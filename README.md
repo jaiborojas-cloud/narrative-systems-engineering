@@ -63,6 +63,6 @@ A proposed first design artifact is an audiovisual measurement profile for one s
 
 ## Current deliverables and limits
 
-Completed: review of all 63 supplied PDF pages, preliminary external landscape check, feasibility assessment, project structure, roadmap, pilot proposal, session record, and a local .NET pipeline with a first video profile. See [run instructions](src/README.md) and [integration checks](tests/README.md).
+Completed: review of all 63 supplied PDF pages, preliminary external landscape check, feasibility assessment, project structure, roadmap, pilot proposal, session record, a local .NET pipeline with a first video profile, and a versioned visual annotation codebook with offline review/import workflow. See [run instructions](src/README.md), [visual codebook](research/protocols/VISUAL-CODEBOOK.md), and [integration checks](tests/README.md).
 
 Not yet completed: systematic literature review, final project name, evaluation dataset, Azure integration, speech transcription, model annotations, participant study, validated metrics, or publication. The pilot scope and resource estimates are proposals for discussion.

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NSE · Visual annotation review</title>
+<style>
+[hidden]{display:none!important}
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101822;color:#edf3f8}*{box-sizing:border-box}body{max-width:1250px;margin:auto;padding:28px}h1{font-size:30px;margin:8px 0}h2{font-size:19px;margin:0 0 14px}p{color:#c1ceda;line-height:1.55}.toolbar,.nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0}button,.file{background:#24485c;border:1px solid #44748e;color:#fff;border-radius:6px;padding:9px 14px;cursor:pointer;font:inherit}button:disabled{opacity:.5;cursor:default}button:hover:enabled,.file:hover{background:#315e76}input,select,textarea{width:100%;background:#111e2a;color:#fff;border:1px solid #597081;border-radius:5px;padding:9px;font:inherit}label{display:block;font-size:14px;color:#c8d7e3;margin-bottom:10px}label>input,label>select,label>textarea{margin-top:6px}.identity{display:grid;grid-template-columns:2fr 1fr;gap:16px;max-width:650px}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,1fr);gap:24px}.evidence{position:sticky;top:20px;align-self:start}img{width:100%;border-radius:8px;background:#000}section{padding:18px;background:#1b2938;border-radius:8px;margin-bottom:16px}.observation{padding:14px 0;border-top:1px solid #476071}.file input{display:none}small{color:#bdcbd7}.badge{color:#89dfcf}#message{min-height:24px;color:#ffe09b}details{margin:16px 0}summary{cursor:pointer;color:#93d9ef}li{margin:9px 0;line-height:1.5}textarea{min-height:75px;resize:vertical}:focus-visible{outline:3px solid #88ddeb;outline-offset:2px}@media(max-width:800px){body{padding:16px}.layout,.identity{grid-template-columns:1fr}.evidence{position:static}}
+</style>
+</head>
+<body>
+<small>NARRATIVE SYSTEMS ENGINEERING · CODEBOOK visual-0.1</small>
+<h1 id="heading">Visual annotation review</h1>
+<p>Record what is visible in each sampled frame. Keep labels specific and explain the visual evidence. A still image supports a visible pose, but cannot establish motion, intent, speech, or recurrence.</p>
+<details><summary>Annotation guide</summary><ul>
+<li><strong>Objects:</strong> visible non-garment items. Example: “rectangular display,” supported by “bright rectangular surface on the left.”</li>
+<li><strong>Clothing:</strong> visible garments and accessories. Use position to distinguish people; do not infer identity, profession, or status.</li>
+<li><strong>Setting:</strong> visible environment. Prefer “interior with a display” over a speculative location.</li>
+<li><strong>Actions:</strong> visible poses or interactions, such as “holding a rectangular item.” Do not infer a conversation or a movement from a still frame.</li>
+<li><strong>Not reviewed</strong> means no judgment yet. <strong>None visible</strong> means you inspected the frame and found no codable instance. <strong>Observed</strong> requires clear evidence. <strong>Uncertain</strong> requires an explanation of ambiguity and at least one uncertain observation.</li>
+<li>“Clear” and “uncertain” are reviewer judgments, not calibrated probabilities. This is a design example, not validated ground truth.</li>
+</ul></details>
+<div class="identity"><label>Reviewer name or identifier<input id="reviewer" maxlength="200" placeholder="Enter your reviewer identifier"></label><label>Annotation provenance<select id="kind"><option value="human">Human</option><option value="ai_assisted">AI-assisted</option></select></label></div>
+<div class="toolbar" id="editing"><button id="download">Download annotations</button><label class="file">Load saved annotations<input id="load" type="file" accept=".json,application/json"></label><small>Changes stay in this page until downloaded. Loading replaces the current draft.</small></div>
+<div id="message" role="status" aria-live="polite"></div>
+<div class="nav"><button id="previous">Previous frame</button><label>Frame<select id="frame-select"></select></label><button id="next">Next frame</button><span class="badge" id="progress"></span></div>
+<div class="layout"><div class="evidence"><img id="frame-image" alt=""><p id="frame-caption"></p><small>Timestamp is the requested seek position. Annotations apply to this frame only.</small></div><div id="categories"></div></div>
+<script>
+const payload = /*REVIEW_DATA*/ null;
+let doc = payload.document, index = 0, dirty = false;
+const original = structuredClone(doc), readOnly = payload.readOnly;
+const $ = id => document.getElementById(id);
+const names = {objects:'Objects',clothing:'Clothing',setting:'Setting',actions:'Actions'};
+const statuses = {not_reviewed:'Not reviewed',none_visible:'None visible',observed:'Observed',uncertain:'Uncertain'};
+const message = text => { $('message').textContent = text; };
+function changed(){ dirty = true; updateProgress(); message('Unsaved changes — download annotations to keep this draft.'); }
+function node(tag,text){ const n=document.createElement(tag); if(text!==undefined)n.textContent=text; return n; }
+function field(parent,title,control){const label=node('label',title);label.append(control);parent.append(label);return control;}
+function select(values,value){const s=node('select');for(const [key,label]of Object.entries(values)){const o=node('option',label);o.value=key;s.append(o);}s.value=value;s.disabled=readOnly;return s;}
+function updateProgress(){const done=doc.frames.reduce((n,f)=>n+f.categories.filter(c=>c.status!=='not_reviewed').length,0);$('progress').textContent=`${done} / ${doc.frames.length*4} categories reviewed`;}
+function render(){
+  const f=doc.frames[index];$('frame-image').src=payload.images[f.frameImage];$('frame-image').alt=`Sample requested at ${f.timestampSeconds.toFixed(2)} seconds`;
+  $('frame-caption').textContent=`${f.timestampSeconds.toFixed(2)}s · ${f.frameImage}`;
+  $('frame-select').value=index;$('previous').disabled=index===0;$('next').disabled=index===doc.frames.length-1;
+  $('categories').replaceChildren();
+  for(const c of f.categories){
+    const section=node('section');section.append(node('h2',names[c.category]));
+    const state=field(section,'Review status',select(statuses,c.status));
+    state.addEventListener('change',()=>{
+      if(['none_visible','not_reviewed'].includes(state.value)&&c.observations.length){message('Remove observations before choosing None visible or Not reviewed.');state.value=c.status;return;}
+      c.status=state.value;changed();render();
+    });
+    c.observations.forEach((o,i)=>{
+      const row=node('div');row.className='observation';
+      const label=node('input');label.value=o.label;label.maxLength=200;label.disabled=readOnly;label.addEventListener('input',()=>{o.label=label.value;changed();});field(row,'Label',label);
+      const evidence=node('textarea');evidence.value=o.evidence;evidence.maxLength=2000;evidence.disabled=readOnly;evidence.addEventListener('input',()=>{o.evidence=evidence.value;changed();});field(row,'Visible evidence and ambiguity',evidence);
+      const certainty=field(row,'Certainty',select({clear:'Clear',uncertain:'Uncertain'},o.certainty));certainty.addEventListener('change',()=>{o.certainty=certainty.value;if(o.certainty==='uncertain')c.status='uncertain';changed();render();});
+      if(!readOnly){const remove=node('button','Remove observation');remove.addEventListener('click',()=>{c.observations.splice(i,1);if(!c.observations.length)c.status='not_reviewed';changed();render();});row.append(remove);}
+      section.append(row);
+    });
+    if(!readOnly){const add=node('button','Add observation');add.disabled=c.observations.length>=100;add.addEventListener('click',()=>{if(!['observed','uncertain'].includes(c.status))c.status='observed';c.observations.push({label:'',evidence:'',certainty:c.status==='uncertain'?'uncertain':'clear'});changed();render();});section.append(add);}
+    $('categories').append(section);
+  }
+  updateProgress();
+}
+function validate(candidate){
+  if(!candidate||candidate.schemaVersion!==original.schemaVersion||candidate.codebookVersion!==original.codebookVersion||candidate.sourceSha256!==original.sourceSha256||candidate.profileSha256!==original.profileSha256)throw Error('This file belongs to a different profile or codebook.');
+  if(!candidate.reviewer||typeof candidate.reviewer.name!=='string'||!candidate.reviewer.name.trim()||candidate.reviewer.name.length>200||!['human','ai_assisted'].includes(candidate.reviewer.kind))throw Error('Enter a reviewer identifier and valid provenance.');
+  if(!Array.isArray(candidate.frames)||candidate.frames.length!==original.frames.length)throw Error('Every sampled frame is required.');
+  const seen=new Set();
+  for(const f of candidate.frames){
+    const expected=original.frames.find(x=>x.frameImage===f?.frameImage);
+    if(!expected||seen.has(f.frameImage)||f.timestampSeconds!==expected.timestampSeconds)throw Error('Unknown/duplicate frame or changed timestamp.');seen.add(f.frameImage);
+    if(!Array.isArray(f.categories)||f.categories.length!==4)throw Error('All four categories are required.');
+    const cats=new Set();
+    for(const c of f.categories){
+      if(!c||!Object.hasOwn(names,c.category)||cats.has(c.category)||!Object.hasOwn(statuses,c.status)||!Array.isArray(c.observations)||c.observations.length>100)throw Error('Invalid category or status.');cats.add(c.category);
+      const active=['observed','uncertain'].includes(c.status);
+      if(active!==Boolean(c.observations.length))throw Error(`${f.timestampSeconds}s ${c.category}: observed/uncertain needs evidence; other statuses must be empty.`);
+      for(const o of c.observations)if(!o||typeof o.label!=='string'||!o.label.trim()||o.label.length>200||typeof o.evidence!=='string'||!o.evidence.trim()||o.evidence.length>2000||!['clear','uncertain'].includes(o.certainty))throw Error(`${f.timestampSeconds}s ${c.category}: complete the label, evidence, and certainty.`);
+      if(c.status==='uncertain'&&!c.observations.some(o=>o.certainty==='uncertain'))throw Error('Uncertain status needs an uncertain observation.');
+      if(c.status==='observed'&&c.observations.some(o=>o.certainty!=='clear'))throw Error('Choose Uncertain status when evidence is uncertain.');
+    }
+  }
+}
+$('reviewer').value=doc.reviewer.name;$('kind').value=doc.reviewer.kind;
+$('reviewer').disabled=readOnly;$('kind').disabled=readOnly;
+$('reviewer').addEventListener('input',()=>{doc.reviewer.name=$('reviewer').value;changed();});
+$('kind').addEventListener('change',()=>{doc.reviewer.kind=$('kind').value;changed();});
+doc.frames.forEach((f,i)=>{const o=node('option',`${i+1} · ${f.timestampSeconds.toFixed(2)}s`);o.value=i;$('frame-select').append(o);});
+$('frame-select').addEventListener('change',()=>{index=Number($('frame-select').value);render();});
+$('previous').addEventListener('click',()=>{index--;render();});$('next').addEventListener('click',()=>{index++;render();});
+$('download').addEventListener('click',()=>{try{validate(doc);const blob=new Blob([JSON.stringify(doc,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=node('a');a.href=url;a.download='annotations.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);dirty=false;message('Annotations downloaded. Import this file with the .NET import-review command.');}catch(e){message(e.message);}});
+$('load').addEventListener('change',async()=>{try{const file=$('load').files[0];if(!file)return;const loaded=JSON.parse(await file.text());validate(loaded);if(dirty&&!confirm('Replace the current unsaved draft?'))return;doc=loaded;index=0;$('reviewer').value=doc.reviewer.name;$('kind').value=doc.reviewer.kind;dirty=false;render();message('Saved annotations loaded.');}catch(e){message(e.message);}finally{$('load').value='';}});
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+if(readOnly){$('heading').textContent='Reviewed visual annotations';$('editing').hidden=true;message('Imported review. Provenance is supplied by the reviewer; these annotations are not independently validated.');}
+render();
+</script>
+</body>
+</html>

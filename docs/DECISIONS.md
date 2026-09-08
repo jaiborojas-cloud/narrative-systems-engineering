@@ -19,6 +19,7 @@ September 8, 2026
 | D013 | Treat audience and societal prediction as optional extensions | Updated working interpretation | Original idea can be evaluated independently of NDE/NSE extensions |
 | D014 | Implement the first prototype in C#/.NET, beginning with local FFmpeg processing | Adopted: user requested coding after discussing .NET and Azure | No Azure models deployed; local measurements can run independently |
 | D015 | Keep computed measurements separate from future model annotations and interpretations | Implemented prototype choice | Profile records provenance, measurement methods, and pending analysis explicitly |
+| D016 | Use a versioned frame-level codebook and offline review/import workflow before Azure annotations | Adopted: user approved implementation in Session 005 | Objects, clothing, setting, and visible actions need explicit evidence and uncertainty; completed review is not validation |
 
 ## Pending founder input
 

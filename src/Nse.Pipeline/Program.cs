@@ -14,11 +14,12 @@ static class Pipeline
     {
         if (args.Length == 0 || args.Contains("--help"))
         {
-            Console.WriteLine("NSE local audiovisual profile\nUsage: dotnet run --project src/Nse.Pipeline -- <video> [--output <new-directory>] [--interval <seconds>] [--max-frames <count>] [--tools <ffmpeg-bin-directory>]\nDefaults: interval 5 seconds, max-frames 120. No Azure calls or credentials required.");
+            Console.WriteLine("NSE local audiovisual profile\nUsage: dotnet run --project src/Nse.Pipeline -- <video> [--output <new-directory>] [--interval <seconds>] [--max-frames <count>] [--tools <ffmpeg-bin-directory>]\nReview: review <profile.json> [--output <new-directory>]\nImport: import-review <profile.json> <annotations.json> [--output <new-directory>]\nDefaults: interval 5 seconds, max-frames 120. No Azure calls or credentials required.");
             return args.Length == 0 ? 2 : 0;
         }
         try
         {
+            if (args[0] is "review" or "import-review") return await ReviewWorkflow.Run(args);
             var input = Path.GetFullPath(args[0]);
             if (!File.Exists(input)) throw new ArgumentException($"Video does not exist: {input}");
             var options = new Dictionary<string, string>();

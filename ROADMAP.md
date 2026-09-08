@@ -65,6 +65,8 @@ The source visions extending to 2036 and 2050 remain historical ambitions. This 
 
 Implementation update (Session 004): the local .NET pipeline now generates a sampled visual profile. The supplied video is 12.08 seconds and contains no audio stream. Next, review this profile and specify a small visual annotation codebook (for example, visible objects and clothing). Azure integration remains pending; use an additional clip with speech to exercise transcription. The one-work profile is a design artifact, not Stage 2 validation.
 
+Session 005 update: the [visual codebook](research/protocols/VISUAL-CODEBOOK.md), annotation schema, and offline review/import workflow are implemented. Next, review the three frames in `data/processed/runs/visual-review/review.html`, download the annotation file, and import it using the [CLI instructions](src/README.md). Human reference annotations and Azure execution remain pending.
+
 1. Set available weekly time, relevant skills, and a provisional resource ceiling.
 2. Decide whether to keep NSE as the working name given existing public uses.
 3. Select a small cross-modal measurement subset and one short design example.

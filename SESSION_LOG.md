@@ -72,6 +72,28 @@ Append a dated entry after each substantive session. Record what actually happen
 
 **Next actions:** review the visual profile and define a bounded visual annotation codebook; add Azure Speech configuration and integration when a speech-containing example and Azure resource are available. Preserve the original media and review model annotations independently when introduced.
 
+## Session 005 - September 8, 2026
+
+**Objective:** implement the annotation schema and manual review workflow approved by the founder.
+
+**Work performed:** added the `visual-0.1` codebook and JSON schema; implemented `review` and `import-review` CLI commands; created an offline frame review page with evidence labels, uncertainty, reviewer provenance, JSON download/load, and partial review support. Imports bind to the exact original profile and source hashes and create a derived profile plus a standalone read-only annotation report. Original measurement outputs are preserved.
+
+**Deliverable:** `data/processed/runs/visual-review/review.html` contains the three frames from the first video profile, initially unreviewed. No human annotations or independent reference labels were fabricated. Azure integration remains pending.
+
+**Validation:** synthetic-media integration checks cover review round trips, preserved measurements, partial/complete review coverage, portable report evidence, and invalid annotation rejection. A separate Node check validates page script syntax and export validation cases. Browser rendering could not be checked: the browser URL policy rejected access to the local HTML file, and no alternate browser route was attempted.
+
+**Next actions:** the founder reviews the three frames, downloads annotations, and imports them into a new derived profile. Use those reviewed examples to refine the codebook before connecting an Azure vision model or treating labels as evaluation references.
+
+## Session 006 - September 8, 2026
+
+**Objective:** process the additional video identified by the founder, `video/06-FCE-V-C110-007-C.mp4`.
+
+**Work performed and findings:** ran the existing local pipeline successfully. The video is 194.84 seconds long and has an audio stream. Extracted mono 16 kHz PCM16 WAV audio, sampled 39 frames at the default five-second interval, and generated color measurements, provenance, JSON/CSV, and an HTML report. Created a separate offline review workspace with all categories initially unreviewed.
+
+**Outputs:** `data/processed/runs/06-FCE-V-C110-007-C-profile/` and `data/processed/runs/06-FCE-V-C110-007-C-review/`. Both completed successfully. Original videos and previous runs were preserved.
+
+**Limits and next actions:** audio presence alone does not establish speech content. No listening, transcription, Azure calls, or human annotation was performed. Review the frames and configure transcription for this extracted audio when the service is available.
+
 ## Template for future sessions
 
 ```text

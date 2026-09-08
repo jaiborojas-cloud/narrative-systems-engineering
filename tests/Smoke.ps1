@@ -39,6 +39,62 @@ try {
     if ($LASTEXITCODE -eq 0) { throw 'Existing output was not protected' }
     dotnet $dll $silent --interval NaN --tools $toolDirectory
     if ($LASTEXITCODE -eq 0) { throw 'Invalid interval accepted' }
+    $profilePath = Join-Path $silentOutput 'profile.json'
+    $originalProfileHash = (Get-FileHash $profilePath).Hash
+    $reviewOutput = Join-Path $run 'review'
+    dotnet $dll review $profilePath --output $reviewOutput
+    if ($LASTEXITCODE -ne 0) { throw 'Review generation failed' }
+    $annotations = Get-Content (Join-Path $reviewOutput 'annotations.json') -Raw | ConvertFrom-Json
+    if ($annotations.profileSha256 -ne $originalProfileHash.ToLowerInvariant()) { throw 'Review is not bound to the exact profile' }
+    if ($annotations.frames[0].categories[0].status -ne 'not_reviewed') { throw 'New reviews must start unreviewed' }
+    $annotations.reviewer.name = 'automated-fixture-test'
+    $annotations.reviewer.kind = 'ai_assisted'
+    $annotations.frames[0].categories[2].status = 'observed'
+    $annotations.frames[0].categories[2].observations = @(@{label='red background';evidence='Solid red synthetic frame';certainty='clear'})
+    $reviewedFile = Join-Path $run 'reviewed.json'
+    $annotations | ConvertTo-Json -Depth 20 | Set-Content $reviewedFile -Encoding utf8
+    $importOutput = Join-Path $run 'imported'
+    dotnet $dll import-review $profilePath $reviewedFile --output $importOutput
+    if ($LASTEXITCODE -ne 0) { throw 'Valid review import failed' }
+    $derived = Get-Content (Join-Path $importOutput 'profile.reviewed.json') -Raw | ConvertFrom-Json
+    if ($derived.annotationReview.status -ne 'partial' -or $derived.annotations[0].categories[2].observations[0].label -ne 'red background') { throw 'Review content or coverage lost during import' }
+    if ($derived.frames[0].colors[0].hex -ne '#F01010' -or (Get-FileHash $profilePath).Hash -ne $originalProfileHash) { throw 'Review changed measurement evidence' }
+    $report = Get-Content (Join-Path $importOutput 'report.html') -Raw
+    if (-not $report.Contains('data:image/jpeg;base64,') -or -not $report.Contains('"readOnly": true')) { throw 'Portable read-only report not generated' }
+    $validJson = $annotations | ConvertTo-Json -Depth 20
+    $invalidChanges = @(
+        { param($a) $a.profileSha256 = '0' * 64 },
+        { param($a) $a.frames[0].timestampSeconds = 123 },
+        { param($a) $a.frames[0].categories[0].category = 'clothing' },
+        { param($a) $a.frames[0].categories[2].observations[0].evidence = '' },
+        { param($a) $a.frames[0].categories[2].status = 'none_visible' },
+        { param($a) $a.frames[0].categories[2].status = 'uncertain' },
+        { param($a) $a.reviewer.name = ' ' },
+        { param($a) $a.frames[1] = $a.frames[0] },
+        { param($a) $a.frames[0].categories[2].observations = $null }
+    )
+    $invalidIndex = 0
+    foreach ($change in $invalidChanges) {
+        $invalid = $validJson | ConvertFrom-Json
+        & $change $invalid
+        $badFile = Join-Path $run 'invalid.json'
+        $invalid | ConvertTo-Json -Depth 20 | Set-Content $badFile -Encoding utf8
+        $badOutput = Join-Path $run ('invalid-' + $invalidIndex++)
+        dotnet $dll import-review $profilePath $badFile --output $badOutput
+        if ($LASTEXITCODE -eq 0 -or (Test-Path $badOutput)) { throw 'Invalid annotations accepted or wrote output' }
+    }
+    foreach ($frame in $annotations.frames) {
+        foreach ($category in $frame.categories) {
+            if ($category.status -eq 'not_reviewed') { $category.status = 'none_visible' }
+        }
+    }
+    $annotations | ConvertTo-Json -Depth 20 | Set-Content $reviewedFile -Encoding utf8
+    $completeOutput = Join-Path $run 'complete-review'
+    dotnet $dll import-review $profilePath $reviewedFile --output $completeOutput
+    if ($LASTEXITCODE -ne 0) { throw 'Complete review import failed' }
+    $complete = Get-Content (Join-Path $completeOutput 'profile.reviewed.json') -Raw | ConvertFrom-Json
+    if ($complete.annotationReview.status -ne 'complete') { throw 'Complete coverage not recorded' }
+    Write-Host 'PASS: review round trip, unchanged measurements, portable report, complete/partial coverage, and nine invalid annotation cases.'
     Write-Host "PASS: color measurements, source hash, frame budget, silent media, audio extraction, and input guards. Artifacts: $run"
 }
 finally { Pop-Location }
