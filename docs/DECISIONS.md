@@ -17,6 +17,8 @@ September 8, 2026
 | D011 | Record integrated audiovisual analysis as the original project concept | Adopted: founder clarification | Direct statement supplied after the PDF review |
 | D012 | Start with a measurement inventory and one-work audiovisual profile | Proposed | Preserve linguistic, acoustic, visual, and material scope |
 | D013 | Treat audience and societal prediction as optional extensions | Updated working interpretation | Original idea can be evaluated independently of NDE/NSE extensions |
+| D014 | Implement the first prototype in C#/.NET, beginning with local FFmpeg processing | Adopted: user requested coding after discussing .NET and Azure | No Azure models deployed; local measurements can run independently |
+| D015 | Keep computed measurements separate from future model annotations and interpretations | Implemented prototype choice | Profile records provenance, measurement methods, and pending analysis explicitly |
 
 ## Pending founder input
 

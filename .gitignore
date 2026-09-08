@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+.tools/
+data/processed/runs/
+video/
+.env
+.env.*
+!.env.example

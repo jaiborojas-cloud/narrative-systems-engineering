@@ -56,6 +56,22 @@ Append a dated entry after each substantive session. Record what actually happen
 
 **Checks:** confirmed root files and project directories exist and checked relative Markdown file links. No commit or remote publication was requested or performed.
 
+## Session 004 - September 8, 2026
+
+**Objective:** begin coding the audiovisual profile pipeline using .NET, with Azure Speech and Foundry as future integrations.
+
+**Input:** the founder requested implementation and supplied `video/268230_medium.mp4`; no Azure models are deployed.
+
+**Work performed:** added a .NET 10 console application; downloaded a project-local FFmpeg build after network escalation approval; implemented media probing, source SHA-256, optional PCM audio extraction, budgeted midpoint frame sampling, RGB color-bin measurements, JSON/CSV export, and an offline HTML report. Added usage documentation, synthetic-media integration checks, and ignore rules for media, tools, builds, secrets, and generated runs.
+
+**Findings:** the supplied file is 12.08 seconds, 2560x1440, and has no audio stream. The first run produced three frame samples at requested positions 2.50, 7.50, and 11.04 seconds. Visually inspected the first extracted frame. No speech analysis is possible on this input alone.
+
+**Checks:** .NET build succeeded without warnings or errors. Synthetic red-video and audio-tone integration checks passed for color bins, timestamps under a frame budget, source hash, no-audio handling, mono 16 kHz PCM16 extraction, overwrite protection, and invalid interval rejection. The real-video run completed successfully; generated artifacts are under `data/processed/runs/` and excluded from Git.
+
+**Limits:** requested seek positions are not verified presentation timestamps; sampled colors describe individual resized frames. No Azure calls, model annotations, acoustic measurements beyond media metadata, transcription, object recurrence detection, or research validation occurred. The pipeline's empty annotation and interpretation fields are placeholders.
+
+**Next actions:** review the visual profile and define a bounded visual annotation codebook; add Azure Speech configuration and integration when a speech-containing example and Azure resource are available. Preserve the original media and review model annotations independently when introduced.
+
 ## Template for future sessions
 
 ```text

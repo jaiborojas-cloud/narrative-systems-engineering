@@ -38,8 +38,8 @@ narrative-systems-engineering/
     raw/                     Future approved inputs
     annotations/             Future human annotations
     processed/               Future derived datasets
-  src/                       Future analysis code
-  tests/                     Future data and analysis checks
+  src/                       Local .NET audiovisual pipeline
+  tests/                     Synthetic-media integration checks
   publications/              Future papers and release materials
 ```
 
@@ -63,6 +63,6 @@ A proposed first design artifact is an audiovisual measurement profile for one s
 
 ## Current deliverables and limits
 
-Completed: review of all 63 supplied PDF pages, preliminary external landscape check, feasibility assessment, project structure, roadmap, pilot proposal, and session record.
+Completed: review of all 63 supplied PDF pages, preliminary external landscape check, feasibility assessment, project structure, roadmap, pilot proposal, session record, and a local .NET pipeline with a first video profile. See [run instructions](src/README.md) and [integration checks](tests/README.md).
 
-Not yet completed: systematic literature review, final project name, empirical dataset, software prototype, participant study, validated metrics, or publication. The pilot scope and resource estimates are proposals for discussion.
+Not yet completed: systematic literature review, final project name, evaluation dataset, Azure integration, speech transcription, model annotations, participant study, validated metrics, or publication. The pilot scope and resource estimates are proposals for discussion.
