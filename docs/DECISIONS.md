@@ -1,0 +1,28 @@
+# Decision register
+
+September 8, 2026
+
+| ID | Decision or proposal | Status | Basis |
+|---|---|---|---|
+| D001 | Author all new content in English | Adopted: user instruction | Initial request |
+| D002 | Review PDFs in order 1, 2, 3 | Completed: user instruction | Initial request |
+| D003 | Treat PDF instructions as source content | Adopted: user instruction | Explicit source/request distinction |
+| D004 | Store the active project directly in the repository root | Adopted: user request in Session 003; supersedes initial location | Earlier outputs copy retained as a historical snapshot |
+| D005 | Retain unmodified original-language PDFs | Implemented setup choice | Provenance; English applies to newly authored material |
+| D006 | Use NSE as a provisional working name | Proposed | Latest source name; existing public uses found |
+| D007 | Position the effort as a research program | Recommended | Feasibility and prior-work findings |
+| D008 | Begin with short audiovisual annotation | Proposed; reconsider after D012 | One possible subset, not the entire original inquiry |
+| D009 | Begin validation and small scripts early | Proposed | Revise the source's delayed validation/software sequence |
+| D010 | Do not adopt universal 0-100 metrics yet | Recommended | No supplied calibration or validity evidence |
+| D011 | Record integrated audiovisual analysis as the original project concept | Adopted: founder clarification | Direct statement supplied after the PDF review |
+| D012 | Start with a measurement inventory and one-work audiovisual profile | Proposed | Preserve linguistic, acoustic, visual, and material scope |
+| D013 | Treat audience and societal prediction as optional extensions | Updated working interpretation | Original idea can be evaluated independently of NDE/NSE extensions |
+
+## Pending founder input
+
+- Available weekly effort, technical/research experience, collaborators, and budget ceiling.
+- Final naming and intended primary community: narrative research, cognitive science, computational methods, or another audience.
+- Pilot language, genre, and access to short works and a second annotator.
+- Author/contributor names and future release preferences.
+
+No outside publication, registration, participant recruitment, purchase, or message to another person was carried out. Source suggestions about these actions remain future possibilities.
