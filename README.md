@@ -7,7 +7,7 @@
 
 An exploratory and applied research program beginning with integrated measurement, mathematical modeling, and state-space interpretation of audiovisual works.
 
-**Status:** foundation & experimental validation stage (`v0.1.0`), November 5, 2026. See [AUTHORS.md](AUTHORS.md), [CITATION.cff](CITATION.cff), [Preprint PAPER-001](publications/PAPER-001-NSE-FOUNDATION.md), and the [Argon Experimental Laboratory](argon/README.md).
+**Status:** foundation, cross-domain atlas & counterfactual control validation stage (`v0.3.0`), November 5, 2026 (foundational archive: September 8, 2026). See [AUTHORS.md](AUTHORS.md), [CITATION.cff](CITATION.cff), [Prior Work & Terminology Disambiguation](docs/PRIOR_WORK_AND_DISAMBIGUATION.md), [Preprint PAPER-001 (PDF)](publications/PAPER-001-NSE-FOUNDATION.pdf), [Preprint PAPER-001 (Markdown)](publications/PAPER-001-NSE-FOUNDATION.md), and the [Argon Experimental Laboratory](argon/README.md).
 
 ## Mission
 

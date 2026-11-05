@@ -192,6 +192,7 @@ code {
         sb.AppendLine("<p>Human societies are structured, stabilized, and transformed by the transmission of symbolic narratives across audiovisual and linguistic media [5, 6, 7]. However, bridging the gap between raw media signals (pixels, acoustic waveforms, lexical tokens) and higher-order cognitive and social dynamics remains an open scientific and engineering problem.</p>");
         sb.AppendLine("<p>Existing computational approaches divide into two disconnected paradigms: (1) <em>low-level media descriptors</em> (shot boundaries, histograms, or transcripts) that do not model persuasive coupling [4], and (2) <em>uncalibrated generative summaries</em> that prompt LLMs for arbitrary scores. Defining Narrative Energy as a naive product <em>E = Intensity &times; Coherence &times; Repetition &times; Identification</em> fails dimensional analysis and collapses to zero whenever any single factor vanishes.</p>");
         sb.AppendLine("<p>To establish <strong>Narrative Systems Engineering (NSE)</strong> as a falsifiable discipline [1], every metric in our engine (<code>Argon.Engine v0.3</code>) satisfies four strict criteria: (i) <strong>Signal Grounding</strong> in 16-bit PCM audio samples, 64&times;64 RGB24 rasters, and time-aligned speech tokens; (ii) <strong>Stated Units and Bounds</strong> (Shannon bits [2, 3], dBFS, and bounded state vectors in [&minus;1, 1]<sup>K</sup>); (iii) <strong>Layer Separation</strong> between observable work material, symbolic interpretation, and state response; and (iv) <strong>Executable Reproducibility</strong>.</p>");
+        sb.AppendLine("<p><strong>Terminology Disambiguation &amp; Chronological Priority:</strong> While homonymous, purely qualitative or essayistic uses of the phrase <em>&ldquo;Narrative Systems Engineering&rdquo;</em> exist on the public web (including game-design notes or qualitative screenplay taxonomies such as Strangium's November 2, 2026 <code>NSE-001</code> post), those texts contain no mathematical formulations, no physical audio/video signal processing, no state-space control models, and no software. In contrast, the work of <strong>Jair Ivan Rojas Ruiz</strong>—cryptographically archived since <strong>September 8, 2026</strong> and registered in Zenodo under <strong>DOI 10.5281/zenodo.23987656</strong> (ORCID: 0009-0003-1109-4583)—formally establishes the quantitative, signal-grounded discipline of <strong>Multimodal Narrative Systems Engineering &amp; Computational Narrative Dynamics (NSE/CND)</strong>.</p>");
 
         sb.AppendLine("<h2>2. Multimodal Signal Vector u(t)</h2>");
         sb.AppendLine("<p>Let an audiovisual work of duration <em>T</em> seconds be partitioned into <em>N</em> discrete time windows <em>t &isin; {0, 1, ..., N&minus;1}</em> of width <em>&Delta;t</em>. At each window <em>t</em>, the work emits a multimodal signal vector <em>u(t) = (u<sub>ac</sub>(t), u<sub>vis</sub>(t), u<sub>ling</sub>(t))</em>.</p>");
@@ -421,7 +422,7 @@ code {
         y -= 114;
 
         // Section 1
-        DrawSectionHeader(p1, ref y, "1. INTRODUCTION & FOUNDATIONAL AXIOMS");
+        DrawSectionHeader(p1, ref y, "1. INTRODUCTION, AXIOMS & CHRONOLOGICAL PRIORITY DISAMBIGUATION");
         WriteParagraph(p1, ref y,
         [
             "Bridging the gap between raw media signals (PCM16 acoustic waveforms, RGB24 pixel rasters, and lexical tokens) and higher-order cognitive",
@@ -431,7 +432,13 @@ code {
             "  (1) Signal Grounding: Direct derivation from physical PCM16 audio samples, 64x64 RGB24 rasters, and time-aligned speech segments.",
             "  (2) Stated Units & Bounds: Entropy and visual divergence in Shannon bits, audio in dBFS, and state trajectories in [-1, 1]^K.",
             "  (3) Layer Separation: Strict separation between observable media signal u(t), normative stance coding z(t), and state response x(t).",
-            "  (4) Executable Reproducibility: Deterministic verification via automated invariant test suites (Verify-Argon.ps1)."
+            "  (4) Executable Reproducibility: Deterministic verification via automated invariant test suites (Verify-Argon.ps1).",
+            "Terminology Disambiguation & Chronological Priority: While homonymous, purely qualitative or essayistic uses of the phrase 'Narrative",
+            "Systems Engineering' exist on the web (including informal game-design notes or qualitative screenplay taxonomies such as Strangium's",
+            "Nov 2, 2026 NSE-001 post), those texts lack mathematical formulations, physical audio/video signal processing, information-theoretic",
+            "entropy, state-space control models, and executable software. In contrast, the foundational work of Jair Ivan Rojas Ruiz (archived since",
+            "September 8, 2026 and registered in Zenodo under DOI: 10.5281/zenodo.23987656, ORCID: 0009-0003-1109-4583) formally establishes the",
+            "quantitative, signal-grounded discipline of Multimodal Narrative Systems Engineering & Computational Narrative Dynamics (NSE/CND)."
         ]);
 
         // Section 2

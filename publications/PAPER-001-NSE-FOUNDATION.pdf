@@ -21,7 +21,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 7784 >>
+<< /Length 8946 >>
 stream
 0.08 0.15 0.28 RG 1.20 w 48.0 756.0 m 564.0 756.0 l S
 0.08 0.11 0.18 rg BT /F2 8.0 Tf 48.0 745.0 Td (NARRATIVE SYSTEMS ENGINEERING \(NSE\) - PREPRINT PAPER-001 v1.1 - DOI: 10.5281/zenodo.23987656) Tj ET
@@ -42,7 +42,7 @@ stream
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 56.0 572.4 Td (via cross-modal resonance, \(4\) Complexity C\(t\), \(5\) Narrative Inertia I\(t\), and \(6\) Controllability Gramian W_c. Validated across 3 works) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 56.0 562.8 Td (\(513.6 s, 77 windows: EXP-001, EXP-002, EXP-003\), NSE cleanly separates civic debate, fear-appeal campaigning \(LBJ 'Daisy' 1964\), and) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 56.0 553.2 Td (crisis consolation \(Reagan 'Challenger' 1986\), while solving all 6! = 720 montage permutations to reduce normative bias by 62.0%.) Tj ET
-0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 530.0 Td (1. INTRODUCTION & FOUNDATIONAL AXIOMS) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 530.0 Td (1. INTRODUCTION, AXIOMS & CHRONOLOGICAL PRIORITY DISAMBIGUATION) Tj ET
 0.30 0.40 0.55 RG 0.60 w 48.0 526.0 m 564.0 526.0 l S
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 515.0 Td (Bridging the gap between raw media signals \(PCM16 acoustic waveforms, RGB24 pixel rasters, and lexical tokens\) and higher-order cognitive) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 504.8 Td (and social state dynamics requires falsifiable mathematical operators. Naive multiplicative formulas such as E = Intensity x Coherence x) Tj ET
@@ -52,33 +52,39 @@ stream
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 464.0 Td (  \(2\) Stated Units & Bounds: Entropy and visual divergence in Shannon bits, audio in dBFS, and state trajectories in [-1, 1]^K.) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 453.8 Td (  \(3\) Layer Separation: Strict separation between observable media signal u\(t\), normative stance coding z\(t\), and state response x\(t\).) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 443.6 Td (  \(4\) Executable Reproducibility: Deterministic verification via automated invariant test suites \(Verify-Argon.ps1\).) Tj ET
-0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 426.4 Td (2. MULTIMODAL SIGNAL FORMULATION u\(t\) = \(u_ac\(t\), u_vis\(t\), u_ling\(t\)\)) Tj ET
-0.30 0.40 0.55 RG 0.60 w 48.0 422.4 m 564.0 422.4 l S
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 411.4 Td (Let an audiovisual work of duration T seconds be partitioned into N discrete windows t in {0, ..., N-1} of duration Delta_t.) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 401.2 Td (  * Acoustic Sub-Vector u_ac\(t\): From mono 16 kHz PCM16 samples s_i in [-1, 1], we compute RMS\(t\), decibels full scale L_dB\(t\) =) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 391.0 Td (    20 log10\(max\(RMS\(t\), 1e-5\)\), 100ms Speech Activity Ratio VAD\(t\) in [0, 1], and intra-window dynamic range Delta_L\(t\).) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 380.8 Td (  * Visual Sub-Vector u_vis\(t\): From 64x64 RGB24 rasters, we extract ITU-R BT.709 luminance Y, spatial contrast sigma_Y\(t\), chromatic) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 370.6 Td (    entropy H_vis\(t\), and the 512-bin color distribution P_t\(b\). Camera cuts are detected via Jensen-Shannon Divergence in bits:) Tj ET
-0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 353.4 516.0 15.0 re B
-0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 357.4 Td (D_JS\(P_t || P_{t-1}\) = 0.5 D_KL\(P_t || M\) + 0.5 D_KL\(P_{t-1} || M\) in [0, 1] bits  \(Cut >= 0.30\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 357.4 Td (\(1\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 335.4 Td (3. FORMAL DEFINITION OF THE SIX CORE NSE METRICS & STATE CONTROL) Tj ET
-0.30 0.40 0.55 RG 0.60 w 48.0 331.4 m 564.0 331.4 l S
-0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 316.4 516.0 15.0 re B
-0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 320.4 Td (Narrative Energy: E\(t\) = 100 * clip\(0.34 I_ac + 0.22 psi_vis + 0.29 I_ling + 0.15 sqrt\(I_ac*I_ling\)\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 320.4 Td (\(2\)) Tj ET
-0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 298.4 516.0 15.0 re B
-0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 302.4 Td (Shannon Stance Entropy: H_narr\(t\) = - Sum_{k,s} p_{k,s}\(t\) log2 p_{k,s}\(t\) in [0, 3.00] bits \(K=4\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 302.4 Td (\(3\)) Tj ET
-0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 280.4 516.0 15.0 re B
-0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 284.4 Td (Narrative Inertia: I\(t\) = clip\(0.55 A_inst\(t\) + 0.25 \(||x\(t\)||_1 / K\) + 0.20 \(\(t + 1\) / N\), 0, 1\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 284.4 Td (\(4\)) Tj ET
-0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 262.4 516.0 15.0 re B
-0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 266.4 Td (LTV State Update: x_k\(t+1\) = \(1 - gamma_k\(t\)\) x_k\(t\) + gamma_k\(t\) z_k\(t\),  gamma_k ~ E\(t\)*\(1-0.65 I_k\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 266.4 Td (\(5\)) Tj ET
-0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 244.4 516.0 15.0 re B
-0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 248.4 Td (Controllability Gramian: W_{c,kk} = Sum_{t=0..N-1} [Phi_k\(N,t+1\) b_k\(t\)]^2,  kappa = l_max / l_min) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 248.4 Td (\(6\)) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 433.4 Td (Terminology Disambiguation & Chronological Priority: While homonymous, purely qualitative or essayistic uses of the phrase 'Narrative) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 423.2 Td (Systems Engineering' exist on the web \(including informal game-design notes or qualitative screenplay taxonomies such as Strangium's) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 413.0 Td (Nov 2, 2026 NSE-001 post\), those texts lack mathematical formulations, physical audio/video signal processing, information-theoretic) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 402.8 Td (entropy, state-space control models, and executable software. In contrast, the foundational work of Jair Ivan Rojas Ruiz \(archived since) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 392.6 Td (September 8, 2026 and registered in Zenodo under DOI: 10.5281/zenodo.23987656, ORCID: 0009-0003-1109-4583\) formally establishes the) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 382.4 Td (quantitative, signal-grounded discipline of Multimodal Narrative Systems Engineering & Computational Narrative Dynamics \(NSE/CND\).) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 365.2 Td (2. MULTIMODAL SIGNAL FORMULATION u\(t\) = \(u_ac\(t\), u_vis\(t\), u_ling\(t\)\)) Tj ET
+0.30 0.40 0.55 RG 0.60 w 48.0 361.2 m 564.0 361.2 l S
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 350.2 Td (Let an audiovisual work of duration T seconds be partitioned into N discrete windows t in {0, ..., N-1} of duration Delta_t.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 340.0 Td (  * Acoustic Sub-Vector u_ac\(t\): From mono 16 kHz PCM16 samples s_i in [-1, 1], we compute RMS\(t\), decibels full scale L_dB\(t\) =) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 329.8 Td (    20 log10\(max\(RMS\(t\), 1e-5\)\), 100ms Speech Activity Ratio VAD\(t\) in [0, 1], and intra-window dynamic range Delta_L\(t\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 319.6 Td (  * Visual Sub-Vector u_vis\(t\): From 64x64 RGB24 rasters, we extract ITU-R BT.709 luminance Y, spatial contrast sigma_Y\(t\), chromatic) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 309.4 Td (    entropy H_vis\(t\), and the 512-bin color distribution P_t\(b\). Camera cuts are detected via Jensen-Shannon Divergence in bits:) Tj ET
+0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 292.2 516.0 15.0 re B
+0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 296.2 Td (D_JS\(P_t || P_{t-1}\) = 0.5 D_KL\(P_t || M\) + 0.5 D_KL\(P_{t-1} || M\) in [0, 1] bits  \(Cut >= 0.30\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 296.2 Td (\(1\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 274.2 Td (3. FORMAL DEFINITION OF THE SIX CORE NSE METRICS & STATE CONTROL) Tj ET
+0.30 0.40 0.55 RG 0.60 w 48.0 270.2 m 564.0 270.2 l S
+0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 255.2 516.0 15.0 re B
+0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 259.2 Td (Narrative Energy: E\(t\) = 100 * clip\(0.34 I_ac + 0.22 psi_vis + 0.29 I_ling + 0.15 sqrt\(I_ac*I_ling\)\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 259.2 Td (\(2\)) Tj ET
+0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 237.2 516.0 15.0 re B
+0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 241.2 Td (Shannon Stance Entropy: H_narr\(t\) = - Sum_{k,s} p_{k,s}\(t\) log2 p_{k,s}\(t\) in [0, 3.00] bits \(K=4\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 241.2 Td (\(3\)) Tj ET
+0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 219.2 516.0 15.0 re B
+0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 223.2 Td (Narrative Inertia: I\(t\) = clip\(0.55 A_inst\(t\) + 0.25 \(||x\(t\)||_1 / K\) + 0.20 \(\(t + 1\) / N\), 0, 1\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 223.2 Td (\(4\)) Tj ET
+0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 201.2 516.0 15.0 re B
+0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 205.2 Td (LTV State Update: x_k\(t+1\) = \(1 - gamma_k\(t\)\) x_k\(t\) + gamma_k\(t\) z_k\(t\),  gamma_k ~ E\(t\)*\(1-0.65 I_k\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 205.2 Td (\(5\)) Tj ET
+0.96 0.97 0.99 rg 0.82 0.86 0.92 RG 0.6 w 48.0 183.2 516.0 15.0 re B
+0.08 0.11 0.18 rg BT /F4 7.4 Tf 54.0 187.2 Td (Controllability Gramian: W_{c,kk} = Sum_{t=0..N-1} [Phi_k\(N,t+1\) b_k\(t\)]^2,  kappa = l_max / l_min) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 544.0 187.2 Td (\(6\)) Tj ET
 0.60 0.65 0.75 RG 0.50 w 48.0 38.0 m 564.0 38.0 l S
 0.08 0.11 0.18 rg BT /F1 8.0 Tf 48.0 26.0 Td (Rojas Ruiz, J. I. \(2026\) - Narrative Systems Engineering \(NSE\) - Apache-2.0 / Mandatory Attribution \(NOTICE\)) Tj ET
 0.08 0.11 0.18 rg BT /F2 8.0 Tf 515.0 26.0 Td (Page 1 of 2) Tj ET
@@ -1047,10 +1053,10 @@ xref
 0000000418 00000 n 
 0000000513 00000 n 
 0000000669 00000 n 
-0000008505 00000 n 
-0000008662 00000 n 
+0000009667 00000 n 
+0000009824 00000 n 
 trailer
 << /Size 11 /Root 1 0 R >>
 startxref
-47010
+48172
 %%EOF

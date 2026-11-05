@@ -98,8 +98,8 @@ try {
         if (-not (Test-Path $pp)) { throw "Missing publication package file: $pubFile" }
     }
 
-    # Verify Zenodo, Citation, Authorship, and Audit Manifest integrity
-    foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'data/raw/CORPUS_MANIFEST.json')) {
+    # Verify Zenodo, Citation, Authorship, Disambiguation, and Audit Manifest integrity
+    foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'docs/PRIOR_WORK_AND_DISAMBIGUATION.md', 'data/raw/CORPUS_MANIFEST.json')) {
         $p = Join-Path $repo $metaFile
         if (-not (Test-Path $p)) { throw "Missing mandatory audit/provenance file: $metaFile" }
     }

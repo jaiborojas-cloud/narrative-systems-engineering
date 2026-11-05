@@ -1,6 +1,6 @@
 {
   "schemaVersion": "argon-0.1",
-  "createdUtc": "2026-11-05T19:22:20.7184469+00:00",
+  "createdUtc": "2026-11-05T22:02:44.9605135+00:00",
   "sourceVideo": "video/06-FCE-V-C110-007-C.mp4",
   "sourceSha256": "cbe05bdfc6131d85e9a749884a68fdf64f3aa12948cc89ff9cbe02f3c2a0e293",
   "durationSeconds": 194.837333,
@@ -171,77 +171,77 @@
       "kind": "speaker_agent"
     },
     {
-      "id": "ARCH_F845299A",
+      "id": "ARCH_DE26C2CD",
       "label": "Objetores/Insumisos presos (victim)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_20050ED3",
+      "id": "ARCH_A5FA4E11",
       "label": "Juicios militares / Estado penal (threat)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_5516C7A9",
+      "id": "ARCH_67A4150A",
       "label": "Insumisi\u00F3n (movimiento) (savior)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_1C84E9D1",
+      "id": "ARCH_A995DD1F",
       "label": "La guerra como m\u00E9todo de resoluci\u00F3n (threat)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_DA7671BF",
+      "id": "ARCH_8FB799AC",
       "label": "Estados Unidos / Intervencionismo militar (villain)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_4DCF86D9",
+      "id": "ARCH_CF2AB6A9",
       "label": "Ej\u00E9rcito (instituci\u00F3n) (threat)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_2CF50D2D",
+      "id": "ARCH_48540398",
       "label": "Ciudadano que contribuye al pa\u00EDs (hero)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_6C35BFCA",
+      "id": "ARCH_8FDAD5A9",
       "label": "Insumisi\u00F3n (negativa a contribuir) (threat)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_81EFAD2F",
+      "id": "ARCH_44D9B9F7",
       "label": "Ej\u00E9rcito profesional \u002B Servicio social \u00FAtil (savior)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_55056D9D",
+      "id": "ARCH_19B2DA7A",
       "label": "La Ley / Obligaci\u00F3n fiscal y c\u00EDvica (hero)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_2C104336",
+      "id": "ARCH_96A0D3BE",
       "label": "Individuo libre pero consecuente (hero)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_0ED75D21",
+      "id": "ARCH_958BEAB6",
       "label": "Consecuencias legales/penales (threat)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_2FCF0868",
+      "id": "ARCH_446F5C3E",
       "label": "Objetores de conciencia (que hacen prestaci\u00F3n social) (hero)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_8654FAB7",
+      "id": "ARCH_ABCDB7CF",
       "label": "Insumiso pasivo (\u0027no hacer nada\u0027) (villain)",
       "kind": "archetype_entity"
     },
     {
-      "id": "ARCH_585F11C5",
+      "id": "ARCH_10500706",
       "label": "Negativa total / Coste econ\u00F3mico percibido (threat)",
       "kind": "archetype_entity"
     }
@@ -410,105 +410,105 @@
     },
     {
       "source": "ENV_POSTER",
-      "target": "ARCH_F845299A",
+      "target": "ARCH_DE26C2CD",
       "weight": -0.8,
       "relation": "casts_as_victim",
       "evidence": "LIBERTAD OBJETORES PRESOS"
     },
     {
       "source": "ENV_POSTER",
-      "target": "ARCH_20050ED3",
+      "target": "ARCH_A5FA4E11",
       "weight": -0.8,
       "relation": "casts_as_threat",
       "evidence": "NO MAS JUICIOS A INSUMISOS"
     },
     {
       "source": "SPK_01",
-      "target": "ARCH_5516C7A9",
+      "target": "ARCH_67A4150A",
       "weight": 0.8,
       "relation": "casts_as_savior",
       "evidence": "actitud bastante positiva como forma de rechazar las guerras"
     },
     {
       "source": "SPK_01",
-      "target": "ARCH_1C84E9D1",
+      "target": "ARCH_A995DD1F",
       "weight": -0.8,
       "relation": "casts_as_threat",
       "evidence": "rechazar las guerras como el \u00FAnico m\u00E9todo de solucionar los problemas"
     },
     {
       "source": "SPK_01",
-      "target": "ARCH_DA7671BF",
+      "target": "ARCH_8FB799AC",
       "weight": -0.8,
       "relation": "casts_as_villain",
       "evidence": "es Estados Unidos el que maneja el cotarro y es el que hace y deshace"
     },
     {
       "source": "SPK_01",
-      "target": "ARCH_4DCF86D9",
+      "target": "ARCH_CF2AB6A9",
       "weight": -0.8,
       "relation": "casts_as_threat",
       "evidence": "sino simplemente eliminar el ej\u00E9rcito"
     },
     {
       "source": "SPK_02",
-      "target": "ARCH_2CF50D2D",
+      "target": "ARCH_48540398",
       "weight": 0.8,
       "relation": "casts_as_hero",
       "evidence": "si todo el mundo hace algo por este pa\u00EDs"
     },
     {
       "source": "SPK_02",
-      "target": "ARCH_6C35BFCA",
+      "target": "ARCH_8FDAD5A9",
       "weight": -0.8,
       "relation": "casts_as_threat",
       "evidence": "no me parece bien la insumisi\u00F3n"
     },
     {
       "source": "SPK_02",
-      "target": "ARCH_81EFAD2F",
+      "target": "ARCH_44D9B9F7",
       "weight": 0.8,
       "relation": "casts_as_savior",
       "evidence": "partidario de unos soldados profesionales... y todo el mundo hace un servicio social, pienso que es m\u00E1s \u00FAtil para este pa\u00EDs"
     },
     {
       "source": "SPK_03",
-      "target": "ARCH_55056D9D",
+      "target": "ARCH_19B2DA7A",
       "weight": 0.8,
       "relation": "casts_as_hero",
       "evidence": "hay cosas que la ley impone y que hay que hacerlas... A nadie le gusta pagar impuestos y sin embargo hay que pagarlos"
     },
     {
       "source": "SPK_04",
-      "target": "ARCH_2C104336",
+      "target": "ARCH_96A0D3BE",
       "weight": 0.8,
       "relation": "casts_as_hero",
       "evidence": "cada persona puede hacer lo que \u00E9l de verdad cree... pero tiene que ser consecuente con las leyes"
     },
     {
       "source": "SPK_04",
-      "target": "ARCH_0ED75D21",
+      "target": "ARCH_958BEAB6",
       "weight": -0.8,
       "relation": "casts_as_threat",
       "evidence": "aceptar todos los problemas que acarrea"
     },
     {
       "source": "SPK_05",
-      "target": "ARCH_2FCF0868",
+      "target": "ARCH_446F5C3E",
       "weight": 0.8,
       "relation": "casts_as_hero",
       "evidence": "los objetores de conciencia por lo menos hacen algo, algo positivo"
     },
     {
       "source": "SPK_05",
-      "target": "ARCH_8654FAB7",
+      "target": "ARCH_ABCDB7CF",
       "weight": -0.8,
       "relation": "casts_as_villain",
       "evidence": "no quieres hacerlo pero no haces nada... si eres espa\u00F1ol, por lo menos hacerlo"
     },
     {
       "source": "SPK_05",
-      "target": "ARCH_585F11C5",
+      "target": "ARCH_10500706",
       "weight": -0.8,
       "relation": "casts_as_threat",
       "evidence": "son un poco negados... macho, haz algo... cuesta m\u00E1s que haciendo la mili"

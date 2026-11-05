@@ -31,6 +31,9 @@ To establish **Narrative Systems Engineering (NSE)** as a falsifiable, reproduci
 3. **Layer Separation:** Strict separation between *(i) observable material in the work*, *(ii) structured normative/symbolic interpretation*, and *(iii) downstream cognitive/social state response*.
 4. **Executable Reproducibility:** Full implementation in deterministic, open-source software verified by automated invariant tests.
 
+### 1.1 Terminology Disambiguation and Chronological Priority
+While homonymous, purely qualitative or essayistic uses of the phrase *"Narrative Systems Engineering"* exist on the public web—including informal game-design notes (*As If Productions*), organizational coaching blogs (*Pinnup*), and qualitative screenplay-criticism taxonomies (such as Strangium's November 2, 2026 `NSE-001` web post)—those texts explicitly lack mathematical equations, physical audio/video signal processing, information-theoretic entropy, state-space control models, datasets, or executable software. In contrast, the work of **Jair Ivan Rojas Ruiz**—cryptographically archived in this repository since **September 8, 2026** ([`sources/foundational/MANIFEST.md`](../sources/foundational/MANIFEST.md)) and permanently registered in **Zenodo (CERN)** under **DOI [`10.5281/zenodo.23987656`](https://doi.org/10.5281/zenodo.23987656)** (`ORCID: 0009-0003-1109-4583`)—formally establishes the quantitative, signal-grounded, and computational discipline of **Multimodal Narrative Systems Engineering and Computational Narrative Dynamics (NSE/CND)** (see [`docs/PRIOR_WORK_AND_DISAMBIGUATION.md`](../docs/PRIOR_WORK_AND_DISAMBIGUATION.md)).
+
 ---
 
 ## 2. Mathematical Formulation of Multimodal Signal $u(t)$
