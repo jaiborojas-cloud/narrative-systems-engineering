@@ -158,15 +158,32 @@ To verify that the six NSE metrics generalize across languages and communicative
 
 ---
 
-## 6. Limitations and Research Roadmap
+## 6. Counterfactual Narrative Control & Montage Synthesis: Experiment `EXP-003`
 
-1. **Corpus Expansion Across Fiction and Long-Form Cinema:** While `EXP-001` and `EXP-002` establish three-regime invariance across $513.6\text{ seconds}$ ($77$ windows) of Spanish and English civic/historical broadcasts, future expansions will evaluate full-length feature films and multi-episode serial narratives.
-2. **Stance Extraction Provenance:** While acoustic ($u_{\text{ac}}$) and visual ($u_{\text{vis}}$) vectors are computed directly from raw media bytes, the normative stance vectors $z(t)$ in `EXP-001` and `EXP-002` rely on structured human-audited transcript coding. Future work will benchmark automated LLM stance extractors against multi-annotator Krippendorff's $\alpha \ge 0.80$.
-3. **Empirical Calibration of Control Gains:** The state-space susceptibility parameters ($\eta = 0.18$, inertia damping $= 0.65$) represent a preregistered theoretical baseline. Phase 4 of the roadmap (`EXP-003`) will fit $(\eta, w_{\text{ac}}, w_{\text{vis}}, w_{\text{ling}})$ against independent human audience response data (second-by-second retention and pre/post belief-shift surveys).
+To advance **Narrative Systems Engineering** from passive observation to active systems synthesis, we implemented a discrete-time optimal control and counterfactual intervention module ([`CounterfactualController.cs`](../argon/src/Argon.Engine/CounterfactualController.cs), `Argon.Engine v0.3`) and executed three control studies ([`argon/experiments/EXP-003-counterfactual-control/`](../argon/experiments/EXP-003-counterfactual-control/CONTROL_FINDINGS.md)):
+
+### 6.1 Exhaustive $6! = 720$ Montage Permutation Reachability (`CORPUS-001`)
+Holding $100\%$ of the physical audio samples, RGB rasters, and words invariant across the $6$ speaker blocks ($39$ windows) of `CORPUS-001`, we evaluated all $6! = 720$ block permutations $\pi \in S_6$ through the LTV state equation:
+- **Reachable Terminal State Hull:** Purely by reordering existing speaker blocks, every belief dimension spans a sign-reversing interval: $x_1(T) \in [-0.2603, +0.5130]$ ($\Delta x_1 = 0.7733$), $x_2(T) \in [-0.1795, +0.5830]$ ($\Delta x_2 = 0.7625$), $x_3(T) \in [-0.0403, +0.7046]$ ($\Delta x_3 = 0.7449$), and $x_4(T) \in [-0.1618, +0.4930]$ ($\Delta x_4 = 0.6548$).
+- **Algorithmic Debiasing ($\min_{\pi \in S_6} \|x(T)\|_2$):** While the original 1994 broadcast order yields a strongly biased terminal state norm $\|x_{\text{orig}}(T)\|_2 = 0.8620$, the synthesized **Civic Equilibrium Montage** $\pi^*_{\text{eq}} = (\text{SPK\_04} \to \text{ENV\_POSTER} \to \text{SPK\_05} \to \text{SPK\_02} \to \text{SPK\_01} \to \text{SPK\_03})$ reduces terminal normative bias by **$-62.0\%$** ($\|x^*(T)\|_2 = 0.3274$) without deleting a single frame of footage.
+
+### 6.2 Non-Verbal Shock Impulse Leverage (`CORPUS-002`, LBJ *"Daisy"*)
+When the verbal transcript and stance vectors $z(t)$ of *"Daisy"* are held identical, but the non-verbal nuclear detonation impulse in Windows #4–#8 ($E_{\max} = 83.29$, $-13.68\text{ dBFS}$, $D_{\text{JS}} = 0.5766\text{ bits}$) is attenuated to calm speech levels, terminal electoral mobilization $x_2(T)$ drops from $+0.2624$ to $+0.1841$—demonstrating that **$29.84\%$ of the commercial's cognitive state displacement is driven purely by the non-verbal acoustic/visual shock wave**.
+
+### 6.3 Institutional Inertial Shielding (`CORPUS-003`, Reagan *Challenger*)
+Removing statutory/presidential institutional anchoring in `CORPUS-003` collapses terminal Narrative Inertia by **$-0.4657$** (from $0.8921$ to $0.4264$). Furthermore, injecting a $30\text{-second}$ high-energy crisis critique ($E = 78.50$, $z_2 = -0.90$) at $t=30\text{s}$ vs. $t=120\text{s}$ vs. $t=210\text{s}$ demonstrates that accumulated institutional inertia prevents terminal sign reversal ($x_2(T) = +0.2321 > 0$) even under late-stage perturbation.
 
 ---
 
-## 7. Conclusion
+## 7. Limitations and Research Roadmap
+
+1. **Corpus Expansion Across Fiction and Long-Form Cinema:** While `EXP-001`, `EXP-002`, and `EXP-003` establish observability, three-regime invariance, and counterfactual control across $513.6\text{ seconds}$ ($77$ windows) of Spanish and English civic/historical broadcasts, future expansions will evaluate full-length feature films and multi-episode serial narratives.
+2. **Stance Extraction Provenance:** While acoustic ($u_{\text{ac}}$) and visual ($u_{\text{vis}}$) vectors are computed directly from raw media bytes, the normative stance vectors $z(t)$ in `EXP-001` and `EXP-002` rely on structured human-audited transcript coding. Future work will benchmark automated LLM stance extractors against multi-annotator Krippendorff's $\alpha \ge 0.80$.
+3. **Empirical Calibration of Control Gains:** The state-space susceptibility parameters ($\eta = 0.18$, inertia damping $= 0.65$) represent a preregistered theoretical baseline. Phase 4 of the roadmap (`EXP-004`) will fit $(\eta, w_{\text{ac}}, w_{\text{vis}}, w_{\text{ling}})$ against independent human audience response data (second-by-second retention and pre/post belief-shift surveys).
+
+---
+
+## 8. Conclusion
 
 By replacing metaphorical scores with signal-grounded operators—Shannon entropy in bits, Jensen-Shannon visual divergence, PCM acoustic prosody, cross-modal resonance, and LTV state-space control—**Narrative Systems Engineering** transitions from philosophical speculation to an executable engineering discipline.
 

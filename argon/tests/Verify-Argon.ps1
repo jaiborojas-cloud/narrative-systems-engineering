@@ -72,6 +72,23 @@ try {
         throw 'Unexpected work or pairwise distance count in atlas.report.json'
     }
 
+    # Build and verify Counterfactual Control & Montage Optimization Lab (EXP-003, Argon v0.3)
+    dotnet run --project argon/src/Argon.Engine --no-build -- control
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine control execution failed' }
+
+    $ctrlReportPath = Join-Path $repo 'argon/experiments/EXP-003-counterfactual-control/control.report.json'
+    $ctrlHtmlPath = Join-Path $repo 'argon/experiments/EXP-003-counterfactual-control/control-dashboard.html'
+    if (-not (Test-Path $ctrlReportPath) -or -not (Test-Path $ctrlHtmlPath)) {
+        throw 'Missing EXP-003 Counterfactual Control report or dashboard HTML'
+    }
+    $ctrl = Get-Content $ctrlReportPath -Raw | ConvertFrom-Json
+    if ($ctrl.study1MontageOptimization.totalPermutationsEvaluated -ne 720) {
+        throw "Expected 720 (6!) montage permutations, got $($ctrl.study1MontageOptimization.totalPermutationsEvaluated)"
+    }
+    if ($ctrl.study1MontageOptimization.optimalCivicEquilibrium.finalStateNormL2 -ge $ctrl.study1MontageOptimization.originalStateNormL2) {
+        throw 'Optimal civic equilibrium norm did not improve over original broadcast norm'
+    }
+
     # Verify Zenodo, Citation, Authorship, and Audit Manifest integrity
     foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'data/raw/CORPUS_MANIFEST.json')) {
         $p = Join-Path $repo $metaFile

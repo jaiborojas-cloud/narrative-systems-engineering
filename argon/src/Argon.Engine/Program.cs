@@ -48,6 +48,39 @@ if (args.Length > 0 && string.Equals(args[0], "atlas", StringComparison.OrdinalI
     return 0;
 }
 
+if (args.Length > 0 && string.Equals(args[0], "control", StringComparison.OrdinalIgnoreCase))
+{
+    var c1Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-001-insumision-dynamics", "dynamics.profile.json");
+    var c2Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "daisy-run", "dynamics.profile.json");
+    var c3Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "challenger-run", "dynamics.profile.json");
+
+    var p1 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c1Path), jsonOptions)!;
+    var p2 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c2Path), jsonOptions)!;
+    var p3 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c3Path), jsonOptions)!;
+
+    var report = CounterfactualController.RunFullControlExperiment(p1, p2, p3);
+    var controlOutDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-003-counterfactual-control");
+    Directory.CreateDirectory(controlOutDir);
+
+    var reportPath = Path.Combine(controlOutDir, "control.report.json");
+    var htmlPath = Path.Combine(controlOutDir, "control-dashboard.html");
+
+    await File.WriteAllTextAsync(reportPath, JsonSerializer.Serialize(report, jsonOptions));
+    await File.WriteAllTextAsync(htmlPath, CounterfactualController.RenderControlHtml(report));
+
+    var s1 = report.Study1MontageOptimization;
+    var s2 = report.Study2ShockImpulseControl;
+    var s3 = report.Study3InertialShielding;
+
+    Console.WriteLine($"[Argon.Engine Control v0.3] Solved {s1.TotalPermutationsEvaluated} montage permutations on CORPUS-001:");
+    Console.WriteLine($"  -> Reachable B1 (Anti-Militarism) Span: [{s1.ReachableStateMin["B1_ANTIMILITARISM"]:+0.0000;-0.0000}, {s1.ReachableStateMax["B1_ANTIMILITARISM"]:+0.0000;-0.0000}] (Delta = {s1.ReachableSpanPerDimension["B1_ANTIMILITARISM"]:F4})");
+    Console.WriteLine($"  -> Optimal Civic Equilibrium Order: {string.Join(" -> ", s1.OptimalCivicEquilibrium.BlockOrder)} (||x*(T)||_2 = {s1.OptimalCivicEquilibrium.FinalStateNormL2:F4} vs. Original {s1.OriginalStateNormL2:F4})");
+    Console.WriteLine($"[Argon.Engine Control v0.3] CORPUS-002 Daisy Non-Verbal Shock Leverage: {s2.NonVerbalShockLeveragePercent:F2}%");
+    Console.WriteLine($"[Argon.Engine Control v0.3] CORPUS-003 Challenger Institutional Stabilization Margin: +{s3.InstitutionalStabilizationMargin:F4}");
+    Console.WriteLine($"[Argon.Engine Control v0.3] Control Lab Dashboard written to: {htmlPath}");
+    return 0;
+}
+
 var profileJsonPath = args.Length > 0
     ? Path.GetFullPath(args[0])
     : Path.Combine(repoRoot, "data", "processed", "runs", "06-FCE-V-C110-007-C-profile", "profile.json");
