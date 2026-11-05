@@ -3,7 +3,8 @@
 ## Principal Author, Creator & Founder
 
 **Jair Ivan Rojas Ruiz** (*Jair Rojas*)  
-**ORCID iD:** [https://orcid.org/0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583)
+**ORCID iD:** [https://orcid.org/0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583)  
+**Official Zenodo DOI:** [https://doi.org/10.5281/zenodo.23987656](https://doi.org/10.5281/zenodo.23987656) (Concept DOI: [`10.5281/zenodo.23987655`](https://doi.org/10.5281/zenodo.23987655))
 
 ---
 

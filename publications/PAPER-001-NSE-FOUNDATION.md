@@ -2,6 +2,7 @@
 
 **Author:** Jair Ivan Rojas Ruiz (*Jair Rojas*)  
 **ORCID iD:** [https://orcid.org/0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583)  
+**DOI:** [https://doi.org/10.5281/zenodo.23987656](https://doi.org/10.5281/zenodo.23987656) (Concept DOI: [`10.5281/zenodo.23987655`](https://doi.org/10.5281/zenodo.23987655))  
 **Date:** November 5, 2026  
 **Version:** Preprint v1.0 (`PAPER-001`)  
 **Repository & Reproducibility Package:** [https://github.com/jaiborojas-cloud/narrative-systems-engineering](https://github.com/jaiborojas-cloud/narrative-systems-engineering) (`src/Nse.Pipeline` & `argon/src/Argon.Engine`)

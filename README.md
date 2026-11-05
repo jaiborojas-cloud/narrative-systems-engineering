@@ -1,6 +1,9 @@
 # Narrative Systems Engineering
 
-**Founder, Creator & Principal Investigator:** Jair Ivan Rojas Ruiz ([ORCID: 0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583))
+[![DOI](https://zenodo.org/badge/1361618725.svg)](https://doi.org/10.5281/zenodo.23987655)
+
+**Founder, Creator & Principal Investigator:** Jair Ivan Rojas Ruiz ([ORCID: 0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583))  
+**Official Zenodo DOI:** [`10.5281/zenodo.23987656`](https://doi.org/10.5281/zenodo.23987656) (Concept DOI: [`10.5281/zenodo.23987655`](https://doi.org/10.5281/zenodo.23987655))
 
 An exploratory and applied research program beginning with integrated measurement, mathematical modeling, and state-space interpretation of audiovisual works.
 
