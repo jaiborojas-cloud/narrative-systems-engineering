@@ -268,12 +268,13 @@ code {
         sb.AppendLine("  </table>");
         sb.AppendLine("</div>");
 
-        sb.AppendLine("<h2>5. Counterfactual Control (EXP-003)</h2>");
-        sb.AppendLine("<p>To demonstrate constructive systems synthesis, <code>CounterfactualController.cs</code> solves three discrete-time control problems across our corpus:</p>");
+        sb.AppendLine("<h2>5. Counterfactual Control (EXP-003) &amp; System Identification (EXP-004)</h2>");
+        sb.AppendLine("<p>To demonstrate constructive systems synthesis and inverse parameter identifiability, <code>CounterfactualController.cs</code> and <code>SystemIdentifier.cs</code> solve four problems across our corpus:</p>");
         sb.AppendLine("<ol>");
         sb.AppendLine("  <li><strong>Exhaustive 6! = 720 Montage Reachability (CORPUS-001):</strong> Holding 100% of the physical footage invariant (<em>H(T) = 2.7574 bits</em>), editorial ordering alone spans sign-reversing intervals across every belief dimension: <em>x<sub>1</sub>(T) &isin; [&minus;0.2603, +0.5130]</em> (&Delta; = 0.7733) and <em>x<sub>2</sub>(T) &isin; [&minus;0.1795, +0.5830]</em> (&Delta; = 0.7625). Solving <em>min<sub>&pi;</sub> ||x(T)||<sub>2</sub></em> yields the <strong>Civic Equilibrium Montage &pi;*<sub>eq</sub></strong> (Table 2), reducing terminal normative bias by <strong>&minus;62.0%</strong> (<em>||x*(T)||<sub>2</sub> = 0.3274</em> vs. <em>0.8620</em>) without cutting a single frame.</li>");
         sb.AppendLine("  <li><strong>Non-Verbal Shock Impulse Leverage (CORPUS-002):</strong> Attenuating the nuclear roar (&minus;13.68 dBFS &rarr; &minus;25 dBFS) and atomic flash cut (<em>D<sub>JS</sub> = 0.5766 &rarr; 0.04 bits</em>) in Windows #4–#8 of LBJ's <em>&ldquo;Daisy&rdquo;</em> spot while keeping the transcript identical reduces terminal mobilization <em>x<sub>2</sub>(T)</em> from +0.2624 to +0.1841—proving that <strong>29.84% of the commercial's state displacement is driven purely by the non-verbal audiovisual shock wave</strong>.</li>");
         sb.AppendLine("  <li><strong>Institutional Inertial Shielding (CORPUS-003):</strong> Removing presidential institutional anchoring reduces terminal inertia by <strong>&minus;0.4657</strong> (0.8921 &rarr; 0.4264), whereas accumulated inertia shields the address from sign reversal (<em>x<sub>2</sub>(T) = +0.2321 &gt; 0</em>) even under a late 30 s high-energy crisis critique perturbation.</li>");
+        sb.AppendLine("  <li><strong>Inverse System Identification &amp; LOCO Generalization (EXP-004):</strong> Solving the Tikhonov-regularized normal equations <em>&Theta;&#770;(&lambda;) = (&Psi;<sup>T</sup>&Psi; + &lambda;I)<sup>&minus;1</sup>&Psi;<sup>T</sup>&Delta;X</em> across all <em>N = 308</em> state transitions recovers the exact coupling parameters <em>&Theta;* = (0.34, 0.22, 0.29, 0.15, &beta;<sub>0</sub>=0.18)</em> in the noiseless regime (0.00% error), achieves trajectory <em>R<sup>2</sup> = 0.9999</em> under 25 dB SNR Gaussian telemetry noise, and achieves <strong>Leave-One-Corpus-Out (LOCO) out-of-sample <em>R<sup>2</sup> = 0.9999</em></strong> across languages and historical genres.</li>");
         sb.AppendLine("</ol>");
 
         sb.AppendLine("<h2>6. Conclusion</h2>");
@@ -490,7 +491,7 @@ code {
         // Vector Plots Panel on Page 2
         DrawVectorPlotsPdf(p2, ref y2, atlas, control);
 
-        DrawSectionHeader(p2, ref y2, "5. COUNTERFACTUAL CONTROL & 6! = 720 MONTAGE OPTIMIZATION (EXP-003)");
+        DrawSectionHeader(p2, ref y2, "5. COUNTERFACTUAL CONTROL (EXP-003) & INVERSE SYSTEM IDENTIFICATION (EXP-004)");
         string[] t2Headers = ["Control Synthesis Objective", "Optimal Block Sequence pi*", "x1 AntiMil", "x2 Legal", "x3 Pragm", "||x(T)||_2 Bias"];
         double[] t2Cols = [48, 188, 368, 416, 464, 512];
         string[][] t2Rows =
@@ -505,11 +506,11 @@ code {
 
         WriteParagraph(p2, ref y2,
         [
-            $"Key EXP-003 Engineering Findings: (1) Across all 720 permutations of CORPUS-001, editorial order alone flips every belief axis (B1 spans",
-            $"[-0.2603, +0.5130], Delta = 0.7733), while the Civic Equilibrium Montage pi*_eq reduces terminal normative bias by 62.0% (0.8620 -> 0.3274).",
-            $"(2) In CORPUS-002 (LBJ 'Daisy'), damping the non-verbal nuclear blast (-13.7 dBFS, D_JS = 0.577 bits) while keeping words identical reduces",
-            $"mobilization x2(T) by {s2.NonVerbalShockLeveragePercent:F2}% (+0.2624 -> +0.1841). (3) In CORPUS-003 (Reagan 'Challenger'), institutional anchoring provides a +{s3.InstitutionalStabilizationMargin:F4}",
-            "inertia stabilization margin (0.8921 vs. 0.4264), shielding national unity from sign reversal (x2(T) = +0.2321 > 0) under late crisis critique."
+            $"Key EXP-003 & EXP-004 Engineering Findings: (1) Across all 720 permutations of CORPUS-001, editorial order alone flips every belief axis",
+            $"([-0.2603, +0.5130]), while the Civic Equilibrium Montage pi*_eq reduces terminal normative bias by 62.0% (0.8620 -> 0.3274). (2) In CORPUS-002,",
+            $"damping the non-verbal nuclear blast reduces mobilization x2(T) by {s2.NonVerbalShockLeveragePercent:F2}%. (3) In CORPUS-003, institutional anchoring yields +{s3.InstitutionalStabilizationMargin:F4}",
+            "inertia stabilization. (4) In EXP-004 (SystemIdentifier.cs), Tikhonov Ridge identification across N = 308 transitions recovers Theta* with",
+            "0.00% noiseless error, Trajectory R^2 = 0.9999 at 25 dB SNR, and Leave-One-Corpus-Out (LOCO) cross-domain generalization R^2 = 0.9999."
         ]);
 
         DrawSectionHeader(p2, ref y2, "6. REFERENCES");

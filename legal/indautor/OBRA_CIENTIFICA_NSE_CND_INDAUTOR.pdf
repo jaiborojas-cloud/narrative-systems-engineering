@@ -1,0 +1,96 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 8201 >>
+stream
+0.08 0.15 0.28 RG 1.40 w 48.0 756.0 m 564.0 756.0 l S
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 48.0 745.0 Td (REGISTRO DE OBRA LITERARIA / CIENTIFICA \(INDAUTOR-01-001\) - COMPENDIO FUNDACIONAL NSE/CND) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 462.0 745.0 Td (ORCID: 0009-0003-1109-4583) Tj ET
+0.08 0.11 0.18 rg BT /F2 12.8 Tf 48.0 722.0 Td (INGENIERIA DE SISTEMAS NARRATIVOS MULTIMODALES Y DINAMICA NARRATIVA) Tj ET
+0.08 0.11 0.18 rg BT /F2 11.8 Tf 48.0 707.0 Td (COMPUTACIONAL: ESPECIFICACION MATEMATICA Y CORPUS EXPERIMENTAL \(v0.4.0\)) Tj ET
+0.96 0.98 1.00 rg 0.70 0.78 0.88 RG 0.6 w 48.0 621.0 516.0 78.0 re B
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 56.0 681.0 Td (AUTOR UNICO Y TITULAR ORIGINARIO \(100%\): Jair Ivan Rojas Ruiz \(Jair Rojas\) - ORCID: https://orcid.org/0009-0003-1109-4583) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 56.0 668.5 Td (MODALIDAD REGISTRAL: Obra Literaria / Cientifica y Tecnica \(INDAUTOR-01-001\) vinculada a Programa de Computo \(INDAUTOR-01-002\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 56.0 656.0 Td (FECHA DE PRIMERA DIVULGACION Y SELLO CRIPTOGRAFICO: 8 de septiembre de 2026 \(Mexico\) | DOI: 10.5281/zenodo.23987656) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 56.0 643.5 Td (ALCANCE INTEGRAL DE LA OBRA: Formulacion Axiomatica + Extraccion de Senales + Simulacion + Control Optimo + Identificacion Inversa) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.0 Tf 56.0 631.0 Td (VOLUMENES PRIMIGENIOS INCLUIDOS: Doc 1 \(Atlas HNA, 19 pp.\), Doc 2 \(Motor NDE, 22 pp.\), Doc 3 \(NSE, 22 pp.\) y PAPER-001 \(v1.2\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 605.0 Td (1. OBJETO CIENTIFICO Y AXIOMAS DE LA DISCIPLINA \(NSE / CND\)) Tj ET
+0.25 0.35 0.50 RG 0.60 w 48.0 601.0 m 564.0 601.0 l S
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 590.0 Td (La Ingenieria de Sistemas Narrativos \(Narrative Systems Engineering - NSE\) y su nucleo matematico, la Dinamica Narrativa) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 579.8 Td (Computacional \(Computational Narrative Dynamics - CND\), creadas por Jair Ivan Rojas Ruiz el 8 de septiembre de 2026, constituyen) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 569.6 Td (la primera formulacion fisico-matematica que modela obras audiovisuales como sistemas dinamicos de tiempo discreto excitados por) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 559.4 Td (vectores multimodales u\(t\) = \(u_ac\(t\), u_vis\(t\), u_ling\(t\)\). La disciplina se rige por cuatro axiomas estrictos:) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 549.2 Td (  Axioma I \(Anclaje Fisico en la Senal\): Toda metrica se deriva directamente de muestras acusticas PCM16 a 16 kHz, matrices de) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 539.0 Td (    pixeles RGB24 de 64x64 y segmentos lexicos alineados en el tiempo, prohibiendo puntajes subjetivos o alucinaciones de LLM.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 528.8 Td (  Axioma II \(Unidades Fisicas e Informacionales Acotadas\): La entropia cromatica, la divergencia visual entre cuadros y la) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 518.6 Td (    dispersion de posturas se expresan en bits de Shannon; la energia acustica en dBFS; y el estado colectivo en [-1, 1]^K.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 508.4 Td (  Axioma III \(Separacion de Capas\): Distincion formal entre la senal fisica observable u\(t\), la codificacion simbolica de postura) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 498.2 Td (    normativa z\(t\) y la respuesta dinamica del estado cognitivo-social x\(t\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 488.0 Td (  Axioma IV \(Reproducibilidad Computacional Exacta\): Verificacion determinista de invariantes matematicos mediante software libre.) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 473.8 Td (2. FORMULACION MATEMATICA DE LAS OCHO ECUACIONES CANONICAS NSE/CND) Tj ET
+0.25 0.35 0.50 RG 0.60 w 48.0 469.8 m 564.0 469.8 l S
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 458.8 Td (  \(Ec. 1\) Intensidad Acustica: RMS\(t\) = sqrt\(\(1/M\) Sum s_i^2\),  L_dB\(t\) = 20 log10\(max\(RMS\(t\), 1e-5\)\), acoplada con VAD\(t\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 448.6 Td (  \(Ec. 2\) Flujo Visual de Jensen-Shannon: D_JS\(P_t || P_{t-1}\) = 0.5 D_KL\(P_t || M\) + 0.5 D_KL\(P_{t-1} || M\) en [0, 1] bits.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 438.4 Td (  \(Ec. 3\) Resonancia Intermodal: Phi_sync\(t\) = sqrt\(I_ac\(t\) * I_ling\(t\)\) en [0, 1].) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 428.2 Td (  \(Ec. 4\) Energia Narrativa: E\(t; alpha\) = 100 * clip\(alpha_ac I_ac + alpha_vis psi_vis + alpha_ling I_ling + alpha_sync Phi_sync\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 418.0 Td (  \(Ec. 5\) Entropia Narrativa de Postura de Shannon: H_narr\(t\) = - Sum_{k,s} p_{k,s}\(t\) log2 p_{k,s}\(t\) en [0, 3.00] bits.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 407.8 Td (  \(Ec. 6\) Inercia Narrativa Institucional: I\(t\) = clip\(0.55 A_inst\(t\) + 0.25 \(||x\(t\)||_1 / K\) + 0.20 \(\(t + 1\) / N\), 0, 1\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 397.6 Td (  \(Ec. 7\) Ecuacion de Estado LTV y Control Optimo de Montaje: x_k\(t+1\) = \(1 - gamma_k\(t\)\)x_k\(t\) + gamma_k\(t\)z_k\(t\), donde el) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 387.4 Td (          controlador sintetiza la permutacion optima pi* en S_n que minimiza ||x\(T; pi\)||_2 o maximiza una dimension objetivo.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 377.2 Td (  \(Ec. 8\) Identificacion Inversa de Sistemas \(Tikhonov Ridge\): Theta_hat\(lambda\) = \(Psi^T Psi + lambda I\)^{-1} Psi^T Delta_X,) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 367.0 Td (          recuperando empiricamente los pesos multimodales \(alpha_ac, alpha_vis, alpha_ling, alpha_sync, beta_0\) desde telemetria.) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 352.8 Td (3. SINTESIS DE LOS CUATRO EXPERIMENTOS DE VALIDACION EMPIRICA \(EXP-001 A EXP-004\)) Tj ET
+0.25 0.35 0.50 RG 0.60 w 48.0 348.8 m 564.0 348.8 l S
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 337.8 Td (  * EXP-001 \(CORPUS-001, Debate 'La Mili y la Insumision', Espana, 1994, 194.84 s, 39 ventanas\): D_JS >= 0.30 bits detecta el 100%) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 327.6 Td (    de los cortes de camara reales sin falsos positivos; H_narr\(T\) alcanza 2.7574 bits \(91.9% del maximo teorico\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 317.4 Td (  * EXP-002 \(Atlas Trans-Dominio, 3 obras bilingues, 513.6 s, 77 ventanas\): Separa geometricamente el debate civico \(CORPUS-001\),) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 307.2 Td (    el spot nuclear 'Daisy' de LBJ \(CORPUS-002, 1964, pico E = 83.29\) y el discurso 'Challenger' de Reagan \(CORPUS-003, 1986,) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 297.0 Td (    inercia I = 0.8921, polarizacion minima P = 0.0617\), con distancia euclidiana en espacio metrico 5D de hasta 0.6135.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 286.8 Td (  * EXP-003 \(Control Contrafactual y Optimizacion 6! = 720\): Evalua las 720 permutaciones de bloques de CORPUS-001, hallando el) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 276.6 Td (    Montaje de Equilibrio Civico pi*_eq que reduce el sesgo normativo terminal en -62.0% \(0.8620 -> 0.3274\) sin alterar un solo) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 266.4 Td (    cuadro, y demuestra que el 29.84% de la movilizacion del spot 'Daisy' proviene exclusivamente del choque acustico-visual.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 256.2 Td (  * EXP-004 \(Identificacion Inversa de Sistemas y Generalizacion Trans-Dominio\): Recupera exactamente Theta* en ausencia de ruido) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 246.0 Td (    \(error 0.000%\), logra R^2 = 0.9999 bajo ruido gaussiano de 25 dB SNR \(50 ensayos Monte Carlo por nivel de 10 a 40 dB\) y) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 235.8 Td (    alcanza R^2 fuera de muestra de 0.9999 en validacion cruzada Leave-One-Corpus-Out \(LOCO\) entre idiomas y generos.) Tj ET
+0.60 0.65 0.75 RG 0.50 w 42.0 36.0 m 570.0 36.0 l S
+0.08 0.11 0.18 rg BT /F1 7.6 Tf 42.0 25.0 Td (Copyright \(c\) 2026 Jair Ivan Rojas Ruiz \(ORCID: 0009-0003-1109-4583 | DOI: 10.5281/zenodo.23987656\) - Registro INDAUTOR) Tj ET
+0.08 0.11 0.18 rg BT /F2 7.8 Tf 505.0 25.0 Td (Pagina 1 de 1) Tj ET
+
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000214 00000 n 
+0000000312 00000 n 
+0000000412 00000 n 
+0000000507 00000 n 
+0000000663 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+8916
+%%EOF

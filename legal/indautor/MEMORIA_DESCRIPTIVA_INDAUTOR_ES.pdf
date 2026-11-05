@@ -21,7 +21,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 10090 >>
+<< /Length 10122 >>
 stream
 0.08 0.15 0.28 RG 1.40 w 48.0 756.0 m 564.0 756.0 l S
 0.08 0.11 0.18 rg BT /F2 8.0 Tf 48.0 745.0 Td (REGISTRO PUBLICO DEL DERECHO DE AUTOR \(INDAUTOR - MEXICO\) - MEMORIA DESCRIPTIVA) Tj ET
@@ -34,7 +34,7 @@ stream
 0.08 0.11 0.18 rg BT /F2 8.1 Tf 56.0 656.0 Td (RAMA DE REGISTRO \(LFDA ART. 13\): Programa de Computo \(INDAUTOR-01-002\) y Obra Cientifica/Tecnica \(INDAUTOR-01-001\)) Tj ET
 0.08 0.11 0.18 rg BT /F2 8.1 Tf 56.0 643.5 Td (FECHA DE CREACION Y ARCHIVO CRIPTOGRAFICO PRIMIGENIO: 8 de septiembre de 2026 \(Caracter de la obra: Primigenia / Original\)) Tj ET
 0.08 0.11 0.18 rg BT /F2 8.1 Tf 56.0 631.0 Td (LENGUAJE Y PLATAFORMA: C# 13 sobre .NET 10.0 \(Ejecucion determinista multiplataforma Windows / Linux\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 8.1 Tf 56.0 618.5 Td (REPOSITORIO OFICIAL: https://github.com/jaiborojas-cloud/narrative-systems-engineering \(Release v0.3.0\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 8.1 Tf 56.0 618.5 Td (REPOSITORIO OFICIAL: https://github.com/jaiborojas-cloud/narrative-systems-engineering \(Release v0.4.0\)) Tj ET
 0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 593.0 Td (1. DECLARACION DE ORIGINALIDAD, PRIORIDAD CRONOLOGICA Y DESAMBIGUACION) Tj ET
 0.25 0.35 0.50 RG 0.60 w 48.0 589.0 m 564.0 589.0 l S
 0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 578.0 Td (La presente obra es una creacion intelectual 100% original y primigenia de Jair Ivan Rojas Ruiz. Los tres documentos fundacionales) Tj ET
@@ -42,76 +42,78 @@ stream
 0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 557.6 Td (Doc 3: Ingenieria de Sistemas Narrativos [NSE], 63 paginas en total\) fueron archivados con huella criptografica SHA-256 el 8 de) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 547.4 Td (septiembre de 2026. El sistema establece formalmente la disciplina cuantitativa y computacional de Ingenieria de Sistemas Narrativos) Tj ET
 0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 537.2 Td (Multimodal \(NSE\) y Dinamica Narrativa Computacional \(CND\), fundamentada en procesamiento fisico de senales de audio/video, entropia) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 527.0 Td (de Shannon y control en espacio de estados, diferenciandose de cualquier ensayo cualitativo homonimo carente de matematica o software.) Tj ET
-0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 512.8 Td (2. ARQUITECTURA FUNCIONAL Y FORMULACION MATEMATICA DEL MOTOR) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 527.0 Td (de Shannon, control en espacio de estados e identificacion inversa de sistemas, diferenciandose de cualquier ensayo cualitativo.) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 512.8 Td (2. ARQUITECTURA DE CUATRO PILARES Y FORMULACION MATEMATICA DEL MOTOR) Tj ET
 0.25 0.35 0.50 RG 0.60 w 48.0 508.8 m 564.0 508.8 l S
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 497.8 Td (El sistema Argon.Engine y Nse.Pipeline transforma senales audiovisuales crudas \(.mp4, .ogv, .webm\) y transcripciones alineadas en un) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 487.6 Td (vector multimodal u\(t\) = \(u_ac\(t\), u_vis\(t\), u_ling\(t\)\) que alimenta un sistema dinamico discreto en espacio de estados x\(t+1\):) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 477.4 Td (  * Subsistema Acustico \(AcousticAnalyzer.cs\): Procesa ondas PCM16 a 16 kHz para extraer amplitud RMS, nivel en dBFS, razon de) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 467.2 Td (    actividad de voz \(VAD en subtramas de 100 ms\) y rango dinamico intra-ventana.) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 457.0 Td (  * Subsistema Visual \(VisualDynamicsAnalyzer.cs\): Procesa matrices RGB24 de 64x64 pixeles para calcular luminancia ITU-R BT.709,) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 446.8 Td (    saturacion HSV, entropia cromatica y Divergencia de Jensen-Shannon D_JS\(P_t || P_{t-1}\) en bits para detectar cortes de escena.) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 436.6 Td (  * Subsistema Linguistico \(LinguisticAnalyzer.cs\): Extrae cadencia \(WPM\), diversidad lexica \(TTR\), conectores dialecticos, anclaje) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 426.4 Td (    institucional A_inst\(t\) y vectores de postura normativa z\(t\) en [-1, 1]^K.) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 416.2 Td (  * Motor de Seis Metricas NSE y Control Optimo \(NarrativeMetricsEngine.cs, AtlasComparator.cs, CounterfactualController.cs\):) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 406.0 Td (    Calcula \(1\) ADN Narrativo G_DNA, \(2\) Energia Narrativa E\(t\) con resonancia intermodal Phi_sync, \(3\) Entropia de Postura de) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 395.8 Td (    Shannon H_narr\(t\) en bits, \(4\) Complejidad C\(t\), \(5\) Inercia Narrativa I\(t\), \(6\) Gramiano de Controlabilidad W_c y resuelve las) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 385.6 Td (    6! = 720 permutaciones de montaje para minimizar el sesgo normativo terminal ||x*\(T\)||_2 \(-62.0% en EXP-003\).) Tj ET
-0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 371.4 Td (3. INVENTARIO CRIPTOGRAFICO DE MODULOS FUENTE C# \(SHA-256\)) Tj ET
-0.25 0.35 0.50 RG 0.60 w 48.0 367.4 m 564.0 367.4 l S
-0.92 0.95 0.98 rg 0.20 0.30 0.45 RG 0.6 w 48.0 345.4 516.0 13.0 re B
-0.08 0.11 0.18 rg BT /F2 7.8 Tf 52.0 348.4 Td (Modulo / Archivo Fuente C#) Tj ET
-0.08 0.11 0.18 rg BT /F2 7.8 Tf 225.0 348.4 Td (Lineas) Tj ET
-0.08 0.11 0.18 rg BT /F2 7.8 Tf 268.0 348.4 Td (Huella Criptografica SHA-256 Verificable) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 332.2 m 564.0 332.2 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 335.2 Td (argon/src/Argon.Engine/Program.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 335.2 Td (194) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 335.2 Td (0ec1540a90b2a20586784057a3127f8bc4dc5834046e468c16444ccebcc2b378) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 321.0 m 564.0 321.0 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 324.0 Td (argon/src/Argon.Engine/AcousticAnalyzer.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 324.0 Td (122) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 324.0 Td (d37de9fecb2d6815bd4d765870d37f05cb8503a7b1350c5faecf208134600805) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 309.8 m 564.0 309.8 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 312.8 Td (argon/src/Argon.Engine/VisualDynamicsAnalyzer.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 312.8 Td (125) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 312.8 Td (cefe0908143520b18e3d7d96c7b58d2f652ac04d99bcf9222e9ca02fdee567fa) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 298.6 m 564.0 298.6 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 301.6 Td (argon/src/Argon.Engine/LinguisticAnalyzer.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 301.6 Td (140) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 301.6 Td (ab7cbca0b11f99401a27c5b3efe8132e9e7f802c395fca97d0abaf5d9506cbf3) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 287.4 m 564.0 287.4 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 290.4 Td (argon/src/Argon.Engine/NarrativeMetricsEngine.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 290.4 Td (466) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 290.4 Td (7776b564872ba9587cff8e3e97d0b478c5734a7be22d5554efc66ff561b6f5f1) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 276.2 m 564.0 276.2 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 279.2 Td (argon/src/Argon.Engine/AtlasComparator.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 279.2 Td (429) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 279.2 Td (e3020d2008f58498734dad9ffaf0157db0668eba1403683f661a3b434245dff9) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 265.0 m 564.0 265.0 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 268.0 Td (argon/src/Argon.Engine/CounterfactualController.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 268.0 Td (796) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 268.0 Td (9f1118c838d1116fbd7400dce9201da5a518867013b9326fca25a8fa270271c3) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 253.8 m 564.0 253.8 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 256.8 Td (argon/src/Argon.Engine/DashboardRenderer.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 256.8 Td (491) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 256.8 Td (be96b68b859304c5bbad054f14a4dac67d0f565425c18a0a6d2aac9a0f2b47d3) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 242.6 m 564.0 242.6 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 245.6 Td (argon/src/Argon.Engine/PaperManuscriptRenderer.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 245.6 Td (731) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 245.6 Td (30cf730de0c4f8798d39b52201a9a7bbe01b3edb646e7b8f78df77aad1d6c709) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 231.4 m 564.0 231.4 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 234.4 Td (argon/src/Argon.Engine/IndautorPackageGenerator.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 234.4 Td (313) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 234.4 Td (2ee27da40318497dbc9543e4477c19f27a6f39010a2c962d75e7e3c431f6e9e6) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 220.2 m 564.0 220.2 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 223.2 Td (src/Nse.Pipeline/Program.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 223.2 Td (176) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 223.2 Td (164abd3151d28465a093246c2e32ade173c3084f82d315784301f3ff024f80ca) Tj ET
-0.80 0.84 0.90 RG 0.30 w 48.0 209.0 m 564.0 209.0 l S
-0.08 0.11 0.18 rg BT /F2 7.5 Tf 52.0 212.0 Td (src/Nse.Pipeline/ReviewWorkflow.cs) Tj ET
-0.08 0.11 0.18 rg BT /F1 7.5 Tf 228.0 212.0 Td (143) Tj ET
-0.08 0.11 0.18 rg BT /F4 6.8 Tf 268.0 212.0 Td (2aa54eac26fa990259ec157e9c245ff8e32052345abae4d4498a27667defc838) Tj ET
-0.10 0.15 0.25 RG 0.90 w 48.0 209.0 m 564.0 209.0 l S
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 497.8 Td (El sistema Argon.Engine v0.4 y Nse.Pipeline implementa los 4 pilares completos de la Ingenieria de Sistemas Narrativos sobre u\(t\):) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 487.6 Td (  * Pilar 1 - Extraccion Multimodal \(AcousticAnalyzer.cs, VisualDynamicsAnalyzer.cs, LinguisticAnalyzer.cs\): Procesa audio PCM16) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 477.4 Td (    \(RMS, dBFS, VAD\), matrices RGB24 de 64x64 \(luminancia BT.709, Divergencia de Jensen-Shannon D_JS en bits\) y cadencia lexica.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 467.2 Td (  * Pilar 2 - Simulacion en Espacio de Estados y Atlas de Fase \(NarrativeMetricsEngine.cs, AtlasComparator.cs, EXP-001/EXP-002\):) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 457.0 Td (    Integra x\(t+1\) = \(I - Gamma\(t\)\)x\(t\) + Gamma\(t\)z\(t\) y proyecta obras reales en el espacio metrico 5D \(E, H_narr, I, C, P\).) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 446.8 Td (  * Pilar 3 - Control Contrafactual y Optimizacion de Montaje \(CounterfactualController.cs, EXP-003\): Resuelve las 6! = 720) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 436.6 Td (    permutaciones de bloques editoriales para minimizar el sesgo normativo terminal ||x*\(T\)||_2 \(-62.0%\) y cuantifica choques.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 426.4 Td (  * Pilar 4 - Identificacion Inversa de Sistemas y Calibracion Empirica \(SystemIdentifier.cs, EXP-004\): Estima las matrices de) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 416.2 Td (    acoplamiento Theta = \(alpha_ac, alpha_vis, alpha_ling, alpha_sync, beta_0\) mediante Regresion Regularizada de Tikhonov \(Ridge\)) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.4 Tf 48.0 406.0 Td (    sobre N = 308 transiciones con validacion cruzada Leave-One-Corpus-Out \(R^2 fuera de muestra = 0.9999\).) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.2 Tf 48.0 391.8 Td (3. INVENTARIO CRIPTOGRAFICO DE LOS 14 MODULOS FUENTE C# \(SHA-256\)) Tj ET
+0.25 0.35 0.50 RG 0.60 w 48.0 387.8 m 564.0 387.8 l S
+0.92 0.95 0.98 rg 0.20 0.30 0.45 RG 0.6 w 48.0 365.8 516.0 13.0 re B
+0.08 0.11 0.18 rg BT /F2 7.8 Tf 52.0 368.8 Td (Modulo / Archivo Fuente C#) Tj ET
+0.08 0.11 0.18 rg BT /F2 7.8 Tf 225.0 368.8 Td (Lineas) Tj ET
+0.08 0.11 0.18 rg BT /F2 7.8 Tf 268.0 368.8 Td (Huella Criptografica SHA-256 Verificable) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 353.2 m 564.0 353.2 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 356.2 Td (argon/src/Argon.Engine/Program.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 356.2 Td (225) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 356.2 Td (b5afc9fd99d0a54bd1d50e389d2b7e14dee2ec11acfa867aff0fead12c6927f2) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 342.6 m 564.0 342.6 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 345.6 Td (argon/src/Argon.Engine/AcousticAnalyzer.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 345.6 Td (122) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 345.6 Td (d37de9fecb2d6815bd4d765870d37f05cb8503a7b1350c5faecf208134600805) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 332.0 m 564.0 332.0 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 335.0 Td (argon/src/Argon.Engine/VisualDynamicsAnalyzer.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 335.0 Td (125) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 335.0 Td (cefe0908143520b18e3d7d96c7b58d2f652ac04d99bcf9222e9ca02fdee567fa) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 321.4 m 564.0 321.4 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 324.4 Td (argon/src/Argon.Engine/LinguisticAnalyzer.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 324.4 Td (140) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 324.4 Td (ab7cbca0b11f99401a27c5b3efe8132e9e7f802c395fca97d0abaf5d9506cbf3) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 310.8 m 564.0 310.8 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 313.8 Td (argon/src/Argon.Engine/NarrativeMetricsEngine.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 313.8 Td (466) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 313.8 Td (7776b564872ba9587cff8e3e97d0b478c5734a7be22d5554efc66ff561b6f5f1) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 300.2 m 564.0 300.2 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 303.2 Td (argon/src/Argon.Engine/AtlasComparator.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 303.2 Td (429) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 303.2 Td (e3020d2008f58498734dad9ffaf0157db0668eba1403683f661a3b434245dff9) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 289.6 m 564.0 289.6 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 292.6 Td (argon/src/Argon.Engine/CounterfactualController.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 292.6 Td (796) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 292.6 Td (9f1118c838d1116fbd7400dce9201da5a518867013b9326fca25a8fa270271c3) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 279.0 m 564.0 279.0 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 282.0 Td (argon/src/Argon.Engine/SystemIdentifier.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 282.0 Td (672) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 282.0 Td (47f27bacc0094f975f41aa714355f6d11e3601fa3a5b5c25ccd560812ee5a238) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 268.4 m 564.0 268.4 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 271.4 Td (argon/src/Argon.Engine/DashboardRenderer.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 271.4 Td (491) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 271.4 Td (be96b68b859304c5bbad054f14a4dac67d0f565425c18a0a6d2aac9a0f2b47d3) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 257.8 m 564.0 257.8 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 260.8 Td (argon/src/Argon.Engine/PaperManuscriptRenderer.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 260.8 Td (732) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 260.8 Td (5112e9048be76d3c0c10e42e3113e0237e9978fa125e94738ea8bad15af00edc) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 247.2 m 564.0 247.2 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 250.2 Td (argon/src/Argon.Engine/IndautorPackageGenerator.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 250.2 Td (402) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 250.2 Td (f38d5a01f6c30a3e1be376dce3ef7567438fd1da0f38a34e29d790544ade469f) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 236.6 m 564.0 236.6 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 239.6 Td (src/Nse.Pipeline/Program.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 239.6 Td (176) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 239.6 Td (164abd3151d28465a093246c2e32ade173c3084f82d315784301f3ff024f80ca) Tj ET
+0.80 0.84 0.90 RG 0.30 w 48.0 226.0 m 564.0 226.0 l S
+0.08 0.11 0.18 rg BT /F2 7.3 Tf 52.0 229.0 Td (src/Nse.Pipeline/ReviewWorkflow.cs) Tj ET
+0.08 0.11 0.18 rg BT /F1 7.3 Tf 228.0 229.0 Td (143) Tj ET
+0.08 0.11 0.18 rg BT /F4 6.6 Tf 268.0 229.0 Td (2aa54eac26fa990259ec157e9c245ff8e32052345abae4d4498a27667defc838) Tj ET
+0.10 0.15 0.25 RG 0.90 w 48.0 226.0 m 564.0 226.0 l S
 0.60 0.65 0.75 RG 0.50 w 42.0 36.0 m 570.0 36.0 l S
 0.08 0.11 0.18 rg BT /F1 7.6 Tf 42.0 25.0 Td (Copyright \(c\) 2026 Jair Ivan Rojas Ruiz \(ORCID: 0009-0003-1109-4583 | DOI: 10.5281/zenodo.23987656\) - Registro INDAUTOR) Tj ET
 0.08 0.11 0.18 rg BT /F2 7.8 Tf 505.0 25.0 Td (Pagina 1 de 1) Tj ET
@@ -132,5 +134,5 @@ xref
 trailer
 << /Size 9 /Root 1 0 R >>
 startxref
-10806
+10838
 %%EOF

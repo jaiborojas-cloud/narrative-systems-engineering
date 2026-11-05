@@ -89,6 +89,20 @@ try {
         throw 'Optimal civic equilibrium norm did not improve over original broadcast norm'
     }
 
+    # Build and verify Inverse System Identification & Parameter Calibration (EXP-004, Argon v0.4)
+    dotnet run --project argon/src/Argon.Engine --no-build -- sysid
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine sysid execution failed' }
+
+    $sysidReportPath = Join-Path $repo 'argon/experiments/EXP-004-system-identification/sysid.report.json'
+    $sysidHtmlPath = Join-Path $repo 'argon/experiments/EXP-004-system-identification/sysid-dashboard.html'
+    if (-not (Test-Path $sysidReportPath) -or -not (Test-Path $sysidHtmlPath)) {
+        throw 'Missing EXP-004 System Identification report or dashboard HTML'
+    }
+    $sysid = Get-Content $sysidReportPath -Raw | ConvertFrom-Json
+    if ($sysid.totalStateTransitions -ne 308 -or $sysid.empiricalNoisyRecovery25dB.trajectoryR2 -lt 0.99) {
+        throw "Unexpected EXP-004 System Identification metrics: R2=$($sysid.empiricalNoisyRecovery25dB.trajectoryR2)"
+    }
+
     # Build and verify Print-Ready Paper Manuscript & LaTeX/BibTeX Package
     dotnet run --project argon/src/Argon.Engine --no-build -- paper
     if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine paper execution failed' }
@@ -102,7 +116,7 @@ try {
     dotnet run --project argon/src/Argon.Engine --no-build -- indautor
     if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine indautor execution failed' }
 
-    foreach ($indFile in @('legal/indautor/GUIA_REGISTRO_INDARELIN.md', 'legal/indautor/MEMORIA_DESCRIPTIVA_INDAUTOR_ES.md', 'legal/indautor/MEMORIA_DESCRIPTIVA_INDAUTOR_ES.pdf', 'legal/indautor/CODIGO_FUENTE_ARGON_NSE_INDAUTOR.pdf')) {
+    foreach ($indFile in @('legal/indautor/GUIA_REGISTRO_INDARELIN.md', 'legal/indautor/MEMORIA_DESCRIPTIVA_INDAUTOR_ES.md', 'legal/indautor/MEMORIA_DESCRIPTIVA_INDAUTOR_ES.pdf', 'legal/indautor/CODIGO_FUENTE_ARGON_NSE_INDAUTOR.pdf', 'legal/indautor/OBRA_CIENTIFICA_NSE_CND_INDAUTOR.pdf')) {
         $ip = Join-Path $repo $indFile
         if (-not (Test-Path $ip)) { throw "Missing INDAUTOR registration file: $indFile" }
     }

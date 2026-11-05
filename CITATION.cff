@@ -18,7 +18,7 @@ identifiers:
     value: 10.5281/zenodo.23987656
     description: "Zenodo Version 0.1.0 DOI"
 license: Apache-2.0
-version: 0.3.0
+version: 0.4.0
 date-released: "2026-11-05"
 keywords:
   - narrative-systems-engineering

@@ -81,6 +81,37 @@ if (args.Length > 0 && string.Equals(args[0], "control", StringComparison.Ordina
     return 0;
 }
 
+if (args.Length > 0 && string.Equals(args[0], "sysid", StringComparison.OrdinalIgnoreCase))
+{
+    var c1Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-001-insumision-dynamics", "dynamics.profile.json");
+    var c2Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "daisy-run", "dynamics.profile.json");
+    var c3Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "challenger-run", "dynamics.profile.json");
+
+    var p1 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c1Path), jsonOptions)!;
+    var p2 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c2Path), jsonOptions)!;
+    var p3 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c3Path), jsonOptions)!;
+
+    var report = SystemIdentifier.RunFullSystemIdentification(p1, p2, p3);
+    var sysidOutDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-004-system-identification");
+    Directory.CreateDirectory(sysidOutDir);
+
+    var reportPath = Path.Combine(sysidOutDir, "sysid.report.json");
+    var htmlPath = Path.Combine(sysidOutDir, "sysid-dashboard.html");
+
+    await File.WriteAllTextAsync(reportPath, JsonSerializer.Serialize(report, jsonOptions));
+    await File.WriteAllTextAsync(htmlPath, SystemIdentifier.RenderSysIdHtml(report));
+
+    var rec = report.EmpiricalNoisyRecovery25dB;
+    var meanLocoR2 = report.LeaveOneCorpusOutFolds.Average(f => f.OutOfSampleR2);
+    Console.WriteLine($"[Argon.Engine SysID v0.4] Identified 4-channel state-space parameters across {report.TotalStateTransitions} transitions:");
+    Console.WriteLine($"  -> True Alpha: (0.3400, 0.2200, 0.2900, 0.1500), Beta0 = 0.1800");
+    Console.WriteLine($"  -> Learned (25 dB SNR): ({rec.AlphaAcoustic:F4}, {rec.AlphaVisual:F4}, {rec.AlphaLinguistic:F4}, {rec.AlphaResonance:F4}), Beta0 = {rec.BaseSusceptanceBeta0:F4}");
+    Console.WriteLine($"  -> Relative Parameter Error ||Theta_hat - Theta*||_2: {rec.RelativeParameterErrorL2 * 100:F2}% | Trajectory R^2: {rec.TrajectoryR2:F4}");
+    Console.WriteLine($"  -> Leave-One-Corpus-Out (LOCO) Out-of-Sample R^2: {meanLocoR2:F4}");
+    Console.WriteLine($"[Argon.Engine SysID v0.4] System Identification Dashboard written to: {htmlPath}");
+    return 0;
+}
+
 if (args.Length > 0 && string.Equals(args[0], "paper", StringComparison.OrdinalIgnoreCase))
 {
     var atlasPath = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "atlas.report.json");

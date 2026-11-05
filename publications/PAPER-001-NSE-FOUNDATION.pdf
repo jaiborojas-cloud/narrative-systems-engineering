@@ -95,7 +95,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 10 0 R >>
 endobj
 10 0 obj
-<< /Length 38294 >>
+<< /Length 38290 >>
 stream
 0.08 0.15 0.28 RG 1.00 w 48.0 756.0 m 564.0 756.0 l S
 0.08 0.11 0.18 rg BT /F2 8.5 Tf 48.0 745.0 Td (JAIR IVAN ROJAS RUIZ - MULTIMODAL NARRATIVE SYSTEMS ENGINEERING \(EXP-001, EXP-002 & EXP-003\)) Tj ET
@@ -979,7 +979,7 @@ S
 461.15 504.55 462.72 502.98 464.65 502.98 c
 466.58 502.98 468.15 504.55 468.15 506.48 c f
 0.08 0.11 0.18 rg BT /F1 7.2 Tf 326.0 463.4 Td (Gray: 720 Montages | Green: Optimal Equilibrium \(0.327\) | Red: Max B1 \(+0.513\)) Tj ET
-0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 440.4 Td (5. COUNTERFACTUAL CONTROL & 6! = 720 MONTAGE OPTIMIZATION \(EXP-003\)) Tj ET
+0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 440.4 Td (5. COUNTERFACTUAL CONTROL \(EXP-003\) & INVERSE SYSTEM IDENTIFICATION \(EXP-004\)) Tj ET
 0.30 0.40 0.55 RG 0.60 w 48.0 436.4 m 564.0 436.4 l S
 0.08 0.11 0.18 rg BT /F2 8.3 Tf 48.0 425.4 Td (Table 2: Exhaustive 6! = 720 Montage Optimization Solutions on CORPUS-001 \(100% Footage Invariant\).) Tj ET
 0.92 0.95 0.98 rg 0.20 0.30 0.45 RG 0.6 w 48.0 408.4 516.0 13.0 re B
@@ -1025,11 +1025,11 @@ S
 0.08 0.11 0.18 rg BT /F1 7.9 Tf 467.0 353.4 Td (+0.0669) Tj ET
 0.08 0.11 0.18 rg BT /F1 7.9 Tf 515.0 353.4 Td (0.6358) Tj ET
 0.10 0.15 0.25 RG 0.90 w 48.0 350.4 m 564.0 350.4 l S
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 338.4 Td (Key EXP-003 Engineering Findings: \(1\) Across all 720 permutations of CORPUS-001, editorial order alone flips every belief axis \(B1 spans) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 328.2 Td ([-0.2603, +0.5130], Delta = 0.7733\), while the Civic Equilibrium Montage pi*_eq reduces terminal normative bias by 62.0% \(0.8620 -> 0.3274\).) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 318.0 Td (\(2\) In CORPUS-002 \(LBJ 'Daisy'\), damping the non-verbal nuclear blast \(-13.7 dBFS, D_JS = 0.577 bits\) while keeping words identical reduces) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 307.8 Td (mobilization x2\(T\) by 29.84% \(+0.2624 -> +0.1841\). \(3\) In CORPUS-003 \(Reagan 'Challenger'\), institutional anchoring provides a +0.4657) Tj ET
-0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 297.6 Td (inertia stabilization margin \(0.8921 vs. 0.4264\), shielding national unity from sign reversal \(x2\(T\) = +0.2321 > 0\) under late crisis critique.) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 338.4 Td (Key EXP-003 & EXP-004 Engineering Findings: \(1\) Across all 720 permutations of CORPUS-001, editorial order alone flips every belief axis) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 328.2 Td (\([-0.2603, +0.5130]\), while the Civic Equilibrium Montage pi*_eq reduces terminal normative bias by 62.0% \(0.8620 -> 0.3274\). \(2\) In CORPUS-002,) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 318.0 Td (damping the non-verbal nuclear blast reduces mobilization x2\(T\) by 29.84%. \(3\) In CORPUS-003, institutional anchoring yields +0.4657) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 307.8 Td (inertia stabilization. \(4\) In EXP-004 \(SystemIdentifier.cs\), Tikhonov Ridge identification across N = 308 transitions recovers Theta* with) Tj ET
+0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 297.6 Td (0.00% noiseless error, Trajectory R^2 = 0.9999 at 25 dB SNR, and Leave-One-Corpus-Out \(LOCO\) cross-domain generalization R^2 = 0.9999.) Tj ET
 0.08 0.11 0.18 rg BT /F2 9.6 Tf 48.0 280.4 Td (6. REFERENCES) Tj ET
 0.30 0.40 0.55 RG 0.60 w 48.0 276.4 m 564.0 276.4 l S
 0.08 0.11 0.18 rg BT /F1 8.6 Tf 48.0 265.4 Td ([1] Rojas Ruiz, J. I. \(2026\). Narrative Systems Engineering \(NSE\) and Computational Narrative Dynamics \(CND\). Zenodo. DOI: 10.5281/zenodo.23987656.) Tj ET
@@ -1058,5 +1058,5 @@ xref
 trailer
 << /Size 11 /Root 1 0 R >>
 startxref
-48172
+48168
 %%EOF
