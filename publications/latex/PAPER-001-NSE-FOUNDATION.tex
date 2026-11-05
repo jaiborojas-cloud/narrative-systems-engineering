@@ -1,0 +1,233 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+
+\geometry{
+  letterpaper,
+  top=0.8in,
+  bottom=0.85in,
+  left=0.72in,
+  right=0.72in,
+  columnsep=0.28in
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=blue!70!black,
+  urlcolor=blue!70!black,
+  pdftitle={Multimodal Narrative Systems Engineering: Signal-Grounded Metrics and State-Space Control Dynamics for Audiovisual Media},
+  pdfauthor={Jair Ivan Rojas Ruiz (ORCID: 0009-0003-1109-4583)}
+}
+
+\title{\textbf{Multimodal Narrative Systems Engineering: Signal-Grounded Metrics and State-Space Control Dynamics for Audiovisual Media}}
+
+\author{
+  \textbf{Jair Ivan Rojas Ruiz} (\emph{Jair Rojas})\\
+  Founder \& Principal Investigator, Narrative Systems Engineering (NSE)\\
+  ORCID: \href{https://orcid.org/0009-0003-1109-4583}{\texttt{0009-0003-1109-4583}} \quad|\quad
+  DOI: \href{https://doi.org/10.5281/zenodo.23987656}{\texttt{10.5281/zenodo.23987656}}\\
+  Repository: \href{https://github.com/jaiborojas-cloud/narrative-systems-engineering}{\texttt{github.com/jaiborojas-cloud/narrative-systems-engineering}}
+}
+
+\date{November 5, 2026 \quad(\texttt{PAPER-001} Preprint v1.1)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+Narratives across film, television, political discourse, and digital media are typically analyzed either through qualitative humanities frameworks or through isolated text-only natural language processing. Conversely, recent attempts to prompt large language models (LLMs) to score ``narrative impact'' or ``emotional intensity'' on arbitrary $0\text{--}100$ scales suffer from uncalibrated units, stochastic hallucination, and complete detachment from the physical audiovisual signal. In this paper, we introduce \textbf{Narrative Systems Engineering (NSE)} and its computational core, \textbf{Computational Narrative Dynamics (CND)}, a signal-grounded mathematical framework originated by Jair Ivan Rojas Ruiz \cite{RojasRuiz2026NSE} that models audiovisual narratives as multimodal time-series inputs $u(t) = (u_{\mathrm{ac}}(t), u_{\mathrm{vis}}(t), u_{\mathrm{ling}}(t))$ acting upon a bounded cognitive-social state space $x(t+1) = f(x(t), u(t))$. We formally define and operationalize six core narrative quantities: (1) \textbf{Narrative DNA} as a signed, time-anchored entity-belief tripartite graph; (2) \textbf{Narrative Entropy ($H$)} in Shannon bits over chromatic and normative-stance distributions; (3) \textbf{Narrative Energy ($E$)} via a non-collapsing cross-modal resonance functional coupling vocal prosody ($\mathrm{dBFS}$, $\mathrm{VAD}$), visual flux (Jensen-Shannon divergence across color distributions), and lexical-normative cadence; (4) \textbf{Narrative Complexity ($C$)} combining lexical diversity, dialectical connector density, and multi-value tension; (5) \textbf{Narrative Inertia ($\mathcal{I}$)} quantifying institutional and prior-conviction resistance to state displacement; and (6) \textbf{Narrative Controllability} via the discrete-time Controllability Gramian $W_c$ over finite horizons. We validate the framework empirically across a three-work, bilingual (Spanish/English) benchmark corpus (\texttt{EXP-001}, \texttt{EXP-002}, and \texttt{EXP-003}, totaling $513.6\text{ s}$ and $77$ time windows), demonstrating that the six NSE metrics cleanly separate polyphonic social debate (\texttt{CORPUS-001}), acute fear-appeal political campaigning (\texttt{CORPUS-002}, LBJ's 1964 \emph{``Daisy''} spot), and institutional crisis consolation (\texttt{CORPUS-003}, President Reagan's 1986 \emph{Challenger} address), while enabling exhaustive $6! = 720$ counterfactual montage synthesis that reduces normative bias by $62.0\%$.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Narrative Systems Engineering, Computational Narrative Dynamics, Multimodal Signal Processing, Shannon Narrative Entropy, Narrative Inertia, State-Space Control, Audiovisual Forensics.
+
+\section{Introduction}
+
+Human societies are structured, stabilized, and transformed by the transmission of symbolic narratives across audiovisual and linguistic media \cite{Green2000,Jones2010,Shiller2017}. However, bridging the gap between raw media signals (pixels, acoustic waveforms, lexical tokens) and higher-order cognitive and social dynamics remains an open scientific and engineering problem.
+
+Existing computational approaches divide into two disconnected paradigms:
+\begin{enumerate}
+  \item \textbf{Low-level media descriptors:} Computer vision and audio pipelines extract shot boundaries, color histograms, or automatic speech transcripts without modeling how these observables couple to form persuasive or symbolic structures \cite{Vicol2018}.
+  \item \textbf{Uncalibrated generative summaries:} Prompting LLMs to output ``narrative energy'' or ``belief shift'' without formal measurement operators produces plausible-sounding numerical fiction. For instance, defining Narrative Energy as a naive product $E = \mathrm{Intensity} \times \mathrm{Coherence} \times \mathrm{Repetition} \times \mathrm{Identification}$ fails dimensional analysis and collapses to zero whenever any single factor vanishes.
+\end{enumerate}
+
+To establish \textbf{Narrative Systems Engineering (NSE)} as a falsifiable discipline \cite{RojasRuiz2026NSE}, every metric must satisfy four strict criteria: (i) \emph{Signal Grounding} in physical PCM16 audio samples, RGB24 rasters, and time-aligned speech tokens; (ii) \emph{Stated Units and Bounds} (Shannon bits \cite{Shannon1948,Lin1991}, $\mathrm{dBFS}$, and bounded state spaces $[-1,1]^K$); (iii) \emph{Layer Separation} between observable work material, symbolic interpretation, and state response; and (iv) \emph{Executable Reproducibility}.
+
+\section{Multimodal Signal Vector \texorpdfstring{$u(t)$}{u(t)}}
+
+Let an audiovisual work of duration $T$ seconds be partitioned into $N$ discrete windows $t \in \{0, 1, \dots, N-1\}$ of duration $\Delta t$. At each window $t$, the work emits a multimodal signal vector:
+\begin{equation}
+  u(t) = \bigl(u_{\mathrm{ac}}(t),\; u_{\mathrm{vis}}(t),\; u_{\mathrm{ling}}(t)\bigr)
+\end{equation}
+
+\subsection{Acoustic Prosody Sub-Vector \texorpdfstring{$u_{\mathrm{ac}}(t)$}{u\_ac(t)}}
+Given the downmixed mono $16\text{ kHz}$ PCM16 waveform containing $M$ normalized samples $s_1, \dots, s_M \in [-1, 1]$ within window $t$:
+\begin{equation}
+  \mathrm{RMS}(t) = \sqrt{\frac{1}{M}\sum_{i=1}^{M} s_i^2}, \quad
+  L_{\mathrm{dB}}(t) = 20 \log_{10}\!\bigl(\max(\mathrm{RMS}(t), 10^{-5})\bigr)
+\end{equation}
+Partitioning window $t$ into $100\text{ ms}$ sub-frames yields the \textbf{Speech Activity Ratio} $\mathrm{VAD}(t) \in [0, 1]$ and intra-window \textbf{Dynamic Range} $\Delta L_{90\text{-}10}(t) = P_{90}(L_{\mathrm{dB}}) - P_{10}(L_{\mathrm{dB}})$. The normalized acoustic intensity $I_{\mathrm{ac}}(t) \in [0, 1]$ is:
+\begin{equation}
+  I_{\mathrm{ac}}(t) = \mathrm{clip}\!\left(0.55\,\frac{L_{\mathrm{dB}}(t) - L_{\min}}{L_{\max} - L_{\min}} + 0.30\,\mathrm{VAD}(t) + 0.15\,\frac{\Delta L_{90\text{-}10}(t)}{18.0},\; 0,\; 1\right)
+\end{equation}
+
+\subsection{Visual Dynamics Sub-Vector \texorpdfstring{$u_{\mathrm{vis}}(t)$}{u\_vis(t)}}
+For each sampled frame resized to a $64\times 64$ area-interpolated RGB24 raster ($P = 4096$ pixels), we compute ITU-R BT.709 luminance $Y_p = 0.2126 R_p + 0.7152 G_p + 0.0722 B_p$, spatial contrast $\sigma_Y(t)$, HSV saturation $S(t)$, and the 512-bin quantized color distribution $P_t(b)$.
+
+To measure visual pacing and camera transitions deterministically, we compute the \textbf{Jensen-Shannon Divergence} \cite{Lin1991} (in bits, bounded in $[0, 1]$) between consecutive frames:
+\begin{equation}
+  D_{\mathrm{JS}}(P_t \parallel P_{t-1}) = \frac{1}{2} D_{\mathrm{KL}}(P_t \parallel M) + \frac{1}{2} D_{\mathrm{KL}}(P_{t-1} \parallel M), \quad M = \frac{1}{2}(P_t + P_{t-1})
+\end{equation}
+A scene cut is detected whenever $D_{\mathrm{JS}}(t) \ge \tau_{\mathrm{cut}} = 0.30\text{ bits}$. Visual salience $\psi_{\mathrm{vis}}(t) \in [0, 1]$ combines shot flux, spatial contrast, and chromatic entropy $H_{\mathrm{vis}}(t) = -\sum_b P_t(b)\log_2 P_t(b)$:
+\begin{equation}
+  \psi_{\mathrm{vis}}(t) = \mathrm{clip}\!\left(0.40\,D_{\mathrm{JS}}(t) + 0.35\,\frac{\sigma_Y(t)}{0.32} + 0.25\,\frac{H_{\mathrm{vis}}(t)}{6.5},\; 0,\; 1\right)
+\end{equation}
+
+\subsection{Linguistic \& Normative Sub-Vector \texorpdfstring{$u_{\mathrm{ling}}(t)$}{u\_ling(t)}}
+From time-aligned speech segments overlapping window $t$, we extract speech cadence $\mathrm{WPM}(t)$, lexical Type-Token Ratio $\mathrm{TTR}(t)$, normative marker density $D_{\mathrm{norm}}(t)$, dialectical connector density $D_{\mathrm{dial}}(t)$, institutional anchoring $A_{\mathrm{inst}}(t) \in [0, 1]$, and active stance vector $z(t) \in [-1, 1]^K$.
+
+\section{Formal Definition of the Six Core NSE Metrics}
+
+\subsection{Narrative DNA (\texorpdfstring{$\mathcal{G}_{\mathrm{DNA}}$}{G\_DNA})}
+The Narrative DNA is defined as a signed, evidence-linked tripartite graph $\mathcal{G}_{\mathrm{DNA}} = (\mathcal{S} \cup \mathcal{A} \cup \mathcal{B}, \mathcal{E}, W)$ where $\mathcal{S}$ is the set of speaker agents, $\mathcal{A}$ is the set of symbolic archetypes, $\mathcal{B} = \{B_1, \dots, B_K\}$ is the set of core belief propositions, and $W: \mathcal{E} \to [-1, +1]$ assigns signed weights backed by verbatim timestamped quotes.
+
+\subsection{Narrative Energy \texorpdfstring{$E(t) \in [0, 100]$}{E(t)}}
+To eliminate zero-collapse while capturing multimodal synergy, Narrative Energy is formulated as a linear-geometric coupling functional:
+\begin{align}
+  \Phi_{\mathrm{sync}}(t) &= \sqrt{I_{\mathrm{ac}}(t) \cdot I_{\mathrm{ling}}(t)} \\
+  E(t) &= 100 \cdot \mathrm{clip}\!\Bigl(0.34\,I_{\mathrm{ac}}(t) + 0.22\,\psi_{\mathrm{vis}}(t) + 0.29\,I_{\mathrm{ling}}(t) + 0.15\,\Phi_{\mathrm{sync}}(t),\; 0,\; 1\Bigr)
+\end{align}
+
+\subsection{Narrative Entropy \texorpdfstring{$H_{\mathrm{narr}}(t)$}{H\_narr(t)} (in Shannon Bits)}
+Across $K$ belief dimensions, each possessing a positive ($+$) and negative ($-$) pole, let $m_{k,\pm}(t)$ denote the cumulative energy-weighted stance exposure mass up to window $t$, and $p_{k,\pm}(t) = m_{k,\pm}(t) / \sum_{j,s} m_{j,s}(t)$. The Shannon Narrative Stance Entropy \cite{Shannon1948} is:
+\begin{equation}
+  H_{\mathrm{narr}}(t) = -\sum_{k=1}^{K} \sum_{s \in \{+,-\}} p_{k,s}(t) \log_2 p_{k,s}(t) \in [0, \log_2(2K)]\text{ bits}
+\end{equation}
+For $K=4$ ($2K = 8$ poles), $H_{\max} = \log_2(8) = 3.00\text{ bits}$, and $\hat{H}_{\mathrm{narr}}(t) = H_{\mathrm{narr}}(t)/3.00 \in [0, 1]$.
+
+\subsection{Narrative Complexity \texorpdfstring{$C(t)$}{C(t)} and Inertia \texorpdfstring{$\mathcal{I}(t)$}{I(t)}}
+Complexity $C(t) \in [0, 100]$ and Inertia $\mathcal{I}(t) \in [0, 1]$ are given by:
+\begin{align}
+  C(t) &= 100 \cdot \mathrm{clip}\!\left(0.40\,\frac{\mathrm{TTR}(t)}{0.78} + 0.35\,\frac{D_{\mathrm{dial}}(t)}{0.11} + 0.25\,\frac{\max(0, |\{k : |z_k(t)| \ge 0.20\}| - 1)}{3.0},\; 0,\; 1\right) \\
+  \mathcal{I}(t) &= \mathrm{clip}\!\left(0.55\,A_{\mathrm{inst}}(t) + 0.25\,\frac{1}{K}\sum_{k=1}^{K} |x_k(t)| + 0.20\,\frac{t+1}{N},\; 0,\; 1\right)
+\end{align}
+
+\subsection{State-Space Control and Controllability Gramian \texorpdfstring{$W_c$}{W\_c}}
+Following Friedkin-Johnsen opinion dynamics \cite{Friedkin1990}, we model the collective cognitive state vector $x(t) \in [-1, 1]^K$ as a discrete-time Linear Time-Varying (LTV) system driven by stance input $z(t)$:
+\begin{equation}
+  x_k(t+1) = \bigl(1 - \gamma_k(t)\bigr) x_k(t) + \gamma_k(t) z_k(t), \qquad
+  \gamma_k(t) = \eta \cdot \frac{E(t)}{100} \cdot \bigl(1 - 0.65\,\mathcal{I}_k(t)\bigr)
+\end{equation}
+with $\eta = 0.18$. Over horizon $[0, N]$, let $\Phi_k(N, t+1) = \prod_{\tau=t+1}^{N-1} (1 - \gamma_k(\tau))$ and $\tilde{b}_k(t) = \gamma_k(t)(0.35 + 0.65|z_k(t)|)$. The diagonal \textbf{Controllability Gramian} is:
+\begin{equation}
+  W_{c,kk}(0, N) = \sum_{t=0}^{N-1} \Bigl(\Phi_k(N, t+1)\,\tilde{b}_k(t)\Bigr)^2, \qquad
+  \kappa(W_c) = \frac{\lambda_{\max}(W_c)}{\lambda_{\min}(W_c)}
+\end{equation}
+
+\begin{table*}[t]
+\centering
+\caption{Empirical Results Across Speaker Turns in \texttt{CORPUS-001} (\emph{Insumisi\'on Debate}, Spain, 1994, $194.84\text{ s}$, $N=39$).}
+\label{tab:exp001}
+\small
+\begin{tabular}{llccccccc}
+\toprule
+\textbf{Turn ID} & \textbf{Speaker / Visual Anchor} & \textbf{Span (s)} & \textbf{dBFS} & \textbf{WPM} & \textbf{Mean $E$} & \textbf{Comp. $C$} & \textbf{Inertia $\mathcal{I}$} & \textbf{Stance $(B_1, B_2, B_3, B_4)$} \\
+\midrule
+\texttt{ENV\_POSTER} & Activist Poster Close-up & $0\text{--}5$ & $-26.36$ & $312.0^*$ & $52.40$ & $65.00$ & $0.088$ & $(+0.90, -0.85, -0.20, +0.80)$ \\
+\texttt{SPK\_01} & Student 1 (Metallica shirt) & $5\text{--}45$ & $\mathbf{-16.96}$ & $\mathbf{203.7}$ & $\mathbf{72.90}$ & $75.67$ & $0.151$ & $(+0.93, -0.66, -0.38, +0.67)$ \\
+\texttt{SPK\_02} & Student 2 (White/pink shirt) & $45\text{--}90$ & $-19.83$ & $141.8$ & $63.86$ & $\mathbf{87.90}$ & $0.539$ & $(-0.48, +0.77, +0.91, -0.32)$ \\
+\texttt{SPK\_03} & Student 3 (World map wall) & $90\text{--}110$ & $-21.34$ & $201.0$ & $66.45$ & $76.15$ & $\mathbf{0.668}$ & $(-0.55, +0.95, +0.70, -0.60)$ \\
+\texttt{SPK\_04} & Student 4 (Navy NY shirt) & $110\text{--}130$ & $-18.64$ & $192.0$ & $65.08$ & $59.47$ & $0.536$ & $(+0.15, +0.60, +0.20, +0.85)$ \\
+\texttt{SPK\_05} & Student 5 (Plaid shirt, hall) & $130\text{--}194.8$ & $-22.21$ & $185.1$ & $57.18$ & $68.39$ & $0.663$ & $(-0.25, +0.72, +0.89, -0.04)$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Experiment \texttt{EXP-001}: Polyphonic Debate Observability}
+
+We first evaluated the framework on \texttt{06-FCE-V-C110-007-C.mp4} ($194.84\text{ s}$, $N=39$ windows), an archival Spanish university debate on compulsory military conscription (\emph{la mili}) vs.\ civil disobedience (\emph{insumisi\'on}). Table~\ref{tab:exp001} summarizes the multimodal telemetry across the six turns over four belief dimensions: $B_1$ (\emph{Anti-Militarist Abolitionism}), $B_2$ (\emph{Civic \& Legal Compliance}), $B_3$ (\emph{Pragmatic Social Service}), and $B_4$ (\emph{Individual Conscience Autonomy}).
+
+Key findings from \texttt{EXP-001}:
+\begin{enumerate}
+  \item \textbf{Deterministic Shot Boundary Recovery:} $D_{\mathrm{JS}}(P_t \parallel P_{t-1}) \ge 0.30\text{ bits}$ recovered all four true camera cuts (Windows \#0, \#1, \#18, \#26) with zero false positives.
+  \item \textbf{Energy vs.\ Inertia Asymmetry:} \texttt{SPK\_01} achieved the highest Narrative Energy ($E = 76.54$ at Window \#7; mean $72.90$) due to loud prosody ($-16.96\text{ dBFS}$) and rapid cadence ($203.7\text{ WPM}$), but the lowest Inertia ($\mathcal{I} = 0.151$) because he advocated abolishing an existing institution. Conversely, \texttt{SPK\_03} spoke $4.4\text{ dB}$ softer but achieved the highest Inertia ($\mathcal{I} = 0.668$) by anchoring military service in statutory law and taxation.
+\end{enumerate}
+
+\begin{table*}[t]
+\centering
+\caption{Cross-Domain Empirical Atlas (\texttt{EXP-002}) Comparing Three Narrative Regimes Across $513.6\text{ s}$ ($77$ Windows).}
+\label{tab:exp002}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric / Dimension} & \textbf{\texttt{CORPUS-001}: Insumisi\'on Debate (ES)} & \textbf{\texttt{CORPUS-002}: LBJ ``Daisy'' (EN)} & \textbf{\texttt{CORPUS-003}: Reagan Challenger (EN)} \\
+\midrule
+Communicative Regime & Polyphonic Civic Debate & Acute Fear-Appeal Spot & Institutional Crisis Consolation \\
+Duration \& Windows & $194.84\text{ s}$ ($39\times 5\text{ s}$) & $59.83\text{ s}$ ($12\times 5\text{ s}$) & $258.93\text{ s}$ ($26\times 10\text{ s}$) \\
+Mean Narrative Energy $\bar{E}$ & $\mathbf{63.58}$ & $50.51$ & $56.45$ \\
+Peak Narrative Energy $E_{\max}$ & $76.54$ (Win \#7) & $\mathbf{83.29}$ (Win \#6) & $61.98$ (Win \#10) \\
+Energy Dynamic Range ($E_{\max}-E_{\min}$) & $33.91$ & $\mathbf{59.40}$ ($23.9\text{--}83.3$) & $31.76$ \\
+Final Stance Entropy $H(T)$ & $\mathbf{2.7574\text{ bits}}$ ($91.9\%$) & $2.2292\text{ bits}$ ($74.3\%$) & $\mathbf{2.0240\text{ bits}}$ ($67.5\%$) \\
+Mean Narrative Inertia $\bar{\mathcal{I}}$ & $0.5019$ & $0.4420$ & $\mathbf{0.7266}$ (peaks at $\mathbf{0.8921}$) \\
+Visual Scene Cuts ($D_{\mathrm{JS}} \ge 0.30$) & $4$ cuts ($\max 0.490$) & $3$ cuts ($\mathbf{\max 0.577}$) & $\mathbf{1\text{ cut}}$ ($\max 0.042$ mid-speech) \\
+Final Polarization Index $P(T)$ & $\mathbf{0.5515}$ & $0.4200$ & $\mathbf{0.0617}$ \\
+Control Condition $\kappa(W_c)$ & $2.738$ & $1.783$ & $1.457$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Experiment \texttt{EXP-002}: Cross-Domain Phase-Space Atlas}
+
+To verify genre separation without parameter recalibration, we analyzed two historic Public Domain U.S.\ broadcasts alongside \texttt{CORPUS-001} (Table~\ref{tab:exp002}):
+\begin{itemize}
+  \item \textbf{\texttt{CORPUS-002} (\emph{LBJ ``Daisy'' Nuclear Spot}, 1964, $59.83\text{ s}$):} Windows \#0--\#3 establish a quiet meadow baseline ($E \in [23.89, 32.82]$, $-28.2\text{ dBFS}$). At Window \#6 ($30\text{--}35\text{ s}$, nuclear detonation), visual divergence spikes to $D_{\mathrm{JS}} = 0.5766\text{ bits}$, acoustic level hits $-13.68\text{ dBFS}$, and Narrative Energy surges $3.49\times$ to $\mathbf{83.29/100}$.
+  \item \textbf{\texttt{CORPUS-003} (\emph{Reagan Challenger Address}, 1986, $258.93\text{ s}$):} Exhibits zero mid-speech camera cuts ($\max D_{\mathrm{JS}} = 0.0419\text{ bits}$), lowest stance entropy ($2.0240\text{ bits}$), near-zero polarization ($0.0617$), and maximum Institutional Inertia ($\mathcal{I}(T) = 0.8921$).
+\end{itemize}
+In the normalized 5D NSE Metric Space $\mathbf{m} = (\bar{E}/100, E_{\max}/100, \hat{H}(T), \bar{\mathcal{I}}, P(T))$, the pairwise Euclidean distances are $\|\mathbf{m}_{\mathrm{C1}} - \mathbf{m}_{\mathrm{C2}}\|_2 = 0.2711$, $\|\mathbf{m}_{\mathrm{C2}} - \mathbf{m}_{\mathrm{C3}}\|_2 = 0.5128$, and $\|\mathbf{m}_{\mathrm{C1}} - \mathbf{m}_{\mathrm{C3}}\|_2 = \mathbf{0.6135}$ (with terminal state distance $\|\mathbf{x}_{\mathrm{C1}}(T) - \mathbf{x}_{\mathrm{C3}}(T)\|_2 = \mathbf{1.0045}$).
+
+\begin{table*}[t]
+\centering
+\caption{Optimal Montage Synthesis Solutions Across All $6! = 720$ Block Permutations in \texttt{EXP-003} (\texttt{CORPUS-001}).}
+\label{tab:exp003}
+\small
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Control Objective} & \textbf{Synthesized Block Sequence $\pi^*$} & $x_1(T)$ & $x_2(T)$ & $x_3(T)$ & $x_4(T)$ & \textbf{Bias $\|x(T)\|_2$} & \textbf{Shift $\|\Delta x\|_2$} \\
+\midrule
+Original Broadcast & \texttt{P $\to$ S1 $\to$ S2 $\to$ S3 $\to$ S4 $\to$ S5} & $-0.1445$ & $+0.5524$ & $+0.6446$ & $+0.0391$ & $0.8620$ & $0.0000$ \\
+$\pi^*_{\mathrm{anti}}$ (Max Abolitionism) & \texttt{S3 $\to$ S2 $\to$ S5 $\to$ S4 $\to$ P $\to$ S1} & $\mathbf{+0.5130}$ & $-0.1717$ & $-0.0304$ & $+0.4568$ & $0.7087$ & $\mathbf{1.2597}$ \\
+$\pi^*_{\mathrm{legal}}$ (Max Legal Compliance) & \texttt{P $\to$ S1 $\to$ S4 $\to$ S5 $\to$ S2 $\to$ S3} & $-0.2601$ & $\mathbf{+0.5830}$ & $+0.6705$ & $-0.1552$ & $0.9387$ & $0.2296$ \\
+$\pi^*_{\mathrm{eq}}$ (Min-Bias Equilibrium) & \texttt{S4 $\to$ P $\to$ S5 $\to$ S2 $\to$ S1 $\to$ S3} & $+0.2262$ & $+0.0606$ & $+0.1787$ & $+0.1430$ & $\mathbf{0.3274}$ & $0.7792$ \\
+$\pi^*_{\mathrm{aut}}$ (Max Autonomy) & \texttt{S3 $\to$ S2 $\to$ S5 $\to$ S1 $\to$ P $\to$ S4} & $+0.3958$ & $-0.0083$ & $+0.0669$ & $\mathbf{+0.4930}$ & $0.6358$ & $1.0705$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Experiment \texttt{EXP-003}: Counterfactual Control \& Montage Optimization}
+
+To demonstrate constructive systems engineering, \texttt{CounterfactualController.cs} (\texttt{Argon.Engine v0.3}) solves three counterfactual control problems:
+\begin{enumerate}
+  \item \textbf{Exhaustive $6! = 720$ Montage Reachability (\texttt{CORPUS-001}):} Evaluating all $720$ permutations of the 6 speaker blocks (holding 100\% of the footage invariant) proves that editorial order alone flips the terminal sign of every belief axis: $x_1(T) \in [-0.2603, +0.5130]$ ($\Delta = 0.7733$) and $x_2(T) \in [-0.1795, +0.5830]$ ($\Delta = 0.7625$). Solving $\min_{\pi \in S_6} \|x(T)\|_2$ yields the \textbf{Civic Equilibrium Montage} $\pi^*_{\mathrm{eq}}$ (Table~\ref{tab:exp003}), reducing terminal normative bias by $\mathbf{-62.0\%}$ ($\|x^*(T)\|_2 = 0.3274$ vs.\ $0.8620$) without cutting a single frame.
+  \item \textbf{Non-Verbal Shock Impulse Leverage (\texttt{CORPUS-002}):} Attenuating the nuclear roar and atomic flash in Windows \#4--\#8 of \emph{``Daisy''} while keeping the verbal transcript identical reduces terminal mobilization $x_2(T)$ from $+0.2624$ to $+0.1841$, proving that $\mathbf{29.84\%}$ of the spot's state displacement is driven purely by the non-verbal audiovisual shock wave.
+  \item \textbf{Institutional Inertial Shielding (\texttt{CORPUS-003}):} Removing presidential institutional anchoring reduces terminal inertia by $\mathbf{-0.4657}$ ($0.8921 \to 0.4264$), whereas accumulated institutional inertia shields the address from terminal sign reversal ($x_2(T) = +0.2321 > 0$) even under a late $30\text{ s}$ high-energy crisis perturbation.
+\end{enumerate}
+
+\section{Conclusion}
+
+By unifying physical signal operators (PCM prosody, Jensen-Shannon visual divergence, Shannon stance entropy) with LTV state-space control and exhaustive montage optimization, \textbf{Narrative Systems Engineering} establishes a falsifiable, reproducible engineering discipline for multimodal media.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

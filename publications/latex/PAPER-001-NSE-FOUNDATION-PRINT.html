@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Multimodal Narrative Systems Engineering — Jair Ivan Rojas Ruiz (2026)</title>
+<style>
+
+@page {
+  size: letter;
+  margin: 16mm 15mm 18mm 15mm;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 9.6pt;
+  line-height: 1.44;
+  color: #111827;
+  background: #ffffff;
+}
+.page-wrap {
+  max-width: 190mm;
+  margin: 0 auto;
+}
+.title-block {
+  text-align: center;
+  border-bottom: 1.5px solid #1e293b;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.title-block h1 {
+  font-size: 16.5pt;
+  line-height: 1.22;
+  margin: 0 0 8px 0;
+  color: #0f172a;
+}
+.author-name {
+  font-size: 11.5pt;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.author-meta {
+  font-size: 8.8pt;
+  color: #334155;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+.abstract-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 3.5px solid #0f172a;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  text-align: justify;
+  font-size: 9.1pt;
+}
+.abstract-box strong.abs-title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 8.5pt;
+  color: #0f172a;
+}
+.two-col {
+  column-count: 2;
+  column-gap: 7mm;
+  text-align: justify;
+}
+h2 {
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #0f172a;
+  border-bottom: 0.75px solid #94a3b8;
+  padding-bottom: 2px;
+  margin: 12px 0 6px 0;
+  break-after: avoid;
+}
+h3 {
+  font-size: 9.8pt;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 9px 0 4px 0;
+  break-after: avoid;
+}
+p { margin: 0 0 7px 0; }
+.eq {
+  background: #f8fafc;
+  border: 0.5px solid #e2e8f0;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin: 6px 0;
+  font-family: 'Cambria Math', 'Times New Roman', serif;
+  font-size: 9.2pt;
+  text-align: center;
+  break-inside: avoid;
+}
+.eq .eq-num {
+  float: right;
+  color: #64748b;
+  font-size: 8.5pt;
+}
+.full-span {
+  column-span: all;
+  margin: 12px 0;
+  break-inside: avoid;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8.2pt;
+  margin: 4px 0 6px 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+th, td {
+  padding: 4.5px 6px;
+  border-bottom: 0.6px solid #cbd5e1;
+  text-align: left;
+}
+thead th {
+  border-top: 1.2px solid #0f172a;
+  border-bottom: 1.2px solid #0f172a;
+  font-weight: 700;
+  color: #0f172a;
+  background: #f1f5f9;
+}
+tbody tr:last-child td {
+  border-bottom: 1.2px solid #0f172a;
+}
+.caption {
+  font-size: 8.3pt;
+  color: #334155;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.fig-box {
+  border: 0.75px solid #cbd5e1;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+ul, ol { margin: 0 0 7px 0; padding-left: 16px; }
+li { margin-bottom: 3px; }
+code {
+  font-family: 'Consolas', monospace;
+  font-size: 8.3pt;
+  background: #f1f5f9;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+.ref-list {
+  font-size: 8.3pt;
+  line-height: 1.35;
+}
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+<div class="title-block">
+  <h1>Multimodal Narrative Systems Engineering: Signal-Grounded Metrics and State-Space Control Dynamics for Audiovisual Media</h1>
+  <div class="author-name">Jair Ivan Rojas Ruiz (<em>Jair Rojas</em>)</div>
+  <div class="author-meta">Founder &amp; Principal Investigator, Narrative Systems Engineering (NSE) &bull; ORCID: 0009-0003-1109-4583 &bull; DOI: 10.5281/zenodo.23987656</div>
+  <div class="author-meta">Repository: https://github.com/jaiborojas-cloud/narrative-systems-engineering &bull; Date: November 5, 2026 (PAPER-001 v1.1)</div>
+</div>
+<div class="abstract-box">
+  <strong class="abs-title">Abstract —</strong> Narratives across film, television, political discourse, and digital media are typically analyzed either through qualitative humanities frameworks or through isolated text-only natural language processing. Conversely, recent attempts to prompt large language models (LLMs) to score &ldquo;narrative impact&rdquo; or &ldquo;emotional intensity&rdquo; on arbitrary 0–100 scales suffer from uncalibrated units, stochastic hallucination, and complete detachment from the physical audiovisual signal. In this paper, we introduce <strong>Narrative Systems Engineering (NSE)</strong> and its computational core, <strong>Computational Narrative Dynamics (CND)</strong>, a signal-grounded mathematical framework originated by Jair Ivan Rojas Ruiz that models audiovisual narratives as multimodal time-series inputs <em>u(t) = (u<sub>ac</sub>(t), u<sub>vis</sub>(t), u<sub>ling</sub>(t))</em> acting upon a bounded cognitive-social state space <em>x(t+1) = f(x(t), u(t))</em>. We formally define and operationalize six core narrative quantities: (1) <strong>Narrative DNA</strong> as a signed, time-anchored entity-belief tripartite graph; (2) <strong>Narrative Entropy (H)</strong> in Shannon bits over chromatic and normative-stance distributions; (3) <strong>Narrative Energy (E)</strong> via a non-collapsing cross-modal resonance functional coupling vocal prosody (dBFS, VAD), visual flux (Jensen-Shannon divergence across color distributions), and lexical-normative cadence; (4) <strong>Narrative Complexity (C)</strong>; (5) <strong>Narrative Inertia (I)</strong>; and (6) <strong>Narrative Controllability</strong> via the discrete-time Controllability Gramian <em>W<sub>c</sub></em>. We validate the framework empirically across a three-work, bilingual (Spanish/English) benchmark corpus (<code>EXP-001</code>, <code>EXP-002</code>, and <code>EXP-003</code>, totaling 513.6 s and 77 time windows), demonstrating clean separation across civic debate, acute fear-appeal campaigning (LBJ's 1964 <em>&ldquo;Daisy&rdquo;</em> spot), and institutional crisis consolation (Reagan's 1986 <em>Challenger</em> address), while solving all 6! = 720 counterfactual montage permutations to achieve a 62.0% algorithmic reduction in terminal normative bias.<br>
+  <strong>Keywords:</strong> Narrative Systems Engineering, Computational Narrative Dynamics, Multimodal Signal Processing, Shannon Narrative Entropy, Narrative Inertia, State-Space Control.
+</div>
+<div class="two-col">
+<h2>1. Introduction</h2>
+<p>Human societies are structured, stabilized, and transformed by the transmission of symbolic narratives across audiovisual and linguistic media [5, 6, 7]. However, bridging the gap between raw media signals (pixels, acoustic waveforms, lexical tokens) and higher-order cognitive and social dynamics remains an open scientific and engineering problem.</p>
+<p>Existing computational approaches divide into two disconnected paradigms: (1) <em>low-level media descriptors</em> (shot boundaries, histograms, or transcripts) that do not model persuasive coupling [4], and (2) <em>uncalibrated generative summaries</em> that prompt LLMs for arbitrary scores. Defining Narrative Energy as a naive product <em>E = Intensity &times; Coherence &times; Repetition &times; Identification</em> fails dimensional analysis and collapses to zero whenever any single factor vanishes.</p>
+<p>To establish <strong>Narrative Systems Engineering (NSE)</strong> as a falsifiable discipline [1], every metric in our engine (<code>Argon.Engine v0.3</code>) satisfies four strict criteria: (i) <strong>Signal Grounding</strong> in 16-bit PCM audio samples, 64&times;64 RGB24 rasters, and time-aligned speech tokens; (ii) <strong>Stated Units and Bounds</strong> (Shannon bits [2, 3], dBFS, and bounded state vectors in [&minus;1, 1]<sup>K</sup>); (iii) <strong>Layer Separation</strong> between observable work material, symbolic interpretation, and state response; and (iv) <strong>Executable Reproducibility</strong>.</p>
+<h2>2. Multimodal Signal Vector u(t)</h2>
+<p>Let an audiovisual work of duration <em>T</em> seconds be partitioned into <em>N</em> discrete time windows <em>t &isin; {0, 1, ..., N&minus;1}</em> of width <em>&Delta;t</em>. At each window <em>t</em>, the work emits a multimodal signal vector <em>u(t) = (u<sub>ac</sub>(t), u<sub>vis</sub>(t), u<sub>ling</sub>(t))</em>.</p>
+<h3>2.1 Acoustic Prosody Sub-Vector u<sub>ac</sub>(t)</h3>
+<p>From the downmixed mono 16 kHz PCM16 waveform containing <em>M</em> normalized samples <em>s<sub>i</sub> &isin; [&minus;1, 1]</em> within window <em>t</em>, we compute Root-Mean-Square amplitude and decibels full scale:</p>
+<div class="eq">RMS(t) = [ (1/M) &Sigma; s<sub>i</sub><sup>2</sup> ]<sup>1/2</sup>, &nbsp;&nbsp; L<sub>dB</sub>(t) = 20 log<sub>10</sub>(max(RMS(t), 10<sup>&minus;5</sup>)) <span class="eq-num">(1)</span></div>
+<p>Sub-framing window <em>t</em> into 100 ms intervals yields the Speech Activity Ratio VAD(t) &isin; [0, 1] and intra-window dynamic range &Delta;L<sub>90-10</sub>(t), normalized into acoustic intensity <em>I<sub>ac</sub>(t) &isin; [0, 1]</em>:</p>
+<div class="eq">I<sub>ac</sub>(t) = clip(0.55 L&#770;<sub>dB</sub>(t) + 0.30 VAD(t) + 0.15 (&Delta;L<sub>90-10</sub>(t)/18), 0, 1) <span class="eq-num">(2)</span></div>
+<h3>2.2 Visual Dynamics Sub-Vector u<sub>vis</sub>(t)</h3>
+<p>For each frame resized to a 64&times;64 RGB24 raster (4096 pixels), we compute ITU-R BT.709 luminance <em>Y<sub>p</sub></em>, spatial contrast <em>&sigma;<sub>Y</sub>(t)</em>, HSV saturation, and the 512-bin quantized color distribution <em>P<sub>t</sub>(b)</em>. Camera cuts and visual flux are measured via the <strong>Jensen-Shannon Divergence</strong> in bits [3]:</p>
+<div class="eq">D<sub>JS</sub>(P<sub>t</sub> || P<sub>t&minus;1</sub>) = &frac12; D<sub>KL</sub>(P<sub>t</sub> || M) + &frac12; D<sub>KL</sub>(P<sub>t&minus;1</sub> || M) &isin; [0, 1] bits <span class="eq-num">(3)</span></div>
+<p>where <em>M = &frac12;(P<sub>t</sub> + P<sub>t&minus;1</sub>)</em>. A hard scene cut is detected deterministically whenever <em>D<sub>JS</sub>(t) &ge; 0.30 bits</em>. Visual salience <em>&psi;<sub>vis</sub>(t)</em> couples <em>D<sub>JS</sub>(t)</em>, contrast <em>&sigma;<sub>Y</sub>(t)</em>, and chromatic Shannon entropy <em>H<sub>vis</sub>(t)</em>.</p>
+<h2>3. Six Core NSE Metrics &amp; Control</h2>
+<h3>3.1 Narrative Energy E(t) &amp; Cross-Modal Resonance</h3>
+<p>To prevent zero-collapse while rewarding vocal-lexical synchronization, Narrative Energy <em>E(t) &isin; [0, 100]</em> is formulated via the geometric Cross-Modal Resonance functional <em>&Phi;<sub>sync</sub>(t) = [I<sub>ac</sub>(t) &middot; I<sub>ling</sub>(t)]<sup>1/2</sup></em>:</p>
+<div class="eq">E(t) = 100 &middot; clip(0.34 I<sub>ac</sub>(t) + 0.22 &psi;<sub>vis</sub>(t) + 0.29 I<sub>ling</sub>(t) + 0.15 &Phi;<sub>sync</sub>(t), 0, 1) <span class="eq-num">(4)</span></div>
+<h3>3.2 Shannon Narrative Stance Entropy H<sub>narr</sub>(t)</h3>
+<p>Across <em>K = 4</em> belief dimensions (8 signed poles <em>p<sub>k,&plusmn;</sub>(t)</em> weighted by cumulative energy exposure), Shannon Narrative Entropy [2] is:</p>
+<div class="eq">H<sub>narr</sub>(t) = &minus;&Sigma;<sub>k,s</sub> p<sub>k,s</sub>(t) log<sub>2</sub> p<sub>k,s</sub>(t) &isin; [0, 3.00] bits <span class="eq-num">(5)</span></div>
+<h3>3.3 Narrative Inertia I(t) &amp; LTV State-Space Control</h3>
+<p>Narrative Inertia <em>I(t) = clip(0.55 A<sub>inst</sub>(t) + 0.25 ||x(t)||<sub>1</sub>/K + 0.20 (t+1)/N, 0, 1)</em> damps state susceptibility in the discrete-time Linear Time-Varying (LTV) opinion state equation [4]:</p>
+<div class="eq">x<sub>k</sub>(t+1) = (1 &minus; &gamma;<sub>k</sub>(t)) x<sub>k</sub>(t) + &gamma;<sub>k</sub>(t) z<sub>k</sub>(t), &nbsp;&nbsp; &gamma;<sub>k</sub>(t) = 0.18 [E(t)/100] (1 &minus; 0.65 I<sub>k</sub>(t)) <span class="eq-num">(6)</span></div>
+<p>The diagonal Controllability Gramian over horizon <em>[0, N]</em> is <em>W<sub>c,kk</sub> = &Sigma;<sub>t</sub> [&Phi;<sub>k</sub>(N, t+1) b&#771;<sub>k</sub>(t)]<sup>2</sup></em>, with condition number <em>&kappa;(W<sub>c</sub>) = &lambda;<sub>max</sub> / &lambda;<sub>min</sub></em>.</p>
+<div class="full-span">
+  <div class="caption">Table 1: Cross-Domain Empirical Atlas (EXP-001 &amp; EXP-002) Comparing Three Narrative Regimes Across 513.6 Seconds (77 Windows).</div>
+  <table>
+    <thead><tr><th>Metric / Dimension</th><th>CORPUS-001: Insumisión Debate (1994, ES)</th><th>CORPUS-002: LBJ 'Daisy' Spot (1964, EN)</th><th>CORPUS-003: Reagan Challenger (1986, EN)</th><th>Structural Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Communicative Regime</strong></td><td>Polyphonic Civic Debate</td><td>Acute Fear-Appeal Political Spot</td><td>Institutional Crisis Consolation</td><td>Three orthogonal narrative functions</td></tr>
+      <tr><td><strong>Duration &amp; Windows</strong></td><td>194.84 s (39 &times; 5 s)</td><td>59.83 s (12 &times; 5 s)</td><td>258.93 s (26 &times; 10 s)</td><td>Standardized multimodal profiling</td></tr>
+      <tr><td><strong>Mean Narrative Energy E&#772;</strong></td><td><strong>63.58</strong></td><td>50.51</td><td>56.45</td><td>Debate sustains high vocal/lexical energy</td></tr>
+      <tr><td><strong>Peak Narrative Energy E<sub>max</sub></strong></td><td>76.54 (Window #7)</td><td><strong>83.29 (Window #6)</strong></td><td>61.98 (Window #10)</td><td><em>Daisy</em> nuclear blast yields highest spike</td></tr>
+      <tr><td><strong>Final Stance Entropy H(T)</strong></td><td><strong>2.7574 bits (91.9%)</strong></td><td>2.2292 bits (74.3%)</td><td><strong>2.0240 bits (67.5%)</strong></td><td>Debate maximizes frame dispersion</td></tr>
+      <tr><td><strong>Mean / Peak Inertia I(t)</strong></td><td>0.5019 (peak 0.728)</td><td>0.4420 (peak 0.799)</td><td><strong>0.7266 (peak 0.8921)</strong></td><td>Reagan maximizes institutional inertia</td></tr>
+      <tr><td><strong>Scene Cuts (D<sub>JS</sub> &ge; 0.30)</strong></td><td>4 cuts (max 0.490 bits)</td><td>3 cuts (<strong>max 0.577 bits</strong>)</td><td><strong>1 cut (max 0.042 mid-speech)</strong></td><td>Unbroken Oval Office shot vs. atomic flash</td></tr>
+      <tr><td><strong>Final Polarization P(T)</strong></td><td><strong>0.5515</strong></td><td>0.4200</td><td><strong>0.0617</strong></td><td>Reagan achieves near-zero polarization</td></tr>
+      <tr><td><strong>Control Condition &kappa;(W<sub>c</sub>)</strong></td><td>2.738</td><td>1.783</td><td>1.457</td><td>Balanced multi-axis control in CORPUS-003</td></tr>
+    </tbody>
+  </table>
+</div>
+<h2>4. Empirical Results: EXP-001 &amp; EXP-002</h2>
+<p>In <code>EXP-001</code> (<code>CORPUS-001</code>, Spanish university conscription debate), Jensen-Shannon divergence <em>D<sub>JS</sub> &ge; 0.30 bits</em> recovered all four true camera transitions (Windows #0, #1, #18, #26) without false positives. Speaker <code>SPK_01</code> achieved the highest Narrative Energy (mean 72.90, peak 76.54 at Window #7, &minus;16.96 dBFS, 203.7 WPM) but the lowest Narrative Inertia (0.151) because he advocated abolishing an existing institution. Conversely, <code>SPK_03</code> spoke 4.4 dB softer (&minus;21.34 dBFS) yet achieved the highest Inertia (0.668) by anchoring military service in statutory law and taxation.</p>
+<p>In <code>EXP-002</code> (Table 1 &amp; Figure 1), projecting all three works into the 5D NSE Metric Space yields non-degenerate Euclidean separation: <strong>||m<sub>C1</sub> &minus; m<sub>C2</sub>||<sub>2</sub> = 0.2711</strong>, <strong>||m<sub>C2</sub> &minus; m<sub>C3</sub>||<sub>2</sub> = 0.5128</strong>, and <strong>||m<sub>C1</sub> &minus; m<sub>C3</sub>||<sub>2</sub> = 0.6135</strong> (terminal state distance <strong>||x<sub>C1</sub>(T) &minus; x<sub>C3</sub>(T)||<sub>2</sub> = 1.0045</strong>).</p>
+<div class="full-span">
+  <div class="fig-box">
+<svg viewBox="0 0 760 220" width="100%" height="210" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif" font-size="9">
+  <rect x="35" y="20" width="320" height="165" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="195" y="13" text-anchor="middle" font-weight="bold" font-size="9.5" fill="#0f172a">A. Cross-Domain Normalized Energy Trajectories E(t/T)</text>
+  <line x1="35" y1="185.0" x2="355" y2="185.0" stroke="#e2e8f0" stroke-width="0.7"/>
+  <text x="30" y="188.0" text-anchor="end" fill="#475569" font-size="8">0</text>
+  <line x1="35" y1="143.8" x2="355" y2="143.8" stroke="#e2e8f0" stroke-width="0.7"/>
+  <text x="30" y="146.8" text-anchor="end" fill="#475569" font-size="8">25</text>
+  <line x1="35" y1="102.5" x2="355" y2="102.5" stroke="#e2e8f0" stroke-width="0.7"/>
+  <text x="30" y="105.5" text-anchor="end" fill="#475569" font-size="8">50</text>
+  <line x1="35" y1="61.2" x2="355" y2="61.2" stroke="#e2e8f0" stroke-width="0.7"/>
+  <text x="30" y="64.2" text-anchor="end" fill="#475569" font-size="8">75</text>
+  <line x1="35" y1="20.0" x2="355" y2="20.0" stroke="#e2e8f0" stroke-width="0.7"/>
+  <text x="30" y="23.0" text-anchor="end" fill="#475569" font-size="8">100</text>
+  <text x="195" y="202" text-anchor="middle" fill="#334155" font-size="8.5">Normalized Time τ = t / T ∈ [0, 1]</text>
+  <polyline fill="none" stroke="#d97706" stroke-width="2" points="35.0,98.5 43.4,63.9 51.8,63.3 60.2,71.9 68.7,69.2 77.1,65.8 85.5,63.7 93.9,58.7 102.4,61.2 110.8,69.6 119.2,66.5 127.6,63.8 136.1,98.3 144.5,114.7 152.9,78.2 161.3,72.3 169.8,75.2 178.2,78.0 186.6,60.4 195.0,80.4 203.4,74.2 211.8,86.5 220.2,74.1 228.7,76.5 237.1,75.0 245.5,84.9 253.9,86.3 262.4,99.8 270.8,93.3 279.2,91.1 287.6,92.7 296.1,92.3 304.5,89.6 312.9,89.0 321.3,82.8 329.8,87.3 338.2,89.5 346.6,89.0 355.0,95.8"/>
+  <polyline fill="none" stroke="#dc2626" stroke-width="2" points="35.0,137.9 64.1,130.8 93.2,145.6 122.3,144.2 151.4,102.7 180.4,107.5 209.6,47.6 238.6,59.6 267.7,69.3 296.8,64.6 325.9,88.9 355.0,121.4"/>
+  <polyline fill="none" stroke="#0284c7" stroke-width="2" points="35.0,87.4 47.8,88.6 60.6,88.4 73.4,89.8 86.2,84.6 99.0,92.3 111.8,88.2 124.6,93.4 137.4,85.7 150.2,83.9 163.0,82.7 175.8,84.6 188.6,86.2 201.4,84.4 214.2,89.8 227.0,83.4 239.8,92.1 252.6,90.5 265.4,97.3 278.2,98.5 291.0,97.0 303.8,89.9 316.6,98.6 329.4,94.2 342.2,101.6 355.0,135.1"/>
+  <text x="42" y="34" fill="#d97706" font-weight="bold" font-size="8">— CORPUS-001 (Debate)</text>
+  <text x="145" y="34" fill="#dc2626" font-weight="bold" font-size="8">— CORPUS-002 (LBJ Daisy, Peak 83.3)</text>
+  <text x="42" y="46" fill="#0284c7" font-weight="bold" font-size="8">— CORPUS-003 (Reagan Challenger)</text>
+  <rect x="415" y="20" width="320" height="165" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="575" y="13" text-anchor="middle" font-weight="bold" font-size="9.5" fill="#0f172a">B. Reachable State Hull Across 6! = 720 Montages (EXP-003)</text>
+  <line x1="536.9" y1="20" x2="536.9" y2="185" stroke="#94a3b8" stroke-dasharray="3,2" stroke-width="0.8"/>
+  <line x1="415" y1="137.9" x2="735" y2="137.9" stroke="#94a3b8" stroke-dasharray="3,2" stroke-width="0.8"/>
+  <circle cx="492.9" cy="51.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="493.7" cy="52.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="478.6" cy="49.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="491.5" cy="51.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="525.3" cy="69.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="546.8" cy="81.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="532.5" cy="79.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="603.1" cy="110.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="505.5" cy="58.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="547.2" cy="82.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="503.8" cy="65.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="558.1" cy="89.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="485.7" cy="55.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="529.0" cy="78.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="502.4" cy="65.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="514.0" cy="82.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="529.6" cy="74.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="599.2" cy="109.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="556.3" cy="89.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="517.2" cy="83.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="492.9" cy="51.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="493.7" cy="52.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="478.6" cy="49.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="491.4" cy="51.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="496.7" cy="53.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="499.4" cy="55.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="492.7" cy="54.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="513.2" cy="59.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="495.1" cy="53.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="500.2" cy="56.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="485.5" cy="53.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="504.7" cy="58.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="479.4" cy="50.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="484.7" cy="53.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="482.3" cy="52.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="464.3" cy="51.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="496.0" cy="54.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="504.3" cy="58.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="500.5" cy="57.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="471.2" cy="52.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="526.9" cy="70.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="548.6" cy="82.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="534.1" cy="80.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="604.9" cy="111.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="526.8" cy="71.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="529.4" cy="72.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="522.4" cy="71.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="543.6" cy="76.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="549.6" cy="83.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="549.6" cy="84.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="567.3" cy="98.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="657.4" cy="137.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="534.9" cy="81.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="534.7" cy="82.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="565.1" cy="97.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="621.6" cy="134.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="608.5" cy="113.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="608.3" cy="114.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="654.5" cy="136.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="626.8" cy="135.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="506.1" cy="59.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="547.9" cy="82.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="504.4" cy="66.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="558.8" cy="90.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="506.0" cy="59.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="511.1" cy="62.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="496.2" cy="59.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="515.5" cy="65.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="550.0" cy="83.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="549.8" cy="84.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="567.6" cy="98.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="657.8" cy="138.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="504.9" cy="66.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="504.8" cy="66.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="563.5" cy="98.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="557.4" cy="106.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="561.3" cy="91.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="561.2" cy="92.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="653.2" cy="137.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="561.2" cy="106.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="486.1" cy="55.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="529.3" cy="79.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="502.8" cy="65.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="514.3" cy="83.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="486.0" cy="56.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="491.1" cy="59.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="488.9" cy="58.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="470.6" cy="57.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="531.6" cy="80.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="531.4" cy="81.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="561.8" cy="97.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="618.2" cy="133.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="503.6" cy="66.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="503.5" cy="66.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="562.1" cy="97.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="556.1" cy="105.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="516.9" cy="84.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="516.9" cy="85.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="613.3" cy="133.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="553.8" cy="104.9" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="531.5" cy="75.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="601.2" cy="111.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="558.3" cy="90.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="519.2" cy="84.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="531.5" cy="76.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="539.7" cy="80.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="535.8" cy="79.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="505.8" cy="74.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="604.8" cy="113.3" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="604.7" cy="114.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="650.9" cy="136.4" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="623.2" cy="134.7" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="559.6" cy="91.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="559.5" cy="91.8" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="651.5" cy="137.0" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="559.5" cy="106.2" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="520.0" cy="85.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="519.9" cy="86.1" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="616.4" cy="133.6" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="556.9" cy="105.5" r="2.2" fill="#64748b" fill-opacity="0.35"/>
+  <circle cx="492.9" cy="51.1" r="4.5" fill="#d97706" stroke="#fff" stroke-width="1"/>
+  <text x="462.9" y="44.1" fill="#d97706" font-weight="bold" font-size="8">Original (0.862)</text>
+  <circle cx="693.2" cy="164.8" r="4.5" fill="#dc2626" stroke="#fff" stroke-width="1"/>
+  <text x="618.2" y="157.8" fill="#dc2626" font-weight="bold" font-size="8">π* Anti-Mil (+0.513)</text>
+  <circle cx="605.8" cy="128.3" r="4.5" fill="#059669" stroke="#fff" stroke-width="1"/>
+  <text x="612.8" y="131.3" fill="#059669" font-weight="bold" font-size="8">π* Equilibrium (0.327)</text>
+  <circle cx="457.6" cy="46.2" r="4.5" fill="#0284c7" stroke="#fff" stroke-width="1"/>
+  <text x="463.6" y="50.2" fill="#0284c7" font-weight="bold" font-size="8">π* Legal (+0.583)</text>
+  <text x="575" y="202" text-anchor="middle" fill="#334155" font-size="8.5">Terminal State x₁(T) Anti-Militarism vs. x₂(T) Legal Compliance</text>
+</svg>
+
+  </div>
+  <div class="caption" style="margin-top:5px">Figure 1: (Left) Normalized Cross-Domain Narrative Energy Trajectories E(t/T) across CORPUS-001, CORPUS-002 (showing the t/T = 0.50 nuclear detonation spike at E = 83.29), and CORPUS-003. (Right) EXP-003 Reachable Terminal State Cloud across all 6! = 720 Montage Permutations of CORPUS-001, highlighting the synthesized Civic Equilibrium Montage &pi;*<sub>eq</sub> (-62.0% normative bias).</div>
+</div>
+<div class="full-span">
+  <div class="caption">Table 2: EXP-003 Optimal Montage Synthesis Solutions Across All 6! = 720 Speaker-Block Permutations on CORPUS-001.</div>
+  <table>
+    <thead><tr><th>Synthesis Objective</th><th>Optimal Editorial Block Sequence &pi;*</th><th>x<sub>1</sub>(T) Anti-Mil</th><th>x<sub>2</sub>(T) Legal</th><th>x<sub>3</sub>(T) Pragmatic</th><th>x<sub>4</sub>(T) Autonomy</th><th>Bias Norm ||x(T)||<sub>2</sub></th><th>Shift ||&Delta;x||<sub>2</sub></th></tr></thead>
+    <tbody>
+      <tr><td><strong>Original 1994 Broadcast</strong></td><td><code>ENV_POSTER &rarr; SPK_01 &rarr; SPK_02 &rarr; SPK_03 &rarr; SPK_04 &rarr; SPK_05</code></td><td>&minus;0.1445</td><td>+0.5524</td><td>+0.6446</td><td>+0.0391</td><td>0.8620</td><td>0.0000</td></tr>
+      <tr><td><strong>MAX_B1_ANTIMILITARISM</strong></td><td><code>SPK_03 &rarr; SPK_02 &rarr; SPK_05 &rarr; SPK_04 &rarr; ENV_POSTER &rarr; SPK_01</code></td><td>+0.5130</td><td>-0.1717</td><td>-0.0304</td><td>+0.4568</td><td><strong>0.7087</strong></td><td>1.2597</td></tr>
+      <tr><td><strong>MAX_B2_LEGAL_COMPLIANCE</strong></td><td><code>ENV_POSTER &rarr; SPK_01 &rarr; SPK_04 &rarr; SPK_05 &rarr; SPK_02 &rarr; SPK_03</code></td><td>-0.2601</td><td>+0.5830</td><td>+0.6705</td><td>-0.1552</td><td><strong>0.9387</strong></td><td>0.2296</td></tr>
+      <tr><td><strong>MIN_NORM_CIVIC_EQUILIBRIUM</strong></td><td><code>SPK_04 &rarr; ENV_POSTER &rarr; SPK_05 &rarr; SPK_02 &rarr; SPK_01 &rarr; SPK_03</code></td><td>+0.2262</td><td>+0.0606</td><td>+0.1787</td><td>+0.1430</td><td><strong>0.3274</strong></td><td>0.7792</td></tr>
+      <tr><td><strong>MAX_B4_INDIVIDUAL_AUTONOMY</strong></td><td><code>SPK_03 &rarr; SPK_02 &rarr; SPK_05 &rarr; SPK_01 &rarr; ENV_POSTER &rarr; SPK_04</code></td><td>+0.3958</td><td>-0.0083</td><td>+0.0669</td><td>+0.4930</td><td><strong>0.6358</strong></td><td>1.0705</td></tr>
+    </tbody>
+  </table>
+</div>
+<h2>5. Counterfactual Control (EXP-003)</h2>
+<p>To demonstrate constructive systems synthesis, <code>CounterfactualController.cs</code> solves three discrete-time control problems across our corpus:</p>
+<ol>
+  <li><strong>Exhaustive 6! = 720 Montage Reachability (CORPUS-001):</strong> Holding 100% of the physical footage invariant (<em>H(T) = 2.7574 bits</em>), editorial ordering alone spans sign-reversing intervals across every belief dimension: <em>x<sub>1</sub>(T) &isin; [&minus;0.2603, +0.5130]</em> (&Delta; = 0.7733) and <em>x<sub>2</sub>(T) &isin; [&minus;0.1795, +0.5830]</em> (&Delta; = 0.7625). Solving <em>min<sub>&pi;</sub> ||x(T)||<sub>2</sub></em> yields the <strong>Civic Equilibrium Montage &pi;*<sub>eq</sub></strong> (Table 2), reducing terminal normative bias by <strong>&minus;62.0%</strong> (<em>||x*(T)||<sub>2</sub> = 0.3274</em> vs. <em>0.8620</em>) without cutting a single frame.</li>
+  <li><strong>Non-Verbal Shock Impulse Leverage (CORPUS-002):</strong> Attenuating the nuclear roar (&minus;13.68 dBFS &rarr; &minus;25 dBFS) and atomic flash cut (<em>D<sub>JS</sub> = 0.5766 &rarr; 0.04 bits</em>) in Windows #4–#8 of LBJ's <em>&ldquo;Daisy&rdquo;</em> spot while keeping the transcript identical reduces terminal mobilization <em>x<sub>2</sub>(T)</em> from +0.2624 to +0.1841—proving that <strong>29.84% of the commercial's state displacement is driven purely by the non-verbal audiovisual shock wave</strong>.</li>
+  <li><strong>Institutional Inertial Shielding (CORPUS-003):</strong> Removing presidential institutional anchoring reduces terminal inertia by <strong>&minus;0.4657</strong> (0.8921 &rarr; 0.4264), whereas accumulated inertia shields the address from sign reversal (<em>x<sub>2</sub>(T) = +0.2321 &gt; 0</em>) even under a late 30 s high-energy crisis critique perturbation.</li>
+</ol>
+<h2>6. Conclusion</h2>
+<p>By unifying physical signal operators (PCM prosody, Jensen-Shannon visual divergence, Shannon stance entropy) with LTV state-space control and exhaustive montage optimization, <strong>Narrative Systems Engineering</strong> transitions media analysis from qualitative metaphor to a falsifiable, reproducible engineering discipline.</p>
+<h2>References</h2>
+<ol class="ref-list">
+  <li>Rojas Ruiz, J. I. (2026). <em>Narrative Systems Engineering (NSE) and Computational Narrative Dynamics (CND): Foundational Architecture, Multimodal Signal Metrics, and Counterfactual State-Space Control</em>. Zenodo. DOI: 10.5281/zenodo.23987656 (ORCID: 0009-0003-1109-4583).</li>
+  <li>Shannon, C. E. (1948). A Mathematical Theory of Communication. <em>Bell System Technical Journal</em>, 27(3), 379–423.</li>
+  <li>Lin, J. (1991). Divergence measures based on the Shannon entropy. <em>IEEE Transactions on Information Theory</em>, 37(1), 145–151.</li>
+  <li>Friedkin, N. E., &amp; Johnsen, E. C. (1990). Social influence and opinions. <em>Journal of Mathematical Sociology</em>, 15(3-4), 193–206.</li>
+  <li>Vicol, P., Tapaswi, M., Castrejon, L., &amp; Fidler, S. (2018). MovieGraphs: Towards Understanding Human-Centric Situations from Videos. <em>CVPR 2018</em>, 8581–8590.</li>
+  <li>Green, M. C., &amp; Brock, T. C. (2000). The role of transportation in the persuasiveness of public narratives. <em>JPSP</em>, 79(5), 701–721.</li>
+  <li>Jones, M. D., &amp; McBeth, M. K. (2010). A Narrative Policy Framework: Clear Enough to Be Wrong? <em>Policy Studies Journal</em>, 38(2), 329–353.</li>
+  <li>Shiller, R. J. (2017). Narrative Economics. <em>American Economic Review</em>, 107(4), 967–1004.</li>
+</ol>
+</div>
+</div>
+</body></html>

@@ -89,6 +89,15 @@ try {
         throw 'Optimal civic equilibrium norm did not improve over original broadcast norm'
     }
 
+    # Build and verify Print-Ready Paper Manuscript & LaTeX/BibTeX Package
+    dotnet run --project argon/src/Argon.Engine --no-build -- paper
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine paper execution failed' }
+
+    foreach ($pubFile in @('publications/latex/PAPER-001-NSE-FOUNDATION.tex', 'publications/latex/references.bib', 'publications/latex/PAPER-001-NSE-FOUNDATION-PRINT.html', 'publications/PAPER-001-NSE-FOUNDATION.pdf')) {
+        $pp = Join-Path $repo $pubFile
+        if (-not (Test-Path $pp)) { throw "Missing publication package file: $pubFile" }
+    }
+
     # Verify Zenodo, Citation, Authorship, and Audit Manifest integrity
     foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'data/raw/CORPUS_MANIFEST.json')) {
         $p = Join-Path $repo $metaFile

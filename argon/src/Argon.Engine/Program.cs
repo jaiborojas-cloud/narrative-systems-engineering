@@ -81,6 +81,28 @@ if (args.Length > 0 && string.Equals(args[0], "control", StringComparison.Ordina
     return 0;
 }
 
+if (args.Length > 0 && string.Equals(args[0], "paper", StringComparison.OrdinalIgnoreCase))
+{
+    var atlasPath = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "atlas.report.json");
+    var ctrlPath = Path.Combine(repoRoot, "argon", "experiments", "EXP-003-counterfactual-control", "control.report.json");
+
+    var atlas = JsonSerializer.Deserialize<CrossDomainAtlasReport>(await File.ReadAllTextAsync(atlasPath), jsonOptions)!;
+    var ctrl = JsonSerializer.Deserialize<CounterfactualControlReport>(await File.ReadAllTextAsync(ctrlPath), jsonOptions)!;
+
+    var latexDir = Path.Combine(repoRoot, "publications", "latex");
+    Directory.CreateDirectory(latexDir);
+
+    var printHtmlPath = Path.Combine(latexDir, "PAPER-001-NSE-FOUNDATION-PRINT.html");
+    var pdfPath = Path.Combine(repoRoot, "publications", "PAPER-001-NSE-FOUNDATION.pdf");
+
+    await File.WriteAllTextAsync(printHtmlPath, PaperManuscriptRenderer.RenderPrintReadyHtml(atlas, ctrl));
+    await File.WriteAllBytesAsync(pdfPath, PaperManuscriptRenderer.RenderNativePdfBytes(atlas, ctrl));
+
+    Console.WriteLine($"[Argon.Engine Paper] Print-ready manuscript HTML written to: {printHtmlPath}");
+    Console.WriteLine($"[Argon.Engine Paper] Native Vector PDF 1.4 written to: {pdfPath}");
+    return 0;
+}
+
 var profileJsonPath = args.Length > 0
     ? Path.GetFullPath(args[0])
     : Path.Combine(repoRoot, "data", "processed", "runs", "06-FCE-V-C110-007-C-profile", "profile.json");
