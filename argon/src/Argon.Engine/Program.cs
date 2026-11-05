@@ -103,6 +103,13 @@ if (args.Length > 0 && string.Equals(args[0], "paper", StringComparison.OrdinalI
     return 0;
 }
 
+if (args.Length > 0 && string.Equals(args[0], "indautor", StringComparison.OrdinalIgnoreCase))
+{
+    IndautorPackageGenerator.GenerateIndautorPdfs(repoRoot);
+    Console.WriteLine($"[Argon.Engine INDAUTOR] Generated official registration PDFs in: {Path.Combine(repoRoot, "legal", "indautor")}");
+    return 0;
+}
+
 var profileJsonPath = args.Length > 0
     ? Path.GetFullPath(args[0])
     : Path.Combine(repoRoot, "data", "processed", "runs", "06-FCE-V-C110-007-C-profile", "profile.json");

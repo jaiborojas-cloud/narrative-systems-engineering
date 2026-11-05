@@ -98,6 +98,15 @@ try {
         if (-not (Test-Path $pp)) { throw "Missing publication package file: $pubFile" }
     }
 
+    # Build and verify INDAUTOR Copyright Registration Package (legal/indautor/)
+    dotnet run --project argon/src/Argon.Engine --no-build -- indautor
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine indautor execution failed' }
+
+    foreach ($indFile in @('legal/indautor/GUIA_REGISTRO_INDARELIN.md', 'legal/indautor/MEMORIA_DESCRIPTIVA_INDAUTOR_ES.md', 'legal/indautor/MEMORIA_DESCRIPTIVA_INDAUTOR_ES.pdf', 'legal/indautor/CODIGO_FUENTE_ARGON_NSE_INDAUTOR.pdf')) {
+        $ip = Join-Path $repo $indFile
+        if (-not (Test-Path $ip)) { throw "Missing INDAUTOR registration file: $indFile" }
+    }
+
     # Verify Zenodo, Citation, Authorship, Disambiguation, and Audit Manifest integrity
     foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'docs/PRIOR_WORK_AND_DISAMBIGUATION.md', 'data/raw/CORPUS_MANIFEST.json')) {
         $p = Join-Path $repo $metaFile
