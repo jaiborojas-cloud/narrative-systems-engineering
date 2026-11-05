@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "argon-corpus-1.0",
+  "curator": "Jair Ivan Rojas Ruiz (ORCID: 0009-0003-1109-4583)",
+  "createdUtc": "2026-11-05T18:53:00Z",
+  "policy": "All active benchmark works must have spoken audio or multimodal symbolic narrative structure and documented Public Domain or Creative Commons / archival research provenance. Silent stock clips (e.g. 268230_medium.mp4) are deprecated for narrative metrics.",
+  "works": [
+    {
+      "workId": "CORPUS-001-INSUMISION-1994",
+      "title": "Debate Universitario sobre Insumisión y Servicio Militar (España, c. 1994)",
+      "filePath": "video/06-FCE-V-C110-007-C.mp4",
+      "sha256": "cbe05bdfc6131d85e9a749884a68fdf64f3aa12948cc89ff9cbe02f3c2a0e293",
+      "bytes": 92097613,
+      "durationSeconds": 194.837333,
+      "language": "es-ES",
+      "narrativeDomain": "polyphonic_social_debate",
+      "license": "Archival Research / Educational Documentary Corpus",
+      "sourceUrl": "Local archival supply (06-FCE-V-C110-007-C.mp4)",
+      "description": "Five university students and one activist poster debating compulsory military service ('la mili'), conscientious objection, and civil disobedience ('insumisión'). High stance entropy and competing legal vs. abolitionist frames."
+    },
+    {
+      "workId": "CORPUS-002-LBJ-DAISY-1964",
+      "title": "'Peace, Little Girl' (The 'Daisy' Commercial) — LBJ Presidential Campaign (1964)",
+      "filePath": "video/LBJ_Daisy_1964.ogv",
+      "sha256": "e09dbeb6ec9e5db43cee89feb577a59e0eff1ce5de58102c01e5c0b84240bda8",
+      "bytes": 4054732,
+      "durationSeconds": 59.826493,
+      "language": "en-US",
+      "narrativeDomain": "fear_appeal_political_campaign",
+      "license": "Public Domain (U.S. Pre-1978 Broadcast without Copyright Renewal / Library of Congress & NARA)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Commercial-LBJ1964ElectionAdDaisyGirl.ogv",
+      "description": "Pioneering 60-second political spot by Doyle Dane Bernbach & Tony Schwartz juxtaposing a child counting daisy petals with a missile launch countdown and nuclear detonation."
+    },
+    {
+      "workId": "CORPUS-003-REAGAN-CHALLENGER-1986",
+      "title": "President Ronald Reagan's Address to the Nation on the Explosion of the Space Shuttle Challenger (1986)",
+      "filePath": "video/Reagan_Challenger_1986.webm",
+      "sha256": "aedfaa61cddcf91537e956a4233008b32e98333ae2d207c322479a0aa7b17bcd",
+      "bytes": 19089611,
+      "durationSeconds": 258.928,
+      "language": "en-US",
+      "narrativeDomain": "institutional_crisis_consolation",
+      "license": "Public Domain (17 U.S.C. § 105 Work of the U.S. Federal Government / NARA / Reagan Library)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:President_Ronald_Reagan%27s_Speech_on_Space_Shuttle_Challenger,_January_28,_1986.webm",
+      "description": "Oval Office presidential address transforming national shock and grief over the Challenger disaster into collective mourning, heroic mythmaking, and institutional continuity."
+    }
+  ],
+  "deprecatedWorks": [
+    {
+      "filePath": "video/268230_medium.mp4",
+      "sha256": "9d7f577133fb549bc434b7f8b8577355ba8fb38f389d4ceff629b726cacfa6c8",
+      "reason": "Silent 12.08s stock clip with no audio stream or narrative dialogue; retained only for legacy smoke tests."
+    }
+  ]
+}

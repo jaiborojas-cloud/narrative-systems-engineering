@@ -20,6 +20,8 @@ September 8, 2026
 | D014 | Implement the first prototype in C#/.NET, beginning with local FFmpeg processing | Adopted: user requested coding after discussing .NET and Azure | No Azure models deployed; local measurements can run independently |
 | D015 | Keep computed measurements separate from future model annotations and interpretations | Implemented prototype choice | Profile records provenance, measurement methods, and pending analysis explicitly |
 | D016 | Use a versioned frame-level codebook and offline review/import workflow before Azure annotations | Adopted: user approved implementation in Session 005 | Objects, clothing, setting, and visible actions need explicit evidence and uncertainty; completed review is not validation |
+| D017 | Confirm founder & principal author identity: Jair Ivan Rojas Ruiz (ORCID: 0009-0003-1109-4583) | Adopted: November 5, 2026 | Recorded in `AUTHORS.md`, `CITATION.cff`, `LICENSE` (Apache 2.0), and `NOTICE` |
+| D018 | Operationalize the 6 core NSE metrics in `argon/` (`Argon.Engine`) and complete `EXP-001` & `PAPER-001` | Completed: November 5, 2026 | Signal-grounded mathematical formalization (`FORMALIZATION.md`), full multimodal run on `06-FCE-V-C110-007-C.mp4`, and foundational preprint |
 
 ## Pending founder input
 

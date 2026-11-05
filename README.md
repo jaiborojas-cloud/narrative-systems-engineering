@@ -1,8 +1,10 @@
 # Narrative Systems Engineering
 
-An exploratory research program beginning with integrated measurement and interpretation of audiovisual works.
+**Founder, Creator & Principal Investigator:** Jair Ivan Rojas Ruiz ([ORCID: 0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583))
 
-**Status:** foundation stage, version 0.1, September 8, 2026. The name is provisional and already has other public uses. This project does not yet claim to have established a new discipline, validated a theory, or demonstrated scientific priority.
+An exploratory and applied research program beginning with integrated measurement, mathematical modeling, and state-space interpretation of audiovisual works.
+
+**Status:** foundation & experimental validation stage (`v0.1.0`), November 5, 2026. See [AUTHORS.md](AUTHORS.md), [CITATION.cff](CITATION.cff), [Preprint PAPER-001](publications/PAPER-001-NSE-FOUNDATION.md), and the [Argon Experimental Laboratory](argon/README.md).
 
 ## Mission
 

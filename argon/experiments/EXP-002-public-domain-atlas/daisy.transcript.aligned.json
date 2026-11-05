@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "argon-0.1",
+  "sourceVideo": "video/LBJ_Daisy_1964.ogv",
+  "sourceSha256": "e09dbeb6ec9e5db43cee89feb577a59e0eff1ce5de58102c01e5c0b84240bda8",
+  "language": "en-US",
+  "context": "1964 U.S. Presidential Campaign advertisement ('Peace, Little Girl' / 'Daisy'), contrasting childhood innocence with nuclear annihilation to drive urgent electoral mobilization.",
+  "beliefDimensions": [
+    {
+      "id": "B1_ANTIMILITARISM",
+      "name": "Existential Nuclear Threat & Anti-War Urgency",
+      "description": "Perception of imminent nuclear annihilation and rejection of catastrophic military escalation."
+    },
+    {
+      "id": "B2_LEGAL_COMPLIANCE",
+      "name": "Electoral & Institutional Mobilization",
+      "description": "Directive compliance with civic voting duty ('Vote for President Johnson on November 3rd')."
+    },
+    {
+      "id": "B3_PRAGMATIC_SERVICE",
+      "name": "Collective Survival & Peace Stewardship",
+      "description": "Framing leadership as the necessary guardian of collective survival ('make a world in which all of God's children can live')."
+    },
+    {
+      "id": "B4_INDIVIDUAL_AUTONOMY",
+      "name": "Innocence & Vulnerability Preservation",
+      "description": "Identification with the vulnerable child in nature threatened by impersonal state/military machinery."
+    }
+  ],
+  "segments": [
+    {
+      "id": "DAISY-01",
+      "startSeconds": 0.0,
+      "endSeconds": 18.0,
+      "speakerId": "CHILD_GIRL",
+      "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+      "role": "innocent_protagonist",
+      "transcript": "One, two, three, four, five, seven, six, six, eight, nine, nine...",
+      "visualEvidence": {
+        "frameRange": [0, 3],
+        "setting": "Sunlit outdoor meadow with birds chirping",
+        "clothing": "Simple sleeveless light dress",
+        "objects": ["daisy flower", "petals"]
+      },
+      "archetypes": [
+        { "role": "victim", "entity": "Child in meadow (Human Innocence)", "evidence": "Young girl miscounting daisy petals in nature" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.25,
+        "B2_LEGAL_COMPLIANCE": 0.00,
+        "B3_PRAGMATIC_SERVICE": 0.30,
+        "B4_INDIVIDUAL_AUTONOMY": 0.90
+      },
+      "institutionalAnchoring": 0.10
+    },
+    {
+      "id": "DAISY-02",
+      "startSeconds": 18.0,
+      "endSeconds": 31.0,
+      "speakerId": "LAUNCH_VOICE",
+      "speakerLabel": "Echoing Male Launch Countdown Voice",
+      "role": "threat_signal",
+      "transcript": "Ten, nine, eight, seven, six, five, four, three, two, one, zero!",
+      "visualEvidence": {
+        "frameRange": [3, 5],
+        "setting": "Freeze-frame and extreme step-zoom into the girl's right eye pupil",
+        "clothing": "Close-up of face and eye",
+        "objects": ["human eye pupil"]
+      },
+      "archetypes": [
+        { "role": "threat", "entity": "Impersonal Nuclear Launch Countdown", "evidence": "Booming metallic countdown overriding the child's voice" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.95,
+        "B2_LEGAL_COMPLIANCE": 0.20,
+        "B3_PRAGMATIC_SERVICE": 0.50,
+        "B4_INDIVIDUAL_AUTONOMY": -0.85
+      },
+      "institutionalAnchoring": 0.45
+    },
+    {
+      "id": "DAISY-03",
+      "startSeconds": 31.0,
+      "endSeconds": 48.0,
+      "speakerId": "LBJ_VOICE",
+      "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "role": "savior_leader",
+      "transcript": "[Nuclear explosion roar] These are the stakes! To make a world in which all of God's children can live, or to go into the dark. We must either love each other, or we must die.",
+      "visualEvidence": {
+        "frameRange": [6, 9],
+        "setting": "Blinding white flash followed by roiling nuclear fireball and mushroom cloud",
+        "clothing": "N/A (nuclear detonation footage)",
+        "objects": ["nuclear fireball", "mushroom cloud"]
+      },
+      "archetypes": [
+        { "role": "threat", "entity": "Nuclear Annihilation ('go into the dark')", "evidence": "Full-screen atomic detonation and mushroom cloud" },
+        { "role": "savior", "entity": "Presidential Peace Stewardship", "evidence": "To make a world in which all of God's children can live" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.98,
+        "B2_LEGAL_COMPLIANCE": 0.75,
+        "B3_PRAGMATIC_SERVICE": 0.95,
+        "B4_INDIVIDUAL_AUTONOMY": 0.60
+      },
+      "institutionalAnchoring": 0.85
+    },
+    {
+      "id": "DAISY-04",
+      "startSeconds": 48.0,
+      "endSeconds": 59.83,
+      "speakerId": "ANNOUNCER",
+      "speakerLabel": "Campaign Announcer (Mandate Card)",
+      "role": "directive_closer",
+      "transcript": "Vote for President Johnson on November 3rd. The stakes are too high for you to stay home.",
+      "visualEvidence": {
+        "frameRange": [9, 11],
+        "setting": "Black screen with bold white typography",
+        "clothing": "N/A (title card)",
+        "objects": ["campaign slogan typography"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "Mobilized Voter", "evidence": "Vote for President Johnson on November 3rd. The stakes are too high for you to stay home." }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.85,
+        "B2_LEGAL_COMPLIANCE": 0.98,
+        "B3_PRAGMATIC_SERVICE": 0.92,
+        "B4_INDIVIDUAL_AUTONOMY": 0.40
+      },
+      "institutionalAnchoring": 0.95
+    }
+  ]
+}

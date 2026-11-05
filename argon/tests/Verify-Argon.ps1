@@ -1,0 +1,73 @@
+$ErrorActionPreference = 'Stop'
+$repo = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
+Push-Location $repo
+try {
+    dotnet build argon/src/Argon.Engine --nologo
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine build failed' }
+
+    dotnet run --project argon/src/Argon.Engine --no-build
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine execution failed' }
+
+    $expDir = Join-Path $repo 'argon/experiments/EXP-001-insumision-dynamics'
+    $profilePath = Join-Path $expDir 'dynamics.profile.json'
+    $csvPath = Join-Path $expDir 'telemetry.csv'
+    $htmlPath = Join-Path $expDir 'dashboard.html'
+
+    if (-not (Test-Path $profilePath) -or -not (Test-Path $csvPath) -or -not (Test-Path $htmlPath)) {
+        throw 'Missing expected experiment output files'
+    }
+
+    $profile = Get-Content $profilePath -Raw | ConvertFrom-Json
+    if ($profile.windowCount -ne 39) { throw "Expected 39 windows, got $($profile.windowCount)" }
+    if ($profile.speakerSummaries.Count -ne 6) { throw "Expected 6 speaker/symbolic turns, got $($profile.speakerSummaries.Count)" }
+
+    foreach ($pt in $profile.timeline) {
+        if ($pt.narrativeEnergy -lt 0 -or $pt.narrativeEnergy -gt 100) {
+            throw "Narrative Energy out of [0,100] bounds at window $($pt.windowIndex): $($pt.narrativeEnergy)"
+        }
+        if ($pt.cumulativeStanceEntropyBits -lt 0 -or $pt.cumulativeStanceEntropyBits -gt 3.0001) {
+            throw "Shannon Stance Entropy out of [0, 3.0] bits bounds at window $($pt.windowIndex): $($pt.cumulativeStanceEntropyBits)"
+        }
+        if ($pt.narrativeInertia -lt 0 -or $pt.narrativeInertia -gt 1.0) {
+            throw "Narrative Inertia out of [0,1] bounds at window $($pt.windowIndex): $($pt.narrativeInertia)"
+        }
+        if ($pt.visual.jensenShannonDivergenceFromPrev -lt 0 -or $pt.visual.jensenShannonDivergenceFromPrev -gt 1.0) {
+            throw "Jensen-Shannon divergence out of [0,1] bits bounds at window $($pt.windowIndex)"
+        }
+    }
+
+    # Verify deterministic scene cut detection matches true camera transitions (windows 0, 1, 18, 26)
+    $cutIndices = @($profile.timeline | Where-Object { $_.visual.isSceneCutDetected } | Select-Object -ExpandProperty windowIndex)
+    if (($cutIndices -join ',') -ne '0,1,18,26') {
+        throw "Unexpected scene cut indices: $($cutIndices -join ',')"
+    }
+
+    # Verify Controllability Gramian eigenvalues are positive and condition number > 1
+    if ($profile.controlAnalysis.minSensitivityEigenvalue -le 0 -or $profile.controlAnalysis.conditionNumberKappa -le 1.0) {
+        throw "Invalid Controllability Gramian spectrum: kappa=$($profile.controlAnalysis.conditionNumberKappa)"
+    }
+
+    # Verify EXP-002 Public Domain Corpus works (LBJ Daisy 1964 & Reagan Challenger 1986)
+    $daisyProfile = Get-Content (Join-Path $repo 'argon/experiments/EXP-002-public-domain-atlas/daisy-run/dynamics.profile.json') -Raw | ConvertFrom-Json
+    $chalProfile = Get-Content (Join-Path $repo 'argon/experiments/EXP-002-public-domain-atlas/challenger-run/dynamics.profile.json') -Raw | ConvertFrom-Json
+
+    if ($daisyProfile.windowCount -ne 12 -or $daisyProfile.globalIndices.peakNarrativeEnergy -lt 80.0) {
+        throw "Unexpected LBJ Daisy 1964 profile metrics"
+    }
+    if ($chalProfile.windowCount -ne 26 -or $chalProfile.globalIndices.detectedSceneCutsCount -ne 1) {
+        throw "Unexpected Reagan Challenger 1986 profile metrics"
+    }
+
+    # Verify Zenodo, Citation, Authorship, and Audit Manifest integrity
+    foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'data/raw/CORPUS_MANIFEST.json')) {
+        $p = Join-Path $repo $metaFile
+        if (-not (Test-Path $p)) { throw "Missing mandatory audit/provenance file: $metaFile" }
+    }
+    $zenodo = Get-Content (Join-Path $repo '.zenodo.json') -Raw | ConvertFrom-Json
+    if ($zenodo.creators[0].orcid -ne '0009-0003-1109-4583') { throw 'Zenodo ORCID mismatch' }
+
+    Write-Host "PASS [Argon Verification]: All 3 corpus works (CORPUS-001 Insumision, CORPUS-002 LBJ Daisy 1964, CORPUS-003 Reagan Challenger 1986) + Zenodo/ORCID provenance audit verified."
+}
+finally {
+    Pop-Location
+}

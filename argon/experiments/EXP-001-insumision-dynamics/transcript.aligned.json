@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "argon-0.1",
+  "sourceVideo": "video/06-FCE-V-C110-007-C.mp4",
+  "sourceSha256": "cbe05bdfc6131d85e9a749884a68fdf64f3aa12948cc89ff9cbe02f3c2a0e293",
+  "language": "es-ES",
+  "context": "University campus documentary interviews in Spain (c. 1994-1995) regarding compulsory military service ('la mili'), conscientious objection ('objeción de conciencia'), alternative social service ('prestación social sustitutoria'), and total non-compliance ('insumisión').",
+  "beliefDimensions": [
+    {
+      "id": "B1_ANTIMILITARISM",
+      "name": "Anti-Militarist Abolitionism",
+      "description": "Rejection of war and the military institution itself; support for 'insumisión' to abolish the army and US-led interventionism."
+    },
+    {
+      "id": "B2_LEGAL_COMPLIANCE",
+      "name": "Civic & Legal Obligation",
+      "description": "Appeals to statutory duty, the rule of law, tax-like reciprocity, and accepting legal consequences."
+    },
+    {
+      "id": "B3_PRAGMATIC_SERVICE",
+      "name": "Pragmatic Social Utility & Professionalization",
+      "description": "Preference for a professional army combined with mandatory socially useful service ('servicio social sustitutorio') over total refusal ('no hacer nada')."
+    },
+    {
+      "id": "B4_INDIVIDUAL_AUTONOMY",
+      "name": "Individual Conscience & Autonomy",
+      "description": "Right of each person to act according to personal belief and conscience."
+    }
+  ],
+  "segments": [
+    {
+      "id": "SEG-00",
+      "startSeconds": 0.0,
+      "endSeconds": 5.0,
+      "speakerId": "ENV_POSTER",
+      "speakerLabel": "Visual Epigraph (Campus Poster)",
+      "role": "symbolic_signal",
+      "transcript": "[Texto en cartel]: LOS QUEREMOS AL NATURAL. LIBERTAD OBJETORES PRESOS. NO MAS JUICIOS A INSUMISOS. HOY MARTES 6:00 P.M. CHARLA-COLOQUIO SALON ROJO, E.T.S.I.",
+      "visualEvidence": {
+        "frameRange": [0, 0],
+        "setting": "Tiled wall with activist poster and handwritten assembly announcement",
+        "clothing": "N/A (black-and-white photograph of nude male figure holding rifle on poster)",
+        "objects": ["activist poster", "adhesive tape", "handwritten schedule sign"]
+      },
+      "archetypes": [
+        { "role": "victim", "entity": "Objetores/Insumisos presos", "evidence": "LIBERTAD OBJETORES PRESOS" },
+        { "role": "threat", "entity": "Juicios militares / Estado penal", "evidence": "NO MAS JUICIOS A INSUMISOS" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.90,
+        "B2_LEGAL_COMPLIANCE": -0.85,
+        "B3_PRAGMATIC_SERVICE": -0.20,
+        "B4_INDIVIDUAL_AUTONOMY": 0.80
+      },
+      "institutionalAnchoring": 0.15
+    },
+    {
+      "id": "SEG-01",
+      "startSeconds": 5.0,
+      "endSeconds": 22.0,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "role": "interviewee",
+      "transcript": "Bueno, pues la insumisión me parece una actitud bastante positiva como forma de rechazar las guerras como el único método de solucionar los problemas y los conflictos entre los países, y por eso me parece que es totalmente válida y me parece positivo.",
+      "visualEvidence": {
+        "frameRange": [1, 3],
+        "setting": "Indoor university lobby at night, glass windows and cork noticeboard behind",
+        "clothing": "Black Metallica graphic t-shirt under unbuttoned blue denim shirt",
+        "objects": ["handheld microphone", "noticeboard with pinned papers"]
+      },
+      "archetypes": [
+        { "role": "savior", "entity": "Insumisión (movimiento)", "evidence": "actitud bastante positiva como forma de rechazar las guerras" },
+        { "role": "threat", "entity": "La guerra como método de resolución", "evidence": "rechazar las guerras como el único método de solucionar los problemas" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.88,
+        "B2_LEGAL_COMPLIANCE": -0.50,
+        "B3_PRAGMATIC_SERVICE": 0.00,
+        "B4_INDIVIDUAL_AUTONOMY": 0.70
+      },
+      "institutionalAnchoring": 0.10
+    },
+    {
+      "id": "SEG-02",
+      "startSeconds": 22.0,
+      "endSeconds": 45.0,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "role": "interviewee",
+      "transcript": "En cuanto a si se terminara el servicio obligatorio como actualmente está concebido y poner un servicio profesional, creo que no se acabaría, porque la insumisión no pretende que las personas no tengan que ir por fuerza al ejército, sino simplemente eliminar el ejército, o por lo menos intentarlo, para que existan otras formas de solucionar los problemas, no solamente la guerra, la intervención, que al fin y al cabo es Estados Unidos el que maneja el cotarro y es el que hace y deshace como le da la gana.",
+      "visualEvidence": {
+        "frameRange": [4, 8],
+        "setting": "Indoor university lobby, female student with pink folder walks past in frame 5",
+        "clothing": "Black Metallica graphic t-shirt, blue denim overshirt",
+        "objects": ["handheld microphone", "pink folder (background)", "noticeboard"]
+      },
+      "archetypes": [
+        { "role": "villain", "entity": "Estados Unidos / Intervencionismo militar", "evidence": "es Estados Unidos el que maneja el cotarro y es el que hace y deshace" },
+        { "role": "threat", "entity": "Ejército (institución)", "evidence": "sino simplemente eliminar el ejército" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.96,
+        "B2_LEGAL_COMPLIANCE": -0.75,
+        "B3_PRAGMATIC_SERVICE": -0.60,
+        "B4_INDIVIDUAL_AUTONOMY": 0.65
+      },
+      "institutionalAnchoring": 0.12
+    },
+    {
+      "id": "SEG-03",
+      "startSeconds": 45.0,
+      "endSeconds": 63.0,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "role": "interviewee",
+      "transcript": "Pues mira, sobre la insumisión pienso que no me parece bien, la verdad, porque si todo el mundo hace algo por este país, tienes la posibilidad de hacer el servicio militar o bien el servicio social sustitutorio, y no me parece bien la insumisión.",
+      "visualEvidence": {
+        "frameRange": [9, 12],
+        "setting": "University lobby near noticeboard, dark glass background",
+        "clothing": "Light pink/white collared button-down shirt, dark backpack strap on left shoulder, gold chain",
+        "objects": ["handheld microphone", "backpack strap", "noticeboard"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "Ciudadano que contribuye al país", "evidence": "si todo el mundo hace algo por este país" },
+        { "role": "threat", "entity": "Insumisión (negativa a contribuir)", "evidence": "no me parece bien la insumisión" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.65,
+        "B2_LEGAL_COMPLIANCE": 0.80,
+        "B3_PRAGMATIC_SERVICE": 0.85,
+        "B4_INDIVIDUAL_AUTONOMY": -0.40
+      },
+      "institutionalAnchoring": 0.78
+    },
+    {
+      "id": "SEG-04",
+      "startSeconds": 63.0,
+      "endSeconds": 90.0,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "role": "interviewee",
+      "transcript": "[Entrevistador: ¿Crees que si terminara el servicio militar obligatorio terminaría el movimiento de insumisos?] Te refieres a si terminase el servicio militar obligatorio. Pues no lo sé, no te puedo decir. Yo soy partidario de unos soldados profesionales, porque están más preparados y eso, y todo el mundo hace un servicio social, pienso que es más útil para este país que no estar ahí tragando mili, pero vamos, ya que algo pienso que hay que hacer.",
+      "visualEvidence": {
+        "frameRange": [12, 17],
+        "setting": "University lobby near noticeboard",
+        "clothing": "Light collared shirt, dark backpack strap",
+        "objects": ["handheld microphone", "backpack strap"]
+      },
+      "archetypes": [
+        { "role": "savior", "entity": "Ejército profesional + Servicio social útil", "evidence": "partidario de unos soldados profesionales... y todo el mundo hace un servicio social, pienso que es más útil para este país" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.35,
+        "B2_LEGAL_COMPLIANCE": 0.75,
+        "B3_PRAGMATIC_SERVICE": 0.95,
+        "B4_INDIVIDUAL_AUTONOMY": -0.25
+      },
+      "institutionalAnchoring": 0.72
+    },
+    {
+      "id": "SEG-05",
+      "startSeconds": 90.0,
+      "endSeconds": 110.0,
+      "speakerId": "SPK_03",
+      "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "role": "interviewee",
+      "transcript": "Hombre, pues pienso que a nadie nos gusta hacer la mili, pero que todos tenemos nuestras obligaciones, y bueno, si alguien no quiere hacer la mili pues está el servicio social sustitutorio, pero pienso que es por ley y hay cosas que la ley impone y que hay que hacerlas, ¿no? A nadie le gusta pagar impuestos y sin embargo hay que pagarlos, ¿no? O sea que...",
+      "visualEvidence": {
+        "frameRange": [18, 21],
+        "setting": "Bright indoor wall with world physical map and course flyers (Curso 94/95 Telecomunicaciones)",
+        "clothing": "Light cream/yellowish button-down collared shirt",
+        "objects": ["handheld microphone", "world map", "university flyers"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "La Ley / Obligación fiscal y cívica", "evidence": "hay cosas que la ley impone y que hay que hacerlas... A nadie le gusta pagar impuestos y sin embargo hay que pagarlos" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.55,
+        "B2_LEGAL_COMPLIANCE": 0.95,
+        "B3_PRAGMATIC_SERVICE": 0.70,
+        "B4_INDIVIDUAL_AUTONOMY": -0.60
+      },
+      "institutionalAnchoring": 0.95
+    },
+    {
+      "id": "SEG-06",
+      "startSeconds": 110.0,
+      "endSeconds": 130.0,
+      "speakerId": "SPK_04",
+      "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "role": "interviewee",
+      "transcript": "Pues pienso que cada persona puede hacer lo que él de verdad cree, y está bien, yo estoy de acuerdo con ello, pero que tiene que ser consecuente con las leyes que hay ahora mismo y eso, y que tiene que después aceptar todos los problemas que acarrea y eso. Y ya está, solamente eso, cada persona es libre de hacer lo que quiera.",
+      "visualEvidence": {
+        "frameRange": [22, 25],
+        "setting": "Indoor wall with world map and apartment rental notice ('PISO REINA MERCEDES')",
+        "clothing": "Dark navy blue graphic t-shirt ('NEW YORK' emblem)",
+        "objects": ["handheld microphone", "world map", "rental flyer"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "Individuo libre pero consecuente", "evidence": "cada persona puede hacer lo que él de verdad cree... pero tiene que ser consecuente con las leyes" },
+        { "role": "threat", "entity": "Consecuencias legales/penales", "evidence": "aceptar todos los problemas que acarrea" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.15,
+        "B2_LEGAL_COMPLIANCE": 0.60,
+        "B3_PRAGMATIC_SERVICE": 0.20,
+        "B4_INDIVIDUAL_AUTONOMY": 0.85
+      },
+      "institutionalAnchoring": 0.65
+    },
+    {
+      "id": "SEG-07",
+      "startSeconds": 130.0,
+      "endSeconds": 165.0,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "role": "interviewee",
+      "transcript": "Pues yo creo que los objetores de conciencia, creo que si no quieren hacer la mili o lo que sea, pues mejor que ser insumiso, que hagan algo, ¿no? Porque si eres insumiso, o sea, no quieres hacerlo pero no haces nada, o sea, dices 'hostia, pues no' y no lo quieres hacer. Pienso que los objetores de conciencia por lo menos hacen algo, algo positivo. Ya que los insumisos yo creo que es negarse, ¿no? Vale, me parece muy bien que no quieras hacer la mili porque es algo que no te apetece hacer o que simplemente no te gusta, pero tampoco puedes no hacer nada, ¿no? Porque si eres español, por lo menos hacerlo.",
+      "visualEvidence": {
+        "frameRange": [26, 32],
+        "setting": "Busy university corridor with students walking in background",
+        "clothing": "Bright plaid multicolor flannel shirt over white top, shoulder bag strap",
+        "objects": ["handheld microphone", "leather bag strap"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "Objetores de conciencia (que hacen prestación social)", "evidence": "los objetores de conciencia por lo menos hacen algo, algo positivo" },
+        { "role": "villain", "entity": "Insumiso pasivo ('no hacer nada')", "evidence": "no quieres hacerlo pero no haces nada... si eres español, por lo menos hacerlo" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.20,
+        "B2_LEGAL_COMPLIANCE": 0.70,
+        "B3_PRAGMATIC_SERVICE": 0.90,
+        "B4_INDIVIDUAL_AUTONOMY": 0.10
+      },
+      "institutionalAnchoring": 0.75
+    },
+    {
+      "id": "SEG-08",
+      "startSeconds": 165.0,
+      "endSeconds": 194.84,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "role": "interviewee",
+      "transcript": "[Entrevistador: ¿Entonces piensas que un insumiso es un insolidario?] Hombre, ¿insolidario? No, lo que pasa es que... bueno, insolidario, es que lo que pienso es que son un poco negados, ¿no? Porque es decir 'no, no lo quiero hacer, no lo quiero hacer', pero macho, haz algo, ¿no? Porque es muy fácil decir 'yo no quiero hacer nada', pero los objetores pueden hacer muchas cosas que más o menos, y además que, joder, los objetores se llevan una pasta, vamos, cuesta más que haciendo la mili, o sea que yo pienso que sí.",
+      "visualEvidence": {
+        "frameRange": [33, 38],
+        "setting": "Busy university corridor with students walking in background",
+        "clothing": "Bright plaid multicolor flannel shirt over white top, shoulder bag strap",
+        "objects": ["handheld microphone", "leather bag strap"]
+      },
+      "archetypes": [
+        { "role": "threat", "entity": "Negativa total / Coste económico percibido", "evidence": "son un poco negados... macho, haz algo... cuesta más que haciendo la mili" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.30,
+        "B2_LEGAL_COMPLIANCE": 0.75,
+        "B3_PRAGMATIC_SERVICE": 0.88,
+        "B4_INDIVIDUAL_AUTONOMY": -0.20
+      },
+      "institutionalAnchoring": 0.78
+    }
+  ]
+}

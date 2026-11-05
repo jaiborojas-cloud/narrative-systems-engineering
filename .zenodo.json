@@ -1,0 +1,26 @@
+{
+  "title": "Narrative Systems Engineering: Signal-Grounded Multimodal Metrics and State-Space Control Dynamics for Audiovisual Media",
+  "upload_type": "software",
+  "description": "<p>Foundational research framework, mathematical formalization, and reproducible C#/.NET 10 multimodal computational engine originated by <strong>Jair Ivan Rojas Ruiz</strong> (<a href=\"https://orcid.org/0009-0003-1109-4583\">ORCID: 0009-0003-1109-4583</a>) for measuring, modeling, and simulating audiovisual narratives as coupled acoustic, visual, and linguistic signals u(t) acting on a bounded cognitive-social state space x(t+1) = f(x(t), u(t)).</p><p>Includes formal operationalization of the six core NSE metrics: <strong>Narrative DNA</strong> (signed entity-belief tripartite graphs), <strong>Narrative Entropy</strong> (Shannon bits), <strong>Narrative Energy</strong> (cross-modal prosodic-visual-linguistic resonance functional), <strong>Narrative Complexity</strong>, <strong>Narrative Inertia</strong>, and <strong>Narrative Controllability</strong> (discrete-time Controllability Gramian W_c), validated across a 3-work cross-domain benchmark corpus (EXP-001 and EXP-002).</p>",
+  "creators": [
+    {
+      "name": "Rojas Ruiz, Jair Ivan",
+      "orcid": "0009-0003-1109-4583"
+    }
+  ],
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "language": "eng",
+  "keywords": [
+    "Narrative Systems Engineering",
+    "Computational Narrative Dynamics",
+    "Multimodal Signal Processing",
+    "Narrative Energy",
+    "Shannon Narrative Entropy",
+    "Narrative Inertia",
+    "Narrative DNA",
+    "State-Space Control",
+    "Audiovisual Forensics"
+  ],
+  "notes": "Originated, authored, and directed by Jair Ivan Rojas Ruiz (ORCID: 0009-0003-1109-4583). Repository: https://github.com/jaiborojas-cloud/narrative-systems-engineering"
+}

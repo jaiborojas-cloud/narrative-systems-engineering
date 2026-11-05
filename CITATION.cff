@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "Narrative Systems Engineering: Signal-Grounded Multimodal Metrics and State-Space Control Dynamics for Audiovisual Media"
+message: "If you use, reference, or build upon the concepts, mathematical metrics, or software in this repository, please cite the original creator and author below."
+type: software
+authors:
+  - given-names: "Jair Ivan"
+    family-names: "Rojas Ruiz"
+    alias: "Jair Rojas"
+    orcid: "https://orcid.org/0009-0003-1109-4583"
+repository-code: "https://github.com/jaiborojas-cloud/narrative-systems-engineering"
+url: "https://github.com/jaiborojas-cloud/narrative-systems-engineering"
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-11-05"
+keywords:
+  - narrative-systems-engineering
+  - computational-narrative-dynamics
+  - multimodal-narrative-analysis
+  - narrative-energy
+  - narrative-entropy
+  - narrative-inertia
+  - narrative-dna
+  - state-space-control
+abstract: >-
+  Foundational research program and multimodal computational engine originated by Jair Ivan Rojas Ruiz
+  (ORCID: 0009-0003-1109-4583) for measuring, formalizing, and simulating how audiovisual and symbolic
+  narratives operate as dynamic signals across linguistic, acoustic, and visual layers, including the
+  core metrics of Narrative DNA, Narrative Energy, Narrative Entropy, Narrative Inertia, Narrative
+  Complexity, and Narrative Controllability.

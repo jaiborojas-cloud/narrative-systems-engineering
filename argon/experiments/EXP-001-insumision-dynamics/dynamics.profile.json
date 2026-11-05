@@ -1,0 +1,3108 @@
+{
+  "schemaVersion": "argon-0.1",
+  "createdUtc": "2026-11-05T19:05:00.1150259+00:00",
+  "sourceVideo": "video/06-FCE-V-C110-007-C.mp4",
+  "sourceSha256": "cbe05bdfc6131d85e9a749884a68fdf64f3aa12948cc89ff9cbe02f3c2a0e293",
+  "durationSeconds": 194.837333,
+  "windowCount": 39,
+  "globalIndices": {
+    "meanNarrativeEnergy": 63.58,
+    "peakNarrativeEnergy": 76.54,
+    "peakEnergyWindowIndex": 7,
+    "finalNarrativeEntropyBits": 2.7574,
+    "normalizedNarrativeEntropy": 0.9191,
+    "meanNarrativeInertia": 0.5019,
+    "meanNarrativeComplexity": 74.18,
+    "detectedSceneCutsCount": 4
+  },
+  "speakerSummaries": [
+    {
+      "speakerId": "ENV_POSTER",
+      "speakerLabel": "Visual Epigraph (Campus Poster)",
+      "startSeconds": 0,
+      "endSeconds": 5,
+      "meanEnergy": 52.4,
+      "meanAcousticDbFs": -26.36,
+      "meanWordsPerMinute": 312,
+      "meanComplexity": 65,
+      "meanInertia": 0.088,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.9,
+        "B2_LEGAL_COMPLIANCE": -0.85,
+        "B3_PRAGMATIC_SERVICE": -0.2,
+        "B4_INDIVIDUAL_AUTONOMY": 0.8
+      }
+    },
+    {
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "startSeconds": 5,
+      "endSeconds": 45,
+      "meanEnergy": 72.9,
+      "meanAcousticDbFs": -16.96,
+      "meanWordsPerMinute": 203.7,
+      "meanComplexity": 75.67,
+      "meanInertia": 0.151,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.93,
+        "B2_LEGAL_COMPLIANCE": -0.656,
+        "B3_PRAGMATIC_SERVICE": -0.375,
+        "B4_INDIVIDUAL_AUTONOMY": 0.669
+      }
+    },
+    {
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "startSeconds": 45,
+      "endSeconds": 90,
+      "meanEnergy": 63.86,
+      "meanAcousticDbFs": -19.83,
+      "meanWordsPerMinute": 141.8,
+      "meanComplexity": 87.9,
+      "meanInertia": 0.539,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.483,
+        "B2_LEGAL_COMPLIANCE": 0.772,
+        "B3_PRAGMATIC_SERVICE": 0.906,
+        "B4_INDIVIDUAL_AUTONOMY": -0.317
+      }
+    },
+    {
+      "speakerId": "SPK_03",
+      "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "startSeconds": 90,
+      "endSeconds": 110,
+      "meanEnergy": 66.45,
+      "meanAcousticDbFs": -21.34,
+      "meanWordsPerMinute": 201,
+      "meanComplexity": 76.15,
+      "meanInertia": 0.668,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.55,
+        "B2_LEGAL_COMPLIANCE": 0.95,
+        "B3_PRAGMATIC_SERVICE": 0.7,
+        "B4_INDIVIDUAL_AUTONOMY": -0.6
+      }
+    },
+    {
+      "speakerId": "SPK_04",
+      "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "startSeconds": 110,
+      "endSeconds": 130,
+      "meanEnergy": 65.08,
+      "meanAcousticDbFs": -18.64,
+      "meanWordsPerMinute": 192,
+      "meanComplexity": 59.47,
+      "meanInertia": 0.536,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.15,
+        "B2_LEGAL_COMPLIANCE": 0.6,
+        "B3_PRAGMATIC_SERVICE": 0.2,
+        "B4_INDIVIDUAL_AUTONOMY": 0.85
+      }
+    },
+    {
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "startSeconds": 130,
+      "endSeconds": 194.837,
+      "meanEnergy": 57.18,
+      "meanAcousticDbFs": -22.21,
+      "meanWordsPerMinute": 185.1,
+      "meanComplexity": 68.39,
+      "meanInertia": 0.663,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": -0.246,
+        "B2_LEGAL_COMPLIANCE": 0.723,
+        "B3_PRAGMATIC_SERVICE": 0.891,
+        "B4_INDIVIDUAL_AUTONOMY": -0.038
+      }
+    }
+  ],
+  "dnaNodes": [
+    {
+      "id": "B1_ANTIMILITARISM",
+      "label": "Anti-Militarist Abolitionism",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B2_LEGAL_COMPLIANCE",
+      "label": "Civic \u0026 Legal Obligation",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B3_PRAGMATIC_SERVICE",
+      "label": "Pragmatic Social Utility \u0026 Professionalization",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B4_INDIVIDUAL_AUTONOMY",
+      "label": "Individual Conscience \u0026 Autonomy",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "ENV_POSTER",
+      "label": "Visual Epigraph (Campus Poster)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "SPK_01",
+      "label": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "SPK_02",
+      "label": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "SPK_03",
+      "label": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "SPK_04",
+      "label": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "SPK_05",
+      "label": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "ARCH_53930DEE",
+      "label": "Objetores/Insumisos presos (victim)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_083453DA",
+      "label": "Juicios militares / Estado penal (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_D1E7247D",
+      "label": "Insumisi\u00F3n (movimiento) (savior)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_1A2D75E1",
+      "label": "La guerra como m\u00E9todo de resoluci\u00F3n (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_627148C4",
+      "label": "Estados Unidos / Intervencionismo militar (villain)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_FE17A96F",
+      "label": "Ej\u00E9rcito (instituci\u00F3n) (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_A9FA1982",
+      "label": "Ciudadano que contribuye al pa\u00EDs (hero)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_865595BB",
+      "label": "Insumisi\u00F3n (negativa a contribuir) (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_29C61C88",
+      "label": "Ej\u00E9rcito profesional \u002B Servicio social \u00FAtil (savior)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_BD6581AA",
+      "label": "La Ley / Obligaci\u00F3n fiscal y c\u00EDvica (hero)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_53F352A5",
+      "label": "Individuo libre pero consecuente (hero)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_656D4C05",
+      "label": "Consecuencias legales/penales (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_70150AFD",
+      "label": "Objetores de conciencia (que hacen prestaci\u00F3n social) (hero)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_7A9FC8CA",
+      "label": "Insumiso pasivo (\u0027no hacer nada\u0027) (villain)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_7DD5DDC7",
+      "label": "Negativa total / Coste econ\u00F3mico percibido (threat)",
+      "kind": "archetype_entity"
+    }
+  ],
+  "dnaEdges": [
+    {
+      "source": "ENV_POSTER",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.9,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.90 over [0s-5s]"
+    },
+    {
+      "source": "ENV_POSTER",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": -0.85,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.85 over [0s-5s]"
+    },
+    {
+      "source": "ENV_POSTER",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": -0.2,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.20 over [0s-5s]"
+    },
+    {
+      "source": "ENV_POSTER",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.8,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.80 over [0s-5s]"
+    },
+    {
+      "source": "SPK_01",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.93,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.93 over [5s-45s]"
+    },
+    {
+      "source": "SPK_01",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": -0.656,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.66 over [5s-45s]"
+    },
+    {
+      "source": "SPK_01",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": -0.375,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.38 over [5s-45s]"
+    },
+    {
+      "source": "SPK_01",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.669,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.67 over [5s-45s]"
+    },
+    {
+      "source": "SPK_02",
+      "target": "B1_ANTIMILITARISM",
+      "weight": -0.483,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.48 over [45s-90s]"
+    },
+    {
+      "source": "SPK_02",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.772,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.77 over [45s-90s]"
+    },
+    {
+      "source": "SPK_02",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.906,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.91 over [45s-90s]"
+    },
+    {
+      "source": "SPK_02",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": -0.317,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.32 over [45s-90s]"
+    },
+    {
+      "source": "SPK_03",
+      "target": "B1_ANTIMILITARISM",
+      "weight": -0.55,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.55 over [90s-110s]"
+    },
+    {
+      "source": "SPK_03",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.95,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.95 over [90s-110s]"
+    },
+    {
+      "source": "SPK_03",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.7,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.70 over [90s-110s]"
+    },
+    {
+      "source": "SPK_03",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": -0.6,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.60 over [90s-110s]"
+    },
+    {
+      "source": "SPK_04",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.15,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.15 over [110s-130s]"
+    },
+    {
+      "source": "SPK_04",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.6,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.60 over [110s-130s]"
+    },
+    {
+      "source": "SPK_04",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.2,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.20 over [110s-130s]"
+    },
+    {
+      "source": "SPK_04",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.85,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.85 over [110s-130s]"
+    },
+    {
+      "source": "SPK_05",
+      "target": "B1_ANTIMILITARISM",
+      "weight": -0.246,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.25 over [130s-195s]"
+    },
+    {
+      "source": "SPK_05",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.723,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.72 over [130s-195s]"
+    },
+    {
+      "source": "SPK_05",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.891,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.89 over [130s-195s]"
+    },
+    {
+      "source": "ENV_POSTER",
+      "target": "ARCH_53930DEE",
+      "weight": -0.8,
+      "relation": "casts_as_victim",
+      "evidence": "LIBERTAD OBJETORES PRESOS"
+    },
+    {
+      "source": "ENV_POSTER",
+      "target": "ARCH_083453DA",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "NO MAS JUICIOS A INSUMISOS"
+    },
+    {
+      "source": "SPK_01",
+      "target": "ARCH_D1E7247D",
+      "weight": 0.8,
+      "relation": "casts_as_savior",
+      "evidence": "actitud bastante positiva como forma de rechazar las guerras"
+    },
+    {
+      "source": "SPK_01",
+      "target": "ARCH_1A2D75E1",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "rechazar las guerras como el \u00FAnico m\u00E9todo de solucionar los problemas"
+    },
+    {
+      "source": "SPK_01",
+      "target": "ARCH_627148C4",
+      "weight": -0.8,
+      "relation": "casts_as_villain",
+      "evidence": "es Estados Unidos el que maneja el cotarro y es el que hace y deshace"
+    },
+    {
+      "source": "SPK_01",
+      "target": "ARCH_FE17A96F",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "sino simplemente eliminar el ej\u00E9rcito"
+    },
+    {
+      "source": "SPK_02",
+      "target": "ARCH_A9FA1982",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "si todo el mundo hace algo por este pa\u00EDs"
+    },
+    {
+      "source": "SPK_02",
+      "target": "ARCH_865595BB",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "no me parece bien la insumisi\u00F3n"
+    },
+    {
+      "source": "SPK_02",
+      "target": "ARCH_29C61C88",
+      "weight": 0.8,
+      "relation": "casts_as_savior",
+      "evidence": "partidario de unos soldados profesionales... y todo el mundo hace un servicio social, pienso que es m\u00E1s \u00FAtil para este pa\u00EDs"
+    },
+    {
+      "source": "SPK_03",
+      "target": "ARCH_BD6581AA",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "hay cosas que la ley impone y que hay que hacerlas... A nadie le gusta pagar impuestos y sin embargo hay que pagarlos"
+    },
+    {
+      "source": "SPK_04",
+      "target": "ARCH_53F352A5",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "cada persona puede hacer lo que \u00E9l de verdad cree... pero tiene que ser consecuente con las leyes"
+    },
+    {
+      "source": "SPK_04",
+      "target": "ARCH_656D4C05",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "aceptar todos los problemas que acarrea"
+    },
+    {
+      "source": "SPK_05",
+      "target": "ARCH_70150AFD",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "los objetores de conciencia por lo menos hacen algo, algo positivo"
+    },
+    {
+      "source": "SPK_05",
+      "target": "ARCH_7A9FC8CA",
+      "weight": -0.8,
+      "relation": "casts_as_villain",
+      "evidence": "no quieres hacerlo pero no haces nada... si eres espa\u00F1ol, por lo menos hacerlo"
+    },
+    {
+      "source": "SPK_05",
+      "target": "ARCH_7DD5DDC7",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "son un poco negados... macho, haz algo... cuesta m\u00E1s que haciendo la mili"
+    }
+  ],
+  "controlAnalysis": {
+    "gramianDiagonalSensitivity": {
+      "B1_ANTIMILITARISM": 0.00945,
+      "B2_LEGAL_COMPLIANCE": 0.01922,
+      "B3_PRAGMATIC_SERVICE": 0.02587,
+      "B4_INDIVIDUAL_AUTONOMY": 0.0105
+    },
+    "maxSensitivityEigenvalue": 0.02587,
+    "minSensitivityEigenvalue": 0.00945,
+    "conditionNumberKappa": 2.738,
+    "mostControllableDimension": "B3_PRAGMATIC_SERVICE",
+    "mostInertialDimension": "B1_ANTIMILITARISM",
+    "counterfactualScenarios": [
+      {
+        "scenarioId": "SCENARIO_A_ORIGINAL",
+        "name": "Scenario A: Original Documentary Order (Actual Video)",
+        "description": "Starts with anti-militarist poster \u0026 SPK_01 (0-45s), followed by 4 consecutive legal/pragmatic speakers (45-195s).",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": -0.1445,
+          "B2_LEGAL_COMPLIANCE": 0.5524,
+          "B3_PRAGMATIC_SERVICE": 0.6446,
+          "B4_INDIVIDUAL_AUTONOMY": 0.0391
+        },
+        "finalPolarization": 0.5515,
+        "netShiftFromBaseline": 0
+      },
+      {
+        "scenarioId": "SCENARIO_B_REVERSED_RECENCY",
+        "name": "Scenario B: Reversed Framing Order (Anti-Militarist Last)",
+        "description": "Places institutional/legal speakers first and ends with SPK_01\u0027s anti-militarist abolitionist critique and activist poster.",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.4976,
+          "B2_LEGAL_COMPLIANCE": -0.212,
+          "B3_PRAGMATIC_SERVICE": 0.0398,
+          "B4_INDIVIDUAL_AUTONOMY": 0.4107
+        },
+        "finalPolarization": 0.5515,
+        "netShiftFromBaseline": 1.2249
+      },
+      {
+        "scenarioId": "SCENARIO_C_AMPLIFIED_DISSENT",
+        "name": "Scenario C: Balanced Airtime Counterfactual",
+        "description": "Equalizes exposure duration between the abolitionist stance (SPK_01) and the pragmatic/legal coalition (SPK_02..05).",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": -0.016,
+          "B2_LEGAL_COMPLIANCE": 0.3871,
+          "B3_PRAGMATIC_SERVICE": 0.5029,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1127
+        },
+        "finalPolarization": 0.6812,
+        "netShiftFromBaseline": 0.2633
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "windowIndex": 0,
+      "startSeconds": 0,
+      "endSeconds": 5,
+      "midpointSeconds": 2.5,
+      "speakerId": "ENV_POSTER",
+      "speakerLabel": "Visual Epigraph (Campus Poster)",
+      "acoustic": {
+        "windowIndex": 0,
+        "startSeconds": 0,
+        "endSeconds": 5,
+        "rmsAmplitude": 0.04806,
+        "dbFs": -26.36,
+        "peakAmplitude": 0.2082,
+        "zeroCrossingRate": 0.1543,
+        "speechActivityRatio": 0.98,
+        "dynamicRangeDb": 2.34,
+        "normalizedIntensity": 0.3135
+      },
+      "visual": {
+        "windowIndex": 0,
+        "timestampSeconds": 2.5,
+        "framePath": "frames/frame-0000.jpg",
+        "meanLuminance": 0.4683,
+        "luminanceContrastStd": 0.305,
+        "meanSaturation": 0.3735,
+        "warmthIndex": 0.1131,
+        "chromaticEntropyBits": 3.8974,
+        "jensenShannonDivergenceFromPrev": 0,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.4835
+      },
+      "linguistic": {
+        "windowIndex": 0,
+        "segmentId": "SEG-00",
+        "speakerId": "ENV_POSTER",
+        "speakerLabel": "Visual Epigraph (Campus Poster)",
+        "wordsPerMinute": 312,
+        "typeTokenRatio": 1,
+        "normativeMarkerDensity": 0.1923,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.15,
+        "normalizedLinguisticIntensity": 0.8116,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.9,
+          "B2_LEGAL_COMPLIANCE": -0.85,
+          "B3_PRAGMATIC_SERVICE": -0.2,
+          "B4_INDIVIDUAL_AUTONOMY": 0.8
+        }
+      },
+      "crossModalResonance": 0.5044,
+      "narrativeEnergy": 52.4,
+      "cumulativeStanceEntropyBits": 2.287,
+      "normalizedNarrativeEntropy": 0.7623,
+      "narrativeInertia": 0.0876,
+      "narrativeComplexity": 65,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0801,
+        "B2_LEGAL_COMPLIANCE": -0.0749,
+        "B3_PRAGMATIC_SERVICE": -0.0178,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0712
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.1319
+    },
+    {
+      "windowIndex": 1,
+      "startSeconds": 5,
+      "endSeconds": 10,
+      "midpointSeconds": 7.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 1,
+        "startSeconds": 5,
+        "endSeconds": 10,
+        "rmsAmplitude": 0.12628,
+        "dbFs": -17.97,
+        "peakAmplitude": 0.7024,
+        "zeroCrossingRate": 0.1135,
+        "speechActivityRatio": 0.96,
+        "dynamicRangeDb": 10.6,
+        "normalizedIntensity": 0.8078
+      },
+      "visual": {
+        "windowIndex": 1,
+        "timestampSeconds": 7.5,
+        "framePath": "frames/frame-0001.jpg",
+        "meanLuminance": 0.2696,
+        "luminanceContrastStd": 0.2129,
+        "meanSaturation": 0.4168,
+        "warmthIndex": 0.0543,
+        "chromaticEntropyBits": 4.3364,
+        "jensenShannonDivergenceFromPrev": 0.4078,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.5628
+      },
+      "linguistic": {
+        "windowIndex": 1,
+        "segmentId": "SEG-01",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 151.8,
+        "typeTokenRatio": 0.767,
+        "normativeMarkerDensity": 0.1628,
+        "dialecticalConnectorDensity": 0.0465,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.7534,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": -0.5,
+          "B3_PRAGMATIC_SERVICE": 0,
+          "B4_INDIVIDUAL_AUTONOMY": 0.7
+        }
+      },
+      "crossModalResonance": 0.7801,
+      "narrativeEnergy": 73.4,
+      "cumulativeStanceEntropyBits": 2.0628,
+      "normalizedNarrativeEntropy": 0.6876,
+      "narrativeInertia": 0.0805,
+      "narrativeComplexity": 70.8,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1802,
+        "B2_LEGAL_COMPLIANCE": -0.1277,
+        "B3_PRAGMATIC_SERVICE": -0.0156,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1499
+      },
+      "polarizationIndex": 0.104,
+      "stateDisplacementNorm": 0.1379
+    },
+    {
+      "windowIndex": 2,
+      "startSeconds": 10,
+      "endSeconds": 15,
+      "midpointSeconds": 12.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 2,
+        "startSeconds": 10,
+        "endSeconds": 15,
+        "rmsAmplitude": 0.14529,
+        "dbFs": -16.76,
+        "peakAmplitude": 0.7016,
+        "zeroCrossingRate": 0.0894,
+        "speechActivityRatio": 0.92,
+        "dynamicRangeDb": 14.23,
+        "normalizedIntensity": 0.8887
+      },
+      "visual": {
+        "windowIndex": 2,
+        "timestampSeconds": 12.5,
+        "framePath": "frames/frame-0002.jpg",
+        "meanLuminance": 0.2995,
+        "luminanceContrastStd": 0.2263,
+        "meanSaturation": 0.3913,
+        "warmthIndex": 0.0535,
+        "chromaticEntropyBits": 4.5293,
+        "jensenShannonDivergenceFromPrev": 0.0128,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4269
+      },
+      "linguistic": {
+        "windowIndex": 2,
+        "segmentId": "SEG-01",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 151.8,
+        "typeTokenRatio": 0.767,
+        "normativeMarkerDensity": 0.1628,
+        "dialecticalConnectorDensity": 0.0465,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.7534,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": -0.5,
+          "B3_PRAGMATIC_SERVICE": 0,
+          "B4_INDIVIDUAL_AUTONOMY": 0.7
+        }
+      },
+      "crossModalResonance": 0.8183,
+      "narrativeEnergy": 73.73,
+      "cumulativeStanceEntropyBits": 1.9472,
+      "normalizedNarrativeEntropy": 0.6491,
+      "narrativeInertia": 0.1,
+      "narrativeComplexity": 70.8,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.267,
+        "B2_LEGAL_COMPLIANCE": -0.1734,
+        "B3_PRAGMATIC_SERVICE": -0.0137,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2182
+      },
+      "polarizationIndex": 0.098,
+      "stateDisplacementNorm": 0.1196
+    },
+    {
+      "windowIndex": 3,
+      "startSeconds": 15,
+      "endSeconds": 20,
+      "midpointSeconds": 17.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 3,
+        "startSeconds": 15,
+        "endSeconds": 20,
+        "rmsAmplitude": 0.1085,
+        "dbFs": -19.29,
+        "peakAmplitude": 0.5842,
+        "zeroCrossingRate": 0.0936,
+        "speechActivityRatio": 0.86,
+        "dynamicRangeDb": 25.82,
+        "normalizedIntensity": 0.7717
+      },
+      "visual": {
+        "windowIndex": 3,
+        "timestampSeconds": 17.5,
+        "framePath": "frames/frame-0003.jpg",
+        "meanLuminance": 0.2847,
+        "luminanceContrastStd": 0.2174,
+        "meanSaturation": 0.401,
+        "warmthIndex": 0.0506,
+        "chromaticEntropyBits": 4.3957,
+        "jensenShannonDivergenceFromPrev": 0.0095,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4106
+      },
+      "linguistic": {
+        "windowIndex": 3,
+        "segmentId": "SEG-01",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 151.8,
+        "typeTokenRatio": 0.767,
+        "normativeMarkerDensity": 0.1628,
+        "dialecticalConnectorDensity": 0.0465,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.7534,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": -0.5,
+          "B3_PRAGMATIC_SERVICE": 0,
+          "B4_INDIVIDUAL_AUTONOMY": 0.7
+        }
+      },
+      "crossModalResonance": 0.7625,
+      "narrativeEnergy": 68.56,
+      "cumulativeStanceEntropyBits": 1.8782,
+      "normalizedNarrativeEntropy": 0.6261,
+      "narrativeInertia": 0.1175,
+      "narrativeComplexity": 70.8,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.3369,
+        "B2_LEGAL_COMPLIANCE": -0.2102,
+        "B3_PRAGMATIC_SERVICE": -0.0121,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2731
+      },
+      "polarizationIndex": 0.09,
+      "stateDisplacementNorm": 0.0962
+    },
+    {
+      "windowIndex": 4,
+      "startSeconds": 20,
+      "endSeconds": 25,
+      "midpointSeconds": 22.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 4,
+        "startSeconds": 20,
+        "endSeconds": 25,
+        "rmsAmplitude": 0.1377,
+        "dbFs": -17.22,
+        "peakAmplitude": 0.7848,
+        "zeroCrossingRate": 0.1102,
+        "speechActivityRatio": 0.62,
+        "dynamicRangeDb": 32.16,
+        "normalizedIntensity": 0.8062
+      },
+      "visual": {
+        "windowIndex": 4,
+        "timestampSeconds": 22.5,
+        "framePath": "frames/frame-0004.jpg",
+        "meanLuminance": 0.2963,
+        "luminanceContrastStd": 0.2255,
+        "meanSaturation": 0.3717,
+        "warmthIndex": 0.0477,
+        "chromaticEntropyBits": 4.4377,
+        "jensenShannonDivergenceFromPrev": 0.0129,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4225
+      },
+      "linguistic": {
+        "windowIndex": 4,
+        "segmentId": "SEG-02",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 234.8,
+        "typeTokenRatio": 0.7,
+        "normativeMarkerDensity": 0.1,
+        "dialecticalConnectorDensity": 0.0556,
+        "institutionalAnchoring": 0.12,
+        "normalizedLinguisticIntensity": 0.7511,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.96,
+          "B2_LEGAL_COMPLIANCE": -0.75,
+          "B3_PRAGMATIC_SERVICE": -0.6,
+          "B4_INDIVIDUAL_AUTONOMY": 0.65
+        }
+      },
+      "crossModalResonance": 0.7782,
+      "narrativeEnergy": 70.16,
+      "cumulativeStanceEntropyBits": 1.9643,
+      "normalizedNarrativeEntropy": 0.6548,
+      "narrativeInertia": 0.1437,
+      "narrativeComplexity": 78.59,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4082,
+        "B2_LEGAL_COMPLIANCE": -0.271,
+        "B3_PRAGMATIC_SERVICE": -0.0794,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3163
+      },
+      "polarizationIndex": 0.1417,
+      "stateDisplacementNorm": 0.1232
+    },
+    {
+      "windowIndex": 5,
+      "startSeconds": 25,
+      "endSeconds": 30,
+      "midpointSeconds": 27.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 5,
+        "startSeconds": 25,
+        "endSeconds": 30,
+        "rmsAmplitude": 0.14595,
+        "dbFs": -16.72,
+        "peakAmplitude": 0.7791,
+        "zeroCrossingRate": 0.0946,
+        "speechActivityRatio": 0.96,
+        "dynamicRangeDb": 6.65,
+        "normalizedIntensity": 0.8395
+      },
+      "visual": {
+        "windowIndex": 5,
+        "timestampSeconds": 27.5,
+        "framePath": "frames/frame-0005.jpg",
+        "meanLuminance": 0.3145,
+        "luminanceContrastStd": 0.2457,
+        "meanSaturation": 0.3884,
+        "warmthIndex": 0.0489,
+        "chromaticEntropyBits": 4.6348,
+        "jensenShannonDivergenceFromPrev": 0.0198,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4549
+      },
+      "linguistic": {
+        "windowIndex": 5,
+        "segmentId": "SEG-02",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 234.8,
+        "typeTokenRatio": 0.7,
+        "normativeMarkerDensity": 0.1,
+        "dialecticalConnectorDensity": 0.0556,
+        "institutionalAnchoring": 0.12,
+        "normalizedLinguisticIntensity": 0.7511,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.96,
+          "B2_LEGAL_COMPLIANCE": -0.75,
+          "B3_PRAGMATIC_SERVICE": -0.6,
+          "B4_INDIVIDUAL_AUTONOMY": 0.65
+        }
+      },
+      "crossModalResonance": 0.7941,
+      "narrativeEnergy": 72.24,
+      "cumulativeStanceEntropyBits": 1.992,
+      "normalizedNarrativeEntropy": 0.664,
+      "narrativeInertia": 0.164,
+      "narrativeComplexity": 78.59,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4723,
+        "B2_LEGAL_COMPLIANCE": -0.3257,
+        "B3_PRAGMATIC_SERVICE": -0.1399,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3551
+      },
+      "polarizationIndex": 0.1559,
+      "stateDisplacementNorm": 0.1107
+    },
+    {
+      "windowIndex": 6,
+      "startSeconds": 30,
+      "endSeconds": 35,
+      "midpointSeconds": 32.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 6,
+        "startSeconds": 30,
+        "endSeconds": 35,
+        "rmsAmplitude": 0.15723,
+        "dbFs": -16.07,
+        "peakAmplitude": 0.8174,
+        "zeroCrossingRate": 0.1064,
+        "speechActivityRatio": 0.92,
+        "dynamicRangeDb": 9.94,
+        "normalizedIntensity": 0.8882
+      },
+      "visual": {
+        "windowIndex": 6,
+        "timestampSeconds": 32.5,
+        "framePath": "frames/frame-0006.jpg",
+        "meanLuminance": 0.2886,
+        "luminanceContrastStd": 0.2235,
+        "meanSaturation": 0.4009,
+        "warmthIndex": 0.0516,
+        "chromaticEntropyBits": 4.3902,
+        "jensenShannonDivergenceFromPrev": 0.0209,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4217
+      },
+      "linguistic": {
+        "windowIndex": 6,
+        "segmentId": "SEG-02",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 234.8,
+        "typeTokenRatio": 0.7,
+        "normativeMarkerDensity": 0.1,
+        "dialecticalConnectorDensity": 0.0556,
+        "institutionalAnchoring": 0.12,
+        "normalizedLinguisticIntensity": 0.7511,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.96,
+          "B2_LEGAL_COMPLIANCE": -0.75,
+          "B3_PRAGMATIC_SERVICE": -0.6,
+          "B4_INDIVIDUAL_AUTONOMY": 0.65
+        }
+      },
+      "crossModalResonance": 0.8168,
+      "narrativeEnergy": 73.51,
+      "cumulativeStanceEntropyBits": 2.003,
+      "normalizedNarrativeEntropy": 0.6677,
+      "narrativeInertia": 0.1827,
+      "narrativeComplexity": 78.59,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5292,
+        "B2_LEGAL_COMPLIANCE": -0.3742,
+        "B3_PRAGMATIC_SERVICE": -0.1935,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3895
+      },
+      "polarizationIndex": 0.1596,
+      "stateDisplacementNorm": 0.0982
+    },
+    {
+      "windowIndex": 7,
+      "startSeconds": 35,
+      "endSeconds": 40,
+      "midpointSeconds": 37.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 7,
+        "startSeconds": 35,
+        "endSeconds": 40,
+        "rmsAmplitude": 0.16465,
+        "dbFs": -15.67,
+        "peakAmplitude": 0.7285,
+        "zeroCrossingRate": 0.1136,
+        "speechActivityRatio": 0.92,
+        "dynamicRangeDb": 16.83,
+        "normalizedIntensity": 0.9662
+      },
+      "visual": {
+        "windowIndex": 7,
+        "timestampSeconds": 37.5,
+        "framePath": "frames/frame-0007.jpg",
+        "meanLuminance": 0.2851,
+        "luminanceContrastStd": 0.2218,
+        "meanSaturation": 0.3977,
+        "warmthIndex": 0.0509,
+        "chromaticEntropyBits": 4.3813,
+        "jensenShannonDivergenceFromPrev": 0.0096,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4149
+      },
+      "linguistic": {
+        "windowIndex": 7,
+        "segmentId": "SEG-02",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 234.8,
+        "typeTokenRatio": 0.7,
+        "normativeMarkerDensity": 0.1,
+        "dialecticalConnectorDensity": 0.0556,
+        "institutionalAnchoring": 0.12,
+        "normalizedLinguisticIntensity": 0.7511,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.96,
+          "B2_LEGAL_COMPLIANCE": -0.75,
+          "B3_PRAGMATIC_SERVICE": -0.6,
+          "B4_INDIVIDUAL_AUTONOMY": 0.65
+        }
+      },
+      "crossModalResonance": 0.8519,
+      "narrativeEnergy": 76.54,
+      "cumulativeStanceEntropyBits": 2.0076,
+      "normalizedNarrativeEntropy": 0.6692,
+      "narrativeInertia": 0.1999,
+      "narrativeComplexity": 78.59,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5808,
+        "B2_LEGAL_COMPLIANCE": -0.4182,
+        "B3_PRAGMATIC_SERVICE": -0.2422,
+        "B4_INDIVIDUAL_AUTONOMY": 0.4207
+      },
+      "polarizationIndex": 0.1591,
+      "stateDisplacementNorm": 0.0892
+    },
+    {
+      "windowIndex": 8,
+      "startSeconds": 40,
+      "endSeconds": 45,
+      "midpointSeconds": 42.5,
+      "speakerId": "SPK_01",
+      "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+      "acoustic": {
+        "windowIndex": 8,
+        "startSeconds": 40,
+        "endSeconds": 45,
+        "rmsAmplitude": 0.15912,
+        "dbFs": -15.97,
+        "peakAmplitude": 0.7552,
+        "zeroCrossingRate": 0.1026,
+        "speechActivityRatio": 0.94,
+        "dynamicRangeDb": 12.92,
+        "normalizedIntensity": 0.9244
+      },
+      "visual": {
+        "windowIndex": 8,
+        "timestampSeconds": 42.5,
+        "framePath": "frames/frame-0008.jpg",
+        "meanLuminance": 0.2955,
+        "luminanceContrastStd": 0.227,
+        "meanSaturation": 0.4006,
+        "warmthIndex": 0.048,
+        "chromaticEntropyBits": 4.4471,
+        "jensenShannonDivergenceFromPrev": 0.0104,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4234
+      },
+      "linguistic": {
+        "windowIndex": 8,
+        "segmentId": "SEG-02",
+        "speakerId": "SPK_01",
+        "speakerLabel": "Estudiante 1 (Camiseta Metallica / Chaqueta vaquera)",
+        "wordsPerMinute": 234.8,
+        "typeTokenRatio": 0.7,
+        "normativeMarkerDensity": 0.1,
+        "dialecticalConnectorDensity": 0.0556,
+        "institutionalAnchoring": 0.12,
+        "normalizedLinguisticIntensity": 0.7511,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.96,
+          "B2_LEGAL_COMPLIANCE": -0.75,
+          "B3_PRAGMATIC_SERVICE": -0.6,
+          "B4_INDIVIDUAL_AUTONOMY": 0.65
+        }
+      },
+      "crossModalResonance": 0.8333,
+      "narrativeEnergy": 75.03,
+      "cumulativeStanceEntropyBits": 2.0092,
+      "normalizedNarrativeEntropy": 0.6697,
+      "narrativeInertia": 0.216,
+      "narrativeComplexity": 78.59,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.6248,
+        "B2_LEGAL_COMPLIANCE": -0.4558,
+        "B3_PRAGMATIC_SERVICE": -0.2837,
+        "B4_INDIVIDUAL_AUTONOMY": 0.4473
+      },
+      "polarizationIndex": 0.1568,
+      "stateDisplacementNorm": 0.076
+    },
+    {
+      "windowIndex": 9,
+      "startSeconds": 45,
+      "endSeconds": 50,
+      "midpointSeconds": 47.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 9,
+        "startSeconds": 45,
+        "endSeconds": 50,
+        "rmsAmplitude": 0.10131,
+        "dbFs": -19.89,
+        "peakAmplitude": 0.7231,
+        "zeroCrossingRate": 0.1018,
+        "speechActivityRatio": 0.72,
+        "dynamicRangeDb": 28.76,
+        "normalizedIntensity": 0.6991
+      },
+      "visual": {
+        "windowIndex": 9,
+        "timestampSeconds": 47.5,
+        "framePath": "frames/frame-0009.jpg",
+        "meanLuminance": 0.3378,
+        "luminanceContrastStd": 0.3162,
+        "meanSaturation": 0.4203,
+        "warmthIndex": 0.0671,
+        "chromaticEntropyBits": 4.0078,
+        "jensenShannonDivergenceFromPrev": 0.1302,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.5521
+      },
+      "linguistic": {
+        "windowIndex": 9,
+        "segmentId": "SEG-03",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 146.7,
+        "typeTokenRatio": 0.727,
+        "normativeMarkerDensity": 0.1364,
+        "dialecticalConnectorDensity": 0.1136,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.7894,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.65,
+          "B2_LEGAL_COMPLIANCE": 0.8,
+          "B3_PRAGMATIC_SERVICE": 0.85,
+          "B4_INDIVIDUAL_AUTONOMY": -0.4
+        }
+      },
+      "crossModalResonance": 0.7429,
+      "narrativeEnergy": 69.95,
+      "cumulativeStanceEntropyBits": 2.4281,
+      "normalizedNarrativeEntropy": 0.8094,
+      "narrativeInertia": 0.5935,
+      "narrativeComplexity": 97.28,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5262,
+        "B2_LEGAL_COMPLIANCE": -0.3678,
+        "B3_PRAGMATIC_SERVICE": -0.196,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3818
+      },
+      "polarizationIndex": 0.4316,
+      "stateDisplacementNorm": 0.1716
+    },
+    {
+      "windowIndex": 10,
+      "startSeconds": 50,
+      "endSeconds": 55,
+      "midpointSeconds": 52.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 10,
+        "startSeconds": 50,
+        "endSeconds": 55,
+        "rmsAmplitude": 0.12172,
+        "dbFs": -18.29,
+        "peakAmplitude": 0.6239,
+        "zeroCrossingRate": 0.0921,
+        "speechActivityRatio": 0.68,
+        "dynamicRangeDb": 33.9,
+        "normalizedIntensity": 0.7691
+      },
+      "visual": {
+        "windowIndex": 10,
+        "timestampSeconds": 52.5,
+        "framePath": "frames/frame-0010.jpg",
+        "meanLuminance": 0.3406,
+        "luminanceContrastStd": 0.3194,
+        "meanSaturation": 0.4149,
+        "warmthIndex": 0.0645,
+        "chromaticEntropyBits": 3.9247,
+        "jensenShannonDivergenceFromPrev": 0.0089,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.5039
+      },
+      "linguistic": {
+        "windowIndex": 10,
+        "segmentId": "SEG-03",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 146.7,
+        "typeTokenRatio": 0.727,
+        "normativeMarkerDensity": 0.1364,
+        "dialecticalConnectorDensity": 0.1136,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.7894,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.65,
+          "B2_LEGAL_COMPLIANCE": 0.8,
+          "B3_PRAGMATIC_SERVICE": 0.85,
+          "B4_INDIVIDUAL_AUTONOMY": -0.4
+        }
+      },
+      "crossModalResonance": 0.7792,
+      "narrativeEnergy": 71.82,
+      "cumulativeStanceEntropyBits": 2.636,
+      "normalizedNarrativeEntropy": 0.8787,
+      "narrativeInertia": 0.5774,
+      "narrativeComplexity": 97.28,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4312,
+        "B2_LEGAL_COMPLIANCE": -0.282,
+        "B3_PRAGMATIC_SERVICE": -0.1115,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3187
+      },
+      "polarizationIndex": 0.5399,
+      "stateDisplacementNorm": 0.1658
+    },
+    {
+      "windowIndex": 11,
+      "startSeconds": 55,
+      "endSeconds": 60,
+      "midpointSeconds": 57.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 11,
+        "startSeconds": 55,
+        "endSeconds": 60,
+        "rmsAmplitude": 0.12247,
+        "dbFs": -18.24,
+        "peakAmplitude": 0.6239,
+        "zeroCrossingRate": 0.0996,
+        "speechActivityRatio": 0.8,
+        "dynamicRangeDb": 28.27,
+        "normalizedIntensity": 0.8078
+      },
+      "visual": {
+        "windowIndex": 11,
+        "timestampSeconds": 57.5,
+        "framePath": "frames/frame-0011.jpg",
+        "meanLuminance": 0.349,
+        "luminanceContrastStd": 0.3238,
+        "meanSaturation": 0.4161,
+        "warmthIndex": 0.0664,
+        "chromaticEntropyBits": 3.9597,
+        "jensenShannonDivergenceFromPrev": 0.0065,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.5049
+      },
+      "linguistic": {
+        "windowIndex": 11,
+        "segmentId": "SEG-03",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 146.7,
+        "typeTokenRatio": 0.727,
+        "normativeMarkerDensity": 0.1364,
+        "dialecticalConnectorDensity": 0.1136,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.7894,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.65,
+          "B2_LEGAL_COMPLIANCE": 0.8,
+          "B3_PRAGMATIC_SERVICE": 0.85,
+          "B4_INDIVIDUAL_AUTONOMY": -0.4
+        }
+      },
+      "crossModalResonance": 0.7985,
+      "narrativeEnergy": 73.44,
+      "cumulativeStanceEntropyBits": 2.7602,
+      "normalizedNarrativeEntropy": 0.9201,
+      "narrativeInertia": 0.562,
+      "narrativeComplexity": 97.28,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.3405,
+        "B2_LEGAL_COMPLIANCE": -0.1991,
+        "B3_PRAGMATIC_SERVICE": -0.0308,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2584
+      },
+      "polarizationIndex": 0.6004,
+      "stateDisplacementNorm": 0.1589
+    },
+    {
+      "windowIndex": 12,
+      "startSeconds": 60,
+      "endSeconds": 65,
+      "midpointSeconds": 62.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 12,
+        "startSeconds": 60,
+        "endSeconds": 65,
+        "rmsAmplitude": 0.06013,
+        "dbFs": -24.42,
+        "peakAmplitude": 0.6151,
+        "zeroCrossingRate": 0.1159,
+        "speechActivityRatio": 0.26,
+        "dynamicRangeDb": 27.86,
+        "normalizedIntensity": 0.328
+      },
+      "visual": {
+        "windowIndex": 12,
+        "timestampSeconds": 62.5,
+        "framePath": "frames/frame-0012.jpg",
+        "meanLuminance": 0.3227,
+        "luminanceContrastStd": 0.3123,
+        "meanSaturation": 0.4368,
+        "warmthIndex": 0.0666,
+        "chromaticEntropyBits": 3.8595,
+        "jensenShannonDivergenceFromPrev": 0.0122,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4949
+      },
+      "linguistic": {
+        "windowIndex": 12,
+        "segmentId": "SEG-03",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 146.7,
+        "typeTokenRatio": 0.727,
+        "normativeMarkerDensity": 0.1364,
+        "dialecticalConnectorDensity": 0.1136,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.7894,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.65,
+          "B2_LEGAL_COMPLIANCE": 0.8,
+          "B3_PRAGMATIC_SERVICE": 0.85,
+          "B4_INDIVIDUAL_AUTONOMY": -0.4
+        }
+      },
+      "crossModalResonance": 0.5088,
+      "narrativeEnergy": 52.57,
+      "cumulativeStanceEntropyBits": 2.8295,
+      "normalizedNarrativeEntropy": 0.9432,
+      "narrativeInertia": 0.5475,
+      "narrativeComplexity": 97.28,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2801,
+        "B2_LEGAL_COMPLIANCE": -0.1433,
+        "B3_PRAGMATIC_SERVICE": 0.0229,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2183
+      },
+      "polarizationIndex": 0.6369,
+      "stateDisplacementNorm": 0.1061
+    },
+    {
+      "windowIndex": 13,
+      "startSeconds": 65,
+      "endSeconds": 70,
+      "midpointSeconds": 67.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 13,
+        "startSeconds": 65,
+        "endSeconds": 70,
+        "rmsAmplitude": 0.05405,
+        "dbFs": -25.34,
+        "peakAmplitude": 0.5869,
+        "zeroCrossingRate": 0.1165,
+        "speechActivityRatio": 0.22,
+        "dynamicRangeDb": 20.01,
+        "normalizedIntensity": 0.2684
+      },
+      "visual": {
+        "windowIndex": 13,
+        "timestampSeconds": 67.5,
+        "framePath": "frames/frame-0013.jpg",
+        "meanLuminance": 0.2758,
+        "luminanceContrastStd": 0.283,
+        "meanSaturation": 0.4804,
+        "warmthIndex": 0.0682,
+        "chromaticEntropyBits": 3.7641,
+        "jensenShannonDivergenceFromPrev": 0.0174,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4613
+      },
+      "linguistic": {
+        "windowIndex": 13,
+        "segmentId": "SEG-04",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 137.8,
+        "typeTokenRatio": 0.806,
+        "normativeMarkerDensity": 0.0968,
+        "dialecticalConnectorDensity": 0.0484,
+        "institutionalAnchoring": 0.72,
+        "normalizedLinguisticIntensity": 0.5981,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.35,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": -0.25
+        }
+      },
+      "crossModalResonance": 0.4007,
+      "narrativeEnergy": 42.63,
+      "cumulativeStanceEntropyBits": 2.8632,
+      "normalizedNarrativeEntropy": 0.9544,
+      "narrativeInertia": 0.5093,
+      "narrativeComplexity": 80.4,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2478,
+        "B2_LEGAL_COMPLIANCE": -0.1009,
+        "B3_PRAGMATIC_SERVICE": 0.0705,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1943
+      },
+      "polarizationIndex": 0.6505,
+      "stateDisplacementNorm": 0.0754
+    },
+    {
+      "windowIndex": 14,
+      "startSeconds": 70,
+      "endSeconds": 75,
+      "midpointSeconds": 72.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 14,
+        "startSeconds": 70,
+        "endSeconds": 75,
+        "rmsAmplitude": 0.119,
+        "dbFs": -18.49,
+        "peakAmplitude": 0.6163,
+        "zeroCrossingRate": 0.1103,
+        "speechActivityRatio": 0.76,
+        "dynamicRangeDb": 31.49,
+        "normalizedIntensity": 0.7829
+      },
+      "visual": {
+        "windowIndex": 14,
+        "timestampSeconds": 72.5,
+        "framePath": "frames/frame-0014.jpg",
+        "meanLuminance": 0.2933,
+        "luminanceContrastStd": 0.2995,
+        "meanSaturation": 0.4777,
+        "warmthIndex": 0.0711,
+        "chromaticEntropyBits": 3.7837,
+        "jensenShannonDivergenceFromPrev": 0.0105,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4773
+      },
+      "linguistic": {
+        "windowIndex": 14,
+        "segmentId": "SEG-04",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 137.8,
+        "typeTokenRatio": 0.806,
+        "normativeMarkerDensity": 0.0968,
+        "dialecticalConnectorDensity": 0.0484,
+        "institutionalAnchoring": 0.72,
+        "normalizedLinguisticIntensity": 0.5981,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.35,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": -0.25
+        }
+      },
+      "crossModalResonance": 0.6843,
+      "narrativeEnergy": 64.73,
+      "cumulativeStanceEntropyBits": 2.8884,
+      "normalizedNarrativeEntropy": 0.9628,
+      "narrativeInertia": 0.5113,
+      "narrativeComplexity": 80.4,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2013,
+        "B2_LEGAL_COMPLIANCE": -0.0396,
+        "B3_PRAGMATIC_SERVICE": 0.1389,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1597
+      },
+      "polarizationIndex": 0.6577,
+      "stateDisplacementNorm": 0.1086
+    },
+    {
+      "windowIndex": 15,
+      "startSeconds": 75,
+      "endSeconds": 80,
+      "midpointSeconds": 77.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 15,
+        "startSeconds": 75,
+        "endSeconds": 80,
+        "rmsAmplitude": 0.13623,
+        "dbFs": -17.31,
+        "peakAmplitude": 0.6385,
+        "zeroCrossingRate": 0.0888,
+        "speechActivityRatio": 0.82,
+        "dynamicRangeDb": 25.8,
+        "normalizedIntensity": 0.8614
+      },
+      "visual": {
+        "windowIndex": 15,
+        "timestampSeconds": 77.5,
+        "framePath": "frames/frame-0015.jpg",
+        "meanLuminance": 0.3186,
+        "luminanceContrastStd": 0.3118,
+        "meanSaturation": 0.4608,
+        "warmthIndex": 0.075,
+        "chromaticEntropyBits": 3.8735,
+        "jensenShannonDivergenceFromPrev": 0.0111,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4944
+      },
+      "linguistic": {
+        "windowIndex": 15,
+        "segmentId": "SEG-04",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 137.8,
+        "typeTokenRatio": 0.806,
+        "normativeMarkerDensity": 0.0968,
+        "dialecticalConnectorDensity": 0.0484,
+        "institutionalAnchoring": 0.72,
+        "normalizedLinguisticIntensity": 0.5981,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.35,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": -0.25
+        }
+      },
+      "crossModalResonance": 0.7178,
+      "narrativeEnergy": 68.28,
+      "cumulativeStanceEntropyBits": 2.9035,
+      "normalizedNarrativeEntropy": 0.9678,
+      "narrativeInertia": 0.5118,
+      "narrativeComplexity": 80.4,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1561,
+        "B2_LEGAL_COMPLIANCE": 0.0203,
+        "B3_PRAGMATIC_SERVICE": 0.2054,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1261
+      },
+      "polarizationIndex": 0.6607,
+      "stateDisplacementNorm": 0.1058
+    },
+    {
+      "windowIndex": 16,
+      "startSeconds": 80,
+      "endSeconds": 85,
+      "midpointSeconds": 82.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 16,
+        "startSeconds": 80,
+        "endSeconds": 85,
+        "rmsAmplitude": 0.12,
+        "dbFs": -18.42,
+        "peakAmplitude": 0.6337,
+        "zeroCrossingRate": 0.1014,
+        "speechActivityRatio": 0.88,
+        "dynamicRangeDb": 30.62,
+        "normalizedIntensity": 0.8227
+      },
+      "visual": {
+        "windowIndex": 16,
+        "timestampSeconds": 82.5,
+        "framePath": "frames/frame-0016.jpg",
+        "meanLuminance": 0.3023,
+        "luminanceContrastStd": 0.3062,
+        "meanSaturation": 0.4613,
+        "warmthIndex": 0.0681,
+        "chromaticEntropyBits": 3.7985,
+        "jensenShannonDivergenceFromPrev": 0.0109,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4853
+      },
+      "linguistic": {
+        "windowIndex": 16,
+        "segmentId": "SEG-04",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 137.8,
+        "typeTokenRatio": 0.806,
+        "normativeMarkerDensity": 0.0968,
+        "dialecticalConnectorDensity": 0.0484,
+        "institutionalAnchoring": 0.72,
+        "normalizedLinguisticIntensity": 0.5981,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.35,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": -0.25
+        }
+      },
+      "crossModalResonance": 0.7015,
+      "narrativeEnergy": 66.52,
+      "cumulativeStanceEntropyBits": 2.9109,
+      "normalizedNarrativeEntropy": 0.9703,
+      "narrativeInertia": 0.5149,
+      "narrativeComplexity": 80.4,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1158,
+        "B2_LEGAL_COMPLIANCE": 0.074,
+        "B3_PRAGMATIC_SERVICE": 0.2647,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0961
+      },
+      "polarizationIndex": 0.6606,
+      "stateDisplacementNorm": 0.0945
+    },
+    {
+      "windowIndex": 17,
+      "startSeconds": 85,
+      "endSeconds": 90,
+      "midpointSeconds": 87.5,
+      "speakerId": "SPK_02",
+      "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+      "acoustic": {
+        "windowIndex": 17,
+        "startSeconds": 85,
+        "endSeconds": 90,
+        "rmsAmplitude": 0.12512,
+        "dbFs": -18.05,
+        "peakAmplitude": 0.6256,
+        "zeroCrossingRate": 0.0846,
+        "speechActivityRatio": 0.7,
+        "dynamicRangeDb": 31.7,
+        "normalizedIntensity": 0.7874
+      },
+      "visual": {
+        "windowIndex": 17,
+        "timestampSeconds": 87.5,
+        "framePath": "frames/frame-0017.jpg",
+        "meanLuminance": 0.2949,
+        "luminanceContrastStd": 0.2966,
+        "meanSaturation": 0.4607,
+        "warmthIndex": 0.0678,
+        "chromaticEntropyBits": 3.8161,
+        "jensenShannonDivergenceFromPrev": 0.008,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4743
+      },
+      "linguistic": {
+        "windowIndex": 17,
+        "segmentId": "SEG-04",
+        "speakerId": "SPK_02",
+        "speakerLabel": "Estudiante 2 (Camisa blanca/rosa clara y mochila)",
+        "wordsPerMinute": 137.8,
+        "typeTokenRatio": 0.806,
+        "normativeMarkerDensity": 0.0968,
+        "dialecticalConnectorDensity": 0.0484,
+        "institutionalAnchoring": 0.72,
+        "normalizedLinguisticIntensity": 0.5981,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.35,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": -0.25
+        }
+      },
+      "crossModalResonance": 0.6863,
+      "narrativeEnergy": 64.84,
+      "cumulativeStanceEntropyBits": 2.9127,
+      "normalizedNarrativeEntropy": 0.9709,
+      "narrativeInertia": 0.5227,
+      "narrativeComplexity": 80.4,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0799,
+        "B2_LEGAL_COMPLIANCE": 0.1221,
+        "B3_PRAGMATIC_SERVICE": 0.3175,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0694
+      },
+      "polarizationIndex": 0.6586,
+      "stateDisplacementNorm": 0.0843
+    },
+    {
+      "windowIndex": 18,
+      "startSeconds": 90,
+      "endSeconds": 95,
+      "midpointSeconds": 92.5,
+      "speakerId": "SPK_03",
+      "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "acoustic": {
+        "windowIndex": 18,
+        "startSeconds": 90,
+        "endSeconds": 95,
+        "rmsAmplitude": 0.11073,
+        "dbFs": -19.11,
+        "peakAmplitude": 0.4986,
+        "zeroCrossingRate": 0.0804,
+        "speechActivityRatio": 0.92,
+        "dynamicRangeDb": 13.66,
+        "normalizedIntensity": 0.7626
+      },
+      "visual": {
+        "windowIndex": 18,
+        "timestampSeconds": 92.5,
+        "framePath": "frames/frame-0018.jpg",
+        "meanLuminance": 0.5725,
+        "luminanceContrastStd": 0.233,
+        "meanSaturation": 0.256,
+        "warmthIndex": 0.0342,
+        "chromaticEntropyBits": 5.1218,
+        "jensenShannonDivergenceFromPrev": 0.4895,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.6477
+      },
+      "linguistic": {
+        "windowIndex": 18,
+        "segmentId": "SEG-05",
+        "speakerId": "SPK_03",
+        "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+        "wordsPerMinute": 201,
+        "typeTokenRatio": 0.627,
+        "normativeMarkerDensity": 0.1343,
+        "dialecticalConnectorDensity": 0.0597,
+        "institutionalAnchoring": 0.95,
+        "normalizedLinguisticIntensity": 0.811,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.55,
+          "B2_LEGAL_COMPLIANCE": 0.95,
+          "B3_PRAGMATIC_SERVICE": 0.7,
+          "B4_INDIVIDUAL_AUTONOMY": -0.6
+        }
+      },
+      "crossModalResonance": 0.7864,
+      "narrativeEnergy": 75.49,
+      "cumulativeStanceEntropyBits": 2.921,
+      "normalizedNarrativeEntropy": 0.9737,
+      "narrativeInertia": 0.6567,
+      "narrativeComplexity": 76.15,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0308,
+        "B2_LEGAL_COMPLIANCE": 0.1794,
+        "B3_PRAGMATIC_SERVICE": 0.3473,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0173
+      },
+      "polarizationIndex": 0.6621,
+      "stateDisplacementNorm": 0.0964
+    },
+    {
+      "windowIndex": 19,
+      "startSeconds": 95,
+      "endSeconds": 100,
+      "midpointSeconds": 97.5,
+      "speakerId": "SPK_03",
+      "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "acoustic": {
+        "windowIndex": 19,
+        "startSeconds": 95,
+        "endSeconds": 100,
+        "rmsAmplitude": 0.07488,
+        "dbFs": -22.51,
+        "peakAmplitude": 0.5149,
+        "zeroCrossingRate": 0.0901,
+        "speechActivityRatio": 0.76,
+        "dynamicRangeDb": 24.79,
+        "normalizedIntensity": 0.5761
+      },
+      "visual": {
+        "windowIndex": 19,
+        "timestampSeconds": 97.5,
+        "framePath": "frames/frame-0019.jpg",
+        "meanLuminance": 0.5732,
+        "luminanceContrastStd": 0.2331,
+        "meanSaturation": 0.2544,
+        "warmthIndex": 0.0308,
+        "chromaticEntropyBits": 5.1513,
+        "jensenShannonDivergenceFromPrev": 0.0098,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.457
+      },
+      "linguistic": {
+        "windowIndex": 19,
+        "segmentId": "SEG-05",
+        "speakerId": "SPK_03",
+        "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+        "wordsPerMinute": 201,
+        "typeTokenRatio": 0.627,
+        "normativeMarkerDensity": 0.1343,
+        "dialecticalConnectorDensity": 0.0597,
+        "institutionalAnchoring": 0.95,
+        "normalizedLinguisticIntensity": 0.811,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.55,
+          "B2_LEGAL_COMPLIANCE": 0.95,
+          "B3_PRAGMATIC_SERVICE": 0.7,
+          "B4_INDIVIDUAL_AUTONOMY": -0.6
+        }
+      },
+      "crossModalResonance": 0.6835,
+      "narrativeEnergy": 63.41,
+      "cumulativeStanceEntropyBits": 2.9229,
+      "normalizedNarrativeEntropy": 0.9743,
+      "narrativeInertia": 0.661,
+      "narrativeComplexity": 76.15,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.007,
+        "B2_LEGAL_COMPLIANCE": 0.2239,
+        "B3_PRAGMATIC_SERVICE": 0.3703,
+        "B4_INDIVIDUAL_AUTONOMY": -0.0229
+      },
+      "polarizationIndex": 0.6633,
+      "stateDisplacementNorm": 0.0745
+    },
+    {
+      "windowIndex": 20,
+      "startSeconds": 100,
+      "endSeconds": 105,
+      "midpointSeconds": 102.5,
+      "speakerId": "SPK_03",
+      "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "acoustic": {
+        "windowIndex": 20,
+        "startSeconds": 100,
+        "endSeconds": 105,
+        "rmsAmplitude": 0.08944,
+        "dbFs": -20.97,
+        "peakAmplitude": 0.5905,
+        "zeroCrossingRate": 0.0819,
+        "speechActivityRatio": 0.78,
+        "dynamicRangeDb": 26.31,
+        "normalizedIntensity": 0.6614
+      },
+      "visual": {
+        "windowIndex": 20,
+        "timestampSeconds": 102.5,
+        "framePath": "frames/frame-0020.jpg",
+        "meanLuminance": 0.5797,
+        "luminanceContrastStd": 0.2319,
+        "meanSaturation": 0.2403,
+        "warmthIndex": 0.0526,
+        "chromaticEntropyBits": 5.0187,
+        "jensenShannonDivergenceFromPrev": 0.0405,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4629
+      },
+      "linguistic": {
+        "windowIndex": 20,
+        "segmentId": "SEG-05",
+        "speakerId": "SPK_03",
+        "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+        "wordsPerMinute": 201,
+        "typeTokenRatio": 0.627,
+        "normativeMarkerDensity": 0.1343,
+        "dialecticalConnectorDensity": 0.0597,
+        "institutionalAnchoring": 0.95,
+        "normalizedLinguisticIntensity": 0.811,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.55,
+          "B2_LEGAL_COMPLIANCE": 0.95,
+          "B3_PRAGMATIC_SERVICE": 0.7,
+          "B4_INDIVIDUAL_AUTONOMY": -0.6
+        }
+      },
+      "crossModalResonance": 0.7324,
+      "narrativeEnergy": 67.18,
+      "cumulativeStanceEntropyBits": 2.9208,
+      "normalizedNarrativeEntropy": 0.9736,
+      "narrativeInertia": 0.6692,
+      "narrativeComplexity": 76.15,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0441,
+        "B2_LEGAL_COMPLIANCE": 0.2678,
+        "B3_PRAGMATIC_SERVICE": 0.3928,
+        "B4_INDIVIDUAL_AUTONOMY": -0.0623
+      },
+      "polarizationIndex": 0.6628,
+      "stateDisplacementNorm": 0.0732
+    },
+    {
+      "windowIndex": 21,
+      "startSeconds": 105,
+      "endSeconds": 110,
+      "midpointSeconds": 107.5,
+      "speakerId": "SPK_03",
+      "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+      "acoustic": {
+        "windowIndex": 21,
+        "startSeconds": 105,
+        "endSeconds": 110,
+        "rmsAmplitude": 0.07266,
+        "dbFs": -22.77,
+        "peakAmplitude": 0.5792,
+        "zeroCrossingRate": 0.0894,
+        "speechActivityRatio": 0.54,
+        "dynamicRangeDb": 26.72,
+        "normalizedIntensity": 0.4966
+      },
+      "visual": {
+        "windowIndex": 21,
+        "timestampSeconds": 107.5,
+        "framePath": "frames/frame-0021.jpg",
+        "meanLuminance": 0.5811,
+        "luminanceContrastStd": 0.2295,
+        "meanSaturation": 0.2431,
+        "warmthIndex": 0.0532,
+        "chromaticEntropyBits": 4.9684,
+        "jensenShannonDivergenceFromPrev": 0.0082,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4454
+      },
+      "linguistic": {
+        "windowIndex": 21,
+        "segmentId": "SEG-05",
+        "speakerId": "SPK_03",
+        "speakerLabel": "Estudiante 3 (Camisa clara frente al mapa mundi)",
+        "wordsPerMinute": 201,
+        "typeTokenRatio": 0.627,
+        "normativeMarkerDensity": 0.1343,
+        "dialecticalConnectorDensity": 0.0597,
+        "institutionalAnchoring": 0.95,
+        "normalizedLinguisticIntensity": 0.811,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.55,
+          "B2_LEGAL_COMPLIANCE": 0.95,
+          "B3_PRAGMATIC_SERVICE": 0.7,
+          "B4_INDIVIDUAL_AUTONOMY": -0.6
+        }
+      },
+      "crossModalResonance": 0.6346,
+      "narrativeEnergy": 59.72,
+      "cumulativeStanceEntropyBits": 2.9161,
+      "normalizedNarrativeEntropy": 0.972,
+      "narrativeInertia": 0.6833,
+      "narrativeComplexity": 76.15,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0743,
+        "B2_LEGAL_COMPLIANCE": 0.3037,
+        "B3_PRAGMATIC_SERVICE": 0.4112,
+        "B4_INDIVIDUAL_AUTONOMY": -0.0944
+      },
+      "polarizationIndex": 0.661,
+      "stateDisplacementNorm": 0.0598
+    },
+    {
+      "windowIndex": 22,
+      "startSeconds": 110,
+      "endSeconds": 115,
+      "midpointSeconds": 112.5,
+      "speakerId": "SPK_04",
+      "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "acoustic": {
+        "windowIndex": 22,
+        "startSeconds": 110,
+        "endSeconds": 115,
+        "rmsAmplitude": 0.12289,
+        "dbFs": -18.21,
+        "peakAmplitude": 0.6472,
+        "zeroCrossingRate": 0.0966,
+        "speechActivityRatio": 0.82,
+        "dynamicRangeDb": 27.71,
+        "normalizedIntensity": 0.8153
+      },
+      "visual": {
+        "windowIndex": 22,
+        "timestampSeconds": 112.5,
+        "framePath": "frames/frame-0022.jpg",
+        "meanLuminance": 0.525,
+        "luminanceContrastStd": 0.2811,
+        "meanSaturation": 0.2798,
+        "warmthIndex": -0.0005,
+        "chromaticEntropyBits": 5.0265,
+        "jensenShannonDivergenceFromPrev": 0.1681,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.568
+      },
+      "linguistic": {
+        "windowIndex": 22,
+        "segmentId": "SEG-06",
+        "speakerId": "SPK_04",
+        "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+        "wordsPerMinute": 192,
+        "typeTokenRatio": 0.641,
+        "normativeMarkerDensity": 0.0625,
+        "dialecticalConnectorDensity": 0.0312,
+        "institutionalAnchoring": 0.65,
+        "normalizedLinguisticIntensity": 0.576,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.15,
+          "B2_LEGAL_COMPLIANCE": 0.6,
+          "B3_PRAGMATIC_SERVICE": 0.2,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6853,
+      "narrativeEnergy": 67.2,
+      "cumulativeStanceEntropyBits": 2.912,
+      "normalizedNarrativeEntropy": 0.9707,
+      "narrativeInertia": 0.5307,
+      "narrativeComplexity": 59.47,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0565,
+        "B2_LEGAL_COMPLIANCE": 0.3253,
+        "B3_PRAGMATIC_SERVICE": 0.3945,
+        "B4_INDIVIDUAL_AUTONOMY": -0.0196
+      },
+      "polarizationIndex": 0.6531,
+      "stateDisplacementNorm": 0.0816
+    },
+    {
+      "windowIndex": 23,
+      "startSeconds": 115,
+      "endSeconds": 120,
+      "midpointSeconds": 117.5,
+      "speakerId": "SPK_04",
+      "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "acoustic": {
+        "windowIndex": 23,
+        "startSeconds": 115,
+        "endSeconds": 120,
+        "rmsAmplitude": 0.1172,
+        "dbFs": -18.62,
+        "peakAmplitude": 0.6387,
+        "zeroCrossingRate": 0.0835,
+        "speechActivityRatio": 0.86,
+        "dynamicRangeDb": 21.04,
+        "normalizedIntensity": 0.8061
+      },
+      "visual": {
+        "windowIndex": 23,
+        "timestampSeconds": 117.5,
+        "framePath": "frames/frame-0023.jpg",
+        "meanLuminance": 0.5204,
+        "luminanceContrastStd": 0.2894,
+        "meanSaturation": 0.2883,
+        "warmthIndex": 0.0018,
+        "chromaticEntropyBits": 5.1032,
+        "jensenShannonDivergenceFromPrev": 0.0157,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.5191
+      },
+      "linguistic": {
+        "windowIndex": 23,
+        "segmentId": "SEG-06",
+        "speakerId": "SPK_04",
+        "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+        "wordsPerMinute": 192,
+        "typeTokenRatio": 0.641,
+        "normativeMarkerDensity": 0.0625,
+        "dialecticalConnectorDensity": 0.0312,
+        "institutionalAnchoring": 0.65,
+        "normalizedLinguisticIntensity": 0.576,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.15,
+          "B2_LEGAL_COMPLIANCE": 0.6,
+          "B3_PRAGMATIC_SERVICE": 0.2,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6814,
+      "narrativeEnergy": 65.75,
+      "cumulativeStanceEntropyBits": 2.9063,
+      "normalizedNarrativeEntropy": 0.9688,
+      "narrativeInertia": 0.5303,
+      "narrativeComplexity": 59.47,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0405,
+        "B2_LEGAL_COMPLIANCE": 0.3449,
+        "B3_PRAGMATIC_SERVICE": 0.3794,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0478
+      },
+      "polarizationIndex": 0.6453,
+      "stateDisplacementNorm": 0.0736
+    },
+    {
+      "windowIndex": 24,
+      "startSeconds": 120,
+      "endSeconds": 125,
+      "midpointSeconds": 122.5,
+      "speakerId": "SPK_04",
+      "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "acoustic": {
+        "windowIndex": 24,
+        "startSeconds": 120,
+        "endSeconds": 125,
+        "rmsAmplitude": 0.13079,
+        "dbFs": -17.67,
+        "peakAmplitude": 0.6521,
+        "zeroCrossingRate": 0.0974,
+        "speechActivityRatio": 0.78,
+        "dynamicRangeDb": 27.36,
+        "normalizedIntensity": 0.8312
+      },
+      "visual": {
+        "windowIndex": 24,
+        "timestampSeconds": 122.5,
+        "framePath": "frames/frame-0024.jpg",
+        "meanLuminance": 0.5134,
+        "luminanceContrastStd": 0.2901,
+        "meanSaturation": 0.2949,
+        "warmthIndex": -0.0012,
+        "chromaticEntropyBits": 5.0179,
+        "jensenShannonDivergenceFromPrev": 0.0129,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.5154
+      },
+      "linguistic": {
+        "windowIndex": 24,
+        "segmentId": "SEG-06",
+        "speakerId": "SPK_04",
+        "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+        "wordsPerMinute": 192,
+        "typeTokenRatio": 0.641,
+        "normativeMarkerDensity": 0.0625,
+        "dialecticalConnectorDensity": 0.0312,
+        "institutionalAnchoring": 0.65,
+        "normalizedLinguisticIntensity": 0.576,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.15,
+          "B2_LEGAL_COMPLIANCE": 0.6,
+          "B3_PRAGMATIC_SERVICE": 0.2,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6919,
+      "narrativeEnergy": 66.68,
+      "cumulativeStanceEntropyBits": 2.8991,
+      "normalizedNarrativeEntropy": 0.9664,
+      "narrativeInertia": 0.5365,
+      "narrativeComplexity": 59.47,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0256,
+        "B2_LEGAL_COMPLIANCE": 0.3632,
+        "B3_PRAGMATIC_SERVICE": 0.3654,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1105
+      },
+      "polarizationIndex": 0.6375,
+      "stateDisplacementNorm": 0.0685
+    },
+    {
+      "windowIndex": 25,
+      "startSeconds": 125,
+      "endSeconds": 130,
+      "midpointSeconds": 127.5,
+      "speakerId": "SPK_04",
+      "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+      "acoustic": {
+        "windowIndex": 25,
+        "startSeconds": 125,
+        "endSeconds": 130,
+        "rmsAmplitude": 0.09926,
+        "dbFs": -20.06,
+        "peakAmplitude": 0.6353,
+        "zeroCrossingRate": 0.1127,
+        "speechActivityRatio": 0.7,
+        "dynamicRangeDb": 27.07,
+        "normalizedIntensity": 0.6839
+      },
+      "visual": {
+        "windowIndex": 25,
+        "timestampSeconds": 127.5,
+        "framePath": "frames/frame-0025.jpg",
+        "meanLuminance": 0.521,
+        "luminanceContrastStd": 0.2883,
+        "meanSaturation": 0.289,
+        "warmthIndex": 0.0004,
+        "chromaticEntropyBits": 5.0678,
+        "jensenShannonDivergenceFromPrev": 0.0102,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.5143
+      },
+      "linguistic": {
+        "windowIndex": 25,
+        "segmentId": "SEG-06",
+        "speakerId": "SPK_04",
+        "speakerLabel": "Estudiante 4 (Camiseta azul marino New York frente al mapa)",
+        "wordsPerMinute": 192,
+        "typeTokenRatio": 0.641,
+        "normativeMarkerDensity": 0.0625,
+        "dialecticalConnectorDensity": 0.0312,
+        "institutionalAnchoring": 0.65,
+        "normalizedLinguisticIntensity": 0.576,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.15,
+          "B2_LEGAL_COMPLIANCE": 0.6,
+          "B3_PRAGMATIC_SERVICE": 0.2,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6276,
+      "narrativeEnergy": 60.69,
+      "cumulativeStanceEntropyBits": 2.8912,
+      "normalizedNarrativeEntropy": 0.9637,
+      "narrativeInertia": 0.5449,
+      "narrativeComplexity": 59.47,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0132,
+        "B2_LEGAL_COMPLIANCE": 0.3785,
+        "B3_PRAGMATIC_SERVICE": 0.3537,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1627
+      },
+      "polarizationIndex": 0.6299,
+      "stateDisplacementNorm": 0.057
+    },
+    {
+      "windowIndex": 26,
+      "startSeconds": 130,
+      "endSeconds": 135,
+      "midpointSeconds": 132.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 26,
+        "startSeconds": 130,
+        "endSeconds": 135,
+        "rmsAmplitude": 0.06279,
+        "dbFs": -24.04,
+        "peakAmplitude": 0.4984,
+        "zeroCrossingRate": 0.1194,
+        "speechActivityRatio": 0.72,
+        "dynamicRangeDb": 24.39,
+        "normalizedIntensity": 0.4854
+      },
+      "visual": {
+        "windowIndex": 26,
+        "timestampSeconds": 132.5,
+        "framePath": "frames/frame-0026.jpg",
+        "meanLuminance": 0.3607,
+        "luminanceContrastStd": 0.1829,
+        "meanSaturation": 0.3249,
+        "warmthIndex": 0.0764,
+        "chromaticEntropyBits": 5.2466,
+        "jensenShannonDivergenceFromPrev": 0.4803,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.5939
+      },
+      "linguistic": {
+        "windowIndex": 26,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.5968,
+      "narrativeEnergy": 59.8,
+      "cumulativeStanceEntropyBits": 2.8806,
+      "normalizedNarrativeEntropy": 0.9602,
+      "narrativeInertia": 0.6077,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0254,
+        "B2_LEGAL_COMPLIANCE": 0.3974,
+        "B3_PRAGMATIC_SERVICE": 0.3893,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1586
+      },
+      "polarizationIndex": 0.6224,
+      "stateDisplacementNorm": 0.0423
+    },
+    {
+      "windowIndex": 27,
+      "startSeconds": 135,
+      "endSeconds": 140,
+      "midpointSeconds": 137.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 27,
+        "startSeconds": 135,
+        "endSeconds": 140,
+        "rmsAmplitude": 0.05531,
+        "dbFs": -25.14,
+        "peakAmplitude": 0.4409,
+        "zeroCrossingRate": 0.1493,
+        "speechActivityRatio": 0.58,
+        "dynamicRangeDb": 31.04,
+        "normalizedIntensity": 0.3868
+      },
+      "visual": {
+        "windowIndex": 27,
+        "timestampSeconds": 137.5,
+        "framePath": "frames/frame-0027.jpg",
+        "meanLuminance": 0.3985,
+        "luminanceContrastStd": 0.1817,
+        "meanSaturation": 0.2958,
+        "warmthIndex": 0.0655,
+        "chromaticEntropyBits": 5.356,
+        "jensenShannonDivergenceFromPrev": 0.0373,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4197
+      },
+      "linguistic": {
+        "windowIndex": 27,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.5328,
+      "narrativeEnergy": 51.66,
+      "cumulativeStanceEntropyBits": 2.8701,
+      "normalizedNarrativeEntropy": 0.9567,
+      "narrativeInertia": 0.6168,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0351,
+        "B2_LEGAL_COMPLIANCE": 0.4126,
+        "B3_PRAGMATIC_SERVICE": 0.4177,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1553
+      },
+      "polarizationIndex": 0.6151,
+      "stateDisplacementNorm": 0.0338
+    },
+    {
+      "windowIndex": 28,
+      "startSeconds": 140,
+      "endSeconds": 145,
+      "midpointSeconds": 142.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 28,
+        "startSeconds": 140,
+        "endSeconds": 145,
+        "rmsAmplitude": 0.06332,
+        "dbFs": -23.97,
+        "peakAmplitude": 0.4985,
+        "zeroCrossingRate": 0.1918,
+        "speechActivityRatio": 0.68,
+        "dynamicRangeDb": 28.71,
+        "normalizedIntensity": 0.4772
+      },
+      "visual": {
+        "windowIndex": 28,
+        "timestampSeconds": 142.5,
+        "framePath": "frames/frame-0028.jpg",
+        "meanLuminance": 0.4023,
+        "luminanceContrastStd": 0.179,
+        "meanSaturation": 0.2857,
+        "warmthIndex": 0.0618,
+        "chromaticEntropyBits": 5.4649,
+        "jensenShannonDivergenceFromPrev": 0.0271,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4168
+      },
+      "linguistic": {
+        "windowIndex": 28,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.5918,
+      "narrativeEnergy": 55.55,
+      "cumulativeStanceEntropyBits": 2.859,
+      "normalizedNarrativeEntropy": 0.953,
+      "narrativeInertia": 0.625,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0449,
+        "B2_LEGAL_COMPLIANCE": 0.4279,
+        "B3_PRAGMATIC_SERVICE": 0.4463,
+        "B4_INDIVIDUAL_AUTONOMY": 0.152
+      },
+      "polarizationIndex": 0.608,
+      "stateDisplacementNorm": 0.0341
+    },
+    {
+      "windowIndex": 29,
+      "startSeconds": 145,
+      "endSeconds": 150,
+      "midpointSeconds": 147.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 29,
+        "startSeconds": 145,
+        "endSeconds": 150,
+        "rmsAmplitude": 0.06525,
+        "dbFs": -23.71,
+        "peakAmplitude": 0.5193,
+        "zeroCrossingRate": 0.1529,
+        "speechActivityRatio": 0.74,
+        "dynamicRangeDb": 25.86,
+        "normalizedIntensity": 0.5086
+      },
+      "visual": {
+        "windowIndex": 29,
+        "timestampSeconds": 147.5,
+        "framePath": "frames/frame-0029.jpg",
+        "meanLuminance": 0.3526,
+        "luminanceContrastStd": 0.1739,
+        "meanSaturation": 0.3248,
+        "warmthIndex": 0.0536,
+        "chromaticEntropyBits": 5.3678,
+        "jensenShannonDivergenceFromPrev": 0.0499,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4167
+      },
+      "linguistic": {
+        "windowIndex": 29,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.6109,
+      "narrativeEnergy": 56.9,
+      "cumulativeStanceEntropyBits": 2.8476,
+      "normalizedNarrativeEntropy": 0.9492,
+      "narrativeInertia": 0.6333,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0542,
+        "B2_LEGAL_COMPLIANCE": 0.4426,
+        "B3_PRAGMATIC_SERVICE": 0.4736,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1489
+      },
+      "polarizationIndex": 0.601,
+      "stateDisplacementNorm": 0.0326
+    },
+    {
+      "windowIndex": 30,
+      "startSeconds": 150,
+      "endSeconds": 155,
+      "midpointSeconds": 152.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 30,
+        "startSeconds": 150,
+        "endSeconds": 155,
+        "rmsAmplitude": 0.06362,
+        "dbFs": -23.93,
+        "peakAmplitude": 0.4933,
+        "zeroCrossingRate": 0.1424,
+        "speechActivityRatio": 0.7,
+        "dynamicRangeDb": 22.05,
+        "normalizedIntensity": 0.4853
+      },
+      "visual": {
+        "windowIndex": 30,
+        "timestampSeconds": 152.5,
+        "framePath": "frames/frame-0030.jpg",
+        "meanLuminance": 0.3488,
+        "luminanceContrastStd": 0.1792,
+        "meanSaturation": 0.3214,
+        "warmthIndex": 0.0508,
+        "chromaticEntropyBits": 5.4155,
+        "jensenShannonDivergenceFromPrev": 0.0379,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4195
+      },
+      "linguistic": {
+        "windowIndex": 30,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.5968,
+      "narrativeEnergy": 55.96,
+      "cumulativeStanceEntropyBits": 2.836,
+      "normalizedNarrativeEntropy": 0.9453,
+      "narrativeInertia": 0.6414,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0628,
+        "B2_LEGAL_COMPLIANCE": 0.4561,
+        "B3_PRAGMATIC_SERVICE": 0.4986,
+        "B4_INDIVIDUAL_AUTONOMY": 0.146
+      },
+      "polarizationIndex": 0.5942,
+      "stateDisplacementNorm": 0.0298
+    },
+    {
+      "windowIndex": 31,
+      "startSeconds": 155,
+      "endSeconds": 160,
+      "midpointSeconds": 157.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 31,
+        "startSeconds": 155,
+        "endSeconds": 160,
+        "rmsAmplitude": 0.06197,
+        "dbFs": -24.16,
+        "peakAmplitude": 0.4968,
+        "zeroCrossingRate": 0.1426,
+        "speechActivityRatio": 0.76,
+        "dynamicRangeDb": 22.55,
+        "normalizedIntensity": 0.4915
+      },
+      "visual": {
+        "windowIndex": 31,
+        "timestampSeconds": 157.5,
+        "framePath": "frames/frame-0031.jpg",
+        "meanLuminance": 0.2921,
+        "luminanceContrastStd": 0.1817,
+        "meanSaturation": 0.3912,
+        "warmthIndex": 0.067,
+        "chromaticEntropyBits": 5.1069,
+        "jensenShannonDivergenceFromPrev": 0.0582,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4184
+      },
+      "linguistic": {
+        "windowIndex": 31,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.6006,
+      "narrativeEnergy": 56.2,
+      "cumulativeStanceEntropyBits": 2.8244,
+      "normalizedNarrativeEntropy": 0.9415,
+      "narrativeInertia": 0.6493,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0708,
+        "B2_LEGAL_COMPLIANCE": 0.4688,
+        "B3_PRAGMATIC_SERVICE": 0.5221,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1433
+      },
+      "polarizationIndex": 0.5876,
+      "stateDisplacementNorm": 0.028
+    },
+    {
+      "windowIndex": 32,
+      "startSeconds": 160,
+      "endSeconds": 165,
+      "midpointSeconds": 162.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 32,
+        "startSeconds": 160,
+        "endSeconds": 165,
+        "rmsAmplitude": 0.07092,
+        "dbFs": -22.98,
+        "peakAmplitude": 0.5349,
+        "zeroCrossingRate": 0.1258,
+        "speechActivityRatio": 0.68,
+        "dynamicRangeDb": 23.34,
+        "normalizedIntensity": 0.5278
+      },
+      "visual": {
+        "windowIndex": 32,
+        "timestampSeconds": 162.5,
+        "framePath": "frames/frame-0032.jpg",
+        "meanLuminance": 0.3181,
+        "luminanceContrastStd": 0.1865,
+        "meanSaturation": 0.3664,
+        "warmthIndex": 0.0638,
+        "chromaticEntropyBits": 5.2451,
+        "jensenShannonDivergenceFromPrev": 0.0354,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4198
+      },
+      "linguistic": {
+        "windowIndex": 32,
+        "segmentId": "SEG-07",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 198.9,
+        "typeTokenRatio": 0.466,
+        "normativeMarkerDensity": 0.0948,
+        "dialecticalConnectorDensity": 0.0862,
+        "institutionalAnchoring": 0.75,
+        "normalizedLinguisticIntensity": 0.7338,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.2,
+          "B2_LEGAL_COMPLIANCE": 0.7,
+          "B3_PRAGMATIC_SERVICE": 0.9,
+          "B4_INDIVIDUAL_AUTONOMY": 0.1
+        }
+      },
+      "crossModalResonance": 0.6223,
+      "narrativeEnergy": 57.8,
+      "cumulativeStanceEntropyBits": 2.8126,
+      "normalizedNarrativeEntropy": 0.9375,
+      "narrativeInertia": 0.657,
+      "narrativeComplexity": 67.99,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0785,
+        "B2_LEGAL_COMPLIANCE": 0.481,
+        "B3_PRAGMATIC_SERVICE": 0.5446,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1407
+      },
+      "polarizationIndex": 0.5811,
+      "stateDisplacementNorm": 0.0269
+    },
+    {
+      "windowIndex": 33,
+      "startSeconds": 165,
+      "endSeconds": 170,
+      "midpointSeconds": 167.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 33,
+        "startSeconds": 165,
+        "endSeconds": 170,
+        "rmsAmplitude": 0.11813,
+        "dbFs": -18.55,
+        "peakAmplitude": 0.8112,
+        "zeroCrossingRate": 0.1311,
+        "speechActivityRatio": 0.46,
+        "dynamicRangeDb": 30.18,
+        "normalizedIntensity": 0.6897
+      },
+      "visual": {
+        "windowIndex": 33,
+        "timestampSeconds": 167.5,
+        "framePath": "frames/frame-0033.jpg",
+        "meanLuminance": 0.3141,
+        "luminanceContrastStd": 0.1846,
+        "meanSaturation": 0.3406,
+        "warmthIndex": 0.069,
+        "chromaticEntropyBits": 5.1906,
+        "jensenShannonDivergenceFromPrev": 0.029,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4132
+      },
+      "linguistic": {
+        "windowIndex": 33,
+        "segmentId": "SEG-08",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 168.9,
+        "typeTokenRatio": 0.56,
+        "normativeMarkerDensity": 0.0595,
+        "dialecticalConnectorDensity": 0.0476,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.5621,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.3,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.88,
+          "B4_INDIVIDUAL_AUTONOMY": -0.2
+        }
+      },
+      "crossModalResonance": 0.6226,
+      "narrativeEnergy": 58.18,
+      "cumulativeStanceEntropyBits": 2.8035,
+      "normalizedNarrativeEntropy": 0.9345,
+      "narrativeInertia": 0.6812,
+      "narrativeComplexity": 68.86,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.0914,
+        "B2_LEGAL_COMPLIANCE": 0.4948,
+        "B3_PRAGMATIC_SERVICE": 0.5642,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1208
+      },
+      "polarizationIndex": 0.576,
+      "stateDisplacementNorm": 0.0337
+    },
+    {
+      "windowIndex": 34,
+      "startSeconds": 170,
+      "endSeconds": 175,
+      "midpointSeconds": 172.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 34,
+        "startSeconds": 170,
+        "endSeconds": 175,
+        "rmsAmplitude": 0.10762,
+        "dbFs": -19.36,
+        "peakAmplitude": 0.5837,
+        "zeroCrossingRate": 0.1611,
+        "speechActivityRatio": 0.8,
+        "dynamicRangeDb": 24.86,
+        "normalizedIntensity": 0.7501
+      },
+      "visual": {
+        "windowIndex": 34,
+        "timestampSeconds": 172.5,
+        "framePath": "frames/frame-0034.jpg",
+        "meanLuminance": 0.3844,
+        "luminanceContrastStd": 0.2208,
+        "meanSaturation": 0.3207,
+        "warmthIndex": 0.07,
+        "chromaticEntropyBits": 5.3952,
+        "jensenShannonDivergenceFromPrev": 0.0598,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4729
+      },
+      "linguistic": {
+        "windowIndex": 34,
+        "segmentId": "SEG-08",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 168.9,
+        "typeTokenRatio": 0.56,
+        "normativeMarkerDensity": 0.0595,
+        "dialecticalConnectorDensity": 0.0476,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.5621,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.3,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.88,
+          "B4_INDIVIDUAL_AUTONOMY": -0.2
+        }
+      },
+      "crossModalResonance": 0.6493,
+      "narrativeEnergy": 61.95,
+      "cumulativeStanceEntropyBits": 2.7941,
+      "normalizedNarrativeEntropy": 0.9314,
+      "narrativeInertia": 0.6879,
+      "narrativeComplexity": 68.86,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.1043,
+        "B2_LEGAL_COMPLIANCE": 0.5086,
+        "B3_PRAGMATIC_SERVICE": 0.5837,
+        "B4_INDIVIDUAL_AUTONOMY": 0.101
+      },
+      "polarizationIndex": 0.571,
+      "stateDisplacementNorm": 0.0336
+    },
+    {
+      "windowIndex": 35,
+      "startSeconds": 175,
+      "endSeconds": 180,
+      "midpointSeconds": 177.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 35,
+        "startSeconds": 175,
+        "endSeconds": 180,
+        "rmsAmplitude": 0.09553,
+        "dbFs": -20.4,
+        "peakAmplitude": 0.5922,
+        "zeroCrossingRate": 0.1398,
+        "speechActivityRatio": 0.84,
+        "dynamicRangeDb": 27.37,
+        "normalizedIntensity": 0.7088
+      },
+      "visual": {
+        "windowIndex": 35,
+        "timestampSeconds": 177.5,
+        "framePath": "frames/frame-0035.jpg",
+        "meanLuminance": 0.3022,
+        "luminanceContrastStd": 0.1776,
+        "meanSaturation": 0.3742,
+        "warmthIndex": 0.0781,
+        "chromaticEntropyBits": 5.2874,
+        "jensenShannonDivergenceFromPrev": 0.0711,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.426
+      },
+      "linguistic": {
+        "windowIndex": 35,
+        "segmentId": "SEG-08",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 168.9,
+        "typeTokenRatio": 0.56,
+        "normativeMarkerDensity": 0.0595,
+        "dialecticalConnectorDensity": 0.0476,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.5621,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.3,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.88,
+          "B4_INDIVIDUAL_AUTONOMY": -0.2
+        }
+      },
+      "crossModalResonance": 0.6312,
+      "narrativeEnergy": 59.24,
+      "cumulativeStanceEntropyBits": 2.7848,
+      "normalizedNarrativeEntropy": 0.9283,
+      "narrativeInertia": 0.6947,
+      "narrativeComplexity": 68.86,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.1157,
+        "B2_LEGAL_COMPLIANCE": 0.521,
+        "B3_PRAGMATIC_SERVICE": 0.601,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0834
+      },
+      "polarizationIndex": 0.566,
+      "stateDisplacementNorm": 0.0299
+    },
+    {
+      "windowIndex": 36,
+      "startSeconds": 180,
+      "endSeconds": 185,
+      "midpointSeconds": 182.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 36,
+        "startSeconds": 180,
+        "endSeconds": 185,
+        "rmsAmplitude": 0.0955,
+        "dbFs": -20.4,
+        "peakAmplitude": 0.5805,
+        "zeroCrossingRate": 0.1282,
+        "speechActivityRatio": 0.76,
+        "dynamicRangeDb": 23.88,
+        "normalizedIntensity": 0.6847
+      },
+      "visual": {
+        "windowIndex": 36,
+        "timestampSeconds": 182.5,
+        "framePath": "frames/frame-0036.jpg",
+        "meanLuminance": 0.3063,
+        "luminanceContrastStd": 0.1775,
+        "meanSaturation": 0.3846,
+        "warmthIndex": 0.0789,
+        "chromaticEntropyBits": 5.3172,
+        "jensenShannonDivergenceFromPrev": 0.0233,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4079
+      },
+      "linguistic": {
+        "windowIndex": 36,
+        "segmentId": "SEG-08",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 168.9,
+        "typeTokenRatio": 0.56,
+        "normativeMarkerDensity": 0.0595,
+        "dialecticalConnectorDensity": 0.0476,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.5621,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.3,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.88,
+          "B4_INDIVIDUAL_AUTONOMY": -0.2
+        }
+      },
+      "crossModalResonance": 0.6204,
+      "narrativeEnergy": 57.86,
+      "cumulativeStanceEntropyBits": 2.7756,
+      "normalizedNarrativeEntropy": 0.9252,
+      "narrativeInertia": 0.7013,
+      "narrativeComplexity": 68.86,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.1261,
+        "B2_LEGAL_COMPLIANCE": 0.5323,
+        "B3_PRAGMATIC_SERVICE": 0.6168,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0673
+      },
+      "polarizationIndex": 0.5611,
+      "stateDisplacementNorm": 0.0273
+    },
+    {
+      "windowIndex": 37,
+      "startSeconds": 185,
+      "endSeconds": 190,
+      "midpointSeconds": 187.5,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 37,
+        "startSeconds": 185,
+        "endSeconds": 190,
+        "rmsAmplitude": 0.09164,
+        "dbFs": -20.76,
+        "peakAmplitude": 0.5505,
+        "zeroCrossingRate": 0.1364,
+        "speechActivityRatio": 0.8,
+        "dynamicRangeDb": 28.03,
+        "normalizedIntensity": 0.6782
+      },
+      "visual": {
+        "windowIndex": 37,
+        "timestampSeconds": 187.5,
+        "framePath": "frames/frame-0037.jpg",
+        "meanLuminance": 0.2961,
+        "luminanceContrastStd": 0.197,
+        "meanSaturation": 0.4242,
+        "warmthIndex": 0.0797,
+        "chromaticEntropyBits": 5.2524,
+        "jensenShannonDivergenceFromPrev": 0.0425,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4345
+      },
+      "linguistic": {
+        "windowIndex": 37,
+        "segmentId": "SEG-08",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 168.9,
+        "typeTokenRatio": 0.56,
+        "normativeMarkerDensity": 0.0595,
+        "dialecticalConnectorDensity": 0.0476,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.5621,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.3,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.88,
+          "B4_INDIVIDUAL_AUTONOMY": -0.2
+        }
+      },
+      "crossModalResonance": 0.6174,
+      "narrativeEnergy": 58.18,
+      "cumulativeStanceEntropyBits": 2.7663,
+      "normalizedNarrativeEntropy": 0.9221,
+      "narrativeInertia": 0.7078,
+      "narrativeComplexity": 68.86,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.1359,
+        "B2_LEGAL_COMPLIANCE": 0.543,
+        "B3_PRAGMATIC_SERVICE": 0.6317,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0522
+      },
+      "polarizationIndex": 0.5563,
+      "stateDisplacementNorm": 0.0257
+    },
+    {
+      "windowIndex": 38,
+      "startSeconds": 190,
+      "endSeconds": 194.837,
+      "midpointSeconds": 192.418,
+      "speakerId": "SPK_05",
+      "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+      "acoustic": {
+        "windowIndex": 38,
+        "startSeconds": 190,
+        "endSeconds": 194.837,
+        "rmsAmplitude": 0.08552,
+        "dbFs": -21.36,
+        "peakAmplitude": 0.607,
+        "zeroCrossingRate": 0.1529,
+        "speechActivityRatio": 0.562,
+        "dynamicRangeDb": 25.64,
+        "normalizedIntensity": 0.5761
+      },
+      "visual": {
+        "windowIndex": 38,
+        "timestampSeconds": 192.419,
+        "framePath": "frames/frame-0038.jpg",
+        "meanLuminance": 0.3449,
+        "luminanceContrastStd": 0.1972,
+        "meanSaturation": 0.3382,
+        "warmthIndex": 0.0768,
+        "chromaticEntropyBits": 5.2245,
+        "jensenShannonDivergenceFromPrev": 0.0511,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4371
+      },
+      "linguistic": {
+        "windowIndex": 38,
+        "segmentId": "SEG-08",
+        "speakerId": "SPK_05",
+        "speakerLabel": "Estudiante 5 (Chica con camisa de cuadros multicolor en pasillo)",
+        "wordsPerMinute": 168.9,
+        "typeTokenRatio": 0.56,
+        "normativeMarkerDensity": 0.0595,
+        "dialecticalConnectorDensity": 0.0476,
+        "institutionalAnchoring": 0.78,
+        "normalizedLinguisticIntensity": 0.5621,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": -0.3,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.88,
+          "B4_INDIVIDUAL_AUTONOMY": -0.2
+        }
+      },
+      "crossModalResonance": 0.5691,
+      "narrativeEnergy": 54.04,
+      "cumulativeStanceEntropyBits": 2.7574,
+      "normalizedNarrativeEntropy": 0.9191,
+      "narrativeInertia": 0.7142,
+      "narrativeComplexity": 68.86,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": -0.1445,
+        "B2_LEGAL_COMPLIANCE": 0.5524,
+        "B3_PRAGMATIC_SERVICE": 0.6446,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0391
+      },
+      "polarizationIndex": 0.5515,
+      "stateDisplacementNorm": 0.0224
+    }
+  ]
+}

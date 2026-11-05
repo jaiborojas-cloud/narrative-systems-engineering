@@ -1,0 +1,1133 @@
+{
+  "schemaVersion": "argon-0.1",
+  "createdUtc": "2026-11-05T18:55:53.9402385+00:00",
+  "sourceVideo": "video/LBJ_Daisy_1964.ogv",
+  "sourceSha256": "e09dbeb6ec9e5db43cee89feb577a59e0eff1ce5de58102c01e5c0b84240bda8",
+  "durationSeconds": 59.826493,
+  "windowCount": 12,
+  "globalIndices": {
+    "meanNarrativeEnergy": 50.51,
+    "peakNarrativeEnergy": 83.29,
+    "peakEnergyWindowIndex": 6,
+    "finalNarrativeEntropyBits": 2.2292,
+    "normalizedNarrativeEntropy": 0.7431,
+    "meanNarrativeInertia": 0.442,
+    "meanNarrativeComplexity": 71.86,
+    "detectedSceneCutsCount": 3
+  },
+  "speakerSummaries": [
+    {
+      "speakerId": "CHILD_GIRL",
+      "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+      "startSeconds": 0,
+      "endSeconds": 20,
+      "meanEnergy": 27.5,
+      "meanAcousticDbFs": -26.04,
+      "meanWordsPerMinute": 36.7,
+      "meanComplexity": 56.67,
+      "meanInertia": 0.103,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.25,
+        "B2_LEGAL_COMPLIANCE": 0,
+        "B3_PRAGMATIC_SERVICE": 0.3,
+        "B4_INDIVIDUAL_AUTONOMY": 0.9
+      }
+    },
+    {
+      "speakerId": "LAUNCH_VOICE",
+      "speakerLabel": "Echoing Male Launch Countdown Voice",
+      "startSeconds": 20,
+      "endSeconds": 30,
+      "meanEnergy": 48.42,
+      "meanAcousticDbFs": -16.93,
+      "meanWordsPerMinute": 50.8,
+      "meanComplexity": 65,
+      "meanInertia": 0.356,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.95,
+        "B2_LEGAL_COMPLIANCE": 0.2,
+        "B3_PRAGMATIC_SERVICE": 0.5,
+        "B4_INDIVIDUAL_AUTONOMY": -0.85
+      }
+    },
+    {
+      "speakerId": "LBJ_VOICE",
+      "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "startSeconds": 30,
+      "endSeconds": 50,
+      "meanEnergy": 75.6,
+      "meanAcousticDbFs": -15.71,
+      "meanWordsPerMinute": 116.5,
+      "meanComplexity": 93.92,
+      "meanInertia": 0.651,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.98,
+        "B2_LEGAL_COMPLIANCE": 0.75,
+        "B3_PRAGMATIC_SERVICE": 0.95,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6
+      }
+    },
+    {
+      "speakerId": "ANNOUNCER",
+      "speakerLabel": "Campaign Announcer (Mandate Card)",
+      "startSeconds": 50,
+      "endSeconds": 59.826,
+      "meanEnergy": 48.4,
+      "meanAcousticDbFs": -22.28,
+      "meanWordsPerMinute": 86.2,
+      "meanComplexity": 65,
+      "meanInertia": 0.788,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.85,
+        "B2_LEGAL_COMPLIANCE": 0.98,
+        "B3_PRAGMATIC_SERVICE": 0.92,
+        "B4_INDIVIDUAL_AUTONOMY": 0.4
+      }
+    }
+  ],
+  "dnaNodes": [
+    {
+      "id": "B1_ANTIMILITARISM",
+      "label": "Existential Nuclear Threat \u0026 Anti-War Urgency",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B2_LEGAL_COMPLIANCE",
+      "label": "Electoral \u0026 Institutional Mobilization",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B3_PRAGMATIC_SERVICE",
+      "label": "Collective Survival \u0026 Peace Stewardship",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B4_INDIVIDUAL_AUTONOMY",
+      "label": "Innocence \u0026 Vulnerability Preservation",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "CHILD_GIRL",
+      "label": "Little Girl in Meadow (Monique Corzilius)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "LAUNCH_VOICE",
+      "label": "Echoing Male Launch Countdown Voice",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "LBJ_VOICE",
+      "label": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "ANNOUNCER",
+      "label": "Campaign Announcer (Mandate Card)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "ARCH_0EF1577D",
+      "label": "Child in meadow (Human Innocence) (victim)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_B1D7EE84",
+      "label": "Impersonal Nuclear Launch Countdown (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_CF092F47",
+      "label": "Nuclear Annihilation (\u0027go into the dark\u0027) (threat)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_C76A0BF5",
+      "label": "Presidential Peace Stewardship (savior)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_27E1543D",
+      "label": "Mobilized Voter (hero)",
+      "kind": "archetype_entity"
+    }
+  ],
+  "dnaEdges": [
+    {
+      "source": "CHILD_GIRL",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.25,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.25 over [0s-20s]"
+    },
+    {
+      "source": "CHILD_GIRL",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.3,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.30 over [0s-20s]"
+    },
+    {
+      "source": "CHILD_GIRL",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.9,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.90 over [0s-20s]"
+    },
+    {
+      "source": "LAUNCH_VOICE",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.95,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.95 over [20s-30s]"
+    },
+    {
+      "source": "LAUNCH_VOICE",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.2,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.20 over [20s-30s]"
+    },
+    {
+      "source": "LAUNCH_VOICE",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.5,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.50 over [20s-30s]"
+    },
+    {
+      "source": "LAUNCH_VOICE",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": -0.85,
+      "relation": "challenges",
+      "evidence": "Mean stance -0.85 over [20s-30s]"
+    },
+    {
+      "source": "LBJ_VOICE",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.98,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.98 over [30s-50s]"
+    },
+    {
+      "source": "LBJ_VOICE",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.75,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.75 over [30s-50s]"
+    },
+    {
+      "source": "LBJ_VOICE",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.95,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.95 over [30s-50s]"
+    },
+    {
+      "source": "LBJ_VOICE",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.6,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.60 over [30s-50s]"
+    },
+    {
+      "source": "ANNOUNCER",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.85,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.85 over [50s-60s]"
+    },
+    {
+      "source": "ANNOUNCER",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.98,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.98 over [50s-60s]"
+    },
+    {
+      "source": "ANNOUNCER",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.92,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.92 over [50s-60s]"
+    },
+    {
+      "source": "ANNOUNCER",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.4,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.40 over [50s-60s]"
+    },
+    {
+      "source": "CHILD_GIRL",
+      "target": "ARCH_0EF1577D",
+      "weight": -0.8,
+      "relation": "casts_as_victim",
+      "evidence": "Young girl miscounting daisy petals in nature"
+    },
+    {
+      "source": "LAUNCH_VOICE",
+      "target": "ARCH_B1D7EE84",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "Booming metallic countdown overriding the child\u0027s voice"
+    },
+    {
+      "source": "LBJ_VOICE",
+      "target": "ARCH_CF092F47",
+      "weight": -0.8,
+      "relation": "casts_as_threat",
+      "evidence": "Full-screen atomic detonation and mushroom cloud"
+    },
+    {
+      "source": "LBJ_VOICE",
+      "target": "ARCH_C76A0BF5",
+      "weight": 0.8,
+      "relation": "casts_as_savior",
+      "evidence": "To make a world in which all of God\u0027s children can live"
+    },
+    {
+      "source": "ANNOUNCER",
+      "target": "ARCH_27E1543D",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "Vote for President Johnson on November 3rd. The stakes are too high for you to stay home."
+    }
+  ],
+  "controlAnalysis": {
+    "gramianDiagonalSensitivity": {
+      "B1_ANTIMILITARISM": 0.02214,
+      "B2_LEGAL_COMPLIANCE": 0.01285,
+      "B3_PRAGMATIC_SERVICE": 0.02291,
+      "B4_INDIVIDUAL_AUTONOMY": 0.01719
+    },
+    "maxSensitivityEigenvalue": 0.02291,
+    "minSensitivityEigenvalue": 0.01285,
+    "conditionNumberKappa": 1.783,
+    "mostControllableDimension": "B3_PRAGMATIC_SERVICE",
+    "mostInertialDimension": "B2_LEGAL_COMPLIANCE",
+    "counterfactualScenarios": [
+      {
+        "scenarioId": "SCENARIO_A_ORIGINAL",
+        "name": "Scenario A: Original Documentary Order (Actual Video)",
+        "description": "Starts with anti-militarist poster \u0026 SPK_01 (0-45s), followed by 4 consecutive legal/pragmatic speakers (45-195s).",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.4283,
+          "B2_LEGAL_COMPLIANCE": 0.2624,
+          "B3_PRAGMATIC_SERVICE": 0.3928,
+          "B4_INDIVIDUAL_AUTONOMY": 0.2037
+        },
+        "finalPolarization": 0.42,
+        "netShiftFromBaseline": 0
+      },
+      {
+        "scenarioId": "SCENARIO_B_REVERSED_RECENCY",
+        "name": "Scenario B: Reversed Framing Order (Anti-Militarist Last)",
+        "description": "Places institutional/legal speakers first and ends with SPK_01\u0027s anti-militarist abolitionist critique and activist poster.",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.3792,
+          "B2_LEGAL_COMPLIANCE": 0.1956,
+          "B3_PRAGMATIC_SERVICE": 0.3366,
+          "B4_INDIVIDUAL_AUTONOMY": 0.2024
+        },
+        "finalPolarization": 0.42,
+        "netShiftFromBaseline": 0.1002
+      },
+      {
+        "scenarioId": "SCENARIO_C_AMPLIFIED_DISSENT",
+        "name": "Scenario C: Balanced Airtime Counterfactual",
+        "description": "Equalizes exposure duration between the abolitionist stance (SPK_01) and the pragmatic/legal coalition (SPK_02..05).",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.3421,
+          "B2_LEGAL_COMPLIANCE": 0.2045,
+          "B3_PRAGMATIC_SERVICE": 0.3124,
+          "B4_INDIVIDUAL_AUTONOMY": 0.164
+        },
+        "finalPolarization": 0.6812,
+        "netShiftFromBaseline": 0.1372
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "windowIndex": 0,
+      "startSeconds": 0,
+      "endSeconds": 5,
+      "midpointSeconds": 2.5,
+      "speakerId": "CHILD_GIRL",
+      "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+      "acoustic": {
+        "windowIndex": 0,
+        "startSeconds": 0,
+        "endSeconds": 5,
+        "rmsAmplitude": 0.05451,
+        "dbFs": -25.27,
+        "peakAmplitude": 0.4271,
+        "zeroCrossingRate": 0.2162,
+        "speechActivityRatio": 0.42,
+        "dynamicRangeDb": 23.52,
+        "normalizedIntensity": 0.3882
+      },
+      "visual": {
+        "windowIndex": 0,
+        "timestampSeconds": 2.5,
+        "framePath": "frames/frame-0000.jpg",
+        "meanLuminance": 0.6282,
+        "luminanceContrastStd": 0.2291,
+        "meanSaturation": 0.0212,
+        "warmthIndex": -0,
+        "chromaticEntropyBits": 2.9796,
+        "jensenShannonDivergenceFromPrev": 0,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.3652
+      },
+      "linguistic": {
+        "windowIndex": 0,
+        "segmentId": "DAISY-01",
+        "speakerId": "CHILD_GIRL",
+        "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+        "wordsPerMinute": 36.7,
+        "typeTokenRatio": 0.818,
+        "normativeMarkerDensity": 0,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.1347,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.25,
+          "B2_LEGAL_COMPLIANCE": 0,
+          "B3_PRAGMATIC_SERVICE": 0.3,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.2287,
+      "narrativeEnergy": 28.57,
+      "cumulativeStanceEntropyBits": 2.2685,
+      "normalizedNarrativeEntropy": 0.7562,
+      "narrativeInertia": 0.0717,
+      "narrativeComplexity": 56.67,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0123,
+        "B2_LEGAL_COMPLIANCE": 0,
+        "B3_PRAGMATIC_SERVICE": 0.0147,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0441
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0481
+    },
+    {
+      "windowIndex": 1,
+      "startSeconds": 5,
+      "endSeconds": 10,
+      "midpointSeconds": 7.5,
+      "speakerId": "CHILD_GIRL",
+      "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+      "acoustic": {
+        "windowIndex": 1,
+        "startSeconds": 5,
+        "endSeconds": 10,
+        "rmsAmplitude": 0.07231,
+        "dbFs": -22.82,
+        "peakAmplitude": 0.5147,
+        "zeroCrossingRate": 0.1969,
+        "speechActivityRatio": 0.4,
+        "dynamicRangeDb": 24.13,
+        "normalizedIntensity": 0.475
+      },
+      "visual": {
+        "windowIndex": 1,
+        "timestampSeconds": 7.5,
+        "framePath": "frames/frame-0001.jpg",
+        "meanLuminance": 0.6387,
+        "luminanceContrastStd": 0.26,
+        "meanSaturation": 0.0224,
+        "warmthIndex": -0,
+        "chromaticEntropyBits": 3.0372,
+        "jensenShannonDivergenceFromPrev": 0.0165,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4078
+      },
+      "linguistic": {
+        "windowIndex": 1,
+        "segmentId": "DAISY-01",
+        "speakerId": "CHILD_GIRL",
+        "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+        "wordsPerMinute": 36.7,
+        "typeTokenRatio": 0.818,
+        "normativeMarkerDensity": 0,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.1347,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.25,
+          "B2_LEGAL_COMPLIANCE": 0,
+          "B3_PRAGMATIC_SERVICE": 0.3,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.2529,
+      "narrativeEnergy": 32.82,
+      "cumulativeStanceEntropyBits": 1.9701,
+      "normalizedNarrativeEntropy": 0.6567,
+      "narrativeInertia": 0.0928,
+      "narrativeComplexity": 56.67,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0255,
+        "B2_LEGAL_COMPLIANCE": 0,
+        "B3_PRAGMATIC_SERVICE": 0.0305,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0916
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0518
+    },
+    {
+      "windowIndex": 2,
+      "startSeconds": 10,
+      "endSeconds": 15,
+      "midpointSeconds": 12.5,
+      "speakerId": "CHILD_GIRL",
+      "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+      "acoustic": {
+        "windowIndex": 2,
+        "startSeconds": 10,
+        "endSeconds": 15,
+        "rmsAmplitude": 0.0406,
+        "dbFs": -27.83,
+        "peakAmplitude": 0.3735,
+        "zeroCrossingRate": 0.2305,
+        "speechActivityRatio": 0.24,
+        "dynamicRangeDb": 23.31,
+        "normalizedIntensity": 0.2376
+      },
+      "visual": {
+        "windowIndex": 2,
+        "timestampSeconds": 12.5,
+        "framePath": "frames/frame-0002.jpg",
+        "meanLuminance": 0.623,
+        "luminanceContrastStd": 0.2741,
+        "meanSaturation": 0.0247,
+        "warmthIndex": -0.0001,
+        "chromaticEntropyBits": 3.0448,
+        "jensenShannonDivergenceFromPrev": 0.0054,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.419
+      },
+      "linguistic": {
+        "windowIndex": 2,
+        "segmentId": "DAISY-01",
+        "speakerId": "CHILD_GIRL",
+        "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+        "wordsPerMinute": 36.7,
+        "typeTokenRatio": 0.818,
+        "normativeMarkerDensity": 0,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.1347,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.25,
+          "B2_LEGAL_COMPLIANCE": 0,
+          "B3_PRAGMATIC_SERVICE": 0.3,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.1789,
+      "narrativeEnergy": 23.89,
+      "cumulativeStanceEntropyBits": 1.8308,
+      "normalizedNarrativeEntropy": 0.6103,
+      "narrativeInertia": 0.1142,
+      "narrativeComplexity": 56.67,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0344,
+        "B2_LEGAL_COMPLIANCE": 0,
+        "B3_PRAGMATIC_SERVICE": 0.0412,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1238
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0351
+    },
+    {
+      "windowIndex": 3,
+      "startSeconds": 15,
+      "endSeconds": 20,
+      "midpointSeconds": 17.5,
+      "speakerId": "CHILD_GIRL",
+      "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+      "acoustic": {
+        "windowIndex": 3,
+        "startSeconds": 15,
+        "endSeconds": 20,
+        "rmsAmplitude": 0.03872,
+        "dbFs": -28.24,
+        "peakAmplitude": 0.2928,
+        "zeroCrossingRate": 0.2139,
+        "speechActivityRatio": 0.38,
+        "dynamicRangeDb": 21.09,
+        "normalizedIntensity": 0.264
+      },
+      "visual": {
+        "windowIndex": 3,
+        "timestampSeconds": 17.5,
+        "framePath": "frames/frame-0003.jpg",
+        "meanLuminance": 0.6089,
+        "luminanceContrastStd": 0.2641,
+        "meanSaturation": 0.0239,
+        "warmthIndex": 0,
+        "chromaticEntropyBits": 3.0933,
+        "jensenShannonDivergenceFromPrev": 0.0046,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4097
+      },
+      "linguistic": {
+        "windowIndex": 3,
+        "segmentId": "DAISY-01",
+        "speakerId": "CHILD_GIRL",
+        "speakerLabel": "Little Girl in Meadow (Monique Corzilius)",
+        "wordsPerMinute": 36.7,
+        "typeTokenRatio": 0.818,
+        "normativeMarkerDensity": 0,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.1,
+        "normalizedLinguisticIntensity": 0.1347,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.25,
+          "B2_LEGAL_COMPLIANCE": 0,
+          "B3_PRAGMATIC_SERVICE": 0.3,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.1886,
+      "narrativeEnergy": 24.72,
+      "cumulativeStanceEntropyBits": 1.7441,
+      "normalizedNarrativeEntropy": 0.5814,
+      "narrativeInertia": 0.1341,
+      "narrativeComplexity": 56.67,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0432,
+        "B2_LEGAL_COMPLIANCE": 0,
+        "B3_PRAGMATIC_SERVICE": 0.0517,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1553
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0344
+    },
+    {
+      "windowIndex": 4,
+      "startSeconds": 20,
+      "endSeconds": 25,
+      "midpointSeconds": 22.5,
+      "speakerId": "LAUNCH_VOICE",
+      "speakerLabel": "Echoing Male Launch Countdown Voice",
+      "acoustic": {
+        "windowIndex": 4,
+        "startSeconds": 20,
+        "endSeconds": 25,
+        "rmsAmplitude": 0.15701,
+        "dbFs": -16.08,
+        "peakAmplitude": 0.7996,
+        "zeroCrossingRate": 0.2208,
+        "speechActivityRatio": 0.84,
+        "dynamicRangeDb": 28.53,
+        "normalizedIntensity": 0.8614
+      },
+      "visual": {
+        "windowIndex": 4,
+        "timestampSeconds": 22.5,
+        "framePath": "frames/frame-0004.jpg",
+        "meanLuminance": 0.622,
+        "luminanceContrastStd": 0.2698,
+        "meanSaturation": 0.0239,
+        "warmthIndex": -0.0001,
+        "chromaticEntropyBits": 3.065,
+        "jensenShannonDivergenceFromPrev": 0.0021,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4138
+      },
+      "linguistic": {
+        "windowIndex": 4,
+        "segmentId": "DAISY-02",
+        "speakerId": "LAUNCH_VOICE",
+        "speakerLabel": "Echoing Male Launch Countdown Voice",
+        "wordsPerMinute": 50.8,
+        "typeTokenRatio": 1,
+        "normativeMarkerDensity": 0,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.45,
+        "normalizedLinguisticIntensity": 0.1884,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.95,
+          "B2_LEGAL_COMPLIANCE": 0.2,
+          "B3_PRAGMATIC_SERVICE": 0.5,
+          "B4_INDIVIDUAL_AUTONOMY": -0.85
+        }
+      },
+      "crossModalResonance": 0.4028,
+      "narrativeEnergy": 49.9,
+      "cumulativeStanceEntropyBits": 2.1802,
+      "normalizedNarrativeEntropy": 0.7267,
+      "narrativeInertia": 0.3465,
+      "narrativeComplexity": 65,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1063,
+        "B2_LEGAL_COMPLIANCE": 0.0133,
+        "B3_PRAGMATIC_SERVICE": 0.0829,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0853
+      },
+      "polarizationIndex": 0.3812,
+      "stateDisplacementNorm": 0.1001
+    },
+    {
+      "windowIndex": 5,
+      "startSeconds": 25,
+      "endSeconds": 30,
+      "midpointSeconds": 27.5,
+      "speakerId": "LAUNCH_VOICE",
+      "speakerLabel": "Echoing Male Launch Countdown Voice",
+      "acoustic": {
+        "windowIndex": 5,
+        "startSeconds": 25,
+        "endSeconds": 30,
+        "rmsAmplitude": 0.12911,
+        "dbFs": -17.78,
+        "peakAmplitude": 0.728,
+        "zeroCrossingRate": 0.2049,
+        "speechActivityRatio": 1,
+        "dynamicRangeDb": 14.37,
+        "normalizedIntensity": 0.815
+      },
+      "visual": {
+        "windowIndex": 5,
+        "timestampSeconds": 27.5,
+        "framePath": "frames/frame-0005.jpg",
+        "meanLuminance": 0.4385,
+        "luminanceContrastStd": 0.1646,
+        "meanSaturation": 0.0321,
+        "warmthIndex": -0.0001,
+        "chromaticEntropyBits": 2.8331,
+        "jensenShannonDivergenceFromPrev": 0.1752,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.359
+      },
+      "linguistic": {
+        "windowIndex": 5,
+        "segmentId": "DAISY-02",
+        "speakerId": "LAUNCH_VOICE",
+        "speakerLabel": "Echoing Male Launch Countdown Voice",
+        "wordsPerMinute": 50.8,
+        "typeTokenRatio": 1,
+        "normativeMarkerDensity": 0,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.45,
+        "normalizedLinguisticIntensity": 0.1884,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.95,
+          "B2_LEGAL_COMPLIANCE": 0.2,
+          "B3_PRAGMATIC_SERVICE": 0.5,
+          "B4_INDIVIDUAL_AUTONOMY": -0.85
+        }
+      },
+      "crossModalResonance": 0.3918,
+      "narrativeEnergy": 46.95,
+      "cumulativeStanceEntropyBits": 2.2663,
+      "normalizedNarrativeEntropy": 0.7554,
+      "narrativeInertia": 0.3655,
+      "narrativeComplexity": 65,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1607,
+        "B2_LEGAL_COMPLIANCE": 0.0248,
+        "B3_PRAGMATIC_SERVICE": 0.1098,
+        "B4_INDIVIDUAL_AUTONOMY": 0.025
+      },
+      "polarizationIndex": 0.4492,
+      "stateDisplacementNorm": 0.0863
+    },
+    {
+      "windowIndex": 6,
+      "startSeconds": 30,
+      "endSeconds": 35,
+      "midpointSeconds": 32.5,
+      "speakerId": "LBJ_VOICE",
+      "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "acoustic": {
+        "windowIndex": 6,
+        "startSeconds": 30,
+        "endSeconds": 35,
+        "rmsAmplitude": 0.20691,
+        "dbFs": -13.68,
+        "peakAmplitude": 0.8439,
+        "zeroCrossingRate": 0.1136,
+        "speechActivityRatio": 1,
+        "dynamicRangeDb": 14.36,
+        "normalizedIntensity": 0.9696
+      },
+      "visual": {
+        "windowIndex": 6,
+        "timestampSeconds": 32.5,
+        "framePath": "frames/frame-0006.jpg",
+        "meanLuminance": 0.7425,
+        "luminanceContrastStd": 0.3618,
+        "meanSaturation": 0.0382,
+        "warmthIndex": 0.0001,
+        "chromaticEntropyBits": 2.0942,
+        "jensenShannonDivergenceFromPrev": 0.5766,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.6612
+      },
+      "linguistic": {
+        "windowIndex": 6,
+        "segmentId": "DAISY-03",
+        "speakerId": "LBJ_VOICE",
+        "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+        "wordsPerMinute": 116.5,
+        "typeTokenRatio": 0.848,
+        "normativeMarkerDensity": 0.2424,
+        "dialecticalConnectorDensity": 0.0909,
+        "institutionalAnchoring": 0.85,
+        "normalizedLinguisticIntensity": 0.7829,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.98,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": 0.6
+        }
+      },
+      "crossModalResonance": 0.8713,
+      "narrativeEnergy": 83.29,
+      "cumulativeStanceEntropyBits": 2.3064,
+      "normalizedNarrativeEntropy": 0.7688,
+      "narrativeInertia": 0.6042,
+      "narrativeComplexity": 93.92,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2353,
+        "B2_LEGAL_COMPLIANCE": 0.0844,
+        "B3_PRAGMATIC_SERVICE": 0.1863,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0773
+      },
+      "polarizationIndex": 0.4557,
+      "stateDisplacementNorm": 0.1331
+    },
+    {
+      "windowIndex": 7,
+      "startSeconds": 35,
+      "endSeconds": 40,
+      "midpointSeconds": 37.5,
+      "speakerId": "LBJ_VOICE",
+      "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "acoustic": {
+        "windowIndex": 7,
+        "startSeconds": 35,
+        "endSeconds": 40,
+        "rmsAmplitude": 0.18865,
+        "dbFs": -14.49,
+        "peakAmplitude": 0.7259,
+        "zeroCrossingRate": 0.1181,
+        "speechActivityRatio": 1,
+        "dynamicRangeDb": 8.83,
+        "normalizedIntensity": 0.8932
+      },
+      "visual": {
+        "windowIndex": 7,
+        "timestampSeconds": 37.5,
+        "framePath": "frames/frame-0007.jpg",
+        "meanLuminance": 0.6936,
+        "luminanceContrastStd": 0.2664,
+        "meanSaturation": 0.0217,
+        "warmthIndex": -0.0005,
+        "chromaticEntropyBits": 2.8565,
+        "jensenShannonDivergenceFromPrev": 0.1787,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4727
+      },
+      "linguistic": {
+        "windowIndex": 7,
+        "segmentId": "DAISY-03",
+        "speakerId": "LBJ_VOICE",
+        "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+        "wordsPerMinute": 116.5,
+        "typeTokenRatio": 0.848,
+        "normativeMarkerDensity": 0.2424,
+        "dialecticalConnectorDensity": 0.0909,
+        "institutionalAnchoring": 0.85,
+        "normalizedLinguisticIntensity": 0.7829,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.98,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": 0.6
+        }
+      },
+      "crossModalResonance": 0.8362,
+      "narrativeEnergy": 76.02,
+      "cumulativeStanceEntropyBits": 2.2934,
+      "normalizedNarrativeEntropy": 0.7645,
+      "narrativeInertia": 0.6373,
+      "narrativeComplexity": 93.92,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.295,
+        "B2_LEGAL_COMPLIANCE": 0.1321,
+        "B3_PRAGMATIC_SERVICE": 0.2475,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1192
+      },
+      "polarizationIndex": 0.4522,
+      "stateDisplacementNorm": 0.1065
+    },
+    {
+      "windowIndex": 8,
+      "startSeconds": 40,
+      "endSeconds": 45,
+      "midpointSeconds": 42.5,
+      "speakerId": "LBJ_VOICE",
+      "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "acoustic": {
+        "windowIndex": 8,
+        "startSeconds": 40,
+        "endSeconds": 45,
+        "rmsAmplitude": 0.13644,
+        "dbFs": -17.3,
+        "peakAmplitude": 0.7635,
+        "zeroCrossingRate": 0.0654,
+        "speechActivityRatio": 1,
+        "dynamicRangeDb": 5.4,
+        "normalizedIntensity": 0.7584
+      },
+      "visual": {
+        "windowIndex": 8,
+        "timestampSeconds": 42.5,
+        "framePath": "frames/frame-0008.jpg",
+        "meanLuminance": 0.6373,
+        "luminanceContrastStd": 0.2924,
+        "meanSaturation": 0.0276,
+        "warmthIndex": -0,
+        "chromaticEntropyBits": 3.1438,
+        "jensenShannonDivergenceFromPrev": 0.044,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4584
+      },
+      "linguistic": {
+        "windowIndex": 8,
+        "segmentId": "DAISY-03",
+        "speakerId": "LBJ_VOICE",
+        "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+        "wordsPerMinute": 116.5,
+        "typeTokenRatio": 0.848,
+        "normativeMarkerDensity": 0.2424,
+        "dialecticalConnectorDensity": 0.0909,
+        "institutionalAnchoring": 0.85,
+        "normalizedLinguisticIntensity": 0.7829,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.98,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": 0.6
+        }
+      },
+      "crossModalResonance": 0.7706,
+      "narrativeEnergy": 70.13,
+      "cumulativeStanceEntropyBits": 2.2731,
+      "normalizedNarrativeEntropy": 0.7577,
+      "narrativeInertia": 0.6671,
+      "narrativeComplexity": 93.92,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.344,
+        "B2_LEGAL_COMPLIANCE": 0.1712,
+        "B3_PRAGMATIC_SERVICE": 0.2977,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1536
+      },
+      "polarizationIndex": 0.4445,
+      "stateDisplacementNorm": 0.0874
+    },
+    {
+      "windowIndex": 9,
+      "startSeconds": 45,
+      "endSeconds": 50,
+      "midpointSeconds": 47.5,
+      "speakerId": "LBJ_VOICE",
+      "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+      "acoustic": {
+        "windowIndex": 9,
+        "startSeconds": 45,
+        "endSeconds": 50,
+        "rmsAmplitude": 0.13551,
+        "dbFs": -17.36,
+        "peakAmplitude": 0.7225,
+        "zeroCrossingRate": 0.1084,
+        "speechActivityRatio": 1,
+        "dynamicRangeDb": 11.45,
+        "normalizedIntensity": 0.8066
+      },
+      "visual": {
+        "windowIndex": 9,
+        "timestampSeconds": 47.5,
+        "framePath": "frames/frame-0009.jpg",
+        "meanLuminance": 0.4871,
+        "luminanceContrastStd": 0.3431,
+        "meanSaturation": 0.0577,
+        "warmthIndex": -0,
+        "chromaticEntropyBits": 3.1571,
+        "jensenShannonDivergenceFromPrev": 0.0634,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4968
+      },
+      "linguistic": {
+        "windowIndex": 9,
+        "segmentId": "DAISY-03",
+        "speakerId": "LBJ_VOICE",
+        "speakerLabel": "President Lyndon B. Johnson (Voiceover over Nuclear Detonation)",
+        "wordsPerMinute": 116.5,
+        "typeTokenRatio": 0.848,
+        "normativeMarkerDensity": 0.2424,
+        "dialecticalConnectorDensity": 0.0909,
+        "institutionalAnchoring": 0.85,
+        "normalizedLinguisticIntensity": 0.7829,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.98,
+          "B2_LEGAL_COMPLIANCE": 0.75,
+          "B3_PRAGMATIC_SERVICE": 0.95,
+          "B4_INDIVIDUAL_AUTONOMY": 0.6
+        }
+      },
+      "crossModalResonance": 0.7947,
+      "narrativeEnergy": 72.98,
+      "cumulativeStanceEntropyBits": 2.2524,
+      "normalizedNarrativeEntropy": 0.7508,
+      "narrativeInertia": 0.6946,
+      "narrativeComplexity": 93.92,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.3898,
+        "B2_LEGAL_COMPLIANCE": 0.2078,
+        "B3_PRAGMATIC_SERVICE": 0.3447,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1858
+      },
+      "polarizationIndex": 0.4349,
+      "stateDisplacementNorm": 0.0817
+    },
+    {
+      "windowIndex": 10,
+      "startSeconds": 50,
+      "endSeconds": 55,
+      "midpointSeconds": 52.5,
+      "speakerId": "ANNOUNCER",
+      "speakerLabel": "Campaign Announcer (Mandate Card)",
+      "acoustic": {
+        "windowIndex": 10,
+        "startSeconds": 50,
+        "endSeconds": 55,
+        "rmsAmplitude": 0.11244,
+        "dbFs": -18.98,
+        "peakAmplitude": 0.7247,
+        "zeroCrossingRate": 0.1464,
+        "speechActivityRatio": 0.66,
+        "dynamicRangeDb": 32.42,
+        "normalizedIntensity": 0.6978
+      },
+      "visual": {
+        "windowIndex": 10,
+        "timestampSeconds": 52.5,
+        "framePath": "frames/frame-0010.jpg",
+        "meanLuminance": 0.0992,
+        "luminanceContrastStd": 0.1024,
+        "meanSaturation": 0.1754,
+        "warmthIndex": -0.0006,
+        "chromaticEntropyBits": 0.9498,
+        "jensenShannonDivergenceFromPrev": 0.4004,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.3087
+      },
+      "linguistic": {
+        "windowIndex": 10,
+        "segmentId": "DAISY-04",
+        "speakerId": "ANNOUNCER",
+        "speakerLabel": "Campaign Announcer (Mandate Card)",
+        "wordsPerMinute": 86.2,
+        "typeTokenRatio": 0.941,
+        "normativeMarkerDensity": 0.1765,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.95,
+        "normalizedLinguisticIntensity": 0.6167,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.85,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.4
+        }
+      },
+      "crossModalResonance": 0.656,
+      "narrativeEnergy": 58.24,
+      "cumulativeStanceEntropyBits": 2.2407,
+      "normalizedNarrativeEntropy": 0.7469,
+      "narrativeInertia": 0.7763,
+      "narrativeComplexity": 65,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4137,
+        "B2_LEGAL_COMPLIANCE": 0.2418,
+        "B3_PRAGMATIC_SERVICE": 0.3746,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1969
+      },
+      "polarizationIndex": 0.4279,
+      "stateDisplacementNorm": 0.0524
+    },
+    {
+      "windowIndex": 11,
+      "startSeconds": 55,
+      "endSeconds": 59.826,
+      "midpointSeconds": 57.413,
+      "speakerId": "ANNOUNCER",
+      "speakerLabel": "Campaign Announcer (Mandate Card)",
+      "acoustic": {
+        "windowIndex": 11,
+        "startSeconds": 55,
+        "endSeconds": 59.826,
+        "rmsAmplitude": 0.05252,
+        "dbFs": -25.59,
+        "peakAmplitude": 0.6673,
+        "zeroCrossingRate": 0.2262,
+        "speechActivityRatio": 0.229,
+        "dynamicRangeDb": 28.45,
+        "normalizedIntensity": 0.3188
+      },
+      "visual": {
+        "windowIndex": 11,
+        "timestampSeconds": 57.413,
+        "framePath": "frames/frame-0011.jpg",
+        "meanLuminance": 0.0972,
+        "luminanceContrastStd": 0.1001,
+        "meanSaturation": 0.1651,
+        "warmthIndex": -0.0001,
+        "chromaticEntropyBits": 0.9254,
+        "jensenShannonDivergenceFromPrev": 0.0008,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.1454
+      },
+      "linguistic": {
+        "windowIndex": 11,
+        "segmentId": "DAISY-04",
+        "speakerId": "ANNOUNCER",
+        "speakerLabel": "Campaign Announcer (Mandate Card)",
+        "wordsPerMinute": 86.2,
+        "typeTokenRatio": 0.941,
+        "normativeMarkerDensity": 0.1765,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.95,
+        "normalizedLinguisticIntensity": 0.6167,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.85,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.4
+        }
+      },
+      "crossModalResonance": 0.4434,
+      "narrativeEnergy": 38.57,
+      "cumulativeStanceEntropyBits": 2.2292,
+      "normalizedNarrativeEntropy": 0.7431,
+      "narrativeInertia": 0.7992,
+      "narrativeComplexity": 65,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4283,
+        "B2_LEGAL_COMPLIANCE": 0.2624,
+        "B3_PRAGMATIC_SERVICE": 0.3928,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2037
+      },
+      "polarizationIndex": 0.42,
+      "stateDisplacementNorm": 0.0319
+    }
+  ]
+}

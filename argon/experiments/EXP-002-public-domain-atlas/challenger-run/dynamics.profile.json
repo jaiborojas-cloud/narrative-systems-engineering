@@ -1,0 +1,2062 @@
+{
+  "schemaVersion": "argon-0.1",
+  "createdUtc": "2026-11-05T18:55:58.9019264+00:00",
+  "sourceVideo": "video/Reagan_Challenger_1986.webm",
+  "sourceSha256": "aedfaa61cddcf91537e956a4233008b32e98333ae2d207c322479a0aa7b17bcd",
+  "durationSeconds": 258.928,
+  "windowCount": 26,
+  "globalIndices": {
+    "meanNarrativeEnergy": 56.45,
+    "peakNarrativeEnergy": 61.98,
+    "peakEnergyWindowIndex": 10,
+    "finalNarrativeEntropyBits": 2.024,
+    "normalizedNarrativeEntropy": 0.6747,
+    "meanNarrativeInertia": 0.7266,
+    "meanNarrativeComplexity": 63.04,
+    "detectedSceneCutsCount": 1
+  },
+  "speakerSummaries": [
+    {
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "startSeconds": 0,
+      "endSeconds": 80,
+      "meanEnergy": 58.13,
+      "meanAcousticDbFs": -31.04,
+      "meanWordsPerMinute": 81.6,
+      "meanComplexity": 65.3,
+      "meanInertia": 0.592,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.65,
+        "B2_LEGAL_COMPLIANCE": 0.92,
+        "B3_PRAGMATIC_SERVICE": 0.8,
+        "B4_INDIVIDUAL_AUTONOMY": 0.85
+      }
+    },
+    {
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "startSeconds": 80,
+      "endSeconds": 160,
+      "meanEnergy": 60.55,
+      "meanAcousticDbFs": -31.48,
+      "meanWordsPerMinute": 93.8,
+      "meanComplexity": 62.91,
+      "meanInertia": 0.708,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.78,
+        "B2_LEGAL_COMPLIANCE": 0.88,
+        "B3_PRAGMATIC_SERVICE": 0.86,
+        "B4_INDIVIDUAL_AUTONOMY": 0.96
+      }
+    },
+    {
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "startSeconds": 160,
+      "endSeconds": 210,
+      "meanEnergy": 54.49,
+      "meanAcousticDbFs": -31.97,
+      "meanWordsPerMinute": 106.9,
+      "meanComplexity": 57.46,
+      "meanInertia": 0.826,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.88,
+        "B2_LEGAL_COMPLIANCE": 0.98,
+        "B3_PRAGMATIC_SERVICE": 0.98,
+        "B4_INDIVIDUAL_AUTONOMY": 0.9
+      }
+    },
+    {
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "startSeconds": 210,
+      "endSeconds": 258.928,
+      "meanEnergy": 49.16,
+      "meanAcousticDbFs": -35.47,
+      "meanWordsPerMinute": 130,
+      "meanComplexity": 65.22,
+      "meanInertia": 0.871,
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.82,
+        "B2_LEGAL_COMPLIANCE": 0.96,
+        "B3_PRAGMATIC_SERVICE": 0.92,
+        "B4_INDIVIDUAL_AUTONOMY": 0.95
+      }
+    }
+  ],
+  "dnaNodes": [
+    {
+      "id": "B1_ANTIMILITARISM",
+      "label": "Peaceful Frontier \u0026 Open Scientific Exploration",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B2_LEGAL_COMPLIANCE",
+      "label": "National Unity \u0026 Institutional Faith (NASA / Presidency)",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B3_PRAGMATIC_SERVICE",
+      "label": "Programmatic Continuity \u0026 Public Service",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "B4_INDIVIDUAL_AUTONOMY",
+      "label": "Heroic Pioneer Courage \u0026 Transcendence",
+      "kind": "belief_frame"
+    },
+    {
+      "id": "REAGAN_MOURNING",
+      "label": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "REAGAN_PIONEERS",
+      "label": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "REAGAN_CONTINUITY",
+      "label": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "REAGAN_TRANSCENDENCE",
+      "label": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "kind": "speaker_agent"
+    },
+    {
+      "id": "ARCH_E50DC719",
+      "label": "The Challenger Seven Crew (hero)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_1D66E296",
+      "label": "Grieving Nation \u0026 Families (victim)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_4608E880",
+      "label": "Brave Pioneers (hero)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_832B9FC3",
+      "label": "Schoolchildren watching live (victim)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_A2E6D749",
+      "label": "Open Democratic Space Program (NASA) (savior)",
+      "kind": "archetype_entity"
+    },
+    {
+      "id": "ARCH_CB7E4876",
+      "label": "Immortalized Explorers (Drake / Challenger Crew) (savior)",
+      "kind": "archetype_entity"
+    }
+  ],
+  "dnaEdges": [
+    {
+      "source": "REAGAN_MOURNING",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.65,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.65 over [0s-80s]"
+    },
+    {
+      "source": "REAGAN_MOURNING",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.92,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.92 over [0s-80s]"
+    },
+    {
+      "source": "REAGAN_MOURNING",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.8,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.80 over [0s-80s]"
+    },
+    {
+      "source": "REAGAN_MOURNING",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.85,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.85 over [0s-80s]"
+    },
+    {
+      "source": "REAGAN_PIONEERS",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.78,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.78 over [80s-160s]"
+    },
+    {
+      "source": "REAGAN_PIONEERS",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.88,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.88 over [80s-160s]"
+    },
+    {
+      "source": "REAGAN_PIONEERS",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.86,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.86 over [80s-160s]"
+    },
+    {
+      "source": "REAGAN_PIONEERS",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.96,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.96 over [80s-160s]"
+    },
+    {
+      "source": "REAGAN_CONTINUITY",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.88,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.88 over [160s-210s]"
+    },
+    {
+      "source": "REAGAN_CONTINUITY",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.98,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.98 over [160s-210s]"
+    },
+    {
+      "source": "REAGAN_CONTINUITY",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.98,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.98 over [160s-210s]"
+    },
+    {
+      "source": "REAGAN_CONTINUITY",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.9,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.90 over [160s-210s]"
+    },
+    {
+      "source": "REAGAN_TRANSCENDENCE",
+      "target": "B1_ANTIMILITARISM",
+      "weight": 0.82,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.82 over [210s-259s]"
+    },
+    {
+      "source": "REAGAN_TRANSCENDENCE",
+      "target": "B2_LEGAL_COMPLIANCE",
+      "weight": 0.96,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.96 over [210s-259s]"
+    },
+    {
+      "source": "REAGAN_TRANSCENDENCE",
+      "target": "B3_PRAGMATIC_SERVICE",
+      "weight": 0.92,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.92 over [210s-259s]"
+    },
+    {
+      "source": "REAGAN_TRANSCENDENCE",
+      "target": "B4_INDIVIDUAL_AUTONOMY",
+      "weight": 0.95,
+      "relation": "reinforces",
+      "evidence": "Mean stance \u002B0.95 over [210s-259s]"
+    },
+    {
+      "source": "REAGAN_MOURNING",
+      "target": "ARCH_E50DC719",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "We mourn seven heroes: Michael Smith, Dick Scobee, Judith Resnik..."
+    },
+    {
+      "source": "REAGAN_MOURNING",
+      "target": "ARCH_1D66E296",
+      "weight": -0.8,
+      "relation": "casts_as_victim",
+      "evidence": "Nancy and I are pained to the core... This is truly a national loss"
+    },
+    {
+      "source": "REAGAN_PIONEERS",
+      "target": "ARCH_4608E880",
+      "weight": 0.8,
+      "relation": "casts_as_hero",
+      "evidence": "The future doesn\u0027t belong to the fainthearted; it belongs to the brave."
+    },
+    {
+      "source": "REAGAN_PIONEERS",
+      "target": "ARCH_832B9FC3",
+      "weight": -0.8,
+      "relation": "casts_as_victim",
+      "evidence": "to the schoolchildren of America who were watching the live coverage"
+    },
+    {
+      "source": "REAGAN_CONTINUITY",
+      "target": "ARCH_A2E6D749",
+      "weight": 0.8,
+      "relation": "casts_as_savior",
+      "evidence": "We do it all up front and in public. That\u0027s the way freedom is... Nothing ends here"
+    },
+    {
+      "source": "REAGAN_TRANSCENDENCE",
+      "target": "ARCH_CB7E4876",
+      "weight": 0.8,
+      "relation": "casts_as_savior",
+      "evidence": "slipped the surly bonds of earth to touch the face of God"
+    }
+  ],
+  "controlAnalysis": {
+    "gramianDiagonalSensitivity": {
+      "B1_ANTIMILITARISM": 0.01714,
+      "B2_LEGAL_COMPLIANCE": 0.01828,
+      "B3_PRAGMATIC_SERVICE": 0.02256,
+      "B4_INDIVIDUAL_AUTONOMY": 0.02498
+    },
+    "maxSensitivityEigenvalue": 0.02498,
+    "minSensitivityEigenvalue": 0.01714,
+    "conditionNumberKappa": 1.457,
+    "mostControllableDimension": "B4_INDIVIDUAL_AUTONOMY",
+    "mostInertialDimension": "B1_ANTIMILITARISM",
+    "counterfactualScenarios": [
+      {
+        "scenarioId": "SCENARIO_A_ORIGINAL",
+        "name": "Scenario A: Original Documentary Order (Actual Video)",
+        "description": "Starts with anti-militarist poster \u0026 SPK_01 (0-45s), followed by 4 consecutive legal/pragmatic speakers (45-195s).",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.5991,
+          "B2_LEGAL_COMPLIANCE": 0.667,
+          "B3_PRAGMATIC_SERVICE": 0.6788,
+          "B4_INDIVIDUAL_AUTONOMY": 0.7038
+        },
+        "finalPolarization": 0.0617,
+        "netShiftFromBaseline": 0
+      },
+      {
+        "scenarioId": "SCENARIO_B_REVERSED_RECENCY",
+        "name": "Scenario B: Reversed Framing Order (Anti-Militarist Last)",
+        "description": "Places institutional/legal speakers first and ends with SPK_01\u0027s anti-militarist abolitionist critique and activist poster.",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.5523,
+          "B2_LEGAL_COMPLIANCE": 0.6592,
+          "B3_PRAGMATIC_SERVICE": 0.6449,
+          "B4_INDIVIDUAL_AUTONOMY": 0.6836
+        },
+        "finalPolarization": 0.0617,
+        "netShiftFromBaseline": 0.0617
+      },
+      {
+        "scenarioId": "SCENARIO_C_AMPLIFIED_DISSENT",
+        "name": "Scenario C: Balanced Airtime Counterfactual",
+        "description": "Equalizes exposure duration between the abolitionist stance (SPK_01) and the pragmatic/legal coalition (SPK_02..05).",
+        "finalStateX": {
+          "B1_ANTIMILITARISM": 0.512,
+          "B2_LEGAL_COMPLIANCE": 0.5663,
+          "B3_PRAGMATIC_SERVICE": 0.5818,
+          "B4_INDIVIDUAL_AUTONOMY": 0.6052
+        },
+        "finalPolarization": 0.6812,
+        "netShiftFromBaseline": 0.192
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "windowIndex": 0,
+      "startSeconds": 0,
+      "endSeconds": 10,
+      "midpointSeconds": 5,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 0,
+        "startSeconds": 0,
+        "endSeconds": 10,
+        "rmsAmplitude": 0.03259,
+        "dbFs": -29.74,
+        "peakAmplitude": 0.2313,
+        "zeroCrossingRate": 0.0727,
+        "speechActivityRatio": 0.3,
+        "dynamicRangeDb": 42.26,
+        "normalizedIntensity": 0.7894
+      },
+      "visual": {
+        "windowIndex": 0,
+        "timestampSeconds": 5,
+        "framePath": "frames/frame-0000.jpg",
+        "meanLuminance": 0.39,
+        "luminanceContrastStd": 0.1957,
+        "meanSaturation": 0.3387,
+        "warmthIndex": 0.1283,
+        "chromaticEntropyBits": 5.0735,
+        "jensenShannonDivergenceFromPrev": 0,
+        "isSceneCutDetected": true,
+        "visualSalienceScore": 0.4091
+      },
+      "linguistic": {
+        "windowIndex": 0,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6184,
+      "narrativeEnergy": 59.16,
+      "cumulativeStanceEntropyBits": 2.3476,
+      "normalizedNarrativeEntropy": 0.7825,
+      "narrativeInertia": 0.5247,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0456,
+        "B2_LEGAL_COMPLIANCE": 0.0595,
+        "B3_PRAGMATIC_SERVICE": 0.0561,
+        "B4_INDIVIDUAL_AUTONOMY": 0.0596
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.1111
+    },
+    {
+      "windowIndex": 1,
+      "startSeconds": 10,
+      "endSeconds": 20,
+      "midpointSeconds": 15,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 1,
+        "startSeconds": 10,
+        "endSeconds": 20,
+        "rmsAmplitude": 0.02741,
+        "dbFs": -31.24,
+        "peakAmplitude": 0.2041,
+        "zeroCrossingRate": 0.0715,
+        "speechActivityRatio": 0.33,
+        "dynamicRangeDb": 32.32,
+        "normalizedIntensity": 0.7553
+      },
+      "visual": {
+        "windowIndex": 1,
+        "timestampSeconds": 15,
+        "framePath": "frames/frame-0001.jpg",
+        "meanLuminance": 0.3978,
+        "luminanceContrastStd": 0.2139,
+        "meanSaturation": 0.2744,
+        "warmthIndex": 0.0962,
+        "chromaticEntropyBits": 4.8682,
+        "jensenShannonDivergenceFromPrev": 0.0419,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4379
+      },
+      "linguistic": {
+        "windowIndex": 1,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6049,
+      "narrativeEnergy": 58.43,
+      "cumulativeStanceEntropyBits": 2.2149,
+      "normalizedNarrativeEntropy": 0.7383,
+      "narrativeInertia": 0.5462,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.0866,
+        "B2_LEGAL_COMPLIANCE": 0.1131,
+        "B3_PRAGMATIC_SERVICE": 0.1066,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1132
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0999
+    },
+    {
+      "windowIndex": 2,
+      "startSeconds": 20,
+      "endSeconds": 30,
+      "midpointSeconds": 25,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 2,
+        "startSeconds": 20,
+        "endSeconds": 30,
+        "rmsAmplitude": 0.02781,
+        "dbFs": -31.12,
+        "peakAmplitude": 0.2141,
+        "zeroCrossingRate": 0.0776,
+        "speechActivityRatio": 0.32,
+        "dynamicRangeDb": 33.06,
+        "normalizedIntensity": 0.756
+      },
+      "visual": {
+        "windowIndex": 2,
+        "timestampSeconds": 25,
+        "framePath": "frames/frame-0002.jpg",
+        "meanLuminance": 0.3921,
+        "luminanceContrastStd": 0.2195,
+        "meanSaturation": 0.2574,
+        "warmthIndex": 0.0827,
+        "chromaticEntropyBits": 4.7997,
+        "jensenShannonDivergenceFromPrev": 0.0417,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4413
+      },
+      "linguistic": {
+        "windowIndex": 2,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6051,
+      "narrativeEnergy": 58.54,
+      "cumulativeStanceEntropyBits": 2.1572,
+      "normalizedNarrativeEntropy": 0.7191,
+      "narrativeInertia": 0.5663,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1241,
+        "B2_LEGAL_COMPLIANCE": 0.1621,
+        "B3_PRAGMATIC_SERVICE": 0.1528,
+        "B4_INDIVIDUAL_AUTONOMY": 0.1623
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0914
+    },
+    {
+      "windowIndex": 3,
+      "startSeconds": 30,
+      "endSeconds": 40,
+      "midpointSeconds": 35,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 3,
+        "startSeconds": 30,
+        "endSeconds": 40,
+        "rmsAmplitude": 0.02664,
+        "dbFs": -31.49,
+        "peakAmplitude": 0.1795,
+        "zeroCrossingRate": 0.0777,
+        "speechActivityRatio": 0.31,
+        "dynamicRangeDb": 31.58,
+        "normalizedIntensity": 0.7423
+      },
+      "visual": {
+        "windowIndex": 3,
+        "timestampSeconds": 35,
+        "framePath": "frames/frame-0003.jpg",
+        "meanLuminance": 0.3912,
+        "luminanceContrastStd": 0.2201,
+        "meanSaturation": 0.259,
+        "warmthIndex": 0.0821,
+        "chromaticEntropyBits": 4.7697,
+        "jensenShannonDivergenceFromPrev": 0.0075,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4272
+      },
+      "linguistic": {
+        "windowIndex": 3,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.5996,
+      "narrativeEnergy": 57.68,
+      "cumulativeStanceEntropyBits": 2.1244,
+      "normalizedNarrativeEntropy": 0.7081,
+      "narrativeInertia": 0.5854,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1579,
+        "B2_LEGAL_COMPLIANCE": 0.2064,
+        "B3_PRAGMATIC_SERVICE": 0.1944,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2065
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0824
+    },
+    {
+      "windowIndex": 4,
+      "startSeconds": 40,
+      "endSeconds": 50,
+      "midpointSeconds": 45,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 4,
+        "startSeconds": 40,
+        "endSeconds": 50,
+        "rmsAmplitude": 0.03267,
+        "dbFs": -29.72,
+        "peakAmplitude": 0.2095,
+        "zeroCrossingRate": 0.0727,
+        "speechActivityRatio": 0.41,
+        "dynamicRangeDb": 33.3,
+        "normalizedIntensity": 0.823
+      },
+      "visual": {
+        "windowIndex": 4,
+        "timestampSeconds": 45,
+        "framePath": "frames/frame-0004.jpg",
+        "meanLuminance": 0.3896,
+        "luminanceContrastStd": 0.217,
+        "meanSaturation": 0.2595,
+        "warmthIndex": 0.0834,
+        "chromaticEntropyBits": 4.7868,
+        "jensenShannonDivergenceFromPrev": 0.0086,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4249
+      },
+      "linguistic": {
+        "windowIndex": 4,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6314,
+      "narrativeEnergy": 60.85,
+      "cumulativeStanceEntropyBits": 2.1026,
+      "normalizedNarrativeEntropy": 0.7009,
+      "narrativeInertia": 0.6033,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.1907,
+        "B2_LEGAL_COMPLIANCE": 0.2493,
+        "B3_PRAGMATIC_SERVICE": 0.2347,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2493
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0798
+    },
+    {
+      "windowIndex": 5,
+      "startSeconds": 50,
+      "endSeconds": 60,
+      "midpointSeconds": 55,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 5,
+        "startSeconds": 50,
+        "endSeconds": 60,
+        "rmsAmplitude": 0.02492,
+        "dbFs": -32.07,
+        "peakAmplitude": 0.2056,
+        "zeroCrossingRate": 0.082,
+        "speechActivityRatio": 0.24,
+        "dynamicRangeDb": 32.05,
+        "normalizedIntensity": 0.7047
+      },
+      "visual": {
+        "windowIndex": 5,
+        "timestampSeconds": 55,
+        "framePath": "frames/frame-0005.jpg",
+        "meanLuminance": 0.3909,
+        "luminanceContrastStd": 0.2209,
+        "meanSaturation": 0.2615,
+        "warmthIndex": 0.0842,
+        "chromaticEntropyBits": 4.7934,
+        "jensenShannonDivergenceFromPrev": 0.0053,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4281
+      },
+      "linguistic": {
+        "windowIndex": 5,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.5843,
+      "narrativeEnergy": 56.19,
+      "cumulativeStanceEntropyBits": 2.0876,
+      "normalizedNarrativeEntropy": 0.6959,
+      "narrativeInertia": 0.6209,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2184,
+        "B2_LEGAL_COMPLIANCE": 0.2857,
+        "B3_PRAGMATIC_SERVICE": 0.2688,
+        "B4_INDIVIDUAL_AUTONOMY": 0.2855
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0676
+    },
+    {
+      "windowIndex": 6,
+      "startSeconds": 60,
+      "endSeconds": 70,
+      "midpointSeconds": 65,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 6,
+        "startSeconds": 60,
+        "endSeconds": 70,
+        "rmsAmplitude": 0.02949,
+        "dbFs": -30.61,
+        "peakAmplitude": 0.2161,
+        "zeroCrossingRate": 0.0827,
+        "speechActivityRatio": 0.3,
+        "dynamicRangeDb": 34.42,
+        "normalizedIntensity": 0.7645
+      },
+      "visual": {
+        "windowIndex": 6,
+        "timestampSeconds": 65,
+        "framePath": "frames/frame-0006.jpg",
+        "meanLuminance": 0.372,
+        "luminanceContrastStd": 0.2222,
+        "meanSaturation": 0.2596,
+        "warmthIndex": 0.0738,
+        "chromaticEntropyBits": 4.6315,
+        "jensenShannonDivergenceFromPrev": 0.0237,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4306
+      },
+      "linguistic": {
+        "windowIndex": 6,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.6085,
+      "narrativeEnergy": 58.64,
+      "cumulativeStanceEntropyBits": 2.0762,
+      "normalizedNarrativeEntropy": 0.6921,
+      "narrativeInertia": 0.637,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2451,
+        "B2_LEGAL_COMPLIANCE": 0.3208,
+        "B3_PRAGMATIC_SERVICE": 0.3017,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3204
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0651
+    },
+    {
+      "windowIndex": 7,
+      "startSeconds": 70,
+      "endSeconds": 80,
+      "midpointSeconds": 75,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+      "acoustic": {
+        "windowIndex": 7,
+        "startSeconds": 70,
+        "endSeconds": 80,
+        "rmsAmplitude": 0.0242,
+        "dbFs": -32.32,
+        "peakAmplitude": 0.1791,
+        "zeroCrossingRate": 0.0746,
+        "speechActivityRatio": 0.24,
+        "dynamicRangeDb": 31.18,
+        "normalizedIntensity": 0.6974
+      },
+      "visual": {
+        "windowIndex": 7,
+        "timestampSeconds": 75,
+        "framePath": "frames/frame-0007.jpg",
+        "meanLuminance": 0.3469,
+        "luminanceContrastStd": 0.2118,
+        "meanSaturation": 0.2423,
+        "warmthIndex": 0.0556,
+        "chromaticEntropyBits": 4.3513,
+        "jensenShannonDivergenceFromPrev": 0.0315,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4116
+      },
+      "linguistic": {
+        "windowIndex": 7,
+        "segmentId": "CHAL-01",
+        "speakerId": "REAGAN_MOURNING",
+        "speakerLabel": "President Reagan \u2014 Phase I: Collective Mourning \u0026 Naming the Seven Heroes",
+        "wordsPerMinute": 81.6,
+        "typeTokenRatio": 0.725,
+        "normativeMarkerDensity": 0.098,
+        "dialecticalConnectorDensity": 0.0098,
+        "institutionalAnchoring": 0.94,
+        "normalizedLinguisticIntensity": 0.4844,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.65,
+          "B2_LEGAL_COMPLIANCE": 0.92,
+          "B3_PRAGMATIC_SERVICE": 0.8,
+          "B4_INDIVIDUAL_AUTONOMY": 0.85
+        }
+      },
+      "crossModalResonance": 0.5812,
+      "narrativeEnergy": 55.53,
+      "cumulativeStanceEntropyBits": 2.0674,
+      "normalizedNarrativeEntropy": 0.6891,
+      "narrativeInertia": 0.6528,
+      "narrativeComplexity": 65.3,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.2684,
+        "B2_LEGAL_COMPLIANCE": 0.3515,
+        "B3_PRAGMATIC_SERVICE": 0.3304,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3509
+      },
+      "polarizationIndex": 0,
+      "stateDisplacementNorm": 0.0569
+    },
+    {
+      "windowIndex": 8,
+      "startSeconds": 80,
+      "endSeconds": 90,
+      "midpointSeconds": 85,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 8,
+        "startSeconds": 80,
+        "endSeconds": 90,
+        "rmsAmplitude": 0.0256,
+        "dbFs": -31.84,
+        "peakAmplitude": 0.2174,
+        "zeroCrossingRate": 0.0972,
+        "speechActivityRatio": 0.32,
+        "dynamicRangeDb": 31.5,
+        "normalizedIntensity": 0.7354
+      },
+      "visual": {
+        "windowIndex": 8,
+        "timestampSeconds": 85,
+        "framePath": "frames/frame-0008.jpg",
+        "meanLuminance": 0.3502,
+        "luminanceContrastStd": 0.2166,
+        "meanSaturation": 0.2466,
+        "warmthIndex": 0.0554,
+        "chromaticEntropyBits": 4.3548,
+        "jensenShannonDivergenceFromPrev": 0.0053,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4065
+      },
+      "linguistic": {
+        "windowIndex": 8,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6472,
+      "narrativeEnergy": 60.17,
+      "cumulativeStanceEntropyBits": 2.061,
+      "normalizedNarrativeEntropy": 0.687,
+      "narrativeInertia": 0.6566,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.3002,
+        "B2_LEGAL_COMPLIANCE": 0.3806,
+        "B3_PRAGMATIC_SERVICE": 0.3633,
+        "B4_INDIVIDUAL_AUTONOMY": 0.3887
+      },
+      "polarizationIndex": 0.0291,
+      "stateDisplacementNorm": 0.0661
+    },
+    {
+      "windowIndex": 9,
+      "startSeconds": 90,
+      "endSeconds": 100,
+      "midpointSeconds": 95,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 9,
+        "startSeconds": 90,
+        "endSeconds": 100,
+        "rmsAmplitude": 0.02893,
+        "dbFs": -30.77,
+        "peakAmplitude": 0.2078,
+        "zeroCrossingRate": 0.1025,
+        "speechActivityRatio": 0.3,
+        "dynamicRangeDb": 32.86,
+        "normalizedIntensity": 0.7598
+      },
+      "visual": {
+        "windowIndex": 9,
+        "timestampSeconds": 95,
+        "framePath": "frames/frame-0009.jpg",
+        "meanLuminance": 0.3533,
+        "luminanceContrastStd": 0.2173,
+        "meanSaturation": 0.2464,
+        "warmthIndex": 0.0565,
+        "chromaticEntropyBits": 4.4235,
+        "jensenShannonDivergenceFromPrev": 0.0092,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4115
+      },
+      "linguistic": {
+        "windowIndex": 9,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6579,
+      "narrativeEnergy": 61.27,
+      "cumulativeStanceEntropyBits": 2.0557,
+      "normalizedNarrativeEntropy": 0.6852,
+      "narrativeInertia": 0.6725,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.33,
+        "B2_LEGAL_COMPLIANCE": 0.408,
+        "B3_PRAGMATIC_SERVICE": 0.3941,
+        "B4_INDIVIDUAL_AUTONOMY": 0.4242
+      },
+      "polarizationIndex": 0.037,
+      "stateDisplacementNorm": 0.062
+    },
+    {
+      "windowIndex": 10,
+      "startSeconds": 100,
+      "endSeconds": 110,
+      "midpointSeconds": 105,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 10,
+        "startSeconds": 100,
+        "endSeconds": 110,
+        "rmsAmplitude": 0.03014,
+        "dbFs": -30.42,
+        "peakAmplitude": 0.1902,
+        "zeroCrossingRate": 0.0954,
+        "speechActivityRatio": 0.32,
+        "dynamicRangeDb": 33.26,
+        "normalizedIntensity": 0.776
+      },
+      "visual": {
+        "windowIndex": 10,
+        "timestampSeconds": 105,
+        "framePath": "frames/frame-0010.jpg",
+        "meanLuminance": 0.354,
+        "luminanceContrastStd": 0.2176,
+        "meanSaturation": 0.2448,
+        "warmthIndex": 0.0566,
+        "chromaticEntropyBits": 4.4653,
+        "jensenShannonDivergenceFromPrev": 0.0104,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4139
+      },
+      "linguistic": {
+        "windowIndex": 10,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6648,
+      "narrativeEnergy": 61.98,
+      "cumulativeStanceEntropyBits": 2.0512,
+      "normalizedNarrativeEntropy": 0.6837,
+      "narrativeInertia": 0.6879,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.3578,
+        "B2_LEGAL_COMPLIANCE": 0.4336,
+        "B3_PRAGMATIC_SERVICE": 0.4228,
+        "B4_INDIVIDUAL_AUTONOMY": 0.4572
+      },
+      "polarizationIndex": 0.0412,
+      "stateDisplacementNorm": 0.0578
+    },
+    {
+      "windowIndex": 11,
+      "startSeconds": 110,
+      "endSeconds": 120,
+      "midpointSeconds": 115,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 11,
+        "startSeconds": 110,
+        "endSeconds": 120,
+        "rmsAmplitude": 0.02503,
+        "dbFs": -32.03,
+        "peakAmplitude": 0.2133,
+        "zeroCrossingRate": 0.076,
+        "speechActivityRatio": 0.36,
+        "dynamicRangeDb": 30.84,
+        "normalizedIntensity": 0.7418
+      },
+      "visual": {
+        "windowIndex": 11,
+        "timestampSeconds": 115,
+        "framePath": "frames/frame-0011.jpg",
+        "meanLuminance": 0.3513,
+        "luminanceContrastStd": 0.218,
+        "meanSaturation": 0.2504,
+        "warmthIndex": 0.0488,
+        "chromaticEntropyBits": 4.6336,
+        "jensenShannonDivergenceFromPrev": 0.0196,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4245
+      },
+      "linguistic": {
+        "windowIndex": 11,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.65,
+      "narrativeEnergy": 60.83,
+      "cumulativeStanceEntropyBits": 2.0474,
+      "normalizedNarrativeEntropy": 0.6825,
+      "narrativeInertia": 0.7028,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.3829,
+        "B2_LEGAL_COMPLIANCE": 0.4568,
+        "B3_PRAGMATIC_SERVICE": 0.4488,
+        "B4_INDIVIDUAL_AUTONOMY": 0.4871
+      },
+      "polarizationIndex": 0.0436,
+      "stateDisplacementNorm": 0.0523
+    },
+    {
+      "windowIndex": 12,
+      "startSeconds": 120,
+      "endSeconds": 130,
+      "midpointSeconds": 125,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 12,
+        "startSeconds": 120,
+        "endSeconds": 130,
+        "rmsAmplitude": 0.02621,
+        "dbFs": -31.63,
+        "peakAmplitude": 0.2201,
+        "zeroCrossingRate": 0.0793,
+        "speechActivityRatio": 0.27,
+        "dynamicRangeDb": 31.13,
+        "normalizedIntensity": 0.7262
+      },
+      "visual": {
+        "windowIndex": 12,
+        "timestampSeconds": 125,
+        "framePath": "frames/frame-0012.jpg",
+        "meanLuminance": 0.3432,
+        "luminanceContrastStd": 0.2107,
+        "meanSaturation": 0.2427,
+        "warmthIndex": 0.0468,
+        "chromaticEntropyBits": 4.5438,
+        "jensenShannonDivergenceFromPrev": 0.0119,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.41
+      },
+      "linguistic": {
+        "windowIndex": 12,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6432,
+      "narrativeEnergy": 59.88,
+      "cumulativeStanceEntropyBits": 2.0442,
+      "normalizedNarrativeEntropy": 0.6814,
+      "narrativeInertia": 0.717,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4058,
+        "B2_LEGAL_COMPLIANCE": 0.478,
+        "B3_PRAGMATIC_SERVICE": 0.4725,
+        "B4_INDIVIDUAL_AUTONOMY": 0.5143
+      },
+      "polarizationIndex": 0.045,
+      "stateDisplacementNorm": 0.0477
+    },
+    {
+      "windowIndex": 13,
+      "startSeconds": 130,
+      "endSeconds": 140,
+      "midpointSeconds": 135,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 13,
+        "startSeconds": 130,
+        "endSeconds": 140,
+        "rmsAmplitude": 0.02717,
+        "dbFs": -31.32,
+        "peakAmplitude": 0.207,
+        "zeroCrossingRate": 0.1032,
+        "speechActivityRatio": 0.32,
+        "dynamicRangeDb": 33.59,
+        "normalizedIntensity": 0.7502
+      },
+      "visual": {
+        "windowIndex": 13,
+        "timestampSeconds": 135,
+        "framePath": "frames/frame-0013.jpg",
+        "meanLuminance": 0.3479,
+        "luminanceContrastStd": 0.2156,
+        "meanSaturation": 0.2396,
+        "warmthIndex": 0.0476,
+        "chromaticEntropyBits": 4.5804,
+        "jensenShannonDivergenceFromPrev": 0.0127,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.417
+      },
+      "linguistic": {
+        "windowIndex": 13,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6537,
+      "narrativeEnergy": 61,
+      "cumulativeStanceEntropyBits": 2.0413,
+      "normalizedNarrativeEntropy": 0.6804,
+      "narrativeInertia": 0.7306,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4274,
+        "B2_LEGAL_COMPLIANCE": 0.498,
+        "B3_PRAGMATIC_SERVICE": 0.4948,
+        "B4_INDIVIDUAL_AUTONOMY": 0.54
+      },
+      "polarizationIndex": 0.0458,
+      "stateDisplacementNorm": 0.045
+    },
+    {
+      "windowIndex": 14,
+      "startSeconds": 140,
+      "endSeconds": 150,
+      "midpointSeconds": 145,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 14,
+        "startSeconds": 140,
+        "endSeconds": 150,
+        "rmsAmplitude": 0.02257,
+        "dbFs": -32.93,
+        "peakAmplitude": 0.1838,
+        "zeroCrossingRate": 0.072,
+        "speechActivityRatio": 0.21,
+        "dynamicRangeDb": 31.52,
+        "normalizedIntensity": 0.6711
+      },
+      "visual": {
+        "windowIndex": 14,
+        "timestampSeconds": 145,
+        "framePath": "frames/frame-0014.jpg",
+        "meanLuminance": 0.3433,
+        "luminanceContrastStd": 0.2138,
+        "meanSaturation": 0.2442,
+        "warmthIndex": 0.0457,
+        "chromaticEntropyBits": 4.5874,
+        "jensenShannonDivergenceFromPrev": 0.0061,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4127
+      },
+      "linguistic": {
+        "windowIndex": 14,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6183,
+      "narrativeEnergy": 57.69,
+      "cumulativeStanceEntropyBits": 2.0388,
+      "normalizedNarrativeEntropy": 0.6796,
+      "narrativeInertia": 0.7439,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4463,
+        "B2_LEGAL_COMPLIANCE": 0.5156,
+        "B3_PRAGMATIC_SERVICE": 0.5144,
+        "B4_INDIVIDUAL_AUTONOMY": 0.5625
+      },
+      "polarizationIndex": 0.0461,
+      "stateDisplacementNorm": 0.0395
+    },
+    {
+      "windowIndex": 15,
+      "startSeconds": 150,
+      "endSeconds": 160,
+      "midpointSeconds": 155,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+      "acoustic": {
+        "windowIndex": 15,
+        "startSeconds": 150,
+        "endSeconds": 160,
+        "rmsAmplitude": 0.02847,
+        "dbFs": -30.91,
+        "peakAmplitude": 0.2026,
+        "zeroCrossingRate": 0.0813,
+        "speechActivityRatio": 0.35,
+        "dynamicRangeDb": 32.91,
+        "normalizedIntensity": 0.7708
+      },
+      "visual": {
+        "windowIndex": 15,
+        "timestampSeconds": 155,
+        "framePath": "frames/frame-0015.jpg",
+        "meanLuminance": 0.3394,
+        "luminanceContrastStd": 0.209,
+        "meanSaturation": 0.2377,
+        "warmthIndex": 0.0454,
+        "chromaticEntropyBits": 4.453,
+        "jensenShannonDivergenceFromPrev": 0.011,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4043
+      },
+      "linguistic": {
+        "windowIndex": 15,
+        "segmentId": "CHAL-02",
+        "speakerId": "REAGAN_PIONEERS",
+        "speakerLabel": "President Reagan \u2014 Phase II: Consoling the Families \u0026 Addressing the Schoolchildren",
+        "wordsPerMinute": 93.8,
+        "typeTokenRatio": 0.64,
+        "normativeMarkerDensity": 0.12,
+        "dialecticalConnectorDensity": 0.016,
+        "institutionalAnchoring": 0.92,
+        "normalizedLinguisticIntensity": 0.5696,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.78,
+          "B2_LEGAL_COMPLIANCE": 0.88,
+          "B3_PRAGMATIC_SERVICE": 0.86,
+          "B4_INDIVIDUAL_AUTONOMY": 0.96
+        }
+      },
+      "crossModalResonance": 0.6626,
+      "narrativeEnergy": 61.56,
+      "cumulativeStanceEntropyBits": 2.0366,
+      "normalizedNarrativeEntropy": 0.6789,
+      "narrativeInertia": 0.7565,
+      "narrativeComplexity": 62.91,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4651,
+        "B2_LEGAL_COMPLIANCE": 0.5331,
+        "B3_PRAGMATIC_SERVICE": 0.5339,
+        "B4_INDIVIDUAL_AUTONOMY": 0.5849
+      },
+      "polarizationIndex": 0.0462,
+      "stateDisplacementNorm": 0.0393
+    },
+    {
+      "windowIndex": 16,
+      "startSeconds": 160,
+      "endSeconds": 170,
+      "midpointSeconds": 165,
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "acoustic": {
+        "windowIndex": 16,
+        "startSeconds": 160,
+        "endSeconds": 170,
+        "rmsAmplitude": 0.02853,
+        "dbFs": -30.89,
+        "peakAmplitude": 0.2216,
+        "zeroCrossingRate": 0.081,
+        "speechActivityRatio": 0.34,
+        "dynamicRangeDb": 32.28,
+        "normalizedIntensity": 0.7684
+      },
+      "visual": {
+        "windowIndex": 16,
+        "timestampSeconds": 165,
+        "framePath": "frames/frame-0016.jpg",
+        "meanLuminance": 0.3431,
+        "luminanceContrastStd": 0.2145,
+        "meanSaturation": 0.242,
+        "warmthIndex": 0.0465,
+        "chromaticEntropyBits": 4.5314,
+        "jensenShannonDivergenceFromPrev": 0.0084,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4122
+      },
+      "linguistic": {
+        "windowIndex": 16,
+        "segmentId": "CHAL-03",
+        "speakerId": "REAGAN_CONTINUITY",
+        "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+        "wordsPerMinute": 106.9,
+        "typeTokenRatio": 0.633,
+        "normativeMarkerDensity": 0.051,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.98,
+        "normalizedLinguisticIntensity": 0.4302,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.98,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.5749,
+      "narrativeEnergy": 56.29,
+      "cumulativeStanceEntropyBits": 2.0348,
+      "normalizedNarrativeEntropy": 0.6783,
+      "narrativeInertia": 0.8021,
+      "narrativeComplexity": 57.46,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.4852,
+        "B2_LEGAL_COMPLIANCE": 0.5512,
+        "B3_PRAGMATIC_SERVICE": 0.5555,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6002
+      },
+      "polarizationIndex": 0.0528,
+      "stateDisplacementNorm": 0.0379
+    },
+    {
+      "windowIndex": 17,
+      "startSeconds": 170,
+      "endSeconds": 180,
+      "midpointSeconds": 175,
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "acoustic": {
+        "windowIndex": 17,
+        "startSeconds": 170,
+        "endSeconds": 180,
+        "rmsAmplitude": 0.02912,
+        "dbFs": -30.72,
+        "peakAmplitude": 0.2229,
+        "zeroCrossingRate": 0.1156,
+        "speechActivityRatio": 0.41,
+        "dynamicRangeDb": 31.85,
+        "normalizedIntensity": 0.7944
+      },
+      "visual": {
+        "windowIndex": 17,
+        "timestampSeconds": 175,
+        "framePath": "frames/frame-0017.jpg",
+        "meanLuminance": 0.3415,
+        "luminanceContrastStd": 0.2129,
+        "meanSaturation": 0.2432,
+        "warmthIndex": 0.0464,
+        "chromaticEntropyBits": 4.5487,
+        "jensenShannonDivergenceFromPrev": 0.0034,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4092
+      },
+      "linguistic": {
+        "windowIndex": 17,
+        "segmentId": "CHAL-03",
+        "speakerId": "REAGAN_CONTINUITY",
+        "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+        "wordsPerMinute": 106.9,
+        "typeTokenRatio": 0.633,
+        "normativeMarkerDensity": 0.051,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.98,
+        "normalizedLinguisticIntensity": 0.4302,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.98,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.5846,
+      "narrativeEnergy": 57.26,
+      "cumulativeStanceEntropyBits": 2.0332,
+      "normalizedNarrativeEntropy": 0.6777,
+      "narrativeInertia": 0.8145,
+      "narrativeComplexity": 57.46,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5043,
+        "B2_LEGAL_COMPLIANCE": 0.5685,
+        "B3_PRAGMATIC_SERVICE": 0.5761,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6147
+      },
+      "polarizationIndex": 0.0573,
+      "stateDisplacementNorm": 0.0361
+    },
+    {
+      "windowIndex": 18,
+      "startSeconds": 180,
+      "endSeconds": 190,
+      "midpointSeconds": 185,
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "acoustic": {
+        "windowIndex": 18,
+        "startSeconds": 180,
+        "endSeconds": 190,
+        "rmsAmplitude": 0.02275,
+        "dbFs": -32.86,
+        "peakAmplitude": 0.1731,
+        "zeroCrossingRate": 0.0781,
+        "speechActivityRatio": 0.27,
+        "dynamicRangeDb": 30.87,
+        "normalizedIntensity": 0.6911
+      },
+      "visual": {
+        "windowIndex": 18,
+        "timestampSeconds": 185,
+        "framePath": "frames/frame-0018.jpg",
+        "meanLuminance": 0.341,
+        "luminanceContrastStd": 0.2124,
+        "meanSaturation": 0.2433,
+        "warmthIndex": 0.0473,
+        "chromaticEntropyBits": 4.5708,
+        "jensenShannonDivergenceFromPrev": 0.0048,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.41
+      },
+      "linguistic": {
+        "windowIndex": 18,
+        "segmentId": "CHAL-03",
+        "speakerId": "REAGAN_CONTINUITY",
+        "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+        "wordsPerMinute": 106.9,
+        "typeTokenRatio": 0.633,
+        "normativeMarkerDensity": 0.051,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.98,
+        "normalizedLinguisticIntensity": 0.4302,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.98,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.5453,
+      "narrativeEnergy": 53.17,
+      "cumulativeStanceEntropyBits": 2.0318,
+      "normalizedNarrativeEntropy": 0.6773,
+      "narrativeInertia": 0.8266,
+      "narrativeComplexity": 57.46,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5209,
+        "B2_LEGAL_COMPLIANCE": 0.5836,
+        "B3_PRAGMATIC_SERVICE": 0.594,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6273
+      },
+      "polarizationIndex": 0.0606,
+      "stateDisplacementNorm": 0.0314
+    },
+    {
+      "windowIndex": 19,
+      "startSeconds": 190,
+      "endSeconds": 200,
+      "midpointSeconds": 195,
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "acoustic": {
+        "windowIndex": 19,
+        "startSeconds": 190,
+        "endSeconds": 200,
+        "rmsAmplitude": 0.02191,
+        "dbFs": -33.19,
+        "peakAmplitude": 0.1785,
+        "zeroCrossingRate": 0.0716,
+        "speechActivityRatio": 0.24,
+        "dynamicRangeDb": 29.87,
+        "normalizedIntensity": 0.6728
+      },
+      "visual": {
+        "windowIndex": 19,
+        "timestampSeconds": 195,
+        "framePath": "frames/frame-0019.jpg",
+        "meanLuminance": 0.3396,
+        "luminanceContrastStd": 0.2117,
+        "meanSaturation": 0.2367,
+        "warmthIndex": 0.0457,
+        "chromaticEntropyBits": 4.527,
+        "jensenShannonDivergenceFromPrev": 0.0067,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4084
+      },
+      "linguistic": {
+        "windowIndex": 19,
+        "segmentId": "CHAL-03",
+        "speakerId": "REAGAN_CONTINUITY",
+        "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+        "wordsPerMinute": 106.9,
+        "typeTokenRatio": 0.633,
+        "normativeMarkerDensity": 0.051,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.98,
+        "normalizedLinguisticIntensity": 0.4302,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.98,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.538,
+      "narrativeEnergy": 52.41,
+      "cumulativeStanceEntropyBits": 2.0305,
+      "normalizedNarrativeEntropy": 0.6768,
+      "narrativeInertia": 0.8382,
+      "narrativeComplexity": 57.46,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5363,
+        "B2_LEGAL_COMPLIANCE": 0.5979,
+        "B3_PRAGMATIC_SERVICE": 0.6106,
+        "B4_INDIVIDUAL_AUTONOMY": 0.639
+      },
+      "polarizationIndex": 0.0629,
+      "stateDisplacementNorm": 0.0292
+    },
+    {
+      "windowIndex": 20,
+      "startSeconds": 200,
+      "endSeconds": 210,
+      "midpointSeconds": 205,
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+      "acoustic": {
+        "windowIndex": 20,
+        "startSeconds": 200,
+        "endSeconds": 210,
+        "rmsAmplitude": 0.0246,
+        "dbFs": -32.18,
+        "peakAmplitude": 0.1827,
+        "zeroCrossingRate": 0.0919,
+        "speechActivityRatio": 0.22,
+        "dynamicRangeDb": 30.55,
+        "normalizedIntensity": 0.6955
+      },
+      "visual": {
+        "windowIndex": 20,
+        "timestampSeconds": 205,
+        "framePath": "frames/frame-0020.jpg",
+        "meanLuminance": 0.341,
+        "luminanceContrastStd": 0.2118,
+        "meanSaturation": 0.2407,
+        "warmthIndex": 0.0466,
+        "chromaticEntropyBits": 4.5657,
+        "jensenShannonDivergenceFromPrev": 0.0038,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4088
+      },
+      "linguistic": {
+        "windowIndex": 20,
+        "segmentId": "CHAL-03",
+        "speakerId": "REAGAN_CONTINUITY",
+        "speakerLabel": "President Reagan \u2014 Phase III: Institutional Faith, Freedom \u0026 NASA Continuity",
+        "wordsPerMinute": 106.9,
+        "typeTokenRatio": 0.633,
+        "normativeMarkerDensity": 0.051,
+        "dialecticalConnectorDensity": 0,
+        "institutionalAnchoring": 0.98,
+        "normalizedLinguisticIntensity": 0.4302,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.88,
+          "B2_LEGAL_COMPLIANCE": 0.98,
+          "B3_PRAGMATIC_SERVICE": 0.98,
+          "B4_INDIVIDUAL_AUTONOMY": 0.9
+        }
+      },
+      "crossModalResonance": 0.547,
+      "narrativeEnergy": 53.32,
+      "cumulativeStanceEntropyBits": 2.0293,
+      "normalizedNarrativeEntropy": 0.6764,
+      "narrativeInertia": 0.8495,
+      "narrativeComplexity": 57.46,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5511,
+        "B2_LEGAL_COMPLIANCE": 0.6119,
+        "B3_PRAGMATIC_SERVICE": 0.6265,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6502
+      },
+      "polarizationIndex": 0.0646,
+      "stateDisplacementNorm": 0.0282
+    },
+    {
+      "windowIndex": 21,
+      "startSeconds": 210,
+      "endSeconds": 220,
+      "midpointSeconds": 215,
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "acoustic": {
+        "windowIndex": 21,
+        "startSeconds": 210,
+        "endSeconds": 220,
+        "rmsAmplitude": 0.03184,
+        "dbFs": -29.94,
+        "peakAmplitude": 0.2157,
+        "zeroCrossingRate": 0.0885,
+        "speechActivityRatio": 0.38,
+        "dynamicRangeDb": 32.12,
+        "normalizedIntensity": 0.8076
+      },
+      "visual": {
+        "windowIndex": 21,
+        "timestampSeconds": 215,
+        "framePath": "frames/frame-0021.jpg",
+        "meanLuminance": 0.3408,
+        "luminanceContrastStd": 0.2117,
+        "meanSaturation": 0.2443,
+        "warmthIndex": 0.0456,
+        "chromaticEntropyBits": 4.5473,
+        "jensenShannonDivergenceFromPrev": 0.0043,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4081
+      },
+      "linguistic": {
+        "windowIndex": 21,
+        "segmentId": "CHAL-04",
+        "speakerId": "REAGAN_TRANSCENDENCE",
+        "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+        "wordsPerMinute": 130,
+        "typeTokenRatio": 0.726,
+        "normativeMarkerDensity": 0.0283,
+        "dialecticalConnectorDensity": 0.0094,
+        "institutionalAnchoring": 0.96,
+        "normalizedLinguisticIntensity": 0.4275,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.82,
+          "B2_LEGAL_COMPLIANCE": 0.96,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.95
+        }
+      },
+      "crossModalResonance": 0.5876,
+      "narrativeEnergy": 57.65,
+      "cumulativeStanceEntropyBits": 2.028,
+      "normalizedNarrativeEntropy": 0.676,
+      "narrativeInertia": 0.8497,
+      "narrativeComplexity": 65.22,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5636,
+        "B2_LEGAL_COMPLIANCE": 0.6257,
+        "B3_PRAGMATIC_SERVICE": 0.6401,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6641
+      },
+      "polarizationIndex": 0.0641,
+      "stateDisplacementNorm": 0.027
+    },
+    {
+      "windowIndex": 22,
+      "startSeconds": 220,
+      "endSeconds": 230,
+      "midpointSeconds": 225,
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "acoustic": {
+        "windowIndex": 22,
+        "startSeconds": 220,
+        "endSeconds": 230,
+        "rmsAmplitude": 0.02224,
+        "dbFs": -33.06,
+        "peakAmplitude": 0.1857,
+        "zeroCrossingRate": 0.0805,
+        "speechActivityRatio": 0.23,
+        "dynamicRangeDb": 29.6,
+        "normalizedIntensity": 0.6734
+      },
+      "visual": {
+        "windowIndex": 22,
+        "timestampSeconds": 225,
+        "framePath": "frames/frame-0022.jpg",
+        "meanLuminance": 0.3402,
+        "luminanceContrastStd": 0.2113,
+        "meanSaturation": 0.2432,
+        "warmthIndex": 0.0468,
+        "chromaticEntropyBits": 4.5564,
+        "jensenShannonDivergenceFromPrev": 0.0113,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4108
+      },
+      "linguistic": {
+        "windowIndex": 22,
+        "segmentId": "CHAL-04",
+        "speakerId": "REAGAN_TRANSCENDENCE",
+        "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+        "wordsPerMinute": 130,
+        "typeTokenRatio": 0.726,
+        "normativeMarkerDensity": 0.0283,
+        "dialecticalConnectorDensity": 0.0094,
+        "institutionalAnchoring": 0.96,
+        "normalizedLinguisticIntensity": 0.4275,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.82,
+          "B2_LEGAL_COMPLIANCE": 0.96,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.95
+        }
+      },
+      "crossModalResonance": 0.5365,
+      "narrativeEnergy": 52.38,
+      "cumulativeStanceEntropyBits": 2.0268,
+      "normalizedNarrativeEntropy": 0.6756,
+      "narrativeInertia": 0.8608,
+      "narrativeComplexity": 65.22,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5742,
+        "B2_LEGAL_COMPLIANCE": 0.6378,
+        "B3_PRAGMATIC_SERVICE": 0.6517,
+        "B4_INDIVIDUAL_AUTONOMY": 0.676
+      },
+      "polarizationIndex": 0.0635,
+      "stateDisplacementNorm": 0.0231
+    },
+    {
+      "windowIndex": 23,
+      "startSeconds": 230,
+      "endSeconds": 240,
+      "midpointSeconds": 235,
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "acoustic": {
+        "windowIndex": 23,
+        "startSeconds": 230,
+        "endSeconds": 240,
+        "rmsAmplitude": 0.0261,
+        "dbFs": -31.67,
+        "peakAmplitude": 0.2065,
+        "zeroCrossingRate": 0.0821,
+        "speechActivityRatio": 0.32,
+        "dynamicRangeDb": 29.62,
+        "normalizedIntensity": 0.7402
+      },
+      "visual": {
+        "windowIndex": 23,
+        "timestampSeconds": 235,
+        "framePath": "frames/frame-0023.jpg",
+        "meanLuminance": 0.3432,
+        "luminanceContrastStd": 0.2101,
+        "meanSaturation": 0.2402,
+        "warmthIndex": 0.0492,
+        "chromaticEntropyBits": 4.5659,
+        "jensenShannonDivergenceFromPrev": 0.0127,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4104
+      },
+      "linguistic": {
+        "windowIndex": 23,
+        "segmentId": "CHAL-04",
+        "speakerId": "REAGAN_TRANSCENDENCE",
+        "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+        "wordsPerMinute": 130,
+        "typeTokenRatio": 0.726,
+        "normativeMarkerDensity": 0.0283,
+        "dialecticalConnectorDensity": 0.0094,
+        "institutionalAnchoring": 0.96,
+        "normalizedLinguisticIntensity": 0.4275,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.82,
+          "B2_LEGAL_COMPLIANCE": 0.96,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.95
+        }
+      },
+      "crossModalResonance": 0.5625,
+      "narrativeEnergy": 55.03,
+      "cumulativeStanceEntropyBits": 2.0258,
+      "normalizedNarrativeEntropy": 0.6753,
+      "narrativeInertia": 0.8713,
+      "narrativeComplexity": 65.22,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5848,
+        "B2_LEGAL_COMPLIANCE": 0.65,
+        "B3_PRAGMATIC_SERVICE": 0.6632,
+        "B4_INDIVIDUAL_AUTONOMY": 0.6878
+      },
+      "polarizationIndex": 0.0629,
+      "stateDisplacementNorm": 0.0231
+    },
+    {
+      "windowIndex": 24,
+      "startSeconds": 240,
+      "endSeconds": 250,
+      "midpointSeconds": 245,
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "acoustic": {
+        "windowIndex": 24,
+        "startSeconds": 240,
+        "endSeconds": 250,
+        "rmsAmplitude": 0.02053,
+        "dbFs": -33.75,
+        "peakAmplitude": 0.1907,
+        "zeroCrossingRate": 0.0881,
+        "speechActivityRatio": 0.15,
+        "dynamicRangeDb": 28.47,
+        "normalizedIntensity": 0.6295
+      },
+      "visual": {
+        "windowIndex": 24,
+        "timestampSeconds": 245,
+        "framePath": "frames/frame-0024.jpg",
+        "meanLuminance": 0.3418,
+        "luminanceContrastStd": 0.2102,
+        "meanSaturation": 0.2411,
+        "warmthIndex": 0.0488,
+        "chromaticEntropyBits": 4.5435,
+        "jensenShannonDivergenceFromPrev": 0.0055,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4069
+      },
+      "linguistic": {
+        "windowIndex": 24,
+        "segmentId": "CHAL-04",
+        "speakerId": "REAGAN_TRANSCENDENCE",
+        "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+        "wordsPerMinute": 130,
+        "typeTokenRatio": 0.726,
+        "normativeMarkerDensity": 0.0283,
+        "dialecticalConnectorDensity": 0.0094,
+        "institutionalAnchoring": 0.96,
+        "normalizedLinguisticIntensity": 0.4275,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.82,
+          "B2_LEGAL_COMPLIANCE": 0.96,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.95
+        }
+      },
+      "crossModalResonance": 0.5188,
+      "narrativeEnergy": 50.53,
+      "cumulativeStanceEntropyBits": 2.0248,
+      "normalizedNarrativeEntropy": 0.6749,
+      "narrativeInertia": 0.8819,
+      "narrativeComplexity": 65.22,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5939,
+        "B2_LEGAL_COMPLIANCE": 0.6608,
+        "B3_PRAGMATIC_SERVICE": 0.6732,
+        "B4_INDIVIDUAL_AUTONOMY": 0.698
+      },
+      "polarizationIndex": 0.0623,
+      "stateDisplacementNorm": 0.0201
+    },
+    {
+      "windowIndex": 25,
+      "startSeconds": 250,
+      "endSeconds": 258.928,
+      "midpointSeconds": 254.464,
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+      "acoustic": {
+        "windowIndex": 25,
+        "startSeconds": 250,
+        "endSeconds": 258.928,
+        "rmsAmplitude": 0.00357,
+        "dbFs": -48.94,
+        "peakAmplitude": 0.0797,
+        "zeroCrossingRate": 0.057,
+        "speechActivityRatio": 0,
+        "dynamicRangeDb": 22.87,
+        "normalizedIntensity": 0.15
+      },
+      "visual": {
+        "windowIndex": 25,
+        "timestampSeconds": 254.464,
+        "framePath": "frames/frame-0025.jpg",
+        "meanLuminance": 0.341,
+        "luminanceContrastStd": 0.2086,
+        "meanSaturation": 0.2397,
+        "warmthIndex": 0.0489,
+        "chromaticEntropyBits": 4.5548,
+        "jensenShannonDivergenceFromPrev": 0.0053,
+        "isSceneCutDetected": false,
+        "visualSalienceScore": 0.4055
+      },
+      "linguistic": {
+        "windowIndex": 25,
+        "segmentId": "CHAL-04",
+        "speakerId": "REAGAN_TRANSCENDENCE",
+        "speakerLabel": "President Reagan \u2014 Phase IV: Sir Francis Drake \u0026 Sacred Apotheosis (\u0027Face of God\u0027)",
+        "wordsPerMinute": 130,
+        "typeTokenRatio": 0.726,
+        "normativeMarkerDensity": 0.0283,
+        "dialecticalConnectorDensity": 0.0094,
+        "institutionalAnchoring": 0.96,
+        "normalizedLinguisticIntensity": 0.4275,
+        "activeStanceVector": {
+          "B1_ANTIMILITARISM": 0.82,
+          "B2_LEGAL_COMPLIANCE": 0.96,
+          "B3_PRAGMATIC_SERVICE": 0.92,
+          "B4_INDIVIDUAL_AUTONOMY": 0.95
+        }
+      },
+      "crossModalResonance": 0.2532,
+      "narrativeEnergy": 30.22,
+      "cumulativeStanceEntropyBits": 2.024,
+      "normalizedNarrativeEntropy": 0.6747,
+      "narrativeInertia": 0.8921,
+      "narrativeComplexity": 65.22,
+      "collectiveStateX": {
+        "B1_ANTIMILITARISM": 0.5991,
+        "B2_LEGAL_COMPLIANCE": 0.667,
+        "B3_PRAGMATIC_SERVICE": 0.6788,
+        "B4_INDIVIDUAL_AUTONOMY": 0.7038
+      },
+      "polarizationIndex": 0.0617,
+      "stateDisplacementNorm": 0.0114
+    }
+  ]
+}

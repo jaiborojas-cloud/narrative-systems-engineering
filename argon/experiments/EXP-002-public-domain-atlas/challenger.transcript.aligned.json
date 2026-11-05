@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "argon-0.1",
+  "sourceVideo": "video/Reagan_Challenger_1986.webm",
+  "sourceSha256": "aedfaa61cddcf91537e956a4233008b32e98333ae2d207c322479a0aa7b17bcd",
+  "language": "en-US",
+  "context": "President Ronald Reagan's Oval Office address to the nation on January 28, 1986, following the Space Shuttle Challenger disaster.",
+  "beliefDimensions": [
+    {
+      "id": "B1_ANTIMILITARISM",
+      "name": "Peaceful Frontier & Open Scientific Exploration",
+      "description": "Framing space exploration as an open, non-secretive, peaceful human quest ('we don't keep secrets... that's the way freedom is')."
+    },
+    {
+      "id": "B2_LEGAL_COMPLIANCE",
+      "name": "National Unity & Institutional Faith (NASA / Presidency)",
+      "description": "Unconditional collective solidarity and continued trust in national institutions despite catastrophic failure."
+    },
+    {
+      "id": "B3_PRAGMATIC_SERVICE",
+      "name": "Programmatic Continuity & Public Service",
+      "description": "Commitment to continuing shuttle flights, volunteer participation, and civic duty ('nothing ends here; our hopes and our journeys continue')."
+    },
+    {
+      "id": "B4_INDIVIDUAL_AUTONOMY",
+      "name": "Heroic Pioneer Courage & Transcendence",
+      "description": "Celebrating voluntary individual bravery in the face of mortal risk ('the future doesn't belong to the fainthearted; it belongs to the brave')."
+    }
+  ],
+  "segments": [
+    {
+      "id": "CHAL-01",
+      "startSeconds": 0.0,
+      "endSeconds": 75.0,
+      "speakerId": "REAGAN_MOURNING",
+      "speakerLabel": "President Reagan — Phase I: Collective Mourning & Naming the Seven Heroes",
+      "role": "consoler_in_chief",
+      "transcript": "Ladies and gentlemen, I'd planned to speak to you tonight to report on the State of the Union, but the events of earlier today have led me to change those plans. Today is a day for mourning and remembering. Nancy and I are pained to the core by the tragedy of the shuttle Challenger. We know we share this pain with all of the people of our country. This is truly a national loss... We mourn seven heroes: Michael Smith, Dick Scobee, Judith Resnik, Ronald McNair, Ellison Onizuka, Gregory Jarvis, and Christa McAuliffe. We mourn their loss as a nation together.",
+      "visualEvidence": {
+        "frameRange": [0, 7],
+        "setting": "Oval Office desk, US and Presidential flags, family photographs on credenza behind",
+        "clothing": "Dark navy presidential suit, white shirt, striped tie",
+        "objects": ["Oval Office desk", "framed family photos", "flags", "speech notes"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "The Challenger Seven Crew", "evidence": "We mourn seven heroes: Michael Smith, Dick Scobee, Judith Resnik..." },
+        { "role": "victim", "entity": "Grieving Nation & Families", "evidence": "Nancy and I are pained to the core... This is truly a national loss" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.65,
+        "B2_LEGAL_COMPLIANCE": 0.92,
+        "B3_PRAGMATIC_SERVICE": 0.80,
+        "B4_INDIVIDUAL_AUTONOMY": 0.85
+      },
+      "institutionalAnchoring": 0.94
+    },
+    {
+      "id": "CHAL-02",
+      "startSeconds": 75.0,
+      "endSeconds": 155.0,
+      "speakerId": "REAGAN_PIONEERS",
+      "speakerLabel": "President Reagan — Phase II: Consoling the Families & Addressing the Schoolchildren",
+      "role": "pedagogical_leader",
+      "transcript": "To the families of the seven: we cannot bear, as you do, the full impact of this tragedy. But we feel the loss... Your loved ones were daring and brave, and they had that special grace, that special spirit that says, 'Give me a challenge and I'll meet it with joy.' ... We're still pioneers. They, the members of the Challenger crew, were pioneers. And I want to say something to the schoolchildren of America who were watching the live coverage of the shuttle's takeoff. I know it is hard to understand, but sometimes painful things like this happen. It's all part of the process of exploration and discovery... The future doesn't belong to the fainthearted; it belongs to the brave.",
+      "visualEvidence": {
+        "frameRange": [7, 15],
+        "setting": "Steady medium shot in Oval Office",
+        "clothing": "Dark suit, striped tie",
+        "objects": ["Oval Office desk", "framed photos"]
+      },
+      "archetypes": [
+        { "role": "hero", "entity": "Brave Pioneers", "evidence": "The future doesn't belong to the fainthearted; it belongs to the brave." },
+        { "role": "victim", "entity": "Schoolchildren watching live", "evidence": "to the schoolchildren of America who were watching the live coverage" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.78,
+        "B2_LEGAL_COMPLIANCE": 0.88,
+        "B3_PRAGMATIC_SERVICE": 0.86,
+        "B4_INDIVIDUAL_AUTONOMY": 0.96
+      },
+      "institutionalAnchoring": 0.92
+    },
+    {
+      "id": "CHAL-03",
+      "startSeconds": 155.0,
+      "endSeconds": 210.0,
+      "speakerId": "REAGAN_CONTINUITY",
+      "speakerLabel": "President Reagan — Phase III: Institutional Faith, Freedom & NASA Continuity",
+      "role": "institutional_defender",
+      "transcript": "I've always had great faith in and respect for our space program, and what happened today does nothing to diminish it. We don't hide our space program. We don't keep secrets and cover things up. We do it all up front and in public. That's the way freedom is, and we wouldn't change it for a minute. We'll continue our quest in space. There will be more shuttle flights and more shuttle crews and, yes, more volunteers, more civilians, more teachers in space. Nothing ends here; our hopes and our journeys continue.",
+      "visualEvidence": {
+        "frameRange": [15, 20],
+        "setting": "Gradual camera push-in to tighter close-up in Oval Office",
+        "clothing": "Dark suit, striped tie",
+        "objects": ["Oval Office window", "flags"]
+      },
+      "archetypes": [
+        { "role": "savior", "entity": "Open Democratic Space Program (NASA)", "evidence": "We do it all up front and in public. That's the way freedom is... Nothing ends here" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.88,
+        "B2_LEGAL_COMPLIANCE": 0.98,
+        "B3_PRAGMATIC_SERVICE": 0.98,
+        "B4_INDIVIDUAL_AUTONOMY": 0.90
+      },
+      "institutionalAnchoring": 0.98
+    },
+    {
+      "id": "CHAL-04",
+      "startSeconds": 210.0,
+      "endSeconds": 258.93,
+      "speakerId": "REAGAN_TRANSCENDENCE",
+      "speakerLabel": "President Reagan — Phase IV: Sir Francis Drake & Sacred Apotheosis ('Face of God')",
+      "role": "mythic_eulogist",
+      "transcript": "There's a coincidence today. On this day 390 years ago, the great explorer Sir Francis Drake died aboard ship off the coast of Panama. In his lifetime the great frontiers were the oceans... Well, today we can say of the Challenger crew: their dedication was, like Drake's, complete. The crew of the space shuttle Challenger honored us by the manner in which they lived their lives. We will never forget them, nor the last time we saw them, this morning, as they prepared for their journey and waved goodbye and 'slipped the surly bonds of earth to touch the face of God.' Thank you.",
+      "visualEvidence": {
+        "frameRange": [21, 25],
+        "setting": "Tight close-up on Reagan's face in the Oval Office",
+        "clothing": "Dark suit, white collar, striped tie",
+        "objects": ["Oval Office window"]
+      },
+      "archetypes": [
+        { "role": "savior", "entity": "Immortalized Explorers (Drake / Challenger Crew)", "evidence": "slipped the surly bonds of earth to touch the face of God" }
+      ],
+      "stanceVector": {
+        "B1_ANTIMILITARISM": 0.82,
+        "B2_LEGAL_COMPLIANCE": 0.96,
+        "B3_PRAGMATIC_SERVICE": 0.92,
+        "B4_INDIVIDUAL_AUTONOMY": 0.95
+      },
+      "institutionalAnchoring": 0.96
+    }
+  ]
+}
