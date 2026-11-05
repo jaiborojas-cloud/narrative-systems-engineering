@@ -11,6 +11,43 @@ var jsonOptions = new JsonSerializerOptions
 };
 
 var repoRoot = Directory.GetCurrentDirectory();
+
+if (args.Length > 0 && string.Equals(args[0], "atlas", StringComparison.OrdinalIgnoreCase))
+{
+    var c1Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-001-insumision-dynamics", "dynamics.profile.json");
+    var c2Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "daisy-run", "dynamics.profile.json");
+    var c3Path = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas", "challenger-run", "dynamics.profile.json");
+
+    var p1 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c1Path), jsonOptions)!;
+    var p2 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c2Path), jsonOptions)!;
+    var p3 = JsonSerializer.Deserialize<NarrativeDynamicsProfile>(await File.ReadAllTextAsync(c3Path), jsonOptions)!;
+
+    var entries = new List<(string WorkId, string Title, string Domain, string Language, string License, NarrativeDynamicsProfile Profile)>
+    {
+        ("CORPUS-001-INSUMISION-1994", "La Mili y la Insumisión — Public Broadcast Debate (Spain, 1994)", "Polyphonic Civic Debate", "es", "Academic Research Corpus (Spain, 1994)", p1),
+        ("CORPUS-002-LBJ-DAISY-1964", "Lyndon B. Johnson 'Daisy' Nuclear Campaign Spot (USA, 1964)", "Acute Fear-Appeal Political Spot", "en", "Public Domain (US National Archives / LBJ Library)", p2),
+        ("CORPUS-003-REAGAN-CHALLENGER-1986", "Ronald Reagan Address on the Space Shuttle Challenger Disaster (USA, 1986)", "Institutional Crisis & Consolation Address", "en", "Public Domain (17 U.S.C. § 105 / White House Television Office)", p3)
+    };
+
+    var atlas = AtlasComparator.BuildAtlas(entries);
+    var atlasOutDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-002-public-domain-atlas");
+    Directory.CreateDirectory(atlasOutDir);
+
+    var reportPath = Path.Combine(atlasOutDir, "atlas.report.json");
+    var htmlPath = Path.Combine(atlasOutDir, "atlas-dashboard.html");
+
+    await File.WriteAllTextAsync(reportPath, JsonSerializer.Serialize(atlas, jsonOptions));
+    await File.WriteAllTextAsync(htmlPath, AtlasComparator.RenderAtlasHtml(atlas));
+
+    Console.WriteLine($"[Argon.Engine Atlas] Synthesized Cross-Domain Narrative Phase-Space Atlas ({atlas.Works.Count} works, {atlas.PairwiseDistances.Count} pairwise distances).");
+    foreach (var d in atlas.PairwiseDistances)
+    {
+        Console.WriteLine($"  -> {d.WorkA} vs. {d.WorkB}: 5D Metric Dist = {d.MetricSpaceEuclideanDistance:F4} | State End Dist = {d.StateTrajectoryEndDistance:F4} | Contrast = {d.RegimeContrastScore:F4}");
+    }
+    Console.WriteLine($"[Argon.Engine Atlas] Dashboard written to: {htmlPath}");
+    return 0;
+}
+
 var profileJsonPath = args.Length > 0
     ? Path.GetFullPath(args[0])
     : Path.Combine(repoRoot, "data", "processed", "runs", "06-FCE-V-C110-007-C-profile", "profile.json");

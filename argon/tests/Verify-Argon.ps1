@@ -58,6 +58,20 @@ try {
         throw "Unexpected Reagan Challenger 1986 profile metrics"
     }
 
+    # Build and verify Cross-Domain Phase-Space Atlas (Argon Atlas v0.2)
+    dotnet run --project argon/src/Argon.Engine --no-build -- atlas
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine atlas execution failed' }
+
+    $atlasReportPath = Join-Path $repo 'argon/experiments/EXP-002-public-domain-atlas/atlas.report.json'
+    $atlasHtmlPath = Join-Path $repo 'argon/experiments/EXP-002-public-domain-atlas/atlas-dashboard.html'
+    if (-not (Test-Path $atlasReportPath) -or -not (Test-Path $atlasHtmlPath)) {
+        throw 'Missing Cross-Domain Atlas report or dashboard HTML'
+    }
+    $atlas = Get-Content $atlasReportPath -Raw | ConvertFrom-Json
+    if ($atlas.works.Count -ne 3 -or $atlas.pairwiseDistances.Count -ne 3) {
+        throw 'Unexpected work or pairwise distance count in atlas.report.json'
+    }
+
     # Verify Zenodo, Citation, Authorship, and Audit Manifest integrity
     foreach ($metaFile in @('.zenodo.json', 'CITATION.cff', 'AUTHORS.md', 'LICENSE', 'NOTICE', 'AUDIT_MANIFEST.md', 'data/raw/CORPUS_MANIFEST.json')) {
         $p = Join-Path $repo $metaFile

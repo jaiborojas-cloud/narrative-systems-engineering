@@ -67,7 +67,21 @@ In stark contrast to both the turbulent student debate (`CORPUS-001`) and the ex
 
 ---
 
-## 4. Conclusion: Proof of Genre Separation in the NSE Metric Space
+## 4. Pairwise Structural Distance Matrix in NSE Metric Space (`Argon.Engine v0.2`)
+
+Using [`AtlasComparator.cs`](../../src/Argon.Engine/AtlasComparator.cs) (`dotnet run --project argon/src/Argon.Engine -- atlas`), we project each work into the normalized 5D NSE Metric Space $\mathbf{m} = (\bar{E}/100,\; E_{\max}/100,\; \hat{H}(T),\; \bar{\mathcal{I}},\; P(T)) \in [0, 1]^5$ and evaluate both the 5D Euclidean metric distance $\|\mathbf{m}_A - \mathbf{m}_B\|_2$ and the Terminal State-Space Euclidean Distance $\|\mathbf{x}_A(T) - \mathbf{x}_B(T)\|_2$ (see [`atlas.report.json`](atlas.report.json) and interactive [`atlas-dashboard.html`](atlas-dashboard.html)):
+
+| Work A | Work B | 5D Metric Space Distance $\|\mathbf{m}_A - \mathbf{m}_B\|_2$ | Terminal State Distance $\|\mathbf{x}_A(T) - \mathbf{x}_B(T)\|_2$ | Composite Regime Contrast Score |
+|---|---|---|---|---|
+| `CORPUS-001-INSUMISION-1994` | `CORPUS-002-LBJ-DAISY-1964` | $0.2711$ | $0.7090$ | **$0.3086$** |
+| `CORPUS-002-LBJ-DAISY-1964` | `CORPUS-003-REAGAN-CHALLENGER-1986` | $0.5128$ | $0.7244$ | **$0.4450$** |
+| `CORPUS-001-INSUMISION-1994` | `CORPUS-003-REAGAN-CHALLENGER-1986` | **$0.6135$** | **$1.0045$** | **$0.5635$** |
+
+**Geometric Insight:** The maximum structural distance in the corpus occurs between **Polyphonic Student Debate (`CORPUS-001`)** and **Presidential Crisis Consolation (`CORPUS-003`)** ($\|\Delta \mathbf{m}\|_2 = 0.6135$, $\|\Delta \mathbf{x}(T)\|_2 = 1.0045$, Contrast $= 0.5635$), confirming that contested multi-speaker civic conflict and single-voice institutional consolation occupy opposite poles of the NSE phase space. Meanwhile, **Acute Fear-Appeal (`CORPUS-002`)** occupies an intermediate, high-impulse vector characterized by extreme peak energy ($83.29$) and rapid transition from low-inertia vulnerability to high-inertia electoral mobilization.
+
+---
+
+## 5. Conclusion: Proof of Genre Separation in the NSE Metric Space
 
 With `EXP-001` and `EXP-002`, the project now possesses a **3-work, multi-language (Spanish/English), copyright-clean benchmark corpus** that proves the six NSE metrics separate narrative regimes cleanly:
 - **Contested Debate (`CORPUS-001`):** High Entropy ($2.76\text{ bits}$), High Polarization ($0.55$), Multi-Cut Visuals ($4$ cuts), State Sign-Reversal.
