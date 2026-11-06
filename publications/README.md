@@ -4,8 +4,8 @@
 
 - **[PAPER-001: Multimodal Narrative Systems Engineering: Signal-Grounded Metrics and State-Space Control Dynamics for Audiovisual Media](PAPER-001-NSE-FOUNDATION.md)**  
   **Author:** Jair Ivan Rojas Ruiz ([ORCID: 0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583))  
-  **Status:** Preprint v1.0 completed (November 5, 2026), backed by reproducible empirical execution in [`argon/experiments/EXP-001-insumision-dynamics/`](../argon/experiments/EXP-001-insumision-dynamics/FINDINGS.md). Ready for DOI deposition on Zenodo / OSF / TechRxiv.
+  **Status:** Preprint v1.1 (November 6, 2026): claims revised to separate signal measurements from the unvalidated stance coding and exploratory state-space model. v1.0 (November 5, 2026) is superseded. Experiment records: [`argon/experiments/`](../argon/experiments/).
 
 ## Licensing & Attribution
 
-Released under **Apache License 2.0** with mandatory attribution clause in [`../NOTICE`](../NOTICE) and [`../CITATION.cff`](../CITATION.cff).
+All rights reserved from the version following v0.4.0; see [`../LICENSE`](../LICENSE). Versions up to v0.4.0 were released under the Apache License 2.0. Cite as indicated in [`../CITATION.cff`](../CITATION.cff); citing grants no reproduction rights.

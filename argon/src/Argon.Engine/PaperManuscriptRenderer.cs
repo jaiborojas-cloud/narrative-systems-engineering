@@ -636,7 +636,7 @@ code {
     private static void DrawFooter(StringBuilder sb, int pageNum, int totalPages)
     {
         DrawLine(sb, 48, 38, 564, 38, 0.5, 0.6, 0.65, 0.75);
-        DrawText(sb, "F1", 8.0, 48, 26, "Rojas Ruiz, J. I. (2026) — Narrative Systems Engineering (NSE) — Apache-2.0 / Mandatory Attribution (NOTICE)");
+        DrawText(sb, "F1", 8.0, 48, 26, "Rojas Ruiz, J. I. (2026) — Narrative Systems Engineering (NSE) — All rights reserved (see LICENSE)");
         DrawText(sb, "F2", 8.0, 515, 26, $"Page {pageNum} of {totalPages}");
     }
 

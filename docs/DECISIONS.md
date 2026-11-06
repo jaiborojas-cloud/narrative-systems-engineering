@@ -20,8 +20,10 @@ September 8, 2026
 | D014 | Implement the first prototype in C#/.NET, beginning with local FFmpeg processing | Adopted: user requested coding after discussing .NET and Azure | No Azure models deployed; local measurements can run independently |
 | D015 | Keep computed measurements separate from future model annotations and interpretations | Implemented prototype choice | Profile records provenance, measurement methods, and pending analysis explicitly |
 | D016 | Use a versioned frame-level codebook and offline review/import workflow before Azure annotations | Adopted: user approved implementation in Session 005 | Objects, clothing, setting, and visible actions need explicit evidence and uncertainty; completed review is not validation |
-| D017 | Confirm founder & principal author identity: Jair Ivan Rojas Ruiz (ORCID: 0009-0003-1109-4583) | Adopted: November 5, 2026 | Recorded in `AUTHORS.md`, `CITATION.cff`, `LICENSE` (Apache 2.0), and `NOTICE` |
+| D017 | Confirm founder & principal author identity: Jair Ivan Rojas Ruiz (ORCID: 0009-0003-1109-4583) | Adopted: November 5, 2026 | Recorded in `AUTHORS.md`, `CITATION.cff`, `LICENSE` (Apache 2.0 at the time; superseded by D019), and `NOTICE` |
 | D018 | Operationalize the 6 core NSE metrics in `argon/` (`Argon.Engine`) and complete `EXP-001` & `PAPER-001` | Completed: November 5, 2026 | Signal-grounded mathematical formalization (`FORMALIZATION.md`), full multimodal run on `06-FCE-V-C110-007-C.mp4`, and foundational preprint |
+| D019 | Change the license from Apache 2.0 to all rights reserved for versions after v0.4.0 | Adopted: founder decision, November 6, 2026 | Aligns NSE with the Leviathan repository and keeps commercial use under the founder's control; earlier Apache 2.0 copies keep their license |
+| D020 | Revise claims in PAPER-001, the experiment findings, and release metadata | Adopted: founder decision, November 6, 2026 | Separate direct signal measurements from single-coder stance labels, uncalibrated composite weights, simulated counterfactuals, and EXP-004's synthetic self-consistency check; no claims of validation or proof without independent annotation or audience data |
 
 ## Pending founder input
 

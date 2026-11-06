@@ -8,6 +8,8 @@
 
 ---
 
+> **Status (v0.4.1, November 6, 2026):** Acoustic, visual, and speech-rate values in this report are measured from the media. Stance vectors and institutional anchoring were coded by a single coder with no agreement statistic. The belief state $x(t)$, the Controllability Gramian, and Scenario B are outputs of an exploratory model; no audience was measured. The "4 cuts" count includes Window #0, which the software marks by convention; three transitions were flagged between sampled frames, and no annotated shot-boundary reference exists.
+
 ## 1. Executive Summary: Bridging the Gap
 
 Before this experiment, the project had two disconnected halves:
@@ -60,8 +62,8 @@ Using the discrete-time state-space control model in [`NarrativeMetricsEngine.cs
 
 2. **Controllability Gramian Spectrum ($W_c$):**
    Computing the diagonal Controllability Gramian over the 39 windows yields a condition number $\kappa(W_c) = 2.738$:
-   - **Most Controllable State:** `B3_PRAGMATIC_SERVICE` ($W_{c,33} = 0.02587$) — the pragmatic middle ground ("professional soldiers + useful social service instead of military barracks") is the attractor with the highest net control sensitivity across the documentary.
-   - **Most Locked/Resisted State:** `B1_ANTIMILITARISM` ($W_{c,11} = 0.00945$) — early gains are overwritten by subsequent high-inertia legal/civic framing.
+   - **Most Controllable State:** `B3_PRAGMATIC_SERVICE` ($W_{c,33} = 0.02587$) — the pragmatic middle ground ("professional soldiers + useful social service instead of military barracks") is the dimension with the highest control sensitivity in the model.
+   - **Least Controllable State (in the model):** `B1_ANTIMILITARISM` ($W_{c,11} = 0.00945$) — early gains are overwritten by subsequent high-inertia legal/civic framing.
 
 3. **Counterfactual Simulation (Scenario B vs. Scenario A):**
-   When we reverse the documentary's editing order in **Scenario B** (placing the 4 legal/pragmatic speakers first and ending with `SPK_01` and the activist poster), the final state shifts by $\|\Delta x\|_2 = 1.2249$, flipping $x_1$ from $-0.1445$ to **$+0.4976$**. This proves mathematically that **editorial sequencing (montage order)** acts as a primary control input in documentary media.
+   When we reverse the documentary's editing order in **Scenario B** (placing the 4 legal/pragmatic speakers first and ending with `SPK_01` and the activist poster), the final state shifts by $\|\Delta x\|_2 = 1.2249$, flipping $x_1$ from $-0.1445$ to **$+0.4976$**. Within the model, therefore, **editorial sequencing (montage order)** acts as a strong input. This is a property of the model's recency-weighted update, not a measured effect on viewers; testing it requires an audience study.

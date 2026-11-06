@@ -1,19 +1,19 @@
-# Multimodal Narrative Systems Engineering: Signal-Grounded Metrics and State-Space Control Dynamics for Audiovisual Media
+# Multimodal Narrative Systems Engineering: Signal-Grounded Measurement and an Exploratory State-Space Model for Audiovisual Media
 
 **Author:** Jair Ivan Rojas Ruiz (*Jair Rojas*)  
 **ORCID iD:** [https://orcid.org/0009-0003-1109-4583](https://orcid.org/0009-0003-1109-4583)  
 **DOI:** [https://doi.org/10.5281/zenodo.23987656](https://doi.org/10.5281/zenodo.23987656) (Concept DOI: [`10.5281/zenodo.23987655`](https://doi.org/10.5281/zenodo.23987655))  
-**Date:** November 5, 2026  
-**Version:** Preprint v1.0 (`PAPER-001`)  
+**Date:** November 6, 2026 (v1.0: November 5, 2026)  
+**Version:** Preprint v1.1 (`PAPER-001`). v1.1 revises the claims of v1.0; see the revision note at the end.  
 **Repository & Reproducibility Package:** [https://github.com/jaiborojas-cloud/narrative-systems-engineering](https://github.com/jaiborojas-cloud/narrative-systems-engineering) (`src/Nse.Pipeline` & `argon/src/Argon.Engine`)
 
 ---
 
 ## Abstract
 
-Narratives across film, television, political discourse, and digital media are typically analyzed either through qualitative humanities frameworks or through isolated text-only natural language processing. Conversely, recent attempts to prompt large language models (LLMs) to score "narrative impact" or "emotional intensity" on arbitrary $0\text{–}100$ scales suffer from uncalibrated units, stochastic hallucination, and complete detachment from the physical audiovisual signal. In this paper, we introduce **Narrative Systems Engineering (NSE)** and its computational core, **Computational Narrative Dynamics (CND)**, a signal-grounded mathematical framework originated by Jair Ivan Rojas Ruiz that models audiovisual narratives as multimodal time-series inputs $u(t) = (u_{\text{ac}}(t), u_{\text{vis}}(t), u_{\text{ling}}(t))$ acting upon a bounded cognitive-social state space $x(t+1) = f(x(t), u(t))$. We formally define and operationalize six core narrative quantities: (1) **Narrative DNA** as a signed, time-anchored entity-belief tripartite graph; (2) **Narrative Entropy ($H$)** in Shannon bits over chromatic and normative-stance distributions; (3) **Narrative Energy ($E$)** via a non-collapsing cross-modal resonance functional coupling vocal prosody (dBFS, VAD), visual flux (Jensen-Shannon divergence across color distributions), and lexical-normative cadence; (4) **Narrative Complexity ($C$)** combining lexical diversity, dialectical connector density, and multi-value tension; (5) **Narrative Inertia ($\mathcal{I}$)** quantifying institutional and prior-conviction resistance to state displacement; and (6) **Narrative Controllability** via the discrete-time Controllability Gramian $W_c$ over finite horizons. We validate the framework empirically across a three-work, bilingual (Spanish/English) benchmark corpus (`EXP-001` and `EXP-002`, totaling $513.6\text{ seconds}$ and $77$ time windows), demonstrating that the six NSE metrics cleanly separate polyphonic social debate (`CORPUS-001`), acute fear-appeal political campaigning (`CORPUS-002`, LBJ's 1964 *"Daisy"* spot), and institutional crisis consolation (`CORPUS-003`, President Reagan's 1986 *Challenger* address).
+Narratives across film, television, political discourse, and digital media are typically analyzed either through qualitative frameworks or through text-only natural language processing, and scores produced by prompting large language models on arbitrary $0\text{–}100$ scales are hard to trace to the audiovisual signal. This preprint presents **Narrative Systems Engineering (NSE)** and its computational core, **Computational Narrative Dynamics (CND)**, an exploratory framework originated by Jair Ivan Rojas Ruiz with two layers that we keep explicitly separate. The first layer is *measurement*: acoustic level and speech activity from PCM audio, visual change between sampled frames (Jensen-Shannon divergence of color distributions), luminance, saturation and color entropy, and transcript-based speech rate and lexical descriptors, each linked to exact time spans and source hashes. The second layer is a *model*: composite indices (Narrative Energy, Entropy, Complexity, Inertia) with author-chosen weights, a single-coder stance coding $z(t)$ over $K$ belief dimensions, and a Friedkin-Johnsen-style state-space model $x(t+1) = f(x(t), u(t))$ of how these inputs might move audience belief states, with a controllability analysis. We apply the framework descriptively to three short works totaling $513.6\text{ s}$ and $77$ windows: a 1994 Spanish university debate, the 1964 *"Daisy"* campaign spot, and the 1986 *Challenger* address. The measurement layer yields reproducible, time-aligned profiles that differ visibly across the three works. The model layer is not validated: its weights are uncalibrated, the stance coding has no measured inter-annotator agreement, counterfactual montage results are simulations of the model itself, the parameter-identification study (EXP-004) recovers parameters from trajectories generated by the same model, and no audience response has been measured. We report these results as a design study and specify the evidence needed to test the model.
 
-**Keywords:** Narrative Systems Engineering, Computational Narrative Dynamics, Multimodal Signal Processing, Narrative Energy, Shannon Narrative Entropy, Narrative Inertia, State-Space Control, Audiovisual Forensics.
+**Keywords:** Narrative Systems Engineering, Computational Narrative Dynamics, Multimodal Signal Processing, Narrative Energy, Shannon Narrative Entropy, Narrative Inertia, State-Space Control, Exploratory Model.
 
 ---
 
@@ -25,14 +25,14 @@ Existing computational approaches divide into two disconnected paradigms:
 1. **Low-level media descriptors:** Computer vision and audio processing pipelines extract shot boundaries, color histograms, or automatic speech transcripts without modeling how these observables couple to form persuasive or symbolic structures.
 2. **Uncalibrated generative summaries:** Prompting LLMs to output "narrative energy" or "belief shift" without formal measurement operators produces plausible-sounding numerical fiction. For instance, defining Narrative Energy as a naive product $E = \text{Intensity} \times \text{Coherence} \times \text{Repetition} \times \text{Identification}$ fails dimensional analysis and collapses to zero whenever any single factor vanishes (e.g., a high-impact singular twist with zero repetition).
 
-To establish **Narrative Systems Engineering (NSE)** as a falsifiable, reproducible discipline, every proposed metric must satisfy four strict criteria:
+We adopt four design criteria for every proposed quantity. They are aims for the framework, not evidence that the resulting quantities are valid measures of narrative constructs:
 1. **Signal Grounding:** Direct derivation from verifiable physical observables (16-bit PCM audio samples, decoded RGB rasters, and time-aligned speech tokens) or explicitly audited stance annotations.
 2. **Stated Units and Bounds:** Information-theoretic quantities expressed in bits (Shannon entropy, Jensen-Shannon divergence), acoustic levels in decibels full scale ($\text{dBFS}$), and state vectors in bounded metric spaces $[-1, 1]^D$.
 3. **Layer Separation:** Strict separation between *(i) observable material in the work*, *(ii) structured normative/symbolic interpretation*, and *(iii) downstream cognitive/social state response*.
-4. **Executable Reproducibility:** Full implementation in deterministic, open-source software verified by automated invariant tests.
+4. **Executable Reproducibility:** Deterministic software with automated invariant tests, so that the same inputs produce the same outputs.
 
-### 1.1 Terminology Disambiguation and Chronological Priority
-While homonymous, purely qualitative or essayistic uses of the phrase *"Narrative Systems Engineering"* exist on the public web—including informal game-design notes (*As If Productions*), organizational coaching blogs (*Pinnup*), and qualitative screenplay-criticism taxonomies (such as Strangium's November 2, 2026 `NSE-001` web post)—those texts explicitly lack mathematical equations, physical audio/video signal processing, information-theoretic entropy, state-space control models, datasets, or executable software. In contrast, the work of **Jair Ivan Rojas Ruiz**—cryptographically archived in this repository since **September 8, 2026** ([`sources/foundational/MANIFEST.md`](../sources/foundational/MANIFEST.md)) and permanently registered in **Zenodo (CERN)** under **DOI [`10.5281/zenodo.23987656`](https://doi.org/10.5281/zenodo.23987656)** (`ORCID: 0009-0003-1109-4583`)—formally establishes the quantitative, signal-grounded, and computational discipline of **Multimodal Narrative Systems Engineering and Computational Narrative Dynamics (NSE/CND)** (see [`docs/PRIOR_WORK_AND_DISAMBIGUATION.md`](../docs/PRIOR_WORK_AND_DISAMBIGUATION.md)).
+### 1.1 Terminology Note
+The phrase *"Narrative Systems Engineering"* is also used elsewhere on the public web, including game-design notes (*As If Productions*), an organizational coaching framework (*Pinnup*), and a screenplay-analysis taxonomy (Strangium's November 2, 2026 `NSE-001` post). This work uses the phrase for a different object: signal-level measurement of audiovisual works combined with an exploratory state-space model. The founding documents of this project are archived in the repository since September 8, 2026 ([`sources/foundational/MANIFEST.md`](../sources/foundational/MANIFEST.md)) and deposited in Zenodo under DOI [`10.5281/zenodo.23987655`](https://doi.org/10.5281/zenodo.23987655). These records document authorship and dates; they do not establish exclusive use of the name or the validity of the framework (see [`docs/PRIOR_WORK_AND_DISAMBIGUATION.md`](../docs/PRIOR_WORK_AND_DISAMBIGUATION.md)).
 
 ---
 
@@ -62,6 +62,8 @@ From the time-aligned speech segments overlapping window $t$, we extract speech 
 
 ## 3. Formal Definition of the Six Core NSE Metrics
 
+All weights and normalization constants below (for example $0.34$, $0.22$, $0.29$, $0.15$ in $E(t)$, the divisors $0.78$, $0.11$, $0.32$, $6.5$, $18.0$, and the damping factor $0.65$) were chosen by the author. They have not been calibrated against human judgments or audience data, so the composite indices are working definitions rather than validated measures.
+
 ### 3.1 Narrative DNA ($\mathcal{G}_{\text{DNA}}$)
 The Narrative DNA of a work is defined as a signed, evidence-linked tripartite graph $\mathcal{G}_{\text{DNA}} = (\mathcal{S} \cup \mathcal{A} \cup \mathcal{B}, \mathcal{E}, W)$ where $\mathcal{S}$ is the set of speaker agents, $\mathcal{A}$ is the set of invoked symbolic archetypes (*hero, villain, victim, savior, threat*), $\mathcal{B} = \{B_1, \dots, B_K\}$ is the set of core belief propositions, and $W: \mathcal{E} \to [-1, +1]$ assigns signed weights backed by verbatim timestamped quotes.
 
@@ -85,7 +87,7 @@ Inertia measures resistance to cognitive state reorientation, combining institut
 $$\mathcal{I}(t) = \text{clip}\!\left(0.55\,A_{\text{inst}}(t) + 0.25\,\frac{1}{K}\sum_{k=1}^{K} |x_k(t)| + 0.20\,\frac{t+1}{N},\; 0,\; 1\right)$$
 
 ### 3.6 State-Space Control Dynamics and Controllability Gramian $W_c$
-We model the evolution of the collective cognitive state vector $x(t) \in [-1, 1]^K$ as a discrete-time Linear Time-Varying (LTV) system driven by stance input $z(t)$:
+Following Friedkin-Johnsen opinion dynamics, we *hypothesize* that a collective belief state $x(t) \in [-1, 1]^K$ evolves as a discrete-time Linear Time-Varying (LTV) system driven by stance input $z(t)$. No audience belief state has been measured in this work, so $x(t)$ is a model variable, not an observation:
 $$x_k(t+1) = \bigl(1 - \gamma_k(t)\bigr) x_k(t) + \gamma_k(t) z_k(t)$$
 where the susceptibility gain $\gamma_k(t)$ is proportional to Narrative Energy $E(t)$ and damped by dimension-specific Inertia $\mathcal{I}_k(t)$:
 $$\gamma_k(t) = \eta \cdot \frac{E(t)}{100} \cdot \bigl(1 - 0.65\,\mathcal{I}_k(t)\bigr), \qquad \eta = 0.18$$
@@ -95,18 +97,18 @@ The spectral condition number $\kappa(W_c) = \lambda_{\max}(W_c)/\lambda_{\min}(
 
 ---
 
-## 4. Empirical Validation: Experiment `EXP-001`
+## 4. Descriptive Application: Experiment `EXP-001`
 
 ### 4.1 Stimulus and Multimodal Processing
 We evaluated the framework on `06-FCE-V-C110-007-C.mp4` ($194.84\text{ s}$, $720\times 576$, SHA-256 `cbe05bdfc6131d85...`), an archival Spanish university documentary recording campus interviews during the 1994–1995 conflict over compulsory military conscription (*la mili*), conscientious objection (*objeción de conciencia*), and civil disobedience (*insumisión*).
 
-The work was discretized into $N = 39$ five-second windows. `Nse.Pipeline` and `Argon.Engine` extracted $3,117,397$ PCM16 audio samples and $39$ RGB24 rasters ($64\times 64$), evaluating all metrics over $K = 4$ belief dimensions:
+The work was discretized into $N = 39$ five-second windows. `Nse.Pipeline` and `Argon.Engine` extracted $3,117,397$ PCM16 audio samples and $39$ RGB24 rasters ($64\times 64$), evaluating all metrics over $K = 4$ belief dimensions. The stance vectors were coded from the transcript by a single coder; no second coder or agreement statistic is available yet:
 - $B_1$: **Anti-Militarist Abolitionism** (abolishing the army and rejecting war/US interventionism).
 - $B_2$: **Civic & Legal Obligation** (obeying statutory law and tax-like civic reciprocity).
 - $B_3$: **Pragmatic Social Utility** (replacing conscription with a professional army + mandatory social service).
 - $B_4$: **Individual Conscience & Autonomy** (acting according to personal conviction).
 
-### 4.2 Empirical Results Across Speakers
+### 4.2 Results Across Speakers
 
 | Turn ID | Speaker / Visual Anchor | Span (s) | Acoustic (dBFS) | Cadence (WPM) | Mean Energy $E$ | Complexity $C$ | Inertia $\mathcal{I}$ | Stance $(B_1, B_2, B_3, B_4)$ |
 |---|---|---|---|---|---|---|---|---|
@@ -119,23 +121,23 @@ The work was discretized into $N = 39$ five-second windows. `Nse.Pipeline` and `
 
 *\*Note: `ENV_POSTER` WPM reflects on-screen printed text density during the 5-second visual epigraph.*
 
-### 4.3 Key Scientific Findings
+### 4.3 Observations
 
-1. **Deterministic Shot Boundary Recovery:**
-   Jensen-Shannon Divergence $D_{\text{JS}}(P_t \parallel P_{t-1}) \ge 0.30\text{ bits}$ recovered all four major visual setting transitions without false positives: Window #0 (poster), Window #1 ($D_{\text{JS}} = 0.4078\text{ bits}$, cut to dark night lobby), Window #18 ($D_{\text{JS}} = 0.4895\text{ bits}$, cut to bright world-map wall), and Window #26 ($D_{\text{JS}} = 0.4803\text{ bits}$, cut to university corridor).
+1. **Visual Transitions Between Sampled Frames:**
+   With frames sampled every 5 s, $D_{\text{JS}}(P_t \parallel P_{t-1}) \ge 0.30\text{ bits}$ flagged three transitions: Window #1 ($D_{\text{JS}} = 0.4078\text{ bits}$, dark night lobby), Window #18 ($0.4895\text{ bits}$, world-map wall), and Window #26 ($0.4803\text{ bits}$, university corridor). These coincide with the setting changes seen on visual inspection. The software also marks Window #0 as a cut by convention, so reported cut counts include it. No annotated shot-boundary reference exists for this video, so false-positive and miss rates are unknown, and cuts between sampled frames cannot be detected at this sampling rate.
 2. **Asymmetry Between Narrative Energy and Institutional Inertia:**
-   `SPK_01` achieved the highest instantaneous Narrative Energy in the corpus ($E = 76.54$ at Window #7, $35\text{–}40\text{s}$; mean $E = 72.90$), driven by loud vocal projection ($-15.67\text{ dBFS}$) and rapid ideological delivery ($234.8\text{ WPM}$). However, because `SPK_01` advocated abolishing an entrenched state institution (*"eliminar el ejército"*), his turn exhibited the lowest Narrative Inertia ($\mathcal{I} = 0.151$). Conversely, `SPK_03` spoke $4.4\text{ dB}$ softer ($-21.34\text{ dBFS}$) but achieved the highest Narrative Inertia ($\mathcal{I} = 0.668$) by anchoring military service in statutory law and tax compliance (*"hay cosas que la ley impone... como pagar impuestos"*).
-3. **Montage Order as a State-Space Control Input:**
-   In the actual documentary sequence (**Scenario A**), the early abolitionist surge ($x_1(45\text{s}) = +0.6248$) is progressively overwritten by $150\text{ seconds}$ of consecutive legal/pragmatic speakers (`SPK_02`–`SPK_05`), yielding a final state dominated by Pragmatic Social Service ($x_3(T) = +0.6446$) and Legal Compliance ($x_2(T) = +0.5524$), while Anti-Militarist Abolitionism ends negative ($x_1(T) = -0.1445$).
-   When we simulate **Scenario B (Reversed Montage Order)**—placing the four legal/pragmatic speakers first and ending with `SPK_01` and the activist poster—the terminal state shifts by Euclidean norm $\|\Delta x(T)\|_2 = 1.2249$, flipping $x_1(T)$ to $+0.4976$ and $x_2(T)$ to $-0.2120$.
+   `SPK_01` achieved the highest instantaneous Narrative Energy in the corpus ($E = 76.54$ at Window #7, $35\text{–}40\text{s}$; mean $E = 72.90$), driven by loud vocal projection ($-15.67\text{ dBFS}$) and rapid ideological delivery ($234.8\text{ WPM}$). His turn received the lowest Narrative Inertia ($\mathcal{I} = 0.151$), whereas `SPK_03`, $4.4\text{ dB}$ softer ($-21.34\text{ dBFS}$), received the highest ($\mathcal{I} = 0.668$). Because Inertia is defined mainly by coded institutional anchoring $A_{\text{inst}}$ (weight $0.55$), this contrast follows from how the turns were coded (`SPK_01` argues for abolishing the army; `SPK_03` appeals to statutory law and taxes) rather than from an independent measurement.
+3. **Montage Order in the Model (Simulation):**
+   Under the model of Section 3.6, in the actual documentary sequence (**Scenario A**), the early abolitionist surge ($x_1(45\text{s}) = +0.6248$) is progressively overwritten by $150\text{ seconds}$ of consecutive legal/pragmatic speakers (`SPK_02`–`SPK_05`), yielding a final state dominated by Pragmatic Social Service ($x_3(T) = +0.6446$) and Legal Compliance ($x_2(T) = +0.5524$), while Anti-Militarist Abolitionism ends negative ($x_1(T) = -0.1445$).
+   When we simulate **Scenario B (Reversed Montage Order)**—placing the four legal/pragmatic speakers first and ending with `SPK_01` and the activist poster—the simulated terminal state shifts by Euclidean norm $\|\Delta x(T)\|_2 = 1.2249$, flipping $x_1(T)$ to $+0.4976$ and $x_2(T)$ to $-0.2120$. This shows that the model is sensitive to order, a property of its recency-weighted update; whether real viewers respond this way requires an audience study.
 4. **Controllability Gramian Spectrum:**
-   The diagonal Controllability Gramian over $[0, 194.84\text{s}]$ yielded eigenvalues $\lambda \in [0.00945, 0.02587]$ with condition number $\kappa(W_c) = 2.738$, identifying $B_3$ (*Pragmatic Social Service*, $W_{c,33} = 0.02587$) as the most controllable consensus attractor and $B_1$ (*Abolitionism*, $W_{c,11} = 0.00945$) as the most damped state under the actual montage.
+   The diagonal Controllability Gramian over $[0, 194.84\text{s}]$ yielded eigenvalues $\lambda \in [0.00945, 0.02587]$ with condition number $\kappa(W_c) = 2.738$, with $B_3$ (*Pragmatic Social Service*, $W_{c,33} = 0.02587$) the most and $B_1$ (*Abolitionism*, $W_{c,11} = 0.00945$) the least controllable dimension under the model and the actual montage.
 
 ---
 
-## 5. Cross-Domain Empirical Atlas: Experiment `EXP-002`
+## 5. Three-Work Comparison: Experiment `EXP-002`
 
-To verify that the six NSE metrics generalize across languages and communicative regimes without recalibration, we established a copyright-clean Public Domain / archival benchmark corpus ([`data/raw/CORPUS_MANIFEST.json`](../data/raw/CORPUS_MANIFEST.json)) adding two historic U.S. broadcasts to `CORPUS-001`:
+To see how the same definitions behave across languages and communicative purposes, we applied them without recalibration to a small archival corpus ([`data/raw/CORPUS_MANIFEST.json`](../data/raw/CORPUS_MANIFEST.json)) adding two historic U.S. broadcasts to `CORPUS-001`:
 - **`CORPUS-002` (*Acute Fear-Appeal Campaign*):** Lyndon B. Johnson's 1964 presidential campaign advertisement *"Peace, Little Girl" ("Daisy")* (`LBJ_Daisy_1964.ogv`, $59.83\text{s}$, $N=12$ five-second windows, SHA-256 `e09dbeb6ec9e5db4...`, Public Domain via Library of Congress / NARA).
 - **`CORPUS-003` (*Institutional Crisis Consolation*):** President Ronald Reagan's Oval Office address following the Space Shuttle *Challenger* disaster on January 28, 1986 (`Reagan_Challenger_1986.webm`, $258.93\text{s}$, $N=26$ ten-second windows, SHA-256 `aedfaa61cddcf915...`, Public Domain under 17 U.S.C. § 105).
 
@@ -150,57 +152,69 @@ To verify that the six NSE metrics generalize across languages and communicative
 | **Energy Dynamic Range ($E_{\max}-E_{\min}$)** | $33.91$ ($42.6\text{–}76.5$) | **$59.40$ ($23.9\text{–}83.3$)** | $31.76$ ($30.2\text{–}62.0$) |
 | **Final Stance Entropy $H(T)$** | **$2.7574\text{ bits}$ ($91.9\%$)** | $2.2292\text{ bits}$ ($74.3\%$) | **$2.0240\text{ bits}$ ($67.5\%$)** |
 | **Mean Narrative Inertia $\bar{\mathcal{I}}$** | $0.5019$ | $0.4420$ | **$0.7266$ (peaks at $0.8921$)** |
-| **Visual Scene Cuts ($D_{\text{JS}} \ge 0.30$)** | $4$ cuts ($\max D_{\text{JS}} = 0.490$) | $3$ cuts (**$\max D_{\text{JS}} = 0.577$**) | **$1$ cut ($\max D_{\text{JS}} = 0.042$)** |
+| **Flagged Transitions ($D_{\text{JS}} \ge 0.30$, excl. Window #0)** | $3$ ($\max D_{\text{JS}} = 0.490$) | $2$ (**$\max D_{\text{JS}} = 0.577$**) | **$0$ ($\max D_{\text{JS}} = 0.042$)** |
 | **Final Polarization Index $P(T)$** | **$0.5515$** | $0.4200$ | **$0.0617$** |
 | **Control Condition $\kappa(W_c)$** | $2.738$ | $1.783$ | $1.457$ |
 
-### 5.2 Genre Separation in the NSE Metric Space
-1. **Shock Fear-Appeal Mechanics (`CORPUS-002`):** In the *"Daisy"* spot, Windows #0–#3 (child counting petals in a meadow) establish a low-energy baseline ($E \in [23.89, 32.82]$, $-28.2\text{ dBFS}$). At Window #4 ($20\text{–}25\text{s}$), the echoing missile countdown raises acoustic amplitude by $+12\text{ dB}$ ($-16.08\text{ dBFS}$) and doubles Narrative Energy to $49.90$. At Window #6 ($30\text{–}35\text{s}$, nuclear detonation), visual divergence spikes to **$D_{\text{JS}} = 0.5766\text{ bits}$** (transition from dark eye pupil to blinding atomic flash), acoustic level hits **$-13.68\text{ dBFS}$**, cross-modal resonance reaches $\Phi_{\text{sync}} = 0.8713$, and **Narrative Energy surges to $83.29 / 100$** ($3.49\times$ over the baseline) before channeling into high-inertia electoral mobilization ($\mathcal{I} = 0.7992$).
-2. **Institutional Consolation Mechanics (`CORPUS-003`):** Reagan's *Challenger* address exhibits zero mid-speech visual cuts ($\max D_{\text{JS}} = 0.0419\text{ bits}$), narrow prosodic variance ($-33.7\text{ to }-29.7\text{ dBFS}$), lowest stance entropy ($2.0240\text{ bits}$), near-zero polarization ($P(T) = 0.0617$), and the **highest Narrative Inertia in the corpus ($\mathcal{I}(T) = 0.8921$)**, driving monotonic state convergence across all four belief dimensions.
-3. **Pairwise Metric-Space Separation (`Argon Atlas v0.2`):** Projecting all three works into the normalized 5D NSE Metric Space $\mathbf{m} = (\bar{E}/100, E_{\max}/100, \hat{H}(T), \bar{\mathcal{I}}, P(T)) \in [0,1]^5$ yields non-degenerate pairwise Euclidean distances: $\|\mathbf{m}_{\text{C1}} - \mathbf{m}_{\text{C2}}\|_2 = 0.2711$ (Debate vs. Fear-Appeal), $\|\mathbf{m}_{\text{C2}} - \mathbf{m}_{\text{C3}}\|_2 = 0.5128$ (Fear-Appeal vs. Consolation), and $\|\mathbf{m}_{\text{C1}} - \mathbf{m}_{\text{C3}}\|_2 = 0.6135$ with terminal state separation $\|\mathbf{x}_{\text{C1}}(T) - \mathbf{x}_{\text{C3}}(T)\|_2 = 1.0045$ (Debate vs. Consolation).
+### 5.2 Differences Among the Three Works
+1. **Shock Fear-Appeal Mechanics (`CORPUS-002`):** In the *"Daisy"* spot, Windows #0–#3 (child counting petals in a meadow) establish a low-energy baseline ($E \in [23.89, 32.82]$, $-28.2\text{ dBFS}$). At Window #4 ($20\text{–}25\text{s}$), the echoing missile countdown raises acoustic amplitude by $+12\text{ dB}$ ($-16.08\text{ dBFS}$) and doubles Narrative Energy to $49.90$. At Window #6 ($30\text{–}35\text{s}$, nuclear detonation), visual divergence spikes to **$D_{\text{JS}} = 0.5766\text{ bits}$** (transition from dark eye pupil to blinding atomic flash), acoustic level hits **$-13.68\text{ dBFS}$**, cross-modal resonance reaches $\Phi_{\text{sync}} = 0.8713$, and **Narrative Energy rises to $83.29 / 100$** ($3.49\times$ the opening baseline), with coded Inertia at $\mathcal{I} = 0.7992$.
+2. **Institutional Consolation Mechanics (`CORPUS-003`):** Reagan's *Challenger* address exhibits zero mid-speech visual cuts ($\max D_{\text{JS}} = 0.0419\text{ bits}$), narrow prosodic variance ($-33.7\text{ to }-29.7\text{ dBFS}$), lowest stance entropy ($2.0240\text{ bits}$), near-zero polarization ($P(T) = 0.0617$), and the **highest Narrative Inertia of the three works ($\mathcal{I}(T) = 0.8921$)**; in the model, all four belief dimensions converge monotonically.
+3. **Pairwise Distances (`Argon Atlas v0.2`):** Projecting all three works into the normalized 5D NSE Metric Space $\mathbf{m} = (\bar{E}/100, E_{\max}/100, \hat{H}(T), \bar{\mathcal{I}}, P(T)) \in [0,1]^5$ yields non-degenerate pairwise Euclidean distances: $\|\mathbf{m}_{\text{C1}} - \mathbf{m}_{\text{C2}}\|_2 = 0.2711$ (Debate vs. Fear-Appeal), $\|\mathbf{m}_{\text{C2}} - \mathbf{m}_{\text{C3}}\|_2 = 0.5128$ (Fear-Appeal vs. Consolation), and $\|\mathbf{m}_{\text{C1}} - \mathbf{m}_{\text{C3}}\|_2 = 0.6135$ with terminal state separation $\|\mathbf{x}_{\text{C1}}(T) - \mathbf{x}_{\text{C3}}(T)\|_2 = 1.0045$ (Debate vs. Consolation). With one work per communicative purpose, these distances describe three works; they cannot show that the metrics separate genres or purposes in general, which would require many works per category and a held-out test.
 
 ---
 
-## 6. Counterfactual Narrative Control & Montage Synthesis: Experiment `EXP-003`
+## 6. Counterfactual Simulations: Experiment `EXP-003`
 
-To advance **Narrative Systems Engineering** from passive observation to active systems synthesis, we implemented a discrete-time optimal control and counterfactual intervention module ([`CounterfactualController.cs`](../argon/src/Argon.Engine/CounterfactualController.cs), `Argon.Engine v0.3`) and executed three control studies ([`argon/experiments/EXP-003-counterfactual-control/`](../argon/experiments/EXP-003-counterfactual-control/CONTROL_FINDINGS.md)):
+All results in this section are simulations of the model in Section 3.6 under modified inputs; none involves viewers. We implemented a counterfactual module ([`CounterfactualController.cs`](../argon/src/Argon.Engine/CounterfactualController.cs), `Argon.Engine v0.3`) and executed three control studies ([`argon/experiments/EXP-003-counterfactual-control/`](../argon/experiments/EXP-003-counterfactual-control/CONTROL_FINDINGS.md)):
 
-### 6.1 Exhaustive $6! = 720$ Montage Permutation Reachability (`CORPUS-001`)
+### 6.1 All $6! = 720$ Block Orders (`CORPUS-001`)
 Holding $100\%$ of the physical audio samples, RGB rasters, and words invariant across the $6$ speaker blocks ($39$ windows) of `CORPUS-001`, we evaluated all $6! = 720$ block permutations $\pi \in S_6$ through the LTV state equation:
-- **Reachable Terminal State Hull:** Purely by reordering existing speaker blocks, every belief dimension spans a sign-reversing interval: $x_1(T) \in [-0.2603, +0.5130]$ ($\Delta x_1 = 0.7733$), $x_2(T) \in [-0.1795, +0.5830]$ ($\Delta x_2 = 0.7625$), $x_3(T) \in [-0.0403, +0.7046]$ ($\Delta x_3 = 0.7449$), and $x_4(T) \in [-0.1618, +0.4930]$ ($\Delta x_4 = 0.6548$).
-- **Algorithmic Debiasing ($\min_{\pi \in S_6} \|x(T)\|_2$):** While the original 1994 broadcast order yields a strongly biased terminal state norm $\|x_{\text{orig}}(T)\|_2 = 0.8620$, the synthesized **Civic Equilibrium Montage** $\pi^*_{\text{eq}} = (\text{SPK\_04} \to \text{ENV\_POSTER} \to \text{SPK\_05} \to \text{SPK\_02} \to \text{SPK\_01} \to \text{SPK\_03})$ reduces terminal normative bias by **$-62.0\%$** ($\|x^*(T)\|_2 = 0.3274$) without deleting a single frame of footage.
+- **Simulated Terminal States:** Reordering the speaker blocks moves every simulated belief dimension across zero: $x_1(T) \in [-0.2603, +0.5130]$ ($\Delta x_1 = 0.7733$), $x_2(T) \in [-0.1795, +0.5830]$ ($\Delta x_2 = 0.7625$), $x_3(T) \in [-0.0403, +0.7046]$ ($\Delta x_3 = 0.7449$), and $x_4(T) \in [-0.1618, +0.4930]$ ($\Delta x_4 = 0.6548$).
+- **Minimum-Norm Order ($\min_{\pi \in S_6} \|x(T)\|_2$):** The broadcast order gives a simulated terminal norm $\|x_{\text{orig}}(T)\|_2 = 0.8620$; the order $\pi^*_{\text{eq}} = (\text{SPK\_04} \to \text{ENV\_POSTER} \to \text{SPK\_05} \to \text{SPK\_02} \to \text{SPK\_01} \to \text{SPK\_03})$ gives $0.3274$ ($-62.0\%$). Treating a smaller norm as "less bias" is a modeling choice, and the reduction is a property of the model, not a measured effect on viewers.
 
-### 6.2 Non-Verbal Shock Impulse Leverage (`CORPUS-002`, LBJ *"Daisy"*)
-When the verbal transcript and stance vectors $z(t)$ of *"Daisy"* are held identical, but the non-verbal nuclear detonation impulse in Windows #4–#8 ($E_{\max} = 83.29$, $-13.68\text{ dBFS}$, $D_{\text{JS}} = 0.5766\text{ bits}$) is attenuated to calm speech levels, terminal electoral mobilization $x_2(T)$ drops from $+0.2624$ to $+0.1841$—demonstrating that **$29.84\%$ of the commercial's cognitive state displacement is driven purely by the non-verbal acoustic/visual shock wave**.
+### 6.2 Attenuating the Non-Verbal Peak (`CORPUS-002`, LBJ *"Daisy"*)
+When the verbal transcript and stance vectors $z(t)$ of *"Daisy"* are held identical, but the non-verbal nuclear detonation impulse in Windows #4–#8 ($E_{\max} = 83.29$, $-13.68\text{ dBFS}$, $D_{\text{JS}} = 0.5766\text{ bits}$) is attenuated to calm speech levels, the simulated $x_2(T)$ drops from $+0.2624$ to $+0.1841$, so **$29.84\%$ of the simulated displacement** is attributable, within the model, to the acoustic and visual inputs of those windows. This share depends directly on the uncalibrated channel weights in $E(t)$ and is not an estimate of the spot's effect on viewers.
 
-### 6.3 Institutional Inertial Shielding (`CORPUS-003`, Reagan *Challenger*)
-Removing statutory/presidential institutional anchoring in `CORPUS-003` collapses terminal Narrative Inertia by **$-0.4657$** (from $0.8921$ to $0.4264$). Furthermore, injecting a $30\text{-second}$ high-energy crisis critique ($E = 78.50$, $z_2 = -0.90$) at $t=30\text{s}$ vs. $t=120\text{s}$ vs. $t=210\text{s}$ demonstrates that accumulated institutional inertia prevents terminal sign reversal ($x_2(T) = +0.2321 > 0$) even under late-stage perturbation.
+### 6.3 Removing Institutional Anchoring (`CORPUS-003`, Reagan *Challenger*)
+Setting the coded institutional anchoring to zero in `CORPUS-003` lowers terminal Narrative Inertia by **$-0.4657$** (from $0.8921$ to $0.4264$). Furthermore, injecting a $30\text{-second}$ high-energy crisis critique ($E = 78.50$, $z_2 = -0.90$) at $t=30\text{s}$ vs. $t=120\text{s}$ vs. $t=210\text{s}$ lowers the simulated $x_2(T)$ from its baseline $+0.667$ to $+0.5013$, $+0.3836$, and $+0.2321$ respectively. The later the injection, the larger the simulated drop, which reflects the recency of the update rule; $x_2(T)$ stays positive in all three cases. (v1.0 cited only the late value as evidence of inertial shielding.)
 
 ---
 
-## 7. Inverse System Identification & Cross-Domain Generalization: Experiment `EXP-004`
+## 7. Estimator Self-Consistency Check: Experiment `EXP-004`
 
-To close the classical systems-engineering loop (Measurement $\to$ State-Space Modeling $\to$ Optimal Control $\to$ Inverse System Identification), we implemented [`SystemIdentifier.cs`](../argon/src/Argon.Engine/SystemIdentifier.cs) (`Argon.Engine v0.4`) and executed [`EXP-004`](../argon/experiments/EXP-004-system-identification/SYSID_FINDINGS.md) across all $N = 308$ state transitions ($77\text{ windows} \times 4\text{ belief axes}$):
+Because no measured belief trajectories exist, EXP-004 generates the target trajectories $\Delta x$ with the model itself, using fixed "true" parameters $\theta^*$, adds Gaussian noise, and asks whether a ridge estimator recovers $\theta^*$. This verifies the estimator and the identifiability of the parameterization; it provides no evidence that the model describes real audiences. We implemented [`SystemIdentifier.cs`](../argon/src/Argon.Engine/SystemIdentifier.cs) (`Argon.Engine v0.4`) and executed [`EXP-004`](../argon/experiments/EXP-004-system-identification/SYSID_FINDINGS.md) across all $N = 308$ state transitions ($77\text{ windows} \times 4\text{ belief axes}$):
 
 $$\hat{\Theta}(\lambda) = \left(\Psi^\top \Psi + \lambda I_4\right)^{-1}\left(\Psi^\top \Delta\tilde{X} + \lambda \Theta_0\right), \quad \Theta = \beta_0\,(\alpha_{\text{ac}}, \alpha_{\text{vis}}, \alpha_{\text{ling}}, \alpha_{\text{sync}})^\top$$
 
-1. **Exact & Noisy Structural Identifiability:** In the noiseless regime, the closed-form estimator recovers $\theta^* = (0.3400, 0.2200, 0.2900, 0.1500, \beta_0 = 0.1800)$ with **$0.000\%$ error** ($\kappa(\Psi^\top\Psi) = 2.376$). Under $25\text{ dB SNR}$ Gaussian telemetry noise ($50$ Monte Carlo trials per SNR level from $10\text{ dB}$ to $40\text{ dB}$), Tikhonov Ridge estimation ($\lambda^* = 0.0025$) achieves full-horizon rollout **$R^2 = 0.9999$** ($\text{RMSE} = 0.00164$).
-2. **Leave-One-Corpus-Out (LOCO) Generalization:** Training $\hat{\Theta}$ on any two corpora and predicting the unseen third corpus zero-shot yields out-of-sample **$R^2_{\text{OOS}} = 0.99999$** on `CORPUS-001` (trained on English `CORPUS-002` + `CORPUS-003`), **$R^2_{\text{OOS}} = 0.99974$** on `CORPUS-002`, and **$R^2_{\text{OOS}} = 0.99996$** on `CORPUS-003`.
+1. **Recovery on Simulated Trajectories:** In the noiseless regime, the closed-form estimator recovers $\theta^* = (0.3400, 0.2200, 0.2900, 0.1500, \beta_0 = 0.1800)$ with **$0.000\%$ error** ($\kappa(\Psi^\top\Psi) = 2.376$). Under $25\text{ dB SNR}$ Gaussian telemetry noise ($50$ Monte Carlo trials per SNR level from $10\text{ dB}$ to $40\text{ dB}$), Tikhonov Ridge estimation ($\lambda^* = 0.0025$) achieves full-horizon rollout **$R^2 = 0.9999$** ($\text{RMSE} = 0.00164$).
+2. **Leave-One-Corpus-Out on Simulated Trajectories:** Training on the simulated trajectories of two works and predicting the simulated trajectories of the third yields out-of-sample **$R^2_{\text{OOS}} = 0.99999$** on `CORPUS-001` (trained on English `CORPUS-002` + `CORPUS-003`), **$R^2_{\text{OOS}} = 0.99974$** on `CORPUS-002`, and **$R^2_{\text{OOS}} = 0.99996$** on `CORPUS-003`. Since every corpus is generated by the same model with the same $\theta^*$, near-perfect $R^2$ is expected and does not indicate cross-domain generalization.
 
 ---
 
-## 8. Limitations and Research Roadmap
+## 8. Limitations
 
-1. **Corpus Expansion Across Fiction and Long-Form Cinema:** While `EXP-001` through `EXP-004` establish observability, three-regime invariance, counterfactual control, and inverse parameter identifiability across $513.6\text{ seconds}$ ($77$ windows) of Spanish and English civic/historical broadcasts, future expansions will evaluate full-length feature films and multi-episode serial narratives.
-2. **Stance Extraction Provenance:** While acoustic ($u_{\text{ac}}$) and visual ($u_{\text{vis}}$) vectors are computed directly from raw media bytes, the normative stance vectors $z(t)$ in `EXP-001` and `EXP-002` rely on structured human-audited transcript coding. Future work will benchmark automated LLM stance extractors against multi-annotator Krippendorff's $\alpha \ge 0.80$.
+1. **No audience data.** The belief state $x(t)$ is never observed. Every statement about belief change, control, or montage effects in Sections 4.3, 6, and 7 is a property of the model.
+2. **Single-coder stance labels.** The stance vectors $z(t)$ and institutional anchoring $A_{\text{inst}}(t)$ in `EXP-001` and `EXP-002` were coded by one coder. Inter-annotator agreement (for example Krippendorff's $\alpha$ or Gwet's AC1) must be measured before these labels are used as evidence.
+3. **Uncalibrated composites.** The weights and constants of $E$, $C$, $\mathcal{I}$, $I_{\text{ac}}$, and $\psi_{\text{vis}}$ are author choices; results that depend on them (rankings of turns, the $29.84\%$ share in Section 6.2) change if they change.
+4. **Small corpus.** Three works, one per communicative purpose, and $513.6\text{ s}$ in total. The comparisons are descriptive.
+5. **Coarse visual sampling.** One frame per window; flagged transitions have not been compared with annotated shot boundaries.
+6. **Synthetic identification.** EXP-004 tests the estimator on data generated by the model.
 
----
+## 9. Next Steps
 
-## 8. Conclusion
+1. Two independent coders for the stance and anchoring labels on `CORPUS-001`, with a preregistered agreement threshold.
+2. Annotated shot boundaries for the three works, to measure the precision and recall of the $D_{\text{JS}}$ detector at several sampling rates.
+3. A larger corpus with several works per communicative purpose, and a held-out comparison of the measurement profiles.
+4. A preregistered audience study (for example, stance before and after viewing two montage orders of `CORPUS-001`) to test the order sensitivity predicted by the model.
+5. Calibration of the composite weights against human ratings, or replacement by the individual measured signals.
 
-By replacing metaphorical scores with signal-grounded operators—Shannon entropy in bits, Jensen-Shannon visual divergence, PCM acoustic prosody, cross-modal resonance, and LTV state-space control—**Narrative Systems Engineering** transitions from philosophical speculation to an executable engineering discipline.
+## 10. Conclusion
 
----
+The measurement layer of NSE turns audiovisual works into reproducible, time-aligned profiles of acoustic, visual, and linguistic signals, and the three-work application shows that these profiles capture visible differences in pacing and delivery. The state-space layer is a formal, executable hypothesis about how such signals might shift audience beliefs. It has not been tested against audiences, and the next steps above specify how to test it.
+
+### Revision note (v1.1)
+
+v1.0 described the results as validation of a discipline, as proof that montage order controls belief, and as cross-domain generalization. v1.1 withdraws those claims: the counterfactual and identification results are simulations of the model, the stance coding has no agreement measure, and three works cannot establish genre separation. v1.1 also corrects the visual cut counts, which in v1.0 included Window #0 by convention. All numerical outputs are unchanged.
 
 ## References
 

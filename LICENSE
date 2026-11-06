@@ -1,17 +1,56 @@
-Apache License
-Version 2.0, January 2004
-http://www.apache.org/licenses/
+Copyright (c) 2026 Jair Ivan Rojas Ruiz (ORCID 0009-0003-1109-4583). Todos los derechos reservados.
+Copyright (c) 2026 Jair Ivan Rojas Ruiz (ORCID 0009-0003-1109-4583). All rights reserved.
 
-Copyright 2026 Jair Ivan Rojas Ruiz (https://orcid.org/0009-0003-1109-4583)
+ESPAÑOL
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Este repositorio (Narrative Systems Engineering, NSE / CND), incluidos su código, documentos,
+textos, fórmulas en su redacción, figuras, imágenes, datos, resultados y la estructura del
+proyecto, es obra protegida.
 
-    http://www.apache.org/licenses/LICENSE-2.0
+No se concede ninguna licencia. Salvo autorización previa y por escrito del titular, queda
+prohibido copiar, reproducir, modificar, adaptar, traducir, distribuir, publicar, sublicenciar,
+vender o crear obras derivadas de cualquier parte de este repositorio, total o parcialmente, por
+cualquier medio y con cualquier fin, comercial o no.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+La visibilidad pública del repositorio no implica renuncia a estos derechos. Se permite únicamente
+lo que los Términos de Servicio de GitHub autorizan a sus usuarios (ver el repositorio y hacer un
+fork dentro de GitHub), sin que ello conceda ningún otro permiso de uso.
+
+Versiones anteriores: las versiones publicadas hasta la v0.4.0 inclusive (5 de noviembre de 2026)
+se distribuyeron bajo la Licencia Apache 2.0, que sigue aplicándose a esas copias tal como fueron
+obtenidas. Este aviso rige a partir de la versión siguiente.
+
+Cita: quien haga referencia a este trabajo en un texto académico o técnico debe citarlo como se
+indica en CITATION.cff. Una cita no constituye autorización para reproducir el contenido.
+
+Solicitudes de permiso: a través del perfil de GitHub del titular (jaiborojas-cloud).
+Identificador del autor: https://orcid.org/0009-0003-1109-4583
+
+EL CONTENIDO SE OFRECE «TAL CUAL», SIN GARANTÍA DE NINGÚN TIPO.
+
+ENGLISH
+
+This repository (Narrative Systems Engineering, NSE / CND), including its code, documents, texts,
+the wording of its formulas, figures, images, data, results and project structure, is a protected
+work.
+
+No license is granted. Except with the prior written permission of the copyright holder, you may
+not copy, reproduce, modify, adapt, translate, distribute, publish, sublicense, sell, or create
+derivative works from any part of this repository, in whole or in part, by any means and for any
+purpose, commercial or not.
+
+The public visibility of this repository does not waive these rights. Only what GitHub's Terms of
+Service allow its users (viewing the repository and forking it within GitHub) is permitted, and
+this grants no other permission of use.
+
+Earlier versions: versions released up to and including v0.4.0 (November 5, 2026) were
+distributed under the Apache License 2.0, which continues to apply to those copies as obtained.
+This notice governs from the following version onward.
+
+Citation: anyone referencing this work in academic or technical writing must cite it as indicated
+in CITATION.cff. A citation does not constitute permission to reproduce the content.
+
+Permission requests: through the copyright holder's GitHub profile (jaiborojas-cloud).
+Author identifier: https://orcid.org/0009-0003-1109-4583
+
+THE CONTENT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

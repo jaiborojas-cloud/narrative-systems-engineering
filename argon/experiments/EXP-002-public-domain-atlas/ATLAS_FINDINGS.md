@@ -7,6 +7,8 @@
 
 ---
 
+> **Status (v0.4.1, November 6, 2026):** Descriptive comparison of three works, one per communicative purpose. Signal measurements are computed from the media; entropy, polarization, and inertia depend on single-coder stance labels and uncalibrated weights; terminal states $x(T)$ are model outputs. Reported cut counts include Window #0 by convention (flagged transitions: 3, 2, and 0).
+
 ## 1. Objective
 
 To test the core hypothesis of **Narrative Systems Engineering (NSE)**—that distinct narrative genres and communicative intents exhibit distinct, reproducible signatures in the metric space $(\text{Energy } E, \text{Entropy } H, \text{Inertia } \mathcal{I}, \text{Visual Flux } D_{\text{JS}}, \text{Polarization } P)$—we established a **copyright-free / archival benchmark corpus** spanning three foundational narrative regimes:
@@ -77,13 +79,13 @@ Using [`AtlasComparator.cs`](../../src/Argon.Engine/AtlasComparator.cs) (`dotnet
 | `CORPUS-002-LBJ-DAISY-1964` | `CORPUS-003-REAGAN-CHALLENGER-1986` | $0.5128$ | $0.7244$ | **$0.4450$** |
 | `CORPUS-001-INSUMISION-1994` | `CORPUS-003-REAGAN-CHALLENGER-1986` | **$0.6135$** | **$1.0045$** | **$0.5635$** |
 
-**Geometric Insight:** The maximum structural distance in the corpus occurs between **Polyphonic Student Debate (`CORPUS-001`)** and **Presidential Crisis Consolation (`CORPUS-003`)** ($\|\Delta \mathbf{m}\|_2 = 0.6135$, $\|\Delta \mathbf{x}(T)\|_2 = 1.0045$, Contrast $= 0.5635$), confirming that contested multi-speaker civic conflict and single-voice institutional consolation occupy opposite poles of the NSE phase space. Meanwhile, **Acute Fear-Appeal (`CORPUS-002`)** occupies an intermediate, high-impulse vector characterized by extreme peak energy ($83.29$) and rapid transition from low-inertia vulnerability to high-inertia electoral mobilization.
+**Geometric Insight:** The maximum structural distance in the corpus occurs between **Polyphonic Student Debate (`CORPUS-001`)** and **Presidential Crisis Consolation (`CORPUS-003`)** ($\|\Delta \mathbf{m}\|_2 = 0.6135$, $\|\Delta \mathbf{x}(T)\|_2 = 1.0045$, Contrast $= 0.5635$). Among these three works, the multi-speaker debate and the single-voice address are the farthest apart; with one work per category, this does not show where these categories lie in general. Meanwhile, **Acute Fear-Appeal (`CORPUS-002`)** occupies an intermediate, high-impulse vector characterized by extreme peak energy ($83.29$) and rapid transition from low-inertia vulnerability to high-inertia electoral mobilization.
 
 ---
 
-## 5. Conclusion: Proof of Genre Separation in the NSE Metric Space
+## 5. Conclusion: Descriptive Differences Among Three Works
 
-With `EXP-001` and `EXP-002`, the project now possesses a **3-work, multi-language (Spanish/English), copyright-clean benchmark corpus** that proves the six NSE metrics separate narrative regimes cleanly:
-- **Contested Debate (`CORPUS-001`):** High Entropy ($2.76\text{ bits}$), High Polarization ($0.55$), Multi-Cut Visuals ($4$ cuts), State Sign-Reversal.
+With `EXP-001` and `EXP-002`, the project now possesses a **3-work, multi-language (Spanish/English), copyright-clean benchmark corpus** on which the NSE profiles differ visibly. Showing that the metrics separate genres or communicative purposes in general would require several works per category, independent stance coding, and a held-out comparison:
+- **Contested Debate (`CORPUS-001`):** High Entropy ($2.76\text{ bits}$), High Polarization ($0.55$), Visual transitions ($3$ flagged, excluding Window #0), State Sign-Reversal.
 - **Shock Fear Campaign (`CORPUS-002`):** Extreme Energy Spike ($83.29$), Extreme Visual Flash Divergence ($0.58\text{ bits}$), Rapid Mobilization Ramp.
-- **Presidential Crisis Consolation (`CORPUS-003`):** Maximum Institutional Inertia ($0.89$), Lowest Entropy ($2.02\text{ bits}$), Near-Zero Polarization ($0.06$), Zero Visual Cuts.
+- **Presidential Crisis Consolation (`CORPUS-003`):** Maximum Institutional Inertia ($0.89$), Lowest Entropy ($2.02\text{ bits}$), Near-Zero Polarization ($0.06$), No flagged visual transitions.

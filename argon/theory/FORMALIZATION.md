@@ -7,6 +7,8 @@
 
 ---
 
+> **Status (v0.4.1, November 6, 2026):** This document specifies working definitions. The weights and normalization constants are author choices and are not calibrated; the stance inputs are single-coder labels; the state-space model is an exploratory hypothesis that has not been compared with measured audience responses. See the "What is and is not established" table in the root `README.md`.
+
 ## 1. Multimodal Signal Vector $u(t)$
 
 Let an audiovisual work of duration $T$ seconds be discretized into uniform time windows $t \in \{1, 2, \dots, N\}$ of width $\Delta t$ (e.g., $\Delta t = 5.0\text{ s}$, matching the frame sampling of `Nse.Pipeline`).
