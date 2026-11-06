@@ -1,13 +1,13 @@
 cff-version: 1.2.0
-title: "Narrative Systems Engineering: Signal-Grounded Multimodal Metrics and State-Space Control Dynamics for Audiovisual Media"
-message: "If you use, reference, or build upon the concepts, mathematical metrics, or software in this repository, please cite the original creator and author below."
+title: "Narrative Systems Engineering: Signal-Grounded Multimodal Measurement and an Exploratory State-Space Model for Audiovisual Media"
+message: "If you reference this work, please cite it as below. Citing grants no reproduction rights (see LICENSE)."
 type: software
 authors:
   - given-names: "Jair Ivan"
     family-names: "Rojas Ruiz"
     alias: "Jair Rojas"
     orcid: "https://orcid.org/0009-0003-1109-4583"
-repository-code: "https://github.com/jaiborojas-cloud/narrative-systems-engineering"
+repository-code: "https://github.com/jaiborojas-cloud/NarrativeSystemsEngineering"
 url: "https://doi.org/10.5281/zenodo.23987656"
 doi: 10.5281/zenodo.23987656
 identifiers:
@@ -17,9 +17,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23987656
     description: "Zenodo Version 0.1.0 DOI"
-license: Apache-2.0
-version: 0.4.0
-date-released: "2026-11-05"
+license-url: "https://github.com/jaiborojas-cloud/NarrativeSystemsEngineering/blob/main/LICENSE"
+version: 0.4.1
+date-released: "2026-11-06"
 keywords:
   - narrative-systems-engineering
   - computational-narrative-dynamics
@@ -30,8 +30,9 @@ keywords:
   - narrative-dna
   - state-space-control
 abstract: >-
-  Foundational research program and multimodal computational engine originated by Jair Ivan Rojas Ruiz
-  (ORCID: 0009-0003-1109-4583) for measuring, formalizing, and simulating how audiovisual and symbolic
-  narratives operate as dynamic signals across linguistic, acoustic, and visual layers, including the
-  core metrics of Narrative DNA, Narrative Energy, Narrative Entropy, Narrative Inertia, Narrative
-  Complexity, and Narrative Controllability.
+  Exploratory research program and multimodal software originated by Jair Ivan Rojas Ruiz
+  (ORCID: 0009-0003-1109-4583) for measuring acoustic, visual, and linguistic features of
+  audiovisual works with time-aligned provenance, and for formulating an exploratory state-space
+  model of how such features might relate to audience belief states. The signal measurements are
+  computed directly from media files; the stance coding and the state-space model are hypotheses
+  that have not yet been validated against independent annotators or measured audience responses.

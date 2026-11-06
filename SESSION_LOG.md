@@ -94,6 +94,16 @@ Append a dated entry after each substantive session. Record what actually happen
 
 **Limits and next actions:** audio presence alone does not establish speech content. No listening, transcription, Azure calls, or human annotation was performed. Review the frames and configure transcription for this extracted audio when the service is available.
 
+## Session 007 - November 6, 2026
+
+**Objective:** revise claims across the preprint, experiment findings, and release metadata, and change the license, at the founder's request.
+
+**Work performed:** reviewed `argon/` and PAPER-001 against the code. Confirmed that EXP-004 generates its target trajectories with the model itself (`SystemIdentifier.cs`, `TrueBeta0`), so its parameter recovery and leave-one-corpus-out fits verify the estimator, not the model; that EXP-003 results are simulations of the model; that stance and anchoring labels are single-coder; and that `VisualDynamicsAnalyzer.cs` marks Window #0 as a cut by convention, so the reported cut counts (4, 3, 1) correspond to 3, 2, and 0 flagged transitions. Rewrote PAPER-001 as v1.1 (Markdown and LaTeX; PDF rebuilt from LaTeX in one-column layout to fix overflowing equations), added status notes to EXP-001 to EXP-004, `argon/README.md`, and `FORMALIZATION.md`, added a "What is and is not established" table to the root README, and corrected the EXP-003 Challenger perturbation statement (later injections produce larger simulated drops). Changed the license to all rights reserved (D019, D020) and bumped the version to 0.4.1. Numerical outputs are unchanged.
+
+**Not changed:** `publications/latex/PAPER-001-NSE-FOUNDATION-PRINT.html` and the PDF text hard-coded in `PaperManuscriptRenderer.cs` still carry v1.0 wording; the LaTeX source is now the reference for the PDF. The Zenodo record for v0.4.0 keeps its Apache 2.0 license and description.
+
+**Next actions:** second coder for stance labels on CORPUS-001; annotated shot boundaries; decide the license setting for the next Zenodo release.
+
 ## Template for future sessions
 
 ```text

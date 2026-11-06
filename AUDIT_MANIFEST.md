@@ -65,3 +65,21 @@ All active benchmark inputs have verified `SHA-256` hashes bound inside both `pr
 | `argon/experiments/EXP-001-insumision-dynamics/telemetry.csv` | `CORPUS-001` 39-window telemetry | `2642ea042fb9e3cf4586b0e6c16f2e1b5299b76de809ca4f4fc654a37894a7ac` |
 | `argon/experiments/EXP-002-public-domain-atlas/daisy-run/telemetry.csv` | `CORPUS-002` 12-window telemetry | `a24dae32ed29817c67e82afdf5a13209c50f3c240ec2cdde85a5ceef2406fcaf` |
 | `argon/experiments/EXP-002-public-domain-atlas/challenger-run/telemetry.csv` | `CORPUS-003` 26-window telemetry | `d8f07312a53f6e1f41bba627c5e8e280d1a2b61f9679cc1919451600ef3ef673` |
+
+---
+
+## Addendum: v0.4.1 (November 6, 2026)
+
+The hashes above record the v0.1.0 state. For v0.4.1 the license changed to all rights reserved (decision D019) and claims were revised (D020); numerical outputs are unchanged. Current hashes of the changed files:
+
+| Artifact Path | SHA-256 Hash |
+|---|---|
+| `LICENSE` | `d67c71bd870fc14027f5b828babc102e3d26bb7a841f917c5768f304c3eb95a4` |
+| `NOTICE` | `37e3677079bfcaf9dabd51b7ffa339cb139a70183732d220a56f2ea7ce75e856` |
+| `CITATION.cff` | `ca43dffbcecdb7bd28387f92f91543784e93e09b97d528aadf924a6e115f9048` |
+| `.zenodo.json` | `fa99fb88252eb9e95af032122e1dbb9025c2206c9d6a6460c35ce8d4812068d4` |
+| `README.md` | `205f7ac7677ceb8e971f87d4de5ae7a90446d8553f4915480776603d7b8db9ae` |
+| `publications/PAPER-001-NSE-FOUNDATION.md` | `4a19913d5afa564f8aa9af5916e89e472e5df84a67b87acfa1dc98f35b4e5a31` |
+| `publications/latex/PAPER-001-NSE-FOUNDATION.tex` | `47d80cd55c752c61dd8996156d9650923a2b4f27f8641fc2666ff14fb7e62d93` |
+| `publications/PAPER-001-NSE-FOUNDATION.pdf` | `d2fa509e4edb44c9d7529e91670a03a462f719926171a52cbd2e1137cf8ec2c8` |
+| `argon/theory/FORMALIZATION.md` | `19690cb58fa4a971deb935d68f61fa4ac7379ea3a14246917f9f4cfcd19620d9` |

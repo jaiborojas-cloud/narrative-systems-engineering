@@ -8,11 +8,13 @@
 
 Whereas the root repository (`src/Nse.Pipeline`, `research/protocols/`) establishes the conservative baseline (frame sampling, RGB histograms, manual visual review), `argon/` builds the **bridge** between raw audiovisual observables and the dynamic cognitive/social system formulations of Foundational Documents 1–3:
 
-1. **Zero Hallucinated Metrics:** Every number in `argon/` is either:
+1. **Traceable Metrics:** Every number in `argon/` is either:
    - Directly computed from raw bytes (`PCM16` audio samples, `RGB24` rasters, verified transcript tokens), or
    - Derived from explicit, auditable mathematical formulas with stated units (e.g., bits for Shannon entropy, dBFS for acoustic RMS, JS-divergence for visual cuts, normalized state vectors for belief dynamics).
 2. **Traceable Grounding:** All extracted narrative structures (archetypes, beliefs, stances, speech acts) link directly to exact `[startSeconds, endSeconds]` spans and frame indices.
 3. **Executable Falsifiability:** Mathematical models of narrative energy, entropy, inertia, and control (`x(t+1) = f(x(t), u(t))`) are implemented as runnable code that produces testable predictions and interactive visual telemetry.
+
+> **Status (v0.4.1, November 6, 2026):** Traceable does not mean validated. Composite weights are uncalibrated, stance inputs are single-coder labels, and the counterfactual (EXP-003) and identification (EXP-004) results are simulations of the model itself. No experiment in `argon/` has yet compared model predictions with independent annotations or audience measurements.
 
 ## Directory Structure
 
