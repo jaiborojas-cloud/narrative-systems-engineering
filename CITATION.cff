@@ -7,7 +7,7 @@ authors:
     family-names: "Rojas Ruiz"
     alias: "Jair Rojas"
     orcid: "https://orcid.org/0009-0003-1109-4583"
-repository-code: "https://github.com/jaiborojas-cloud/NarrativeSystemsEngineering"
+repository-code: "https://github.com/jaiborojas-cloud/narrative-systems-engineering"
 url: "https://doi.org/10.5281/zenodo.23987656"
 doi: 10.5281/zenodo.23987656
 identifiers:
@@ -17,7 +17,7 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23987656
     description: "Zenodo Version 0.1.0 DOI"
-license-url: "https://github.com/jaiborojas-cloud/NarrativeSystemsEngineering/blob/main/LICENSE"
+license-url: "https://github.com/jaiborojas-cloud/narrative-systems-engineering/blob/main/LICENSE"
 version: 0.4.1
 date-released: "2026-11-06"
 keywords:

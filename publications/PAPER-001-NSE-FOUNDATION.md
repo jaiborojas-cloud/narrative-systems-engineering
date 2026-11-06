@@ -5,7 +5,7 @@
 **DOI:** [https://doi.org/10.5281/zenodo.23987656](https://doi.org/10.5281/zenodo.23987656) (Concept DOI: [`10.5281/zenodo.23987655`](https://doi.org/10.5281/zenodo.23987655))  
 **Date:** November 6, 2026 (v1.0: November 5, 2026)  
 **Version:** Preprint v1.1 (`PAPER-001`). v1.1 revises the claims of v1.0; see the revision note at the end.  
-**Repository & Reproducibility Package:** [https://github.com/jaiborojas-cloud/NarrativeSystemsEngineering](https://github.com/jaiborojas-cloud/NarrativeSystemsEngineering) (`src/Nse.Pipeline` & `argon/src/Argon.Engine`)
+**Repository & Reproducibility Package:** [https://github.com/jaiborojas-cloud/narrative-systems-engineering](https://github.com/jaiborojas-cloud/narrative-systems-engineering) (`src/Nse.Pipeline` & `argon/src/Argon.Engine`)
 
 ---
 
