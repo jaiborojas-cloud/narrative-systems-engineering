@@ -6,3 +6,5 @@ video/
 .env
 .env.*
 !.env.example
+argon/experiments/EXP-005-signal-perception-gap/stimuli/
+argon/experiments/EXP-005-signal-perception-gap/temp_extract/
