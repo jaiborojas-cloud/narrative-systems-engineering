@@ -124,6 +124,28 @@ Append a dated entry after each substantive session. Record what actually happen
 
 **Next actions:** the Principal Investigator records `studio_master.wav`, `live_raw.mp4`, and `playback_raw.mp4` under `video/exp005/`, generates the 8 FFmpeg lag variants, runs `exp005-video` to verify detector error on real camera footage before freezing the protocol, and decides whether to adopt `D021`.
 
+## Session 009 - November 9, 2026
+
+**Objective:** correct EXP-005 (PR #2) after review, at the founder's request, before any recording or human data.
+
+**Inputs reviewed:** PR #2 (Session 008): protocol 0.1, `LipSyncSignalDetector.cs`, `Program.cs`, observer form, corpus manifest, decision register.
+
+**Work performed:**
+
+- Protocol 0.2: unified the definition of $\text{SPG}_{\tau}$; corrected the inverted instrument-failure criterion and required it on real video; restricted $H_2$ and $H_3$ to unshifted takes; split $H_2$ into $H_{2a}$ (machine with the studio master, information-asymmetric) and $H_{2b}$ (machine without it); assigned lag variants to $H_1$ only to remove the lag/mode confound; required the same room and camera microphone for live and playback stimuli; replaced clap-based muxing with camera capture of loudspeaker playback; added at least three excerpts, ordering rules, a 30-observer planning target, and a pilot that fixes thresholds before freezing. The protocol remains a draft.
+- Detector: fixed the timing convention that produced a constant bias (acoustic flux stamped 2.5 ms late, visual difference half a frame late); added the reference-free cue $\sigma_{\text{LA}}$; `exp005-video` accepts a mouth crop and saves measurements; `exp005-analyze` uses real-video measurements (warning when it falls back to synthetic values), scores $H_2$/$H_3$ on unshifted takes only, interpolates the 0.5 crossing for $W_{\text{human}}$, and reports $H_{2b}$ when a pilot threshold is given.
+- Observer form: seeded, reproducible order in which two versions of the same excerpt are never consecutive; the seed and presented order are exported.
+- Synthetic stimuli are no longer versioned; `exp005` regenerates them with identical hashes.
+- EXP-005 README rewritten to state that the synthetic separation holds by construction; D021 table row fixed.
+
+**Findings:** synthetic self-test after the timing fix: bias +0.25 ms, MAE 1.26 ms, RMSE 1.52 ms (before: bias -5.21 ms, MAE 5.21 ms). These describe idealized signals only. The re-encoded lag commands recovered all eight offsets within 1 ms through the real-video path; the 0.1 stream-copy `-itsoffset` command gave -65 ms for an intended -60 ms. The analysis path was exercised with simulated observer files (not committed) and reproduced the planted values.
+
+**Checks:** .NET build with 0 warnings and 0 errors; `exp005` regenerated stimuli with unchanged hashes; observer form checked in headless Chromium (5 sessions × 27 clips, no consecutive repeats, seed reproducible, no script errors). `Verify-Argon.ps1` was not run (no PowerShell in this environment).
+
+**Decisions adopted:** none. D021 remains proposed.
+
+**Next actions:** record pilot takes (not reused) under protocol 0.2; run `exp005-video` on them to apply the instrument criterion; fix the $\sigma_{\text{LA}}$ threshold and implement the logistic fit for $W_{\text{human}}$; then freeze the protocol and record its hash here.
+
 ## Template for future sessions
 
 ```text

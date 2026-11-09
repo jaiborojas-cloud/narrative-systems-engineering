@@ -46,24 +46,25 @@
   ],
   "exp005StimuliAndCalibration": {
     "protocolPath": "research/protocols/EXP-005-PROTOCOL.md",
-    "recordingProcedure": "Self-recorded vocal + acoustic guitar performance by Jair Ivan Rojas Ruiz (rights-clean, 100% original). Fixed tripod at 1920x1080 60fps progressive scan, shutter >= 1/250s, simultaneous 48kHz/16kHz PCM16 WAV, with a visible hand-clap impulse at t=1.0s followed by 1.0s silence for hardware audio-video alignment. Three master takes: TAKE_STUDIO_MASTER (master.wav), TAKE_LIVE_GENUINE (live_000ms.mp4), and TAKE_PLAYBACK_MIME (playback_000ms.mp4), plus 8 FFmpeg -itsoffset variants at -120, -60, -30, 0, +30, +60, +120, +200 ms.",
+    "recordingProcedure": "See research/protocols/EXP-005-PROTOCOL.md (v0.2), Section 4. Self-recorded vocal + acoustic guitar by Jair Ivan Rojas Ruiz; at least three excerpts. All takes in the same room with the camera's own audio as stimulus audio; the studio master is recorded separately and used only as playback source and machine reference. Playback takes are mimed while the master plays through a loudspeaker and are captured by the camera (no muxing). Eight lag variants per live take via re-encoded adelay/atrim, each verified after generation.",
     "pendingHumanStudyRecordings": {
       "workId": "CORPUS-005-JAIBO-LIVE-VS-PLAYBACK",
       "status": "pending_founder_recording",
       "targetDirectory": "video/exp005/",
       "plannedFiles": [
-        "video/exp005/studio_master.wav",
-        "video/exp005/live_raw.mp4",
-        "video/exp005/playback_raw.mp4",
-        "video/exp005/stim_live_neg120ms.mp4",
-        "video/exp005/stim_live_neg060ms.mp4",
-        "video/exp005/stim_live_neg030ms.mp4",
-        "video/exp005/stim_live_pos000ms.mp4",
-        "video/exp005/stim_live_pos030ms.mp4",
-        "video/exp005/stim_live_pos060ms.mp4",
-        "video/exp005/stim_live_pos120ms.mp4",
-        "video/exp005/stim_live_pos200ms.mp4"
-      ]
+        "video/exp005/master_<id>.wav",
+        "video/exp005/live_<id>.mp4",
+        "video/exp005/playback_<id>.mp4",
+        "video/exp005/stim_live_<id>_neg120ms.mp4",
+        "video/exp005/stim_live_<id>_neg060ms.mp4",
+        "video/exp005/stim_live_<id>_neg030ms.mp4",
+        "video/exp005/stim_live_<id>_pos000ms.mp4",
+        "video/exp005/stim_live_<id>_pos030ms.mp4",
+        "video/exp005/stim_live_<id>_pos060ms.mp4",
+        "video/exp005/stim_live_<id>_pos120ms.mp4",
+        "video/exp005/stim_live_<id>_pos200ms.mp4"
+      ],
+      "excerptIds": "at least three (A, B, C)"
     },
     "syntheticCalibrationSuite": {
       "studioMasterWavPath": "argon/experiments/EXP-005-signal-perception-gap/stimuli/studio_master.wav",
@@ -124,7 +125,8 @@
           "audioSha256": "4b2789b7221b0b332ffa204e2f84b486184f4d2637a958fed05fc0289d047220",
           "videoSha256": "28c41694d402549e2bdeaad400fff10985b70294ddcdd7362830a730696fb884"
         }
-      ]
+      ],
+      "note": "Stimuli are regenerated deterministically by `exp005` and are not versioned; hashes below are reproduced on each run. Software self-test only."
     }
   },
   "deprecatedWorks": [

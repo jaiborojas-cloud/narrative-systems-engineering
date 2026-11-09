@@ -166,16 +166,24 @@ if (args.Length > 0 && string.Equals(args[0], "exp005-video", StringComparison.O
 {
     if (args.Length < 3)
     {
-        Console.WriteLine("Usage: dotnet run --project argon/src/Argon.Engine -- exp005-video <video.mp4> <studio_master.wav> [trueLagMs=0] [isPlayback=false]");
+        Console.WriteLine("Usage: dotnet run --project argon/src/Argon.Engine -- exp005-video <video.mp4> <studio_master.wav> [trueLagMs=0] [isPlayback=false] [\"crop=w:h:x:y\"]");
         return 1;
     }
     var videoPath = Path.GetFullPath(args[1]);
     var masterWav = Path.GetFullPath(args[2]);
     double trueLag = args.Length > 3 ? double.Parse(args[3], CultureInfo.InvariantCulture) : 0.0;
     bool isPlayback = args.Length > 4 && bool.Parse(args[4]);
+    // Mouth region per recording; the default centre crop is only a placeholder.
+    string crop = args.Length > 5 ? args[5] : "crop=iw*0.25:ih*0.20:iw*0.375:ih*0.35";
+    if (!crop.Contains("scale=", StringComparison.Ordinal)) crop += ",scale=32:32";
 
-    var m = LipSyncSignalDetector.MeasureRealVideoWithFfmpeg(repoRoot, videoPath, masterWav, trueLag, isPlayback);
+    var m = LipSyncSignalDetector.MeasureRealVideoWithFfmpeg(repoRoot, videoPath, masterWav, trueLag, isPlayback, cropFilter: crop);
+    var measDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-005-signal-perception-gap", "measurements");
+    Directory.CreateDirectory(measDir);
+    var measPath = Path.Combine(measDir, $"{m.StimulusId}.json");
+    await File.WriteAllTextAsync(measPath, JsonSerializer.Serialize(m, jsonOptions));
     Console.WriteLine(JsonSerializer.Serialize(m, jsonOptions));
+    Console.WriteLine($"[Argon.Engine EXP-005] Measurement saved to: {measPath}");
     return 0;
 }
 
@@ -183,11 +191,41 @@ if (args.Length > 0 && string.Equals(args[0], "exp005-analyze", StringComparison
 {
     var expDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-005-signal-perception-gap");
     var calPath = Path.Combine(expDir, "calibration.report.json");
-    if (!File.Exists(calPath))
-        throw new FileNotFoundException($"Run 'exp005' calibration first. Missing: {calPath}");
-
-    var calReport = JsonSerializer.Deserialize<Exp005CalibrationReport>(await File.ReadAllTextAsync(calPath), jsonOptions)!;
     var responsesDir = args.Length > 1 ? Path.GetFullPath(args[1]) : Path.Combine(expDir, "responses");
+    double? noRefThreshold = args.Length > 2 ? double.Parse(args[2], CultureInfo.InvariantCulture) : null;
+
+    // Prefer real-video measurements (exp005-video). Fall back to the synthetic suite only for software tests.
+    var measDir = Path.Combine(expDir, "measurements");
+    var realMeasurements = new List<LipSyncMachineMeasurement>();
+    if (Directory.Exists(measDir))
+    {
+        foreach (var file in Directory.GetFiles(measDir, "*.json"))
+        {
+            var mm = JsonSerializer.Deserialize<LipSyncMachineMeasurement>(await File.ReadAllTextAsync(file), jsonOptions);
+            if (mm is not null) realMeasurements.Add(mm);
+        }
+    }
+
+    List<LipSyncMachineMeasurement> machineMeasurements;
+    double mdl;
+    string source;
+    if (realMeasurements.Count > 0)
+    {
+        machineMeasurements = realMeasurements;
+        var sweepErrors = realMeasurements.Where(x => !x.IsPlaybackGroundTruth).Select(x => x.LagEstimationErrorMs).ToList();
+        mdl = sweepErrors.Count > 0 ? Math.Round(2.0 * Math.Sqrt(sweepErrors.Select(e => e * e).Average()), 2) : double.NaN;
+        source = "real_video_measurements";
+    }
+    else
+    {
+        if (!File.Exists(calPath))
+            throw new FileNotFoundException($"No real measurements and no synthetic calibration. Missing: {calPath}");
+        var calReport = JsonSerializer.Deserialize<Exp005CalibrationReport>(await File.ReadAllTextAsync(calPath), jsonOptions)!;
+        machineMeasurements = calReport.Measurements;
+        mdl = calReport.MachineMinimumDetectableLagMs;
+        source = "synthetic_self_test_only";
+        Console.WriteLine("[Argon.Engine EXP-005 Analyze] WARNING: no real-video measurements found; using synthetic self-test values. Not valid for hypothesis tests.");
+    }
 
     var submissions = new List<HumanObserverSubmission>();
     if (Directory.Exists(responsesDir))
@@ -199,7 +237,7 @@ if (args.Length > 0 && string.Equals(args[0], "exp005-analyze", StringComparison
         }
     }
 
-    var gapReport = LipSyncSignalDetector.AnalyzeHumanResponses(calReport, submissions);
+    var gapReport = LipSyncSignalDetector.AnalyzeHumanResponses(machineMeasurements, mdl, source, submissions, noRefThreshold);
     var outPath = Path.Combine(expDir, "spg.analysis.json");
     await File.WriteAllTextAsync(outPath, JsonSerializer.Serialize(gapReport, jsonOptions));
     Console.WriteLine($"[Argon.Engine EXP-005 Analyze] Processed {gapReport.ObserverCount} observer submissions ({gapReport.TotalTrialJudgments} trial judgments).");

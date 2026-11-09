@@ -31,7 +31,8 @@ public sealed record LipSyncMachineMeasurement(
     int MatchedBilabialOnsetCount,
     double MasterRepetitionCorrelation,
     double InterOnsetDriftStdMs,
-    string MachinePredictedMode);
+    string MachinePredictedMode,
+    double LipAudioOnsetDispersionMs);
 
 public sealed record Exp005CalibrationReport(
     string SchemaVersion,
@@ -74,9 +75,12 @@ public sealed record SignalPerceptionGapAnalysisReport(
     double MachineMdlMs,
     double HumanSynchronyWindowWidthMs,
     double SignalPerceptionTemporalGapMs,
-    double MachineNearZeroLagAccuracy,
-    double HumanNearZeroLagAccuracy,
-    double SignalPerceptionPlaybackGap,
+    double MachineReferenceAccuracy,
+    double HumanUnshiftedAccuracy,
+    double SignalPerceptionReferenceGap,
+    double? MachineNoReferenceAccuracy,
+    double? SignalPerceptionNoReferenceGap,
+    string MachineMeasurementSource,
     double SynchronizedPlaybackAnomalyRate,
     double GenuineLiveAnomalyRate,
     double AnomalyDissociationDelta);
@@ -228,10 +232,10 @@ public static class LipSyncSignalDetector
         bool passes = mae <= 25.0 && pearsonR >= 0.90;
 
         return new Exp005CalibrationReport(
-            "argon-exp005-0.1",
+            "argon-exp005-0.2",
             DateTimeOffset.UtcNow,
             "EXP-005-SIGNAL-PERCEPTION-GAP",
-            "Instrument calibration on synthetic ground-truth stimuli only. No human observer data have been collected.",
+            "Software self-test on synthetic stimuli generated alongside the detector; live/playback separation holds by construction. Not evidence of performance on real recordings. No human observer data have been collected.",
             Path.GetRelativePath(repoRoot, masterWavPath).Replace('\\', '/'),
             masterSha,
             measurements.Count,
@@ -274,13 +278,20 @@ public static class LipSyncSignalDetector
             visOpeningRateFrames[f] = Math.Max(0.0, diff);
         }
 
-        // Resample visual opening rate onto the 5 ms (200 Hz) analysis grid
+        // Resample visual opening rate onto the 5 ms (200 Hz) analysis grid.
+        // Timing convention (v0.2 fix): both difference signals are stamped at the midpoint of the
+        // interval they span. The acoustic flux acOnsetGrid[g] = rms[g] - rms[g-1] compares two
+        // 5 ms blocks centred at (g-0.5)*5 ms and (g+0.5)*5 ms, so it belongs to t = g*5 ms.
+        // The visual difference A[f] - A[f-1] spans frames at (f-1)/fps and f/fps, so it belongs to
+        // t = (f-0.5)/fps, i.e. fractional frame index t*fps + 0.5. The v0.1 code stamped the audio
+        // flux 2.5 ms late and the visual difference half a frame (8.3 ms at 60 fps) late, which
+        // produced a constant bias of about -5 ms in every estimate.
         int gridCount = audioSamples.Length / GridSamples;
         var visGrid = new double[gridCount];
         for (int g = 0; g < gridCount; g++)
         {
-            double tSec = (g + 0.5) * (GridStepMs / 1000.0);
-            double fExactFrame = tSec * fps;
+            double tSec = g * (GridStepMs / 1000.0);
+            double fExactFrame = tSec * fps + 0.5;
             int f0 = Math.Clamp((int)Math.Floor(fExactFrame), 0, frames.Count - 1);
             int f1 = Math.Clamp(f0 + 1, 0, frames.Count - 1);
             double frac = fExactFrame - f0;
@@ -363,6 +374,14 @@ public static class LipSyncSignalDetector
         }
 
         double onsetLagMs = matchedDiffs.Count > 0 ? ComputeMedian(matchedDiffs) : xcorrLagMs;
+
+        // Reference-free cue for H2b: dispersion of lip-to-audio onset differences within the stimulus.
+        double lipAudioDispersionMs = 0.0;
+        if (matchedDiffs.Count > 1)
+        {
+            double meanDiff = matchedDiffs.Average();
+            lipAudioDispersionMs = Math.Sqrt(matchedDiffs.Select(d => (d - meanDiff) * (d - meanDiff)).Average());
+        }
         double consensusLagMs = Math.Round(0.65 * xcorrLagMs + 0.35 * onsetLagMs, 2);
         double errMs = Math.Round(consensusLagMs - trueAudioLagMs, 2);
 
@@ -416,7 +435,8 @@ public static class LipSyncSignalDetector
             ioiDriftStdMs = Math.Sqrt(timingResiduals.Select(r => (r - meanRes) * (r - meanRes)).Average());
         }
 
-        // Classification rule: if aligned envelope correlation > 0.94 and inter-onset timing drift < 8.0 ms, classify as playback
+        // Reference-based classification rule (H2a). Thresholds were chosen for the synthetic suite, where the
+        // separation holds by construction; re-fix them on pilot recordings before the main study.
         string predictedMode = (bestMasterCorr >= 0.94 && ioiDriftStdMs < 8.0) ? "playback" : "live";
 
         return new LipSyncMachineMeasurement(
@@ -433,63 +453,60 @@ public static class LipSyncSignalDetector
             matchedDiffs.Count,
             Math.Round(bestMasterCorr, 4),
             Math.Round(ioiDriftStdMs, 2),
-            predictedMode);
+            predictedMode,
+            Math.Round(lipAudioDispersionMs, 2));
     }
 
     public static SignalPerceptionGapAnalysisReport AnalyzeHumanResponses(
-        Exp005CalibrationReport machineReport,
-        List<HumanObserverSubmission> submissions)
+        List<LipSyncMachineMeasurement> machineMeasurements,
+        double machineMdlMs,
+        string machineMeasurementSource,
+        List<HumanObserverSubmission> submissions,
+        double? noReferenceDispersionThresholdMs = null)
     {
         var allTrials = submissions.SelectMany(s => s.Trials).ToList();
-        var machineByStim = machineReport.Measurements.ToDictionary(m => m.StimulusId, StringComparer.OrdinalIgnoreCase);
+        var machineByStim = machineMeasurements.ToDictionary(m => m.StimulusId, StringComparer.OrdinalIgnoreCase);
+        var matchedTrials = allTrials.Where(t => machineByStim.ContainsKey(t.StimulusId)).ToList();
 
-        // Group by true lag to estimate human synchrony window width W_human
-        var byLag = allTrials
-            .Where(t => machineByStim.ContainsKey(t.StimulusId))
+        // W_human: proportion rated synchronous (S >= 4) per tested offset, then linear interpolation of the
+        // 0.5 crossing on each side of zero. Provisional: the protocol requires a logistic fit before main-study analysis.
+        var syncRateByLag = matchedTrials
             .GroupBy(t => machineByStim[t.StimulusId].TrueAudioLagMs)
             .OrderBy(g => g.Key)
+            .Select(g => (Lag: g.Key, Rate: g.Count(t => t.SynchronyRating >= 4) / (double)g.Count()))
             .ToList();
+        double leadEdge = FindHalfCrossing(syncRateByLag.Where(p => p.Lag <= 0).OrderByDescending(p => p.Lag).ToList());
+        double lagEdge = FindHalfCrossing(syncRateByLag.Where(p => p.Lag >= 0).OrderBy(p => p.Lag).ToList());
+        double humanWindowWidthMs = Math.Round(lagEdge - leadEdge, 2);
+        double spgTemporalMs = Math.Round(humanWindowWidthMs - 2.0 * machineMdlMs, 2);
 
-        double minSyncLag = 0.0, maxSyncLag = 0.0;
-        foreach (var grp in byLag)
-        {
-            double syncRate = grp.Count(t => t.SynchronyRating >= 4) / (double)Math.Max(1, grp.Count());
-            if (syncRate >= 0.50)
-            {
-                if (grp.Key < minSyncLag) minSyncLag = grp.Key;
-                if (grp.Key > maxSyncLag) maxSyncLag = grp.Key;
-            }
-        }
+        // H2 and H3 use unshifted takes only (protocol 0.2, Section 4.4).
+        static bool IsUnshifted(LipSyncMachineMeasurement m) => Math.Abs(m.TrueAudioLagMs) < 0.5;
+        static string Truth(LipSyncMachineMeasurement m) => m.IsPlaybackGroundTruth ? "playback" : "live";
 
-        double humanWindowWidthMs = Math.Round(maxSyncLag - minSyncLag, 2);
-        double spgTemporalMs = Math.Round(humanWindowWidthMs - 2.0 * machineReport.MachineMinimumDetectableLagMs, 2);
-
-        // Near-zero lag (|Delta t| <= 30 ms) accuracy comparison
-        var nearZeroTrials = allTrials
-            .Where(t => machineByStim.TryGetValue(t.StimulusId, out var m) && Math.Abs(m.TrueAudioLagMs) <= 30.0)
-            .ToList();
-
-        double humanNearZeroAcc = 0.0;
-        if (nearZeroTrials.Count > 0)
-        {
-            int correct = nearZeroTrials.Count(t =>
-            {
-                var m = machineByStim[t.StimulusId];
-                string expected = m.IsPlaybackGroundTruth ? "playback" : "live";
-                return string.Equals(t.Judgment, expected, StringComparison.OrdinalIgnoreCase);
-            });
-            humanNearZeroAcc = Math.Round((double)correct / nearZeroTrials.Count, 4);
-        }
-
-        var nearZeroMachine = machineReport.Measurements.Where(m => Math.Abs(m.TrueAudioLagMs) <= 30.0).ToList();
-        double machineNearZeroAcc = nearZeroMachine.Count > 0
-            ? Math.Round(nearZeroMachine.Count(m => (m.IsPlaybackGroundTruth ? "playback" : "live") == m.MachinePredictedMode) / (double)nearZeroMachine.Count, 4)
+        var unshiftedTrials = matchedTrials.Where(t => IsUnshifted(machineByStim[t.StimulusId])).ToList();
+        double humanAcc = unshiftedTrials.Count > 0
+            ? Math.Round(unshiftedTrials.Count(t => string.Equals(t.Judgment, Truth(machineByStim[t.StimulusId]), StringComparison.OrdinalIgnoreCase)) / (double)unshiftedTrials.Count, 4)
             : 0.0;
 
-        var syncPlaybackTrials = nearZeroTrials
+        var unshiftedMachine = machineMeasurements.Where(IsUnshifted).ToList();
+        double machineRefAcc = unshiftedMachine.Count > 0
+            ? Math.Round(unshiftedMachine.Count(m => Truth(m) == m.MachinePredictedMode) / (double)unshiftedMachine.Count, 4)
+            : 0.0;
+
+        double? machineNoRefAcc = null;
+        double? noRefGap = null;
+        if (noReferenceDispersionThresholdMs is double thr && unshiftedMachine.Count > 0)
+        {
+            // Hypothesis direction: miming produces larger lip-to-audio onset dispersion than live singing.
+            machineNoRefAcc = Math.Round(unshiftedMachine.Count(m => (m.LipAudioOnsetDispersionMs > thr ? "playback" : "live") == Truth(m)) / (double)unshiftedMachine.Count, 4);
+            noRefGap = Math.Round(machineNoRefAcc.Value - humanAcc, 4);
+        }
+
+        var syncPlaybackTrials = unshiftedTrials
             .Where(t => machineByStim[t.StimulusId].IsPlaybackGroundTruth && t.SynchronyRating >= 4)
             .ToList();
-        var liveTrials = nearZeroTrials
+        var liveTrials = unshiftedTrials
             .Where(t => !machineByStim[t.StimulusId].IsPlaybackGroundTruth)
             .ToList();
 
@@ -501,19 +518,40 @@ public static class LipSyncSignalDetector
             : 0.0;
 
         return new SignalPerceptionGapAnalysisReport(
-            "argon-exp005-analysis-0.1",
+            "argon-exp005-analysis-0.2",
             DateTimeOffset.UtcNow,
             submissions.Count,
             allTrials.Count,
-            machineReport.MachineMinimumDetectableLagMs,
+            machineMdlMs,
             humanWindowWidthMs,
             spgTemporalMs,
-            machineNearZeroAcc,
-            humanNearZeroAcc,
-            Math.Round(machineNearZeroAcc - humanNearZeroAcc, 4),
+            machineRefAcc,
+            humanAcc,
+            Math.Round(machineRefAcc - humanAcc, 4),
+            machineNoRefAcc,
+            noRefGap,
+            machineMeasurementSource,
             playbackAnomalyRate,
             liveAnomalyRate,
             Math.Round(playbackAnomalyRate - liveAnomalyRate, 4));
+    }
+
+    // Walks outward from zero lag and returns the interpolated lag where the synchronous proportion falls below 0.5.
+    // Returns the outermost tested lag if it never falls below 0.5, or 0 if the 0 ms condition is already below 0.5.
+    private static double FindHalfCrossing(List<(double Lag, double Rate)> outward)
+    {
+        if (outward.Count == 0) return 0.0;
+        if (outward[0].Rate < 0.5) return outward[0].Lag;
+        for (int i = 1; i < outward.Count; i++)
+        {
+            var (l0, r0) = outward[i - 1];
+            var (l1, r1) = outward[i];
+            if (r1 < 0.5)
+            {
+                return l0 + (r0 - 0.5) / (r0 - r1) * (l1 - l0);
+            }
+        }
+        return outward[^1].Lag;
     }
 
     public static LipSyncMachineMeasurement MeasureRealVideoWithFfmpeg(
