@@ -141,6 +141,72 @@ if (args.Length > 0 && string.Equals(args[0], "indautor", StringComparison.Ordin
     return 0;
 }
 
+if (args.Length > 0 && string.Equals(args[0], "exp005", StringComparison.OrdinalIgnoreCase))
+{
+    var report = LipSyncSignalDetector.RunSyntheticCalibrationSuite(repoRoot);
+    var outDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-005-signal-perception-gap");
+    Directory.CreateDirectory(outDir);
+
+    var reportPath = Path.Combine(outDir, "calibration.report.json");
+    await File.WriteAllTextAsync(reportPath, JsonSerializer.Serialize(report, jsonOptions));
+
+    Console.WriteLine($"[Argon.Engine EXP-005] Evaluated {report.OffsetStimuliCount} synthetic ground-truth stimuli:");
+    foreach (var m in report.Measurements)
+    {
+        Console.WriteLine(FormattableString.Invariant(
+            $"  -> {m.StimulusId}: True Lag = {m.TrueAudioLagMs:+0.0;-0.0;0.0} ms | XCorr = {m.EstimatedXCorrLagMs:+0.0;-0.0;0.0} ms | Onset = {m.EstimatedBilabialOnsetLagMs:+0.0;-0.0;0.0} ms | Consensus = {m.ConsensusLagMs:+0.00;-0.00;0.00} ms (Err = {m.LagEstimationErrorMs:+0.00;-0.00;0.00} ms) | MasterCorr = {m.MasterRepetitionCorrelation:F4}, IOI_Drift = {m.InterOnsetDriftStdMs:F2} ms -> Mode: {m.MachinePredictedMode}"));
+    }
+    Console.WriteLine(FormattableString.Invariant(
+        $"[Argon.Engine EXP-005] Calibration Summary: Bias = {report.MeanBiasErrorMs:+0.00;-0.00;0.00} ms | MAE = {report.MeanAbsoluteErrorMs:F2} ms | RMSE = {report.RootMeanSquareErrorMs:F2} ms | MDL (2*RMSE) = {report.MachineMinimumDetectableLagMs:F2} ms | Pearson r = {report.PearsonLagCorrelation:F5}"));
+    Console.WriteLine($"[Argon.Engine EXP-005] Calibration report written to: {reportPath}");
+    return 0;
+}
+
+if (args.Length > 0 && string.Equals(args[0], "exp005-video", StringComparison.OrdinalIgnoreCase))
+{
+    if (args.Length < 3)
+    {
+        Console.WriteLine("Usage: dotnet run --project argon/src/Argon.Engine -- exp005-video <video.mp4> <studio_master.wav> [trueLagMs=0] [isPlayback=false]");
+        return 1;
+    }
+    var videoPath = Path.GetFullPath(args[1]);
+    var masterWav = Path.GetFullPath(args[2]);
+    double trueLag = args.Length > 3 ? double.Parse(args[3], CultureInfo.InvariantCulture) : 0.0;
+    bool isPlayback = args.Length > 4 && bool.Parse(args[4]);
+
+    var m = LipSyncSignalDetector.MeasureRealVideoWithFfmpeg(repoRoot, videoPath, masterWav, trueLag, isPlayback);
+    Console.WriteLine(JsonSerializer.Serialize(m, jsonOptions));
+    return 0;
+}
+
+if (args.Length > 0 && string.Equals(args[0], "exp005-analyze", StringComparison.OrdinalIgnoreCase))
+{
+    var expDir = Path.Combine(repoRoot, "argon", "experiments", "EXP-005-signal-perception-gap");
+    var calPath = Path.Combine(expDir, "calibration.report.json");
+    if (!File.Exists(calPath))
+        throw new FileNotFoundException($"Run 'exp005' calibration first. Missing: {calPath}");
+
+    var calReport = JsonSerializer.Deserialize<Exp005CalibrationReport>(await File.ReadAllTextAsync(calPath), jsonOptions)!;
+    var responsesDir = args.Length > 1 ? Path.GetFullPath(args[1]) : Path.Combine(expDir, "responses");
+
+    var submissions = new List<HumanObserverSubmission>();
+    if (Directory.Exists(responsesDir))
+    {
+        foreach (var file in Directory.GetFiles(responsesDir, "*.json"))
+        {
+            var sub = JsonSerializer.Deserialize<HumanObserverSubmission>(await File.ReadAllTextAsync(file), jsonOptions);
+            if (sub is not null) submissions.Add(sub);
+        }
+    }
+
+    var gapReport = LipSyncSignalDetector.AnalyzeHumanResponses(calReport, submissions);
+    var outPath = Path.Combine(expDir, "spg.analysis.json");
+    await File.WriteAllTextAsync(outPath, JsonSerializer.Serialize(gapReport, jsonOptions));
+    Console.WriteLine($"[Argon.Engine EXP-005 Analyze] Processed {gapReport.ObserverCount} observer submissions ({gapReport.TotalTrialJudgments} trial judgments).");
+    Console.WriteLine($"[Argon.Engine EXP-005 Analyze] Output written to: {outPath}");
+    return 0;
+}
+
 var profileJsonPath = args.Length > 0
     ? Path.GetFullPath(args[0])
     : Path.Combine(repoRoot, "data", "processed", "runs", "06-FCE-V-C110-007-C-profile", "profile.json");

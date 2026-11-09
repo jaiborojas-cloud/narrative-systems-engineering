@@ -44,6 +44,89 @@
       "description": "Oval Office presidential address transforming national shock and grief over the Challenger disaster into collective mourning, heroic mythmaking, and institutional continuity."
     }
   ],
+  "exp005StimuliAndCalibration": {
+    "protocolPath": "research/protocols/EXP-005-PROTOCOL.md",
+    "recordingProcedure": "Self-recorded vocal + acoustic guitar performance by Jair Ivan Rojas Ruiz (rights-clean, 100% original). Fixed tripod at 1920x1080 60fps progressive scan, shutter >= 1/250s, simultaneous 48kHz/16kHz PCM16 WAV, with a visible hand-clap impulse at t=1.0s followed by 1.0s silence for hardware audio-video alignment. Three master takes: TAKE_STUDIO_MASTER (master.wav), TAKE_LIVE_GENUINE (live_000ms.mp4), and TAKE_PLAYBACK_MIME (playback_000ms.mp4), plus 8 FFmpeg -itsoffset variants at -120, -60, -30, 0, +30, +60, +120, +200 ms.",
+    "pendingHumanStudyRecordings": {
+      "workId": "CORPUS-005-JAIBO-LIVE-VS-PLAYBACK",
+      "status": "pending_founder_recording",
+      "targetDirectory": "video/exp005/",
+      "plannedFiles": [
+        "video/exp005/studio_master.wav",
+        "video/exp005/live_raw.mp4",
+        "video/exp005/playback_raw.mp4",
+        "video/exp005/stim_live_neg120ms.mp4",
+        "video/exp005/stim_live_neg060ms.mp4",
+        "video/exp005/stim_live_neg030ms.mp4",
+        "video/exp005/stim_live_pos000ms.mp4",
+        "video/exp005/stim_live_pos030ms.mp4",
+        "video/exp005/stim_live_pos060ms.mp4",
+        "video/exp005/stim_live_pos120ms.mp4",
+        "video/exp005/stim_live_pos200ms.mp4"
+      ]
+    },
+    "syntheticCalibrationSuite": {
+      "studioMasterWavPath": "argon/experiments/EXP-005-signal-perception-gap/stimuli/studio_master.wav",
+      "studioMasterSha256": "8c1cbf721999c500f1090b9c3bef5c1d36de4be8fe7ee38282d3c1913ea2c99c",
+      "calibrationReportPath": "argon/experiments/EXP-005-signal-perception-gap/calibration.report.json",
+      "stimuliHashes": [
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-NEG120MS",
+          "trueLagMs": -120,
+          "audioSha256": "eee6d302a4272581f7aae756ef932b2dbf214dd1646db309c1fda2a9e36015aa",
+          "videoSha256": "ed4aeec8390b0f21d70665a3fa5e295a6b8a19597eadd3fc6fdd75f3e29723ef"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-NEG060MS",
+          "trueLagMs": -60,
+          "audioSha256": "44f44aa494a8753b94a63961de4fc5a5669ddcff9958252a5a7383221969c454",
+          "videoSha256": "400e135bc4c371441693d7ee575d678d8da08d385001a28a28e5685adc87de61"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-NEG030MS",
+          "trueLagMs": -30,
+          "audioSha256": "9ad84921d4bc834a49f05536e6e7d6909b603e08f83eabb8162efc1f6e8c4a2a",
+          "videoSha256": "ce44f5652cfea96209d9bc87a080ad92645a88ec2207c6bad53a613e1e602150"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-POS000MS",
+          "trueLagMs": 0,
+          "audioSha256": "55e56bd6c45bcfc0f99a052e6c48063e56238b26d18d7e417b791e88e60079a6",
+          "videoSha256": "9a39f5af81addab401ec86e43d573b7af65b11c887c52030b47949fea80f4542"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-POS030MS",
+          "trueLagMs": 30,
+          "audioSha256": "471308a46272f86bb772afc2be41e03cc5c678f8de8c3b7035debe54e419a274",
+          "videoSha256": "fae997aeccd3b9175fa719634d90869165cf91b8bc17e2b6c234b09d4caa858d"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-POS060MS",
+          "trueLagMs": 60,
+          "audioSha256": "3c9977664ea72c7e307dcf1f1e93b782bd47032e454c1cd917e31eaa73453169",
+          "videoSha256": "bb1730c7129ac4b4697d4ecb14b648b199ee8c6430eddb3e556d756a547cdf7c"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-POS120MS",
+          "trueLagMs": 120,
+          "audioSha256": "f4842cc97472508a20367606896481291e4e45aa4603861f7a2fe559ef3d81aa",
+          "videoSha256": "6bb5e9599453a05515077430edc52d8c3b8310c9b22905da0334d94f433635b6"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-PLAYBACK-POS200MS",
+          "trueLagMs": 200,
+          "audioSha256": "feceb9893b42c53f8813a0053c927fe463d4b564332282789c37967bd89720dd",
+          "videoSha256": "c24dd9025f6e4dfdb9363236f5fa62efc465b6ade964783113031848a96393af"
+        },
+        {
+          "stimulusId": "STIM-SYNTH-LIVE-POS000MS",
+          "trueLagMs": 0,
+          "audioSha256": "4b2789b7221b0b332ffa204e2f84b486184f4d2637a958fed05fc0289d047220",
+          "videoSha256": "28c41694d402549e2bdeaad400fff10985b70294ddcdd7362830a730696fb884"
+        }
+      ]
+    }
+  },
   "deprecatedWorks": [
     {
       "filePath": "video/268230_medium.mp4",

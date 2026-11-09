@@ -25,6 +25,8 @@ September 8, 2026
 | D019 | Change the license from Apache 2.0 to all rights reserved for versions after v0.4.0 | Adopted: founder decision, November 6, 2026 | Aligns NSE with the Leviathan repository and keeps commercial use under the founder's control; earlier Apache 2.0 copies keep their license |
 | D020 | Revise claims in PAPER-001, the experiment findings, and release metadata | Adopted: founder decision, November 6, 2026 | Separate direct signal measurements from single-coder stance labels, uncalibrated composite weights, simulated counterfactuals, and EXP-004's synthetic self-consistency check; no claims of validation or proof without independent annotation or audience data |
 
+| D021 | Preregister and execute EXP-005 (Signal–Perception Gap in lip-sync and playback detection) using self-recorded vocal/guitar stimuli (`CORPUS-005`) and blinded human observer judgments | Proposed | Tests a concrete, falsifiable cross-modal perception hypothesis with known physical ground truth ($\Delta t_{\text{true}}$ in ms and live vs. playback provenance) and zero third-party copyright restrictions (`research/protocols/EXP-005-PROTOCOL.md`) |
+
 ## Pending founder input
 
 - Available weekly effort, technical/research experience, collaborators, and budget ceiling.

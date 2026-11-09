@@ -104,6 +104,26 @@ Append a dated entry after each substantive session. Record what actually happen
 
 **Next actions:** second coder for stance labels on CORPUS-001; annotated shot boundaries; decide the license setting for the next Zenodo release.
 
+## Session 008 - November 9, 2026
+
+**Objective:** design EXP-005 ("Signal–Perception Gap: lip-sync and playback detection") and implement its preregistration protocol, synthetic ground-truth calibration stimuli, C#/.NET 10 signal detector, and blinded human observer response form, without running a human participant study.
+
+**Inputs reviewed:** `README.md` ("What is and is not established"), `SESSION_LOG.md` (Session 007), `docs/DECISIONS.md`, `argon/README.md`, and `data/raw/CORPUS_MANIFEST.json`.
+
+**Work performed:**
+
+- Authored `research/protocols/EXP-005-PROTOCOL.md` specifying the research questions, falsifiable hypotheses ($H_1, H_2, H_3$) and null hypotheses, explicit dismissal criteria, self-recorded stimulus acquisition protocol (`CORPUS-005-JAIBO-LIVE-VS-PLAYBACK`, vocals + guitar with clapboard sync impulse and FFmpeg `-itsoffset` commands for $-120, -60, -30, 0, +30, +60, +120, +200\text{ ms}$), and pre-specified statistical analysis plan defining the Signal–Perception Gap metrics ($\text{SPG}_{\tau}$ in ms and $\text{SPG}_{\text{playback}}$ in accuracy difference).
+- Implemented `argon/src/Argon.Engine/LipSyncSignalDetector.cs` and wired CLI subcommands (`exp005`, `exp005-video`, `exp005-analyze`) in `argon/src/Argon.Engine/Program.cs`. The detector estimates audio–video lag from raw `60 fps` `32x32` RGB24 mouth-ROI frame sequences and `16 kHz` PCM16 WAV waveforms using two independent signal methods (5 ms positive envelope cross-correlation with parabolic interpolation and bilabial closure-to-burst onset matching) and evaluates playback repetition against a studio reference via aligned envelope correlation and inter-onset timing drift ($\sigma_{\text{IOI}}$).
+- Generated the 9-stimulus synthetic calibration suite (`argon/experiments/EXP-005-signal-perception-gap/stimuli/`) and recorded all SHA-256 hashes and the pending real-video recording specification in `data/raw/CORPUS_MANIFEST.json`.
+- Built the standalone blinded observer evaluation form (`research/protocols/exp005-observer-form.html`) that locks judgments (`live` vs. `playback`), synchrony ratings ($1\text{–}5$), anomaly flags, confidence, and free-text reasons with UTC timestamps prior to any explanation or measurement disclosure.
+- Proposed decision `D021` in `docs/DECISIONS.md`.
+
+**Findings:** on the 9 synthetic ground-truth stimuli (8 playback offsets from $-120\text{ ms}$ to $+200\text{ ms}$ plus 1 simulated live take with $24\text{ ms}$ natural micro-timing drift), `LipSyncSignalDetector` achieved Mean Bias $= -5.21\text{ ms}$, $\text{MAE} = 5.21\text{ ms}$ (max absolute error $8.76\text{ ms}$), $\text{RMSE} = 5.43\text{ ms}$, $\text{MDL}_{\text{machine}} = 10.86\text{ ms}$, and Pearson $r = 0.99990$, while separating the 8 playback tracks ($\sigma_{\text{IOI}} = 0.00\text{ ms}$, $r_{\text{rep}} = 0.995$) from the simulated live take ($\sigma_{\text{IOI}} = 18.95\text{ ms}$, $r_{\text{rep}} = 0.881$). These numbers calibrate the signal estimator on synthetic inputs only; no real camera recordings or human observer data have been collected.
+
+**Decisions adopted:** none (`D021` is recorded as `Proposed` for founder decision).
+
+**Next actions:** the Principal Investigator records `studio_master.wav`, `live_raw.mp4`, and `playback_raw.mp4` under `video/exp005/`, generates the 8 FFmpeg lag variants, runs `exp005-video` to verify detector error on real camera footage before freezing the protocol, and decides whether to adopt `D021`.
+
 ## Template for future sessions
 
 ```text

@@ -103,13 +103,23 @@ try {
         throw "Unexpected EXP-004 System Identification metrics: R2=$($sysid.empiricalNoisyRecovery25dB.trajectoryR2)"
     }
 
-    # Build and verify Print-Ready Paper Manuscript & LaTeX/BibTeX Package
-    dotnet run --project argon/src/Argon.Engine --no-build -- paper
-    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine paper execution failed' }
-
+    # Verify Print-Ready Paper Manuscript & LaTeX/BibTeX Package exist (do not overwrite LaTeX-built PDF)
     foreach ($pubFile in @('publications/latex/PAPER-001-NSE-FOUNDATION.tex', 'publications/latex/references.bib', 'publications/latex/PAPER-001-NSE-FOUNDATION-PRINT.html', 'publications/PAPER-001-NSE-FOUNDATION.pdf')) {
         $pp = Join-Path $repo $pubFile
         if (-not (Test-Path $pp)) { throw "Missing publication package file: $pubFile" }
+    }
+
+    # Build and verify EXP-005 Signal-Perception Gap synthetic calibration suite & protocol files
+    dotnet run --project argon/src/Argon.Engine --no-build -- exp005
+    if ($LASTEXITCODE -ne 0) { throw 'Argon.Engine exp005 execution failed' }
+
+    foreach ($exp5File in @('research/protocols/EXP-005-PROTOCOL.md', 'research/protocols/exp005-observer-form.html', 'argon/experiments/EXP-005-signal-perception-gap/calibration.report.json', 'argon/experiments/EXP-005-signal-perception-gap/README.md')) {
+        $e5p = Join-Path $repo $exp5File
+        if (-not (Test-Path $e5p)) { throw "Missing EXP-005 deliverable file: $exp5File" }
+    }
+    $exp5Cal = Get-Content (Join-Path $repo 'argon/experiments/EXP-005-signal-perception-gap/calibration.report.json') -Raw | ConvertFrom-Json
+    if (-not $exp5Cal.passesInstrumentCalibrationCriterion -or $exp5Cal.meanAbsoluteErrorMs -gt 25.0) {
+        throw "EXP-005 calibration failed threshold: MAE=$($exp5Cal.meanAbsoluteErrorMs) ms"
     }
 
     # Build and verify INDAUTOR Copyright Registration Package (legal/indautor/)
